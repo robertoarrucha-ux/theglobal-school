@@ -91,6 +91,7 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
             block('[data-fresh="collaborators"]', h.collaborators);
             block('[data-fresh="gallery"]', h.gallery, function () { if (window.__tngsInitGallery) window.__tngsInitGallery(); });
             block('[data-fresh="testimonials"]', h.testimonials);
+            block('[data-fresh="inclusions"]', h.inclusions);
           })
           .catch(function () {});
         function setText(sel, val) { var e = document.querySelector(sel); if (e && val != null && e.textContent !== val) e.textContent = val; }

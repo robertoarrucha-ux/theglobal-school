@@ -197,13 +197,13 @@ const jsonLd = {
       )}
 
       {x.type === 'viaje' && (
-        <>
+        <section class="xp-incl-wrap" data-fresh="inclusions">
           <h2>Tu experiencia completa</h2>
           <div class="xp-incl">
-            <div><h4 class="ok">✓ Qué incluye</h4><ul>{inc.included.map((i) => <li>{i}</li>)}</ul></div>
-            <div><h4 class="no">✕ Qué no incluye</h4><ul>{inc.notIncluded.map((i) => <li>{i}</li>)}</ul></div>
+            <div><h4 class="ok">✓ Qué incluye</h4><ul>{(x.included?.length ? x.included : inc.included).map((i: string) => <li>{i}</li>)}</ul></div>
+            <div><h4 class="no">✕ Qué no incluye</h4><ul>{(x.notIncluded?.length ? x.notIncluded : inc.notIncluded).map((i: string) => <li>{i}</li>)}</ul></div>
           </div>
-        </>
+        </section>
       )}
     </div>
 

@@ -50,6 +50,9 @@ export interface Experience {
   collaborators?: { imageUrl: string; name?: string }[];
   eventGallery?: { imageUrl: string; caption?: string }[];
   testimonials?: { quote: string; author: string; org?: string; orgUrl?: string; photo?: string; headline?: string }[];
+  // "Tu experiencia completa" (viajes) — editable por programa; vacío = lista estándar.
+  included?: string[];
+  notIncluded?: string[];
 }
 
 // 16 expediciones reales importadas de Viajes (generadas por migration/transform_expeditions.mjs).

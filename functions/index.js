@@ -153,6 +153,17 @@ function fmtDate(iso, locale) {
   try { return new Date(iso + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }); }
   catch { return iso || ''; }
 }
+// Lista estándar "Tu experiencia completa" (viajes) — espejo de src/lib/inclusions.ts.
+const DEFAULT_INCL = {
+  es: {
+    included: ['Alojamiento en hoteles con encanto y bien ubicados.', 'Todos los desayunos y los almuerzos o cenas especificados en el itinerario.', 'Guías expertos e historiadores durante todo el recorrido.', 'Entradas a todos los museos, monumentos y sitios históricos del itinerario.', 'Transporte privado cómodo para todos los traslados entre ciudades y actividades.', 'Talleres exclusivos, catas y experiencias inmersivas descritas en el programa.', 'Un paquete de bienvenida con materiales de lectura y un diario de viaje.', 'Seguro de viaje básico.'],
+    notIncluded: ['Vuelos internacionales de ida y vuelta al punto de inicio/fin de la expedición.', 'Seguro médico y de cancelación (obligatorio y adicional al básico).', 'Comidas y bebidas no especificadas en el itinerario.', 'Gastos personales, compras y souvenirs.', 'Actividades opcionales durante el tiempo libre.', 'Propinas para guías y conductores.'],
+  },
+  en: {
+    included: ['Accommodation in charming, well-located hotels.', 'All breakfasts and the lunches or dinners specified in the itinerary.', 'Expert guides and historians throughout the journey.', 'Entrance to all museums, monuments and historic sites in the itinerary.', 'Comfortable private transport for all transfers between cities and activities.', 'Exclusive workshops, tastings and immersive experiences described in the program.', 'A welcome pack with reading materials and a travel journal.', 'Basic travel insurance.'],
+    notIncluded: ['Round-trip international flights to the expedition start/end point.', 'Medical and cancellation insurance (mandatory, additional to the basic one).', 'Meals and drinks not specified in the itinerary.', 'Personal expenses, purchases and souvenirs.', 'Optional activities during free time.', 'Tips for guides and drivers.'],
+  },
+};
 function renderFragments(x, lang) {
   const L = lang === 'es';
   const locale = L ? 'es-ES' : 'en-US';
@@ -185,7 +196,17 @@ function renderFragments(x, lang) {
       a(x.testimonials).map((t) => `<figure class="testi-card glass">${t.headline ? `<p class="testi-headline">${esc(t.headline)}</p>` : ''}<blockquote>${esc(t.quote)}</blockquote><figcaption>${t.photo ? `<img class="testi-avatar" src="${esc(t.photo)}" alt="${esc(t.author)}" loading="lazy" width="46" height="46">` : ''}<div><strong>${esc(t.author)}</strong>${t.org ? (t.orgUrl ? `<a href="${esc(t.orgUrl)}" target="_blank" rel="noopener">${esc(t.org)}</a>` : `<span>${esc(t.org)}</span>`) : ''}</div></figcaption></figure>`).join('') + `</div>`
     : '';
 
-  return { title: x.title || '', summary: x.summary || '', meta, price, highlights, sections, collaborators, gallery, testimonials };
+  let inclusions = '';
+  if (x.type === 'viaje') {
+    const def = DEFAULT_INCL[L ? 'es' : 'en'];
+    const inc = a(x.included).length ? a(x.included) : def.included;
+    const notInc = a(x.notIncluded).length ? a(x.notIncluded) : def.notIncluded;
+    inclusions = `<h2>${L ? 'Tu experiencia completa' : 'Your complete experience'}</h2><div class="xp-incl">` +
+      `<div><h4 class="ok">${L ? '✓ Qué incluye' : "✓ What's included"}</h4><ul>${inc.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>` +
+      `<div><h4 class="no">${L ? '✕ Qué no incluye' : '✕ Not included'}</h4><ul>${notInc.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div></div>`;
+  }
+
+  return { title: x.title || '', summary: x.summary || '', meta, price, highlights, sections, collaborators, gallery, testimonials, inclusions };
 }
 
 export const experiencePublic = onRequest(
