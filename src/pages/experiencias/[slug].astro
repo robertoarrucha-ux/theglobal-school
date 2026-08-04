@@ -16,6 +16,12 @@ const { x } = Astro.props as any;
 const fmt = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 const dateStr = x.endDate ? `${fmt(x.startDate)} – ${fmt(x.endDate)}` : fmt(x.startDate);
 
+// "Tu experiencia completa": viaje usa las listas del programa o el default estándar;
+// evento solo muestra lo que el aliado haya llenado (sin default de viaje).
+const inclInc = x.included?.length ? x.included : (x.type === 'viaje' ? inc.included : []);
+const inclNot = x.notIncluded?.length ? x.notIncluded : (x.type === 'viaje' ? inc.notIncluded : []);
+const showIncl = inclInc.length > 0 || inclNot.length > 0;
+
 // Contenido completo migrado (eventos TNGS con página original: LALA, Mujeres, Diplomado...).
 const contentPage = await getEntry('pages', `es/page/${x.slug}`).catch(() => null);
 const rendered = contentPage ? await render(contentPage) : null;
@@ -196,15 +202,17 @@ const jsonLd = {
         </>
       )}
 
-      {x.type === 'viaje' && (
-        <section class="xp-incl-wrap" data-fresh="inclusions">
-          <h2>Tu experiencia completa</h2>
-          <div class="xp-incl">
-            <div><h4 class="ok">✓ Qué incluye</h4><ul>{(x.included?.length ? x.included : inc.included).map((i: string) => <li>{i}</li>)}</ul></div>
-            <div><h4 class="no">✕ Qué no incluye</h4><ul>{(x.notIncluded?.length ? x.notIncluded : inc.notIncluded).map((i: string) => <li>{i}</li>)}</ul></div>
-          </div>
-        </section>
-      )}
+      <section class="xp-incl-wrap" data-fresh="inclusions" hidden={!showIncl}>
+        {showIncl && (
+          <>
+            <h2>Tu experiencia completa</h2>
+            <div class="xp-incl">
+              {inclInc.length > 0 && <div><h4 class="ok">✓ Qué incluye</h4><ul>{inclInc.map((i: string) => <li>{i}</li>)}</ul></div>}
+              {inclNot.length > 0 && <div><h4 class="no">✕ Qué no incluye</h4><ul>{inclNot.map((i: string) => <li>{i}</li>)}</ul></div>}
+            </div>
+          </>
+        )}
+      </section>
     </div>
 
     <aside>

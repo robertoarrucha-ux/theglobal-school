@@ -20,6 +20,12 @@ const fmt = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString('en-
 const dateStr = x.endDate ? `${fmt(x.startDate)} – ${fmt(x.endDate)}` : fmt(x.startDate);
 const priceStr = x.publicPrice === 0 ? 'Free' : `${x.currency} ${x.publicPrice.toLocaleString()}`;
 
+// "Your complete experience": trips use program lists or the standard default;
+// events only show what the ally filled in (no trip default).
+const inclInc = x.included?.length ? x.included : (x.type === 'viaje' ? inc.included : []);
+const inclNot = x.notIncluded?.length ? x.notIncluded : (x.type === 'viaje' ? inc.notIncluded : []);
+const showIncl = inclInc.length > 0 || inclNot.length > 0;
+
 // JSON-LD (Event schema) — clave para SEO + respuesta de IA
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -195,15 +201,17 @@ const jsonLd = {
         </>
       )}
 
-      {x.type === 'viaje' && (
-        <section class="xp-incl-wrap" data-fresh="inclusions">
-          <h2>Your complete experience</h2>
-          <div class="xp-incl">
-            <div><h4 class="ok">✓ What's included</h4><ul>{(x.included?.length ? x.included : inc.included).map((i: string) => <li>{i}</li>)}</ul></div>
-            <div><h4 class="no">✕ Not included</h4><ul>{(x.notIncluded?.length ? x.notIncluded : inc.notIncluded).map((i: string) => <li>{i}</li>)}</ul></div>
-          </div>
-        </section>
-      )}
+      <section class="xp-incl-wrap" data-fresh="inclusions" hidden={!showIncl}>
+        {showIncl && (
+          <>
+            <h2>Your complete experience</h2>
+            <div class="xp-incl">
+              {inclInc.length > 0 && <div><h4 class="ok">✓ What's included</h4><ul>{inclInc.map((i: string) => <li>{i}</li>)}</ul></div>}
+              {inclNot.length > 0 && <div><h4 class="no">✕ Not included</h4><ul>{inclNot.map((i: string) => <li>{i}</li>)}</ul></div>}
+            </div>
+          </>
+        )}
+      </section>
     </div>
 
     <aside>

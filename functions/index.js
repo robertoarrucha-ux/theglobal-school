@@ -196,14 +196,16 @@ function renderFragments(x, lang) {
       a(x.testimonials).map((t) => `<figure class="testi-card glass">${t.headline ? `<p class="testi-headline">${esc(t.headline)}</p>` : ''}<blockquote>${esc(t.quote)}</blockquote><figcaption>${t.photo ? `<img class="testi-avatar" src="${esc(t.photo)}" alt="${esc(t.author)}" loading="lazy" width="46" height="46">` : ''}<div><strong>${esc(t.author)}</strong>${t.org ? (t.orgUrl ? `<a href="${esc(t.orgUrl)}" target="_blank" rel="noopener">${esc(t.org)}</a>` : `<span>${esc(t.org)}</span>`) : ''}</div></figcaption></figure>`).join('') + `</div>`
     : '';
 
+  // viaje: listas del programa o el default; evento: solo lo que el aliado llenó.
+  const def = x.type === 'viaje' ? DEFAULT_INCL[L ? 'es' : 'en'] : { included: [], notIncluded: [] };
+  const incInc = a(x.included).length ? a(x.included) : def.included;
+  const incNot = a(x.notIncluded).length ? a(x.notIncluded) : def.notIncluded;
   let inclusions = '';
-  if (x.type === 'viaje') {
-    const def = DEFAULT_INCL[L ? 'es' : 'en'];
-    const inc = a(x.included).length ? a(x.included) : def.included;
-    const notInc = a(x.notIncluded).length ? a(x.notIncluded) : def.notIncluded;
+  if (incInc.length || incNot.length) {
     inclusions = `<h2>${L ? 'Tu experiencia completa' : 'Your complete experience'}</h2><div class="xp-incl">` +
-      `<div><h4 class="ok">${L ? '✓ Qué incluye' : "✓ What's included"}</h4><ul>${inc.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>` +
-      `<div><h4 class="no">${L ? '✕ Qué no incluye' : '✕ Not included'}</h4><ul>${notInc.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div></div>`;
+      (incInc.length ? `<div><h4 class="ok">${L ? '✓ Qué incluye' : "✓ What's included"}</h4><ul>${incInc.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>` : '') +
+      (incNot.length ? `<div><h4 class="no">${L ? '✕ Qué no incluye' : '✕ Not included'}</h4><ul>${incNot.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>` : '') +
+      `</div>`;
   }
 
   return { title: x.title || '', summary: x.summary || '', meta, price, highlights, sections, collaborators, gallery, testimonials, inclusions };

@@ -221,7 +221,7 @@
 .xp-prework li { padding: .6rem 0; border-bottom: 1px solid var(--line); color: var(--txt-soft); }
 .xp-prework .tag { display: inline-block; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--yellow); border: 1px solid var(--line); border-radius: 999px; padding: .1rem .55rem; margin-right: .5rem; }
 .xp-prework strong { color: var(--txt); }
-.xp-incl { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; margin-top: 1rem; }
+.xp-incl { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem 2rem; margin-top: 1rem; }
 @media (max-width: 560px) { .xp-incl { grid-template-columns: 1fr; } }
 .xp-incl h4 { font-family: var(--font-sans); font-size: 1rem; margin: 0 0 .6rem; }
 .xp-incl h4.ok { color: #34d399; }
