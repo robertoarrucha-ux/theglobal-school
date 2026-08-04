@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { LANG } from '../lib/site';
+
+const { category } = Astro.props;
+const name = (category.name || '').replace(/&amp;/g, '&').replace(/&#0?39;/g, "'");
+const intro = LANG === 'es'
+  ? `Artículos de The New Global School en la categoría ${name}.`
+  : `Articles from The New Global School in ${name}.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name,
+  description: intro,
+  inLanguage: LANG,
+  hasPart: category.items.map((p: any) => ({
+    '@type': 'Article', headline: p.title,
+    url: new URL(`/${p.slug}/`, Astro.site).href,
+  })),
+};
+---
+<BaseLayout title={`${name} — The New Global School`} description={intro}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <section class="home-hero">
+    <div class="home-wrap">
+      <p class="eyebrow">{LANG === 'es' ? 'Categoría' : 'Category'}</p>
+      <h1>{name}</h1>
+      <p class="lead">{intro}</p>
+    </div>
+  </section>
+  <section class="home-wrap">
+    <div class="card-grid">
+      {category.items.map((p: any) => (
+        <a class="card stretch" href={`/${p.slug}/`}>
+          {p.hero && <img src={p.hero} alt={p.title} width="400" height="225" loading="lazy" />}
+          <div class="body">
+            <h3>{p.title}</h3>
+            <p>{(p.description || '').slice(0, 120)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

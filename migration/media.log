@@ -1,0 +1,42 @@
+URLs de imágenes propias a procesar: 731
+/Users/robertoarrucha/Developer/theglobal.school/migration/.venv/lib/python3.9/site-packages/PIL/Image.py:1047: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+  FAIL https://es.theglobal.school/wp-content/uploads//2019/11/Compartir_poder_para_reconstruir_confianza_pública-1.jpg -> 'ascii' codec can't encode character '\xfa' in position 77: ordinal not in range(128)
+  50/731 (ok=49 skip=0 fail=1)
+  100/731 (ok=97 skip=2 fail=1)
+  150/731 (ok=147 skip=2 fail=1)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/03/Mujeres-Auténticas.webp -> 'ascii' codec can't encode character '\u0301' in position 44: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/05/5-hábitos-300x300.png -> 'ascii' codec can't encode character '\xe1' in position 35: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/05/Baño-300x300.png -> 'ascii' codec can't encode character '\xf1' in position 34: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/05/Historia-sobre-la-extinción-humana-Mexico-1024x1024.jpg -> 'ascii' codec can't encode character '\u0301' in position 58: ordinal not in range(128)
+  200/731 (ok=190 skip=5 fail=5)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/05/des´perdicio-300x300.png -> 'ascii' codec can't encode character '\xb4' in position 35: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/05/energía-283x300.png -> 'ascii' codec can't encode character '\xed' in position 37: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2020/09/Amílcar-Cabral.jpg -> 'ascii' codec can't encode character '\u0301' in position 35: ordinal not in range(128)
+  250/731 (ok=237 skip=5 fail=8)
+  300/731 (ok=287 skip=5 fail=8)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/07/Jorge-Fernández-Moreno-Reciqlo-Latin-American-Leaders-Awards.webp -> 'ascii' codec can't encode character '\u0301' in position 43: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/08/Mauricio-Vila-Gobernador-de-Yucatán.webp -> 'ascii' codec can't encode character '\u0301' in position 66: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/09/Paloma-Dirección-de-Moviliidad-y-Transporte.webp -> 'ascii' codec can't encode character '\u0301' in position 47: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/10/Gabriela-Liñan-crop.webp -> 'ascii' codec can't encode character '\u0303' in position 44: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/10/Gonzalo-Muñoz-Abogabir-Climate-Champion-Triciclos-Manuia-Latin-American-Leaders-Awards.webp -> 'ascii' codec can't encode character '\u0303' in position 43: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/10/Jennifer-Schell-Trabaja-Mamá.webp -> 'ascii' codec can't encode character '\u0301' in position 60: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/10/Ligia-Adela-Castro-de-Doens-Cambio-Climático-Panama-.webp -> 'ascii' codec can't encode character '\u0301' in position 72: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/10/Martha-Lucia-Merchán-Premios-CAFAM.webp -> 'ascii' codec can't encode character '\u0301' in position 51: ordinal not in range(128)
+  FAIL https://es.theglobal.school/wp-content/uploads/2022/11/La-Caña-Logo-1.webp -> 'ascii' codec can't encode character '\u0303' in position 38: ordinal not in range(128)
+  350/731 (ok=328 skip=5 fail=17)
+  400/731 (ok=378 skip=5 fail=17)
+  450/731 (ok=427 skip=6 fail=17)
+  FAIL https://es.theglobal.school/wp-content/uploads/2023/11/Centro-Internacional-de-Mejoramiento-de-Maiz-y-Trigo-–-CIMMYT.jpg -> 'ascii' codec can't encode character '\u2013' in position 85: ordinal not in range(128)
+  500/731 (ok=474 skip=8 fail=18)
+  FAIL https://theglobal.school/wp-content/uploads/2019/09/7-reasons-why-we-love-vienna-😍.png -> 'ascii' codec can't encode character '\U0001f60d' in position 61: ordinal not in range(128)
+  FAIL https://theglobal.school/wp-content/uploads/2019/09/Copia-de-7-reasons-why-we-love-vienna-.png -> HTTP Error 404: Not Found
+  550/731 (ok=519 skip=11 fail=20)
+  650/731 (ok=601 skip=29 fail=20)
+  FAIL https://theglobal.school/wp-content/uploads/2022/05/whitexicans-Desigualdad-en-América-Latina.webp -> 'ascii' codec can't encode character '\u0301' in position 62: ordinal not in range(128)
+  FAIL https://theglobal.school/wp-content/uploads/2022/11/La-Caña-Logo-1.webp -> 'ascii' codec can't encode character '\u0303' in position 38: ordinal not in range(128)
+  700/731 (ok=636 skip=42 fail=22)
+
+Imágenes: ok=655 skip=54 fail=22
+Archivos .md reescritos: 379
+Peso total de /media: 76.3 MB

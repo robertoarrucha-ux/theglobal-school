@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+const cred = JSON.parse(readFileSync('gen-lang-client-0345505794-firebase-adminsdk-fbsvc-c4b77a5ab8.json','utf8'));
+const { initializeApp, cert } = await import('firebase-admin/app');
+const { getFirestore } = await import('firebase-admin/firestore');
+const db = getFirestore(initializeApp({ credential: cert(cred) }), 'ai-studio-6aba6233-6f6c-455d-be53-29923fe66f0f'.replace('6aba6233','6aba9233'));
+await db.collection('experience_votes').doc('renaissance-masters').delete().catch(()=>{});
+const ips = await db.collection('vote_ips').where('slug','==','renaissance-masters').get();
+for (const d of ips.docs) await d.ref.delete();
+console.log('✓ voto de prueba limpiado. vote_ips borrados:', ips.size);
+process.exit(0);

@@ -1,0 +1,204 @@
+---
+import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
+import { getCollection } from 'astro:content';
+import { loadExperiences } from '../lib/experiences';
+import { LANG, BRAND, SELF_ORIGIN } from '../lib/site';
+
+const L = LANG === 'es';
+const xbase = L ? '/experiencias' : '/experiences';
+const applyUrl = 'https://aliados.theglobal.school/'; // landing de aliados (explica el programa + beneficios)
+
+const experiences = await loadExperiences();
+// Datos para el widget de votación (solo viajes/expediciones).
+const votingData = experiences
+  .filter((x: any) => x.type === 'viaje')
+  .map((x: any) => ({ slug: x.slug, title: x.title, cover: x.coverImageUrl, url: `${LANG === 'es' ? '/experiencias' : '/experiences'}/${x.slug}/` }));
+const posts = (await getCollection('posts', (p) => p.data.lang === LANG))
+  .filter((p) => p.data.hero)
+  .sort((a, b) => (b.data.date || '').localeCompare(a.data.date || ''))
+  .slice(0, 6);
+
+const fmtDate = (iso: string) =>
+  new Date(iso + 'T00:00:00').toLocaleDateString(L ? 'es-ES' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const price = (x: any) => (x.publicPrice === 0 ? `<span class="free">${L ? 'Gratis' : 'Free'}</span>` : `${x.currency} ${x.publicPrice.toLocaleString()}`);
+
+const t = {
+  h1: L ? 'Viajes y Eventos Educativos para Líderes Globales' : 'Educational Trips & Events for Global Leaders',
+  lead: L
+    ? 'Experiencias internacionales de aprendizaje —eventos y viajes— para líderes de gobierno, empresa y sociedad civil. Organizadas por The New Global School y una red de aliados en Europa y América Latina.'
+    : 'International learning experiences — events and journeys — for leaders in government, business and civil society. Hosted by The New Global School and a network of allies across Europe and Latin America.',
+  explore: L ? 'Explorar experiencias' : 'Explore experiences',
+  becomeAlly: L ? 'Únete como aliado' : 'Become an ally',
+  programsEyebrow: L ? 'Programas' : 'Programs',
+  programsTitle: L ? 'Eventos y Viajes' : 'Events & Trips',
+  allEvents: L ? 'Todos' : 'All',
+  events: L ? 'Eventos' : 'Events',
+  trips: L ? 'Viajes' : 'Trips',
+  allyEyebrow: L ? 'Para aliados' : 'For allies',
+  allyTitle: L ? 'Lleva tus viajes y eventos a líderes de todo el mundo' : 'Bring your trips and events to leaders worldwide',
+  allyLead: L
+    ? 'Publica tus programas en nuestra plataforma, llega a una audiencia de líderes y déjanos la difusión, el registro y los pagos. Tú te enfocas en la experiencia.'
+    : 'Publish your programs on our platform, reach an audience of leaders, and let us handle promotion, registration and payments. You focus on the experience.',
+  allyPoints: L
+    ? ['Vitrina indexable con tráfico y reputación ya establecidos', 'Registro y pagos gestionados (o cobras directo, tú eliges)', 'Certificación y respaldo de marca The New Global School']
+    : ['Indexable storefront with established traffic and reputation', 'Managed registration and payments (or collect directly — your choice)', 'Certification and The New Global School brand backing'],
+  votedEyebrow: L ? 'Lo más votado' : 'Most voted',
+  votedTitle: L ? '¿Qué viaje te interesa más?' : 'Which trip interests you most?',
+  votedIntro: L ? 'Vota por tu expedición favorita. Un voto por persona — así vemos qué viaje despierta más interés.' : 'Vote for your favourite expedition. One vote per person — so we can see which trip draws the most interest.',
+  vote: L ? 'Votar' : 'Vote',
+  voted: L ? 'Votado' : 'Voted',
+  votesLabel: L ? 'votos' : 'votes',
+  blogEyebrow: L ? 'Del blog' : 'From the blog',
+  blogTitle: L ? 'Ideas y reflexiones' : 'Ideas & reflections',
+  blogAll: L ? 'Ver todo el blog' : 'See the full blog',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: BRAND,
+  url: SELF_ORIGIN[LANG],
+  description: t.lead,
+  foundingDate: '2010',
+  location: { '@type': 'Place', address: 'Vienna, Austria' },
+};
+---
+<MarketplaceLayout title={`${BRAND} — ${t.h1}`} description={t.lead}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- HERO -->
+  <section class="home-hero mkt-wrap">
+    <p class="eyebrow">The New Global School</p>
+    <h1>{t.h1}</h1>
+    <p class="lead">{t.lead}</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#programas">{t.explore}</a>
+      <a class="btn-ghost" href={applyUrl}>{t.becomeAlly} →</a>
+    </div>
+  </section>
+
+  <!-- MÁS VOTADOS (widget cliente, votos en vivo) -->
+  <section class="mkt-wrap voted-sec" id="voted-section">
+    <div class="sec-head"><p class="eyebrow">{t.votedEyebrow}</p><h2>{t.votedTitle}</h2></div>
+    <p class="voted-intro">{t.votedIntro}</p>
+    <div class="voted-grid" id="voted-grid"></div>
+  </section>
+  <script id="xp-vote-data" type="application/json" set:html={JSON.stringify(votingData)}></script>
+  <script define:vars={{ voteTxt: t.vote, votedTxt: t.voted, votesTxt: t.votesLabel }}>
+    (async () => {
+      const el = document.getElementById('voted-grid');
+      const data = JSON.parse(document.getElementById('xp-vote-data').textContent || '[]');
+      const bySlug = Object.fromEntries(data.map((d) => [d.slug, d]));
+      let counts = {}, voted = [];
+      try {
+        const r = await fetch('/api/votes');
+        const j = await r.json();
+        counts = j.counts || {}; voted = j.voted || [];
+      } catch (e) { /* sin conexión: mostrar en 0 */ }
+
+      const render = () => {
+        const items = data
+          .map((d) => ({ ...d, votes: counts[d.slug] || 0, mine: voted.includes(d.slug) }))
+          .sort((a, b) => b.votes - a.votes)
+          .slice(0, 6);
+        el.innerHTML = items.map((x) => `
+          <div class="voted-card">
+            <a href="${x.url}" class="vc-media"><img src="${x.cover}" alt="${x.title}" loading="lazy"></a>
+            <div class="vc-body">
+              <a href="${x.url}"><h3>${x.title}</h3></a>
+              <div class="vc-foot">
+                <span class="vc-count"><b>${x.votes}</b> ${votesTxt}</span>
+                <button class="vc-btn" data-slug="${x.slug}" ${x.mine ? 'disabled' : ''}>${x.mine ? votedTxt + ' ✓' : voteTxt}</button>
+              </div>
+            </div>
+          </div>`).join('');
+        el.querySelectorAll('.vc-btn:not([disabled])').forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            const slug = btn.dataset.slug;
+            btn.disabled = true;
+            try {
+              const r = await fetch('/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slug }) });
+              const j = await r.json();
+              if (j.votes != null) counts[slug] = j.votes;
+              if (!voted.includes(slug)) voted.push(slug);
+            } catch (e) {}
+            render();
+          });
+        });
+      };
+      render();
+    })();
+  </script>
+
+  <!-- PROGRAMAS (todas las experiencias, como en /experiences) -->
+  <section class="mkt-wrap" id="programas">
+    <div class="sec-head">
+      <p class="eyebrow">{t.programsEyebrow}</p>
+      <h2>{t.programsTitle}</h2>
+    </div>
+    <div class="mkt-filters" id="filters">
+      <button class="mkt-chip" data-f="all" aria-pressed="true">{t.allEvents}</button>
+      <button class="mkt-chip" data-f="evento" aria-pressed="false">{t.events}</button>
+      <button class="mkt-chip" data-f="viaje" aria-pressed="false">{t.trips}</button>
+    </div>
+    <div class="mkt-grid">
+      {experiences.map((x) => (
+        <a class="xp-card" href={`${xbase}/${x.slug}/`} data-type={x.type}>
+          <div class="media">
+            <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
+            <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? t.events.replace(/s$/, '') : (L ? 'Viaje' : 'Trip')}</span>
+          </div>
+          <div class="body">
+            <div class="meta"><span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {x.startDate ? fmtDate(x.startDate) : ''}</span></div>
+            <h3>{x.title}</h3>
+            <p class="summary">{x.summary}</p>
+            <div class="foot"><span class="xp-price" set:html={price(x)} /><span class="xp-pub">{x.publisher?.type === 'tgs' ? 'TNGS' : x.publisher?.name}</span></div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ALIADOS -->
+  <section class="ally-band">
+    <div class="mkt-wrap ally-inner">
+      <div>
+        <p class="eyebrow">{t.allyEyebrow}</p>
+        <h2>{t.allyTitle}</h2>
+        <p class="lead">{t.allyLead}</p>
+        <ul class="ally-points">{t.allyPoints.map((p) => <li>{p}</li>)}</ul>
+        <a class="btn-primary" href={applyUrl}>{t.becomeAlly}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEL BLOG (SEO + reputación) -->
+  <section class="mkt-wrap" id="blog">
+    <div class="sec-head">
+      <p class="eyebrow">{t.blogEyebrow}</p>
+      <h2>{t.blogTitle}</h2>
+    </div>
+    <div class="mkt-grid">
+      {posts.map((p) => (
+        <a class="xp-card" href={`/${p.data.slug}/`}>
+          <div class="media"><img src={p.data.hero} alt={p.data.title} width="400" height="250" loading="lazy" /></div>
+          <div class="body">
+            <h3>{p.data.title}</h3>
+            <p class="summary">{(p.data.description || '').slice(0, 120)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+    <p style="text-align:center;margin-top:2rem"><a class="btn-ghost" href="/blog/">{t.blogAll} →</a></p>
+  </section>
+
+  <script>
+    const chips = document.querySelectorAll('.mkt-chip');
+    const cards = document.querySelectorAll<HTMLElement>('#programas .xp-card');
+    const apply = (f: string) => {
+      chips.forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.f === f)));
+      cards.forEach((c) => (c.style.display = f === 'all' || c.dataset.type === f ? '' : 'none'));
+    };
+    chips.forEach((c) => c.addEventListener('click', () => apply((c as HTMLElement).dataset.f!)));
+  </script>
+</MarketplaceLayout>

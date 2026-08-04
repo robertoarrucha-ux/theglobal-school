@@ -1,0 +1,1077 @@
+{
+  "hosting": [
+    {
+      "target": "en",
+      "public": "dist-en",
+      "cleanUrls": false,
+      "trailingSlashBehavior": "ADD",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/api/lead",
+          "function": "submitLead"
+        },
+        {
+          "source": "/api/votes",
+          "function": "marketplaceVotes"
+        }
+      ],
+      "redirects": [
+        {
+          "source": "/12303/",
+          "destination": "https://es.theglobal.school/top-5-lideres/",
+          "type": 301
+        },
+        {
+          "source": "/16965/",
+          "destination": "https://es.theglobal.school/oxcem-latin-american-leaders-awards/",
+          "type": 301
+        },
+        {
+          "source": "/22186-2/",
+          "destination": "https://es.theglobal.school/malegarcia/",
+          "type": 301
+        },
+        {
+          "source": "/404-2/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/5-consejos-vida-sustentable/",
+          "destination": "/tips-how-to-live-a-sustainable-lifestyle/",
+          "type": 301
+        },
+        {
+          "source": "/7-razones-por-las-cuales-amamos-viena/",
+          "destination": "https://es.theglobal.school/viena-ciudad-inteligente/",
+          "type": 301
+        },
+        {
+          "source": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "destination": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
+          "type": 301
+        },
+        {
+          "source": "/a-la-opinion-publica-cuidado-con-supuesta-denuncia/",
+          "destination": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "type": 301
+        },
+        {
+          "source": "/about-the-global-school-for-new-leadership/",
+          "destination": "/about/",
+          "type": 301
+        },
+        {
+          "source": "/about/",
+          "destination": "https://theglobal.school/about-us/",
+          "type": 301
+        },
+        {
+          "source": "/airbnb-partners-with-safe-ireland-and-womens-aid-to-offer-free-accommodation-for-domestic-violence-survivors/",
+          "destination": "https://theglobal.school/airbnb-violence-survivors/",
+          "type": 301
+        },
+        {
+          "source": "/alojamiento-gratuito-violencia-domestica/",
+          "destination": "https://es.theglobal.school/airbnb-alojamiento-gratuito/",
+          "type": 301
+        },
+        {
+          "source": "/alojamiento-gratuito-violencia/",
+          "destination": "https://es.theglobal.school/airbnb-alojamiento-gratuito/",
+          "type": 301
+        },
+        {
+          "source": "/batalla-por-supervivencia/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/bienvenido/",
+          "destination": "https://es.theglobal.school/conviertete-en-analista-columnista/",
+          "type": 301
+        },
+        {
+          "source": "/can-ai-cheat-your-boss-and-professor-forever/",
+          "destination": "https://theglobal.school/how-to-stop-ai-from-cheating/",
+          "type": 301
+        },
+        {
+          "source": "/can-women-lead-an-army/",
+          "destination": "/women-leadership/",
+          "type": 301
+        },
+        {
+          "source": "/casi-el-90-de-los-hombres-y-mujeres-en-el-mundo-expresan-un-sesgo-contra-las-mujeres/",
+          "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/ciudad-segura-y-sustentable/",
+          "destination": "https://es.theglobal.school/estrategias-para-ciudades-seguras-y-sustentables/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-a-guatemala/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-ambiental/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-climatico/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-natural/",
+          "destination": "/how-can-we-help-when-a-natural-disasters-happen/",
+          "type": 301
+        },
+        {
+          "source": "/como-me-beneficia-o-perjudica-el-nuevo-acuerdo-de-la-union-europea-y-mexico/",
+          "destination": "https://es.theglobal.school/como-me-afecta-el-nuevo-acuerdo-de-la-union-europea-y-mexico/",
+          "type": 301
+        },
+        {
+          "source": "/como-trabajar-en-red-para-poder-sobrevivir-esta-crisis/",
+          "destination": "https://es.theglobal.school/trabajo-en-red/",
+          "type": 301
+        },
+        {
+          "source": "/consejos-de-vida-sustentable-para-la-vida-en-el-hogar/",
+          "destination": "/5-consejos-vida-sustentable/",
+          "type": 301
+        },
+        {
+          "source": "/consumo-en-tiempos-de-covid/",
+          "destination": "https://es.theglobal.school/vida-sustentable-y-saludable/",
+          "type": 301
+        },
+        {
+          "source": "/covid-19-como-superar-el-confinamiento-en-casa-y-la-cuarentena/",
+          "destination": "https://es.theglobal.school/superar-confinamiento-y-cuarentena/",
+          "type": 301
+        },
+        {
+          "source": "/curso-sambito/",
+          "destination": "/curso-liderazgo-y-estrategia-premios-verdes/",
+          "type": 301
+        },
+        {
+          "source": "/desarrollo-sostenible-un-planeta-superpoblado-superproductivo-y-gloton/",
+          "destination": "https://es.theglobal.school/desarrollo-sostenible/",
+          "type": 301
+        },
+        {
+          "source": "/directora-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
+          "destination": "https://es.theglobal.school/direccion-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
+          "type": 301
+        },
+        {
+          "source": "/disminuir-la-violencia/",
+          "destination": "https://es.theglobal.school/estrategias-para-ciudades-seguras-y-sustentables/",
+          "type": 301
+        },
+        {
+          "source": "/economia-de-la-dona-podemos-regenerar-nuestro-planeta/",
+          "destination": "https://es.theglobal.school/economia-de-la-dona/",
+          "type": 301
+        },
+        {
+          "source": "/el-decrecimiento-la-teoria-de-la-abundancia-radical/",
+          "destination": "https://es.theglobal.school/decrecimiento/",
+          "type": 301
+        },
+        {
+          "source": "/el-imperativo-de-poner-fin-a-los-delitos-contra-la-vida-silvestre/",
+          "destination": "https://es.theglobal.school/vida-silvestre/",
+          "type": 301
+        },
+        {
+          "source": "/el-trabajo-remoto-es-una-solucion-real/",
+          "destination": "https://es.theglobal.school/trabajo-remoto/",
+          "type": 301
+        },
+        {
+          "source": "/energy-management-systems-iso-14001/",
+          "destination": "https://es.theglobal.school/certificacion-en-gestion-ambiental-iso-14001/",
+          "type": 301
+        },
+        {
+          "source": "/event-organizations-academy-communities/",
+          "destination": "/the-new-global-school-communities-events-education/",
+          "type": 301
+        },
+        {
+          "source": "/event-tech-digital-solutions-for-event-organizers/",
+          "destination": "/event-organizations-academy-communities/",
+          "type": 301
+        },
+        {
+          "source": "/happiness-in-europe/",
+          "destination": "https://theglobal.school/happiness-is-expensive/",
+          "type": 301
+        },
+        {
+          "source": "/happiness-of-europe/",
+          "destination": "https://theglobal.school/happiness-is-expensive/",
+          "type": 301
+        },
+        {
+          "source": "/historia-sobre-la-extincion-humana/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/holistic-development-for-planetary-wellbeing/",
+          "destination": "https://theglobal.school/holistic-development/",
+          "type": 301
+        },
+        {
+          "source": "/human-interaction/",
+          "destination": "https://theglobal.school/remote-work/",
+          "type": 301
+        },
+        {
+          "source": "/ideologia/",
+          "destination": "https://es.theglobal.school/el-capitalismo-ha-muerto/",
+          "type": 301
+        },
+        {
+          "source": "/innovation-box/",
+          "destination": "/innovation-toolbox-for-ceos-and-founders/",
+          "type": 301
+        },
+        {
+          "source": "/insostenible/",
+          "destination": "https://es.theglobal.school/extincion-o-evolucion/",
+          "type": 301
+        },
+        {
+          "source": "/investigacion-las-mujeres-obtienen-puntajes-mas-altos-que-los-hombres-en-la-mayoria-de-las-habilidades-de-liderazgo/",
+          "destination": "https://es.theglobal.school/mujeres-liderazgo/",
+          "type": 301
+        },
+        {
+          "source": "/its-time-for-impact-driven-events-what-can-the-events-industry-learn-from-the-coronavirus-crisis/",
+          "destination": "https://theglobal.school/events-industry/",
+          "type": 301
+        },
+        {
+          "source": "/ivan-fernando-flores-macias/",
+          "destination": "https://es.theglobal.school/fernando-ivan-flores-macias/",
+          "type": 301
+        },
+        {
+          "source": "/la-batalla-por-la-supervivencia-da-inicio/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/la-crisis-global-del-sistema-covid-19/",
+          "destination": "https://es.theglobal.school/crisis-global/",
+          "type": 301
+        },
+        {
+          "source": "/la-extincion-de-la-especie-humana-2050/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/la-peor-pesadilla-de-europa/",
+          "destination": "https://es.theglobal.school/la-peor-pesadilla-de-europa-europa-en-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/latin-american-leaders-awards/",
+          "destination": "https://es.theglobal.school/latin-american-leaders-awards-2019/",
+          "type": 301
+        },
+        {
+          "source": "/launch-your-global-school-community-events-education-academy/",
+          "destination": "https://es.theglobal.school/tu-escuela-global-comunidad-eventos-educacion/",
+          "type": 301
+        },
+        {
+          "source": "/lessons-from-indigenous-to-resist-the-crisis/",
+          "destination": "https://theglobal.school/lessons-indigenous/",
+          "type": 301
+        },
+        {
+          "source": "/lessons-from-indigenous/",
+          "destination": "https://theglobal.school/lessons-indigenous/",
+          "type": 301
+        },
+        {
+          "source": "/letter-to-humanity-since-2050/",
+          "destination": "https://theglobal.school/letter-to-humanity-from-2050/",
+          "type": 301
+        },
+        {
+          "source": "/libro-mente-cuerpo-espiritu-roberto-arrucha/",
+          "destination": "https://es.theglobal.school/roberto-arrucha-libro/",
+          "type": 301
+        },
+        {
+          "source": "/liderando-la-economia-circular/",
+          "destination": "https://es.theglobal.school/liderazgo-en-economia-circular/",
+          "type": 301
+        },
+        {
+          "source": "/liderazgo-hacia-las-destinos-inteligentes/",
+          "destination": "https://es.theglobal.school/destinos-inteligentes-tequila/",
+          "type": 301
+        },
+        {
+          "source": "/liderazgo-por-la-vida-y-el-planeta/",
+          "destination": "https://es.theglobal.school/liderazgo-desde-la-cuna-curso/",
+          "type": 301
+        },
+        {
+          "source": "/mujeres-autenticas-2/",
+          "destination": "https://es.theglobal.school/mujeres-autenticas-votaciones/",
+          "type": 301
+        },
+        {
+          "source": "/mujeres-autenticas-20/",
+          "destination": "https://es.theglobal.school/mujeres-autenticas-2023/",
+          "type": 301
+        },
+        {
+          "source": "/nuestro-nuevo-conjunto-de-herramientas-plantea-preguntas-criticas-sobre-las-tecnologias-gubernamentales/",
+          "destination": "https://es.theglobal.school/tecnologias-gubernamentales/",
+          "type": 301
+        },
+        {
+          "source": "/nueva-etapa-the-global-school-for-new-leadership/",
+          "destination": "/new-era-the-global-school-for-new-leadership/",
+          "type": 301
+        },
+        {
+          "source": "/online-will-never-replace-human-interaction/",
+          "destination": "https://theglobal.school/remote-work/",
+          "type": 301
+        },
+        {
+          "source": "/paises-mas-contaminantes-de-america-latina/",
+          "destination": "https://es.theglobal.school/paises-contaminantes-de-america-latina/",
+          "type": 301
+        },
+        {
+          "source": "/pasantias-pagadas-analisis-y-creacion-de-contenido/",
+          "destination": "/internship-youtuber/",
+          "type": 301
+        },
+        {
+          "source": "/project/purpose-driven-career-masterclass/",
+          "destination": "/purpose-driven-career-masterclass/",
+          "type": 301
+        },
+        {
+          "source": "/qepd-capitalismo/",
+          "destination": "https://es.theglobal.school/el-capitalismo-ha-muerto/",
+          "type": 301
+        },
+        {
+          "source": "/que-le-quieren-decir-al-mundo-los-pueblos-indigenas-sobre-el-covid-19/",
+          "destination": "https://es.theglobal.school/indigenas-covid19/",
+          "type": 301
+        },
+        {
+          "source": "/research-women-score-higher-than-men-in-most-leadership-skills/",
+          "destination": "https://theglobal.school/women-leadership/",
+          "type": 301
+        },
+        {
+          "source": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
+          "destination": "/404-2/",
+          "type": 301
+        },
+        {
+          "source": "/security-operations-management-systems-iso-18788/",
+          "destination": "https://theglobal.school/iso-21001-educational-organizations-management/",
+          "type": 301
+        },
+        {
+          "source": "/seopress_404/curso-2/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/seopress_404/launch-your-global-school-community-events-education-academy/",
+          "destination": "/event-organizations-academy-communities/",
+          "type": 301
+        },
+        {
+          "source": "/sesgo-contra-mujeres/",
+          "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/sharing-power-to-rebuild-public-trust/",
+          "destination": "https://theglobal.school/sharing-power-public-trust/",
+          "type": 301
+        },
+        {
+          "source": "/speakers-requests/",
+          "destination": "https://theglobal.school/startups-and-speakers-applications/",
+          "type": 301
+        },
+        {
+          "source": "/superar-confinamiento/",
+          "destination": "https://es.theglobal.school/superar-confinamiento-y-cuarentena/",
+          "type": 301
+        },
+        {
+          "source": "/tag/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/testimonial/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/the-future-is-now-european-union-and-latin-american-eu-lac/",
+          "destination": "/european-union-and-latin-american-eu-lac-celac/",
+          "type": 301
+        },
+        {
+          "source": "/the-global-covid-19-system-crisis/",
+          "destination": "https://theglobal.school/system-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/the-story-of-digital-hikoi/",
+          "destination": "https://theglobal.school/journey-with-the-indigenous-of-brazil/",
+          "type": 301
+        },
+        {
+          "source": "/the-war-of-china-and-the-usa-must-be-against-climate-change/",
+          "destination": "https://es.theglobal.school/guerra-china-contra-eeuu-y-cambio-climatico/",
+          "type": 301
+        },
+        {
+          "source": "/theglobal.school/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/tools/",
+          "destination": "https://theglobal.school/tools2/",
+          "type": 301
+        },
+        {
+          "source": "/transforming-culture/",
+          "destination": "https://theglobal.school/cultural-transformation-by-leaders/",
+          "type": 301
+        },
+        {
+          "source": "/tras-las-huellas-de-los-componentes-de-la-salud-fisica/",
+          "destination": "https://es.theglobal.school/estudio-actividad-fisica/",
+          "type": 301
+        },
+        {
+          "source": "/una-mirada-hacia-el-futuro-del-liderazgo-en-tiempos-de-crisis-posliderazgo/",
+          "destination": "https://es.theglobal.school/posliderazgo/",
+          "type": 301
+        },
+        {
+          "source": "/vienna-housing-model-programme/",
+          "destination": "/vienna-housing-international-congress/",
+          "type": 301
+        },
+        {
+          "source": "/will-the-coronavirus-help-humanity-survive-the-environmental-crisis/",
+          "destination": "https://theglobal.school/environmental-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/world-localization-day/",
+          "destination": "https://theglobal.school/localization-day/",
+          "type": 301
+        }
+      ],
+      "headers": [
+        {
+          "source": "/media/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css|woff2)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "public": "dist-es",
+      "cleanUrls": false,
+      "trailingSlashBehavior": "ADD",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/api/lead",
+          "function": "submitLead"
+        },
+        {
+          "source": "/api/votes",
+          "function": "marketplaceVotes"
+        }
+      ],
+      "redirects": [
+        {
+          "source": "/12303/",
+          "destination": "https://es.theglobal.school/top-5-lideres/",
+          "type": 301
+        },
+        {
+          "source": "/16965/",
+          "destination": "https://es.theglobal.school/oxcem-latin-american-leaders-awards/",
+          "type": 301
+        },
+        {
+          "source": "/22186-2/",
+          "destination": "https://es.theglobal.school/malegarcia/",
+          "type": 301
+        },
+        {
+          "source": "/404-2/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/5-consejos-vida-sustentable/",
+          "destination": "/tips-how-to-live-a-sustainable-lifestyle/",
+          "type": 301
+        },
+        {
+          "source": "/7-razones-por-las-cuales-amamos-viena/",
+          "destination": "https://es.theglobal.school/viena-ciudad-inteligente/",
+          "type": 301
+        },
+        {
+          "source": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "destination": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
+          "type": 301
+        },
+        {
+          "source": "/a-la-opinion-publica-cuidado-con-supuesta-denuncia/",
+          "destination": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "type": 301
+        },
+        {
+          "source": "/about-the-global-school-for-new-leadership/",
+          "destination": "/about/",
+          "type": 301
+        },
+        {
+          "source": "/about/",
+          "destination": "https://theglobal.school/about-us/",
+          "type": 301
+        },
+        {
+          "source": "/airbnb-partners-with-safe-ireland-and-womens-aid-to-offer-free-accommodation-for-domestic-violence-survivors/",
+          "destination": "https://theglobal.school/airbnb-violence-survivors/",
+          "type": 301
+        },
+        {
+          "source": "/alojamiento-gratuito-violencia-domestica/",
+          "destination": "https://es.theglobal.school/airbnb-alojamiento-gratuito/",
+          "type": 301
+        },
+        {
+          "source": "/alojamiento-gratuito-violencia/",
+          "destination": "https://es.theglobal.school/airbnb-alojamiento-gratuito/",
+          "type": 301
+        },
+        {
+          "source": "/batalla-por-supervivencia/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/bienvenido/",
+          "destination": "https://es.theglobal.school/conviertete-en-analista-columnista/",
+          "type": 301
+        },
+        {
+          "source": "/can-ai-cheat-your-boss-and-professor-forever/",
+          "destination": "https://theglobal.school/how-to-stop-ai-from-cheating/",
+          "type": 301
+        },
+        {
+          "source": "/casi-el-90-de-los-hombres-y-mujeres-en-el-mundo-expresan-un-sesgo-contra-las-mujeres/",
+          "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/ciudad-segura-y-sustentable/",
+          "destination": "https://es.theglobal.school/estrategias-para-ciudades-seguras-y-sustentables/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-a-guatemala/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-ambiental/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-climatico/",
+          "destination": "/como-ayudar-ante-un-desastre-natural/",
+          "type": 301
+        },
+        {
+          "source": "/como-ayudar-ante-un-desastre-natural/",
+          "destination": "/how-can-we-help-when-a-natural-disasters-happen/",
+          "type": 301
+        },
+        {
+          "source": "/como-me-beneficia-o-perjudica-el-nuevo-acuerdo-de-la-union-europea-y-mexico/",
+          "destination": "https://es.theglobal.school/como-me-afecta-el-nuevo-acuerdo-de-la-union-europea-y-mexico/",
+          "type": 301
+        },
+        {
+          "source": "/como-trabajar-en-red-para-poder-sobrevivir-esta-crisis/",
+          "destination": "https://es.theglobal.school/trabajo-en-red/",
+          "type": 301
+        },
+        {
+          "source": "/consejos-de-vida-sustentable-para-la-vida-en-el-hogar/",
+          "destination": "/5-consejos-vida-sustentable/",
+          "type": 301
+        },
+        {
+          "source": "/consumo-en-tiempos-de-covid/",
+          "destination": "https://es.theglobal.school/vida-sustentable-y-saludable/",
+          "type": 301
+        },
+        {
+          "source": "/covid-19-como-superar-el-confinamiento-en-casa-y-la-cuarentena/",
+          "destination": "https://es.theglobal.school/superar-confinamiento-y-cuarentena/",
+          "type": 301
+        },
+        {
+          "source": "/curso-sambito/",
+          "destination": "/curso-liderazgo-y-estrategia-premios-verdes/",
+          "type": 301
+        },
+        {
+          "source": "/desarrollo-sostenible-un-planeta-superpoblado-superproductivo-y-gloton/",
+          "destination": "https://es.theglobal.school/desarrollo-sostenible/",
+          "type": 301
+        },
+        {
+          "source": "/directora-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
+          "destination": "https://es.theglobal.school/direccion-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
+          "type": 301
+        },
+        {
+          "source": "/disminuir-la-violencia/",
+          "destination": "https://es.theglobal.school/estrategias-para-ciudades-seguras-y-sustentables/",
+          "type": 301
+        },
+        {
+          "source": "/economia-de-la-dona-podemos-regenerar-nuestro-planeta/",
+          "destination": "https://es.theglobal.school/economia-de-la-dona/",
+          "type": 301
+        },
+        {
+          "source": "/educacion-global-para-lideres-de-gobierno-y-empresa/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/el-decrecimiento-la-teoria-de-la-abundancia-radical/",
+          "destination": "https://es.theglobal.school/decrecimiento/",
+          "type": 301
+        },
+        {
+          "source": "/el-imperativo-de-poner-fin-a-los-delitos-contra-la-vida-silvestre/",
+          "destination": "https://es.theglobal.school/vida-silvestre/",
+          "type": 301
+        },
+        {
+          "source": "/el-trabajo-remoto-es-una-solucion-real/",
+          "destination": "https://es.theglobal.school/trabajo-remoto/",
+          "type": 301
+        },
+        {
+          "source": "/energy-management-systems-iso-14001/",
+          "destination": "https://es.theglobal.school/certificacion-en-gestion-ambiental-iso-14001/",
+          "type": 301
+        },
+        {
+          "source": "/es-tiempo-de-repensar-los-eventos-que-puede-aprender-la-industria-de-eventos-de-la-crisis-del-coronavirus/",
+          "destination": "/eventos-coronavirus/",
+          "type": 301
+        },
+        {
+          "source": "/es.theglobal.school/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/estresado-este-estudio-dice-que-simplemente-necesita-una-pildora-natural-de-20-minutos/",
+          "destination": "/pildora-natural/",
+          "type": 301
+        },
+        {
+          "source": "/event-organizations-academy-communities/",
+          "destination": "https://theglobal.school/the-new-global-school-communities-events-education/",
+          "type": 301
+        },
+        {
+          "source": "/event-tech-digital-solutions-for-event-organizers/",
+          "destination": "/event-organizations-academy-communities/",
+          "type": 301
+        },
+        {
+          "source": "/happiness-in-europe/",
+          "destination": "https://theglobal.school/happiness-is-expensive/",
+          "type": 301
+        },
+        {
+          "source": "/happiness-of-europe/",
+          "destination": "https://theglobal.school/happiness-is-expensive/",
+          "type": 301
+        },
+        {
+          "source": "/historia-sobre-la-extincion-humana/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/holistic-development-for-planetary-wellbeing/",
+          "destination": "https://theglobal.school/holistic-development/",
+          "type": 301
+        },
+        {
+          "source": "/human-interaction/",
+          "destination": "https://theglobal.school/remote-work/",
+          "type": 301
+        },
+        {
+          "source": "/ideologia/",
+          "destination": "https://es.theglobal.school/el-capitalismo-ha-muerto/",
+          "type": 301
+        },
+        {
+          "source": "/innovation-box/",
+          "destination": "https://theglobal.school/innovation-toolbox-for-ceos-and-founders/",
+          "type": 301
+        },
+        {
+          "source": "/insostenible/",
+          "destination": "https://es.theglobal.school/extincion-o-evolucion/",
+          "type": 301
+        },
+        {
+          "source": "/investigacion-las-mujeres-obtienen-puntajes-mas-altos-que-los-hombres-en-la-mayoria-de-las-habilidades-de-liderazgo/",
+          "destination": "https://es.theglobal.school/mujeres-liderazgo/",
+          "type": 301
+        },
+        {
+          "source": "/its-time-for-impact-driven-events-what-can-the-events-industry-learn-from-the-coronavirus-crisis/",
+          "destination": "https://theglobal.school/events-industry/",
+          "type": 301
+        },
+        {
+          "source": "/ivan-fernando-flores-macias/",
+          "destination": "https://es.theglobal.school/fernando-ivan-flores-macias/",
+          "type": 301
+        },
+        {
+          "source": "/la-batalla-por-la-supervivencia-da-inicio/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/la-crisis-global-del-sistema-covid-19/",
+          "destination": "https://es.theglobal.school/crisis-global/",
+          "type": 301
+        },
+        {
+          "source": "/la-extincion-de-la-especie-humana-2050/",
+          "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/la-peor-pesadilla-de-europa/",
+          "destination": "https://es.theglobal.school/la-peor-pesadilla-de-europa-europa-en-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/latin-american-leaders-awards/",
+          "destination": "/latin-american-leaders-awards-2019/",
+          "type": 301
+        },
+        {
+          "source": "/launch-your-global-school-community-events-education-academy/",
+          "destination": "https://es.theglobal.school/tu-escuela-global-comunidad-eventos-educacion/",
+          "type": 301
+        },
+        {
+          "source": "/lessons-from-indigenous-to-resist-the-crisis/",
+          "destination": "https://theglobal.school/lessons-indigenous/",
+          "type": 301
+        },
+        {
+          "source": "/lessons-from-indigenous/",
+          "destination": "https://theglobal.school/lessons-indigenous/",
+          "type": 301
+        },
+        {
+          "source": "/letter-to-humanity-since-2050/",
+          "destination": "https://theglobal.school/letter-to-humanity-from-2050/",
+          "type": 301
+        },
+        {
+          "source": "/libro-mente-cuerpo-espiritu-roberto-arrucha/",
+          "destination": "https://es.theglobal.school/roberto-arrucha-libro/",
+          "type": 301
+        },
+        {
+          "source": "/liderando-la-economia-circular/",
+          "destination": "https://es.theglobal.school/liderazgo-en-economia-circular/",
+          "type": 301
+        },
+        {
+          "source": "/liderazgo-hacia-las-destinos-inteligentes/",
+          "destination": "https://es.theglobal.school/destinos-inteligentes-tequila/",
+          "type": 301
+        },
+        {
+          "source": "/liderazgo-por-la-vida-y-el-planeta/",
+          "destination": "https://es.theglobal.school/liderazgo-desde-la-cuna-curso/",
+          "type": 301
+        },
+        {
+          "source": "/membresias/",
+          "destination": "/miembros-asociados/",
+          "type": 301
+        },
+        {
+          "source": "/mujeres-autenticas-2/",
+          "destination": "https://es.theglobal.school/mujeres-autenticas-votaciones/",
+          "type": 301
+        },
+        {
+          "source": "/mujeres-autenticas-20/",
+          "destination": "https://es.theglobal.school/mujeres-autenticas-2023/",
+          "type": 301
+        },
+        {
+          "source": "/nominaciones-latin-american-leaders-awards/",
+          "destination": "https://awards.pro-latam.org/nominate",
+          "type": 301
+        },
+        {
+          "source": "/nominaciones-mujeres-autenticas/",
+          "destination": "https://awards.pro-latam.org/nominate",
+          "type": 301
+        },
+        {
+          "source": "/nuestro-nuevo-conjunto-de-herramientas-plantea-preguntas-criticas-sobre-las-tecnologias-gubernamentales/",
+          "destination": "https://es.theglobal.school/tecnologias-gubernamentales/",
+          "type": 301
+        },
+        {
+          "source": "/nueva-etapa-the-global-school-for-new-leadership/",
+          "destination": "/new-era-the-global-school-for-new-leadership/",
+          "type": 301
+        },
+        {
+          "source": "/online-will-never-replace-human-interaction/",
+          "destination": "https://theglobal.school/remote-work/",
+          "type": 301
+        },
+        {
+          "source": "/paises-mas-contaminantes-de-america-latina/",
+          "destination": "https://es.theglobal.school/paises-contaminantes-de-america-latina/",
+          "type": 301
+        },
+        {
+          "source": "/pasantias-pagadas-analisis-y-creacion-de-contenido/",
+          "destination": "https://theglobal.school/internship-youtuber/",
+          "type": 301
+        },
+        {
+          "source": "/qepd-capitalismo/",
+          "destination": "https://es.theglobal.school/el-capitalismo-ha-muerto/",
+          "type": 301
+        },
+        {
+          "source": "/que-le-quieren-decir-al-mundo-los-pueblos-indigenas-sobre-el-covid-19/",
+          "destination": "https://es.theglobal.school/indigenas-covid19/",
+          "type": 301
+        },
+        {
+          "source": "/research-women-score-higher-than-men-in-most-leadership-skills/",
+          "destination": "https://theglobal.school/women-leadership/",
+          "type": 301
+        },
+        {
+          "source": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
+          "destination": "/404-2/",
+          "type": 301
+        },
+        {
+          "source": "/security-operations-management-systems-iso-18788/",
+          "destination": "https://theglobal.school/iso-21001-educational-organizations-management/",
+          "type": 301
+        },
+        {
+          "source": "/sesgo-contra-mujeres/",
+          "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/sharing-power-to-rebuild-public-trust/",
+          "destination": "https://theglobal.school/sharing-power-public-trust/",
+          "type": 301
+        },
+        {
+          "source": "/speakers-requests/",
+          "destination": "https://theglobal.school/startups-and-speakers-applications/",
+          "type": 301
+        },
+        {
+          "source": "/superar-confinamiento/",
+          "destination": "https://es.theglobal.school/superar-confinamiento-y-cuarentena/",
+          "type": 301
+        },
+        {
+          "source": "/tag/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/testimonial/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/the-future-is-now-european-union-and-latin-american-eu-lac/",
+          "destination": "/european-union-and-latin-american-eu-lac-celac/",
+          "type": 301
+        },
+        {
+          "source": "/the-global-covid-19-system-crisis/",
+          "destination": "https://theglobal.school/system-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/the-story-of-digital-hikoi/",
+          "destination": "https://theglobal.school/journey-with-the-indigenous-of-brazil/",
+          "type": 301
+        },
+        {
+          "source": "/the-war-of-china-and-the-usa-must-be-against-climate-change/",
+          "destination": "https://es.theglobal.school/guerra-china-contra-eeuu-y-cambio-climatico/",
+          "type": 301
+        },
+        {
+          "source": "/tools/",
+          "destination": "https://theglobal.school/tools2/",
+          "type": 301
+        },
+        {
+          "source": "/transforming-culture/",
+          "destination": "https://theglobal.school/cultural-transformation-by-leaders/",
+          "type": 301
+        },
+        {
+          "source": "/tras-las-huellas-de-los-componentes-de-la-salud-fisica/",
+          "destination": "https://es.theglobal.school/estudio-actividad-fisica/",
+          "type": 301
+        },
+        {
+          "source": "/una-mirada-hacia-el-futuro-del-liderazgo-en-tiempos-de-crisis-posliderazgo/",
+          "destination": "https://es.theglobal.school/posliderazgo/",
+          "type": 301
+        },
+        {
+          "source": "/vienna-housing-model-programme/",
+          "destination": "/vienna-housing-international-congress/",
+          "type": 301
+        },
+        {
+          "source": "/welcome/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/will-the-coronavirus-help-humanity-survive-the-environmental-crisis/",
+          "destination": "https://theglobal.school/environmental-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/world-localization-day/",
+          "destination": "https://theglobal.school/localization-day/",
+          "type": 301
+        }
+      ],
+      "headers": [
+        {
+          "source": "/media/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css|woff2)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "theglobal",
+      "runtime": "nodejs20",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "*.local"
+      ]
+    }
+  ]
+}

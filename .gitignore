@@ -1,0 +1,21 @@
+# Secretos — NUNCA subir
+*firebase-adminsdk*.json
+.env
+.env.local
+.env.*.local
+*serviceAccount*.json
+
+# Build / deps
+node_modules/
+dist/
+dist-en/
+dist-es/
+.astro/
+# NOTA: public/media/ (imágenes migradas, 81MB) SÍ se versiona → el CI las necesita para desplegar sin imágenes rotas.
+
+# Proyectos hermanos que viven aquí pero no son este sitio
+Aliados-GlobalSchool-main/
+Viajes.theglobal.school/
+qidb/
+migration/.venv/
+*.DS_Store

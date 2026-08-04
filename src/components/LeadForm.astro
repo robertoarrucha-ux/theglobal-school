@@ -1,0 +1,76 @@
+---
+import { LANG } from '../lib/site';
+const t = LANG === 'es'
+  ? { name: 'Nombre completo', email: 'Correo electrónico', phone: 'Teléfono (opcional)', interest: 'Tema de interés (opcional)', message: 'Mensaje', send: 'Enviar', ok: '¡Gracias! Hemos recibido tu mensaje.', err: 'Hubo un error. Intenta de nuevo o escríbenos a hello@theglobal.school.' }
+  : { name: 'Full name', email: 'Email address', phone: 'Phone (optional)', interest: 'Topic of interest (optional)', message: 'Message', send: 'Send', ok: 'Thank you! We received your message.', err: 'Something went wrong. Please try again or email hello@theglobal.school.' };
+---
+<form class="lead-form" data-lead-form data-lang={LANG}>
+  <div class="row">
+    <label>{t.name}<input name="name" required autocomplete="name" /></label>
+    <label>{t.email}<input name="email" type="email" required autocomplete="email" /></label>
+  </div>
+  <div class="row">
+    <label>{t.phone}<input name="phone" autocomplete="tel" /></label>
+    <label>{t.interest}<input name="interest" /></label>
+  </div>
+  <label>{t.message}<textarea name="message" rows="5"></textarea></label>
+  {/* honeypot anti-spam (oculto) */}
+  <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+  <button type="submit">{t.send}</button>
+  <p class="form-msg" data-ok={t.ok} data-err={t.err} hidden></p>
+</form>
+
+<style>
+  .lead-form { max-width: 640px; display: grid; gap: 1rem; margin: 1.5rem 0; }
+  .lead-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 560px) { .lead-form .row { grid-template-columns: 1fr; } }
+  .lead-form label { display: grid; gap: .35rem; font-family: var(--font-head); font-weight: 500; font-size: .9rem; color: var(--ink-soft); }
+  .lead-form input, .lead-form textarea {
+    font-family: var(--font-body); font-size: 1rem; padding: .7rem .85rem;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink);
+  }
+  .lead-form input:focus, .lead-form textarea:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+  .lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .lead-form button {
+    justify-self: start; font-family: var(--font-head); font-weight: 600; font-size: 1rem;
+    color: #fff; background: var(--brand); border: 0; border-radius: 999px; padding: .75rem 1.8rem; cursor: pointer;
+  }
+  .lead-form button:hover { background: var(--brand-2); }
+  .lead-form button:disabled { opacity: .6; cursor: default; }
+  .form-msg { font-family: var(--font-head); font-weight: 500; padding: .6rem 0; }
+  .form-msg.ok { color: #1a8f4a; }
+  .form-msg.err { color: #cf2e2e; }
+</style>
+
+<script>
+  document.querySelectorAll('[data-lead-form]').forEach((form) => {
+    const f = form as HTMLFormElement;
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = f.querySelector('button')!;
+      const msg = f.querySelector('.form-msg') as HTMLElement;
+      btn.disabled = true;
+      const data = Object.fromEntries(new FormData(f).entries());
+      (data as any).lang = f.dataset.lang;
+      (data as any).page = location.pathname;
+      try {
+        const r = await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const j = await r.json();
+        if (!j.ok) throw new Error();
+        msg.textContent = msg.dataset.ok!;
+        msg.className = 'form-msg ok';
+        f.reset();
+      } catch {
+        msg.textContent = msg.dataset.err!;
+        msg.className = 'form-msg err';
+      } finally {
+        msg.hidden = false;
+        btn.disabled = false;
+      }
+    });
+  });
+</script>

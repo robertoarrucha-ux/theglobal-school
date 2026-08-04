@@ -1,0 +1,48 @@
+name: Deploy marketplace
+
+# Se ejecuta cuando:
+#  - un aliado/nosotros publicamos/editamos/borramos una experiencia
+#    (la Cloud Function onExperienceChange dispara repository_dispatch), o
+#  - se hace push de cambios de código a main, o
+#  - se lanza manualmente desde la pestaña Actions.
+on:
+  repository_dispatch:
+    types: [marketplace-publish]
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Colapsa ediciones rápidas: un build nuevo cancela el que esté en curso → gana el estado final.
+concurrency:
+  group: deploy-marketplace
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Write service account key
+        run: printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      - name: Build both languages (reads Firestore live)
+        run: npm run build
+        env:
+          FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      - name: Deploy to Firebase Hosting (theglobal-en + theglobal-es)
+        run: npx --yes firebase-tools@13 deploy --only hosting --project gen-lang-client-0345505794 --non-interactive
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json

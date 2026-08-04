@@ -1,0 +1,208 @@
+{
+  "images": [
+    {
+      "id": "hero-expedition",
+      "description": "Vista panorámica de Viena, Austria.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2025/06/Viena-Calidad-de-Vida-y-Ciudad-Inteligente-Diplomado.webp",
+      "imageHint": "Vienna cityscape"
+    },
+    {
+      "id": "napoleon-hero",
+      "description": "Pintura de Napoleón Bonaparte a caballo, simbolizando su ambición y genio estratégico.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Napoleon-Bonaparte-Viaje-Educativo.webp",
+      "imageHint": "historical painting"
+    },
+    {
+      "id": "napoleon-paris",
+      "description": "El Arco del Triunfo en París al anochecer, un monumento encargado por Napoleón.",
+      "imageUrl": "https://picsum.photos/seed/Arc de Triomphe Paris/1080/720",
+      "imageHint": "Arc de Triomphe Paris"
+    },
+    {
+      "id": "napoleon-fontainebleau",
+      "description": "El gran Castillo de Fontainebleau, donde Napoleón abdicó.",
+      "imageUrl": "https://picsum.photos/seed/historic chateau/1080/720",
+      "imageHint": "historic chateau"
+    },
+    {
+      "id": "renaissance-hero",
+      "description": "El Hombre de Vitruvio de Leonardo da Vinci, que representa la mezcla de arte y ciencia durante el Renacimiento.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Los-Maestros-del-Renacimiento-Una-expedicion-dirigida-por-Leonardo-da-Vinci.webp",
+      "imageHint": "Vitruvian Man"
+    },
+    {
+      "id": "renaissance-florence",
+      "description": "El Duomo de Florencia, una obra maestra de la arquitectura renacentista.",
+      "imageUrl": "https://picsum.photos/seed/Florence Duomo/1080/720",
+      "imageHint": "Florence Duomo"
+    },
+    {
+      "id": "renaissance-rome",
+      "description": "El interior de la Capilla Sixtina, mostrando los frescos de Miguel Ángel.",
+      "imageUrl": "https://picsum.photos/seed/Sistine Chapel/1080/720",
+      "imageHint": "Sistine Chapel"
+    },
+    {
+      "id": "interactive-map-placeholder",
+      "description": "Un mapa del mundo estilizado y artístico con rutas dibujadas.",
+      "imageUrl": "https://picsum.photos/seed/map illustration/1080/720",
+      "imageHint": "map illustration"
+    },
+    {
+      "id": "charles-v-hero",
+      "description": "Un retrato del emperador Carlos V, que muestra el poder y la extensión de su imperio.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/La-Ruta-de-Carlos-V.webp",
+      "imageHint": "Charles V portrait"
+    },
+    {
+      "id": "charles-v-brussels",
+      "description": "La Grand-Place de Bruselas, un centro de poder en los dominios de los Habsburgo.",
+      "imageUrl": "https://picsum.photos/seed/Brussels square/1080/720",
+      "imageHint": "Brussels square"
+    },
+    {
+      "id": "charles-v-toledo",
+      "description": "El Alcázar de Toledo, una de las capitales imperiales de Carlos V.",
+      "imageUrl": "https://picsum.photos/seed/Toledo Alcazar/1080/720",
+      "imageHint": "Toledo Alcazar"
+    },
+    {
+      "id": "enlightenment-hero",
+      "description": "Un grabado que representa un salón parisino, el corazón intelectual de la Ilustración.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/El-Gran-Tour-de-las-Luces.webp",
+      "imageHint": "Enlightenment salon"
+    },
+    {
+      "id": "enlightenment-paris",
+      "description": "El Café Procope en París, un lugar de encuentro para filósofos de la Ilustración.",
+      "imageUrl": "https://picsum.photos/seed/Paris cafe/1080/720",
+      "imageHint": "Paris cafe"
+    },
+    {
+      "id": "enlightenment-rome",
+      "description": "El Panteón de Roma, admirado por los pensadores de la Ilustración por su perfección clásica.",
+      "imageUrl": "https://picsum.photos/seed/Rome Pantheon/1080/720",
+      "imageHint": "Rome Pantheon"
+    },
+    {
+      "id": "empire-flavors-hero",
+      "description": "Un bodegón inspirado en el barroco con quesos, embutidos, pan rústico y una jarra de vino, que sugiere un festín histórico.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Sabores-del-Imperio.webp",
+      "imageHint": "historic feast"
+    },
+    {
+      "id": "gutenberg-revolution-hero",
+      "description": "Una réplica de la imprenta de Gutenberg, con tipos de metal y papel recién impreso.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/La-Revolucion-de-Gutenberg.webp",
+      "imageHint": "old printing press"
+    },
+    {
+      "id": "olympia-hero",
+      "description": "Una estatua de un lanzador de disco griego antiguo, congelada en el tiempo, en el sitio arqueológico de Olimpia.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Olympia-El-Legado.webp",
+      "imageHint": "greek statue"
+    },
+    {
+      "id": "testimonial-lorena",
+      "description": "Retrato de Lorena Gómez.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-marcela",
+      "description": "Retrato de Marcela Mejía.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/06/Liz-Marcela-Summit-circle-cropped-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-irma",
+      "description": "Retrato de Irma Murillo.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/06/Irma-Murillo-leaders-circle-cropped-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-billy",
+      "description": "Retrato de Billy Batware.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2020/07/Billy-crop-circle-300x300.png",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-natalia",
+      "description": "Retrato de Natalia Lever.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/05/Natalia-Lever-Circle-Alumni-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-juliana",
+      "description": "Retrato de Juliana Galindo.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/05/Juliana-Galindo-circle-alumni-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-karina",
+      "description": "Retrato de Karina Nuñez.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/05/Karina-Circle-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-veronica",
+      "description": "Retrato de Verónica Narvaez.",
+      "imageUrl": "https://es.theglobal.school/wp-content/uploads/2019/06/Veronica-Narvaez-circle-cropped-2-300x300.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "french-revolution-hero",
+      "description": "La pintura 'La Libertad guiando al pueblo' de Delacroix, simbolizando el fervor revolucionario.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/La-Revolucion-Francesa.webp",
+      "imageHint": "revolution painting"
+    },
+    {
+      "id": "industrial-revolution-uk-hero",
+      "description": "Una imagen evocadora de una fábrica de la era industrial en el Reino Unido, con chimeneas y vapor.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/La-Revolucion-Industrial-El-Mundo-Forjado-a-Vapor.webp",
+      "imageHint": "industrial factory"
+    },
+    {
+      "id": "great-war-hero",
+      "description": "Una foto en blanco y negro de soldados en una trinchera de la Primera Guerra Mundial, evocando la sombría realidad del conflicto.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Ecos-de-la-Gran-Guerra.webp",
+      "imageHint": "war trenches"
+    },
+    {
+      "id": "ww2-hero",
+      "description": "Soldados desembarcando en una playa de Normandía durante el Día D, simbolizando el esfuerzo aliado.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Europa-en-la-Sombra-de-la-II-Guerra.webp",
+      "imageHint": "normandy landing"
+    },
+    {
+      "id": "cold-war-hero",
+      "description": "El Muro de Berlín con la Puerta de Brandeburgo al fondo, un poderoso símbolo de la división y posterior reunificación.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/El-Telon-de-Acero-guerra-fria-De-la-Division-a-la-Europa-Unida.webp",
+      "imageHint": "berlin wall"
+    },
+    {
+      "id": "cheese-wine-hero",
+      "description": "Una tabla rústica de madera con una selección de quesos artesanales, uvas y una copa de vino tinto.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/La-Ruta-del-Queso-y-el-Vino-en-Europa.webp",
+      "imageHint": "cheese wine"
+    },
+    {
+      "id": "imperial-feasts-hero",
+      "description": "Un gran salón de banquetes de estilo barroco, con una larga mesa lujosamente dispuesta para un festín.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Festines-Imperiales-Un-Viaje-por-la-Abundancia-Europea.webp",
+      "imageHint": "grand banquet"
+    },
+    {
+      "id": "beer-tour-hero",
+      "description": "Una selección de diferentes estilos de cerveza en vasos sobre una barra de madera.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/El-Legado-de-Gambrinus-La-Ruta-de-la-Cerveza.webp",
+      "imageHint": "beer flight"
+    },
+    {
+      "id": "julius-caesar-hero",
+      "description": "Una estatua de Julio César delante del Foro Romano, simbolizando la ley y el poder.",
+      "imageUrl": "https://theglobal.school/wp-content/uploads/2026/01/Lex-Iulia-El-Legado-Juridico-de-Cesar.webp",
+      "imageHint": "roman statue"
+    }
+  ]
+}

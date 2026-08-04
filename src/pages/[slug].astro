@@ -1,0 +1,64 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import CategoryLayout from '../layouts/CategoryLayout.astro';
+import categoriesData from '../../migration/categories.json';
+import pagesClassified from '../../migration/pages_classified.json';
+import { LANG } from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', (e) => e.data.lang === LANG);
+  const pages = await getCollection('pages', (e) => e.data.lang === LANG);
+  const projects = await getCollection('projects', (e) => e.data.lang === LANG);
+
+  // mapa slug -> arquetipo (de la clasificación con tráfico GSC)
+  const archOf = new Map<string, string>();
+  for (const p of pagesClassified as any[]) {
+    if (p.lang === LANG) archOf.set(p.slug, p.arch);
+  }
+
+  const seen = new Set<string>();
+  const out: any[] = [];
+  for (const entry of posts) {
+    if (seen.has(entry.data.slug)) continue;
+    seen.add(entry.data.slug);
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'posts' } });
+  }
+  for (const entry of pages) {
+    if (!entry.data.slug || seen.has(entry.data.slug)) continue;
+    const arch = archOf.get(entry.data.slug) || 'Institucional';
+    if (arch === 'Sistema') continue; // 404-2, duplicados de home, welcome -> se redirigen a home
+    if (entry.data.slug === 'blog') continue; // /blog/ lo maneja el índice paginado
+    seen.add(entry.data.slug);
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'pages', archetype: arch } });
+  }
+  for (const entry of projects) {
+    if (!entry.data.slug || seen.has(entry.data.slug)) continue;
+    seen.add(entry.data.slug);
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'projects', archetype: 'Proyecto' } });
+  }
+
+  // páginas de categoría (root-level)
+  const postBySlug = new Map(posts.map((p) => [p.data.slug, p.data]));
+  for (const cat of Object.values(categoriesData as Record<string, any>)) {
+    if (cat.lang !== LANG || seen.has(cat.slug)) continue;
+    const items = cat.posts.map((s: string) => postBySlug.get(s)).filter(Boolean);
+    if (!items.length) continue;
+    seen.add(cat.slug);
+    out.push({ params: { slug: cat.slug }, props: { kind: 'category', category: { ...cat, items } } });
+  }
+  return out;
+}
+
+const { entry, kind, category, archetype } = Astro.props as any;
+const rendered = kind === 'category' ? null : await render(entry);
+const Content = rendered?.Content;
+---
+{kind === 'category' ? (
+  <CategoryLayout category={category} />
+) : kind === 'posts' ? (
+  <ArticleLayout data={entry.data}><Content /></ArticleLayout>
+) : (
+  <PageLayout data={entry.data} archetype={archetype}><Content /></PageLayout>
+)}

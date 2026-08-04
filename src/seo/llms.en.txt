@@ -1,0 +1,28 @@
+# The New Global School
+
+> The New Global School is an international education and events platform based in Europe and Latin America. The English site presents executive programs, sustainability and social innovation initiatives, partnerships, and public-facing information about the organization.
+
+The site has a separate Spanish-language version at https://es.theglobal.school. This file covers the English-language website at https://theglobal.school.
+
+## Main Pages
+
+- [Home](https://theglobal.school): Main overview of the organization, its mission, and featured programs.
+- [Europe](https://theglobal.school/europe/): Overview of executive programs and services for leaders in sustainability, social innovation, and climate justice.
+- [Regional Partners & Franchises](https://theglobal.school/franchises-theglobal-school/): Information for potential partners, franchises, and regional representatives.
+- [Roberto Arrucha](https://theglobal.school/roberto-arrucha/): Founder and director profile page.
+
+## Featured Content
+
+- [Artificial Intelligence Europe](https://theglobal.school/ai-sustainability/): Public article or program page related to artificial intelligence and sustainability.
+- [Holistic Development for Planetary Wellbeing](https://theglobal.school/holistic-development/): Content related to wellbeing, development, and planetary impact.
+- [Finding Your Purpose](https://theglobal.school/finding-your-purpose/): Public-facing educational or reflective content.
+- [Tech vs Mindfulness](https://theglobal.school/tech-vs-mindfulness/): Article discussing technology and mindfulness.
+- [Smart City Vienna](https://theglobal.school/smart-city-vienna/): Content related to urban innovation and Vienna.
+
+## Language Versions
+
+- [Spanish Site](https://es.theglobal.school): Spanish-language version of The New Global School website.
+
+## Sitemap
+
+- [XML Sitemap](https://theglobal.school/sitemap_index.xml): Primary sitemap for the English-language site.

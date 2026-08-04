@@ -1,0 +1,62 @@
+---
+import MarketplaceLayout from '../../layouts/MarketplaceLayout.astro';
+import { loadExperiences } from '../../lib/experiences';
+import { LANG } from '../../lib/site';
+
+// M2 (muestra): en ES redirige a /experiencias/. Datos reales vendrán de Firestore.
+if (LANG === 'es') return Astro.redirect('/experiencias/');
+
+const experiences = await loadExperiences();
+const fmtDate = (iso: string) =>
+  new Date(iso + 'T00:00:00').toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Free</span>' : `${x.currency} ${x.publicPrice.toLocaleString()}`);
+---
+<MarketplaceLayout title="Events & Trips — The New Global School" description="Discover international events and educational trips by The New Global School and partner allies.">
+  <section class="mkt-wrap mkt-hero">
+    <p class="eyebrow">Marketplace</p>
+    <h1>Events & Trips for Global Leaders</h1>
+    <p>International events and educational journeys — hosted by The New Global School and partner allies across Europe and Latin America.</p>
+  </section>
+
+  <div class="mkt-wrap">
+    <div class="mkt-filters" id="filters">
+      <button class="mkt-chip" data-f="all" aria-pressed="true">All</button>
+      <button class="mkt-chip" data-f="evento" aria-pressed="false">Events</button>
+      <button class="mkt-chip" data-f="viaje" aria-pressed="false">Trips</button>
+    </div>
+
+    <div class="mkt-grid" id="grid">
+      {experiences.map((x) => (
+        <a class="xp-card" href={`/experiences/${x.slug}/`} data-type={x.type}>
+          <div class="media">
+            <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
+            <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Event' : 'Trip'}</span>
+          </div>
+          <div class="body">
+            <div class="meta">
+              <span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {fmtDate(x.startDate)}</span>
+            </div>
+            <h3>{x.title}</h3>
+            <p class="summary">{x.summary}</p>
+            <div class="foot">
+              <span class="xp-price" set:html={price(x)} />
+              <span class="xp-pub">{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    const chips = document.querySelectorAll('.mkt-chip');
+    const cards = document.querySelectorAll<HTMLElement>('.xp-card');
+    const apply = (f: string) => {
+      chips.forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.f === f)));
+      cards.forEach((c) => (c.style.display = f === 'all' || c.dataset.type === f ? '' : 'none'));
+    };
+    chips.forEach((c) => c.addEventListener('click', () => apply((c as HTMLElement).dataset.f!)));
+    const t = new URLSearchParams(location.search).get('t');
+    if (t) apply(t);
+  </script>
+</MarketplaceLayout>

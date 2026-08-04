@@ -1,0 +1,86 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { LANG } from '../lib/site';
+
+// Plantilla de página consciente del ARQUETIPO (institucional, programa, perfil, legal...).
+const { data: d, archetype = 'Institucional' } = Astro.props;
+
+const L = LANG === 'es';
+const contactHref = L ? '/contacto/' : '/contact/';
+
+// Etiqueta (eyebrow) y CTA según arquetipo
+const ARCH: Record<string, { label: string; cta: string; blurb: string }> = {
+  'Programa/Curso':  { label: L ? 'Programa' : 'Program', cta: L ? 'Solicita información' : 'Request information', blurb: L ? '¿Te interesa este programa? Escríbenos y te damos todos los detalles.' : 'Interested in this program? Contact us for full details.' },
+  'Certificación':   { label: L ? 'Certificación' : 'Certification', cta: L ? 'Solicita información' : 'Request information', blurb: L ? '¿Quieres certificarte? Cuéntanos y te guiamos en el proceso.' : 'Want to get certified? Reach out and we will guide you.' },
+  'Institucional':   { label: L ? 'The New Global School' : 'The New Global School', cta: L ? 'Contáctanos' : 'Contact us', blurb: L ? '¿Hablamos? Estamos para ayudarte.' : "Let's talk — we're here to help." },
+  'Perfil':          { label: L ? 'Perfil' : 'Profile', cta: L ? 'Contactar' : 'Get in touch', blurb: L ? '¿Quieres colaborar o invitar a un evento? Escríbenos.' : 'Want to collaborate or invite a speaker? Contact us.' },
+  'Evento/Campaña':  { label: L ? 'Evento' : 'Event', cta: L ? 'Quiero participar' : 'I want to join', blurb: L ? '¿Te interesa participar? Escríbenos.' : 'Interested in taking part? Contact us.' },
+  'Herramienta':     { label: L ? 'Metodología' : 'Methodology', cta: L ? 'Trabaja con nosotros' : 'Work with us', blurb: L ? '¿Quieres aplicar esta metodología en tu organización? Te acompañamos.' : 'Want to apply this methodology in your organization? We can help.' },
+  'Historia':        { label: L ? 'Del libro de Roberto A. Arrucha' : 'From the book by Roberto A. Arrucha', cta: L ? 'Conoce nuestros viajes' : 'Discover our journeys', blurb: L ? '¿Te inspiran estas historias? Descubre nuestros viajes educativos.' : 'Inspired by these stories? Discover our educational journeys.' },
+  'Proyecto':        { label: L ? 'Proyecto' : 'Project', cta: L ? 'Súmate al proyecto' : 'Join the project', blurb: L ? '¿Quieres participar o apoyar este proyecto? Escríbenos.' : 'Want to take part or support this project? Contact us.' },
+  'Donación':        { label: L ? 'Contribuir' : 'Contribute', cta: L ? 'Quiero contribuir' : 'I want to contribute', blurb: L ? 'Tu aporte impulsa educación y liderazgo con impacto. Gracias por sumarte.' : 'Your contribution powers education and impactful leadership. Thank you for joining.' },
+  'Aplicación':      { label: L ? 'Convocatoria' : 'Application', cta: L ? 'Aplicar ahora' : 'Apply now', blurb: L ? '¿Te interesa? Envíanos tu aplicación y te contactamos.' : 'Interested? Send your application and we will get back to you.' },
+  'Legal':           { label: L ? 'Legal' : 'Legal', cta: '', blurb: '' },
+  'Otras':           { label: L ? 'The New Global School' : 'The New Global School', cta: L ? 'Contáctanos' : 'Contact us', blurb: L ? '¿Hablamos?' : "Let's talk." },
+};
+const a = ARCH[archetype] || ARCH['Institucional'];
+// Override de CTA por página (p.ej. LALA -> awards.pro-latam.org)
+const ctaHref = d.ctaHref || contactHref;
+const ctaLabel = d.ctaLabel || a.cta;
+const ctaExternal = /^https?:\/\//.test(ctaHref);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: d.title, description: d.description, inLanguage: d.lang,
+  publisher: { '@type': 'Organization', name: 'The New Global School' },
+};
+---
+<BaseLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">{a.label}</p>
+      <h1>{d.title}</h1>
+      {d.description && <p class="lead">{d.description}</p>}
+    </div>
+    {d.hero && <div class="page-hero-media"><img src={d.hero} alt={d.title} width="1100" height="620" /></div>}
+  </section>
+
+  <article class="page-body">
+    <slot />
+  </article>
+
+  {(a.cta || d.ctaHref) && (
+    <section class="page-cta">
+      <div class="page-cta-inner">
+        <p>{a.blurb}</p>
+        <a class="cta-btn" href={ctaHref} {...(ctaExternal ? { rel: 'noopener', target: '_blank' } : {})}>{ctaLabel}</a>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .page-hero { max-width: var(--wrap-wide); margin: 0 auto; padding: 3rem var(--space) 1rem; }
+  .page-hero-inner { max-width: 780px; }
+  .page-hero .lead { color: var(--ink-soft); font-size: 1.2rem; margin-top: .5rem; }
+  .page-hero-media { margin-top: 2rem; }
+  .page-hero-media img { width: 100%; border-radius: var(--radius); aspect-ratio: 16/8; object-fit: cover; }
+  .page-body { max-width: 820px; margin: 2.5rem auto 0; padding: 0 var(--space); font-size: 1.05rem; }
+  .page-body :global(h2) { margin-top: 2.8rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+  .page-body :global(h3) { margin-top: 2rem; }
+  .page-body :global(img) { border-radius: 10px; margin: 1.8rem auto; }
+  .page-body :global(ul), .page-body :global(ol) { padding-left: 1.3rem; }
+  .page-body :global(li) { margin: .5rem 0; }
+  .page-cta { margin: 4rem auto 0; max-width: var(--wrap-wide); padding: 0 var(--space) 4rem; }
+  .page-cta-inner {
+    background: linear-gradient(135deg, var(--brand-deep), var(--brand)); color: #fff;
+    border-radius: 18px; padding: 2.5rem; display: flex; align-items: center;
+    justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .page-cta-inner p { margin: 0; font-family: var(--font-head); font-weight: 500; font-size: 1.2rem; max-width: 640px; }
+  .cta-btn { background: #fff; color: var(--brand-deep); font-family: var(--font-head); font-weight: 700; padding: .8rem 1.8rem; border-radius: 999px; white-space: nowrap; }
+  .cta-btn:hover { text-decoration: none; transform: translateY(-2px); }
+</style>

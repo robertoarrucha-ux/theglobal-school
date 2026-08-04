@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "gen-lang-client-0345505794"
+  },
+  "targets": {
+    "gen-lang-client-0345505794": {
+      "hosting": {
+        "en": [
+          "theglobal-en"
+        ],
+        "es": [
+          "theglobal-es"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,233 @@
+---
+import MarketplaceLayout from '../../layouts/MarketplaceLayout.astro';
+import { getEntry, render } from 'astro:content';
+import { marked } from 'marked';
+import { loadExperiences } from '../../lib/experiences';
+import { LANG, SELF_ORIGIN } from '../../lib/site';
+import { getInclusions } from '../../lib/inclusions';
+const inc = getInclusions('es');
+
+export async function getStaticPaths() {
+  if (LANG === 'en') return []; // EN vive en /experiences/
+  return (await loadExperiences()).map((x) => ({ params: { slug: x.slug }, props: { x } }));
+}
+
+const { x } = Astro.props as any;
+const fmt = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+const dateStr = x.endDate ? `${fmt(x.startDate)} – ${fmt(x.endDate)}` : fmt(x.startDate);
+
+// Contenido completo migrado (eventos TNGS con página original: LALA, Mujeres, Diplomado...).
+const contentPage = await getEntry('pages', `es/page/${x.slug}`).catch(() => null);
+const rendered = contentPage ? await render(contentPage) : null;
+const FullContent = rendered?.Content;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': x.type === 'evento' ? 'Event' : 'TouristTrip',
+  name: x.title,
+  description: x.summary,
+  startDate: x.startDate,
+  ...(x.endDate ? { endDate: x.endDate } : {}),
+  image: new URL(x.coverImageUrl, Astro.site).href,
+  inLanguage: 'es',
+  ...(x.type === 'evento'
+    ? {
+        eventAttendanceMode: x.format === 'online' ? 'https://schema.org/OnlineEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
+        location: x.format === 'online' ? { '@type': 'VirtualLocation', url: SELF_ORIGIN[LANG] } : { '@type': 'Place', name: x.venue, address: `${x.city}, ${x.country}` },
+      }
+    : {}),
+  offers: { '@type': 'Offer', price: x.publicPrice, priceCurrency: x.currency, availability: 'https://schema.org/InStock' },
+  organizer: { '@type': 'Organization', name: 'The New Global School' },
+};
+---
+<MarketplaceLayout title={`${x.title} — The New Global School`} description={x.summary} ogImage={x.coverImageUrl}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="xp-detail-hero">
+    <img src={x.coverImageUrl} alt={x.title} />
+    <div class="mkt-wrap inner">
+      <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Evento' : 'Viaje'}</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0">{x.title}</h1>
+      <p style="color:var(--txt-soft);max-width:640px">{x.summary}</p>
+      <p style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {dateStr} &nbsp;·&nbsp; 🗣 {x.language}</p>
+    </div>
+  </section>
+
+  {x.eventGallery && x.eventGallery.length > 0 && (
+    <section class="mkt-wrap xp-gallery">
+      <div class="gallery-strip" data-autoplay>
+        {x.eventGallery.map((g: any, i: number) => (
+          <figure class="gslide"><img src={g.imageUrl} alt={g.caption || x.title} loading={i === 0 ? 'eager' : 'lazy'} width="1000" height="560" /></figure>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <div class="mkt-wrap xp-detail-grid">
+    <div>
+      {x.type === 'viaje' && (
+        <div class="xp-vote glass" data-slug={x.slug}>
+          <div class="xp-vote-info">
+            <strong>Vota por tu viaje favorito</strong>
+            <span><b class="xp-vote-count">·</b> votos</span>
+          </div>
+          <button class="xp-vote-btn" type="button">Votar</button>
+        </div>
+      )}
+
+      {x.sections && x.sections.length > 0 ? (
+        <div class="xp-accordions">
+          {x.description && <p class="xp-lead">{x.description}</p>}
+          {x.sections.map((s: any, i: number) => (
+            <details class="acc" open={i === 0}>
+              <summary>{s.title}<span class="acc-icon" aria-hidden="true"></span></summary>
+              <div class="acc-body xp-richbody" set:html={marked.parse(s.md)} />
+            </details>
+          ))}
+        </div>
+      ) : FullContent ? (
+        <div class="xp-richbody"><FullContent /></div>
+      ) : (
+        <>
+          <h2>Acerca de</h2>
+          <p>{x.description}</p>
+        </>
+      )}
+
+      {x.collaborators && x.collaborators.length > 0 && (
+        <section class="xp-collabs">
+          <h2>Colaboradores y Expositores</h2>
+          <div class="collab-grid">
+            {x.collaborators.map((c: any) => (
+              <figure class="collab-tile" title={c.name || ''}>
+                <img src={c.imageUrl} alt={c.name || 'Colaborador'} loading="lazy" />
+                {c.name && <figcaption>{c.name}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {x.testimonials && x.testimonials.length > 0 && (
+        <section class="xp-testimonials">
+          <h2>Lo que dicen los participantes</h2>
+          <div class="testi-grid">
+            {x.testimonials.map((t: any) => (
+              <figure class="testi-card glass">
+                {t.headline && <p class="testi-headline">{t.headline}</p>}
+                <blockquote>{t.quote}</blockquote>
+                <figcaption>
+                  {t.photo && <img class="testi-avatar" src={t.photo} alt={t.author} loading="lazy" width="46" height="46" />}
+                  <div>
+                    <strong>{t.author}</strong>
+                    {t.org && (t.orgUrl
+                      ? <a href={t.orgUrl} target="_blank" rel="noopener">{t.org}</a>
+                      : <span>{t.org}</span>)}
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {x.leader && (
+        <blockquote class="xp-leader glass">
+          <p>“{x.leader.narrative}”</p>
+          <footer>— {x.leader.name}, <span>{x.leader.title}</span></footer>
+        </blockquote>
+      )}
+
+      {x.rationale && (
+        <>
+          <h2>¿Por qué este viaje?</h2>
+          <div class="xp-rationale">
+            <div class="glass"><h4>Importancia</h4><p>{x.rationale.importance}</p></div>
+            <div class="glass"><h4>Aprendizaje</h4><p>{x.rationale.learning}</p></div>
+            <div class="glass"><h4>Relevancia profesional</h4><p>{x.rationale.relevance}</p></div>
+          </div>
+        </>
+      )}
+
+      <h2>Destacados</h2>
+      <ul class="xp-highlights">{x.highlights.map((h: string) => <li>{h}</li>)}</ul>
+
+      {x.itinerary && x.itinerary.length > 0 ? (
+        <>
+          <h2>Itinerario detallado</h2>
+          <div class="xp-agenda">
+            {x.itinerary.map((d: any) => (
+              <div class="xp-agenda-item glass">
+                <div class="lbl">Día {d.day}</div>
+                <strong>{d.title}</strong>
+                <p style="margin:.3rem 0 0">{d.description}</p>
+                {d.relevance && <p class="rel">↳ {d.relevance}</p>}
+              </div>
+            ))}
+          </div>
+        </>
+      ) : x.agenda && (
+        <>
+          <h2>{x.type === 'evento' ? 'Agenda' : 'Itinerario'}</h2>
+          <div class="xp-agenda">
+            {x.agenda.map((a: any) => (
+              <div class="xp-agenda-item glass">
+                <div class="lbl">{a.label}</div>
+                <strong>{a.title}</strong>
+                <p style="margin:.3rem 0 0">{a.detail}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {x.preWork && x.preWork.items?.length > 0 && (
+        <>
+          <h2>{x.preWork.title || 'Preparación: materiales recomendados'}</h2>
+          <ul class="xp-prework">
+            {x.preWork.items.map((it: any) => (
+              <li><span class="tag">{it.type}</span> <strong>{it.title}</strong>{it.author ? ` — ${it.author}` : ''}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {x.type === 'viaje' && (
+        <>
+          <h2>Tu experiencia completa</h2>
+          <div class="xp-incl">
+            <div><h4 class="ok">✓ Qué incluye</h4><ul>{inc.included.map((i) => <li>{i}</li>)}</ul></div>
+            <div><h4 class="no">✕ Qué no incluye</h4><ul>{inc.notIncluded.map((i) => <li>{i}</li>)}</ul></div>
+          </div>
+        </>
+      )}
+    </div>
+
+    <aside>
+      <div class="xp-book glass">
+        <div class="price">{x.publicPrice === 0 ? 'Gratis' : <>{x.currency} {x.publicPrice.toLocaleString()}<span class="cur"> / persona</span></>}</div>
+        <div style="margin:1rem 0">
+          <div class="row"><span>Fechas</span><span>{dateStr}</span></div>
+          <div class="row"><span>Formato</span><span>{x.format || 'Presencial'}</span></div>
+          {x.spotsLeft != null && <div class="row"><span>Cupos</span><span>{x.spotsLeft} / {x.capacity}</span></div>}
+          <div class="row"><span>Anfitrión</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
+        </div>
+        <a class="xp-cta" href={x.registerUrl || `https://aliados.theglobal.school/reservar/${x.slug}`}>{x.publicPrice === 0 ? 'Registro gratuito' : 'Reservar mi lugar'}</a>
+        <p class="pay-note">
+          {x.paymentMode === 'platform'
+            ? '🔒 Pago seguro en la plataforma (Stripe).'
+            : '↗ El pago lo gestiona directamente el aliado.'}
+        </p>
+      </div>
+
+      {x.pricingTiers && x.pricingTiers.length > 0 && (
+        <div class="xp-book glass" style="margin-top:1rem;position:static">
+          <h4 style="margin:0 0 .6rem">Descuentos por grupo</h4>
+          {x.pricingTiers.map((tt: any) => (
+            <div class="row"><span>{tt.threshold}+ personas</span><span>−{tt.discountPercent}%</span></div>
+          ))}
+        </div>
+      )}
+    </aside>
+  </div>
+</MarketplaceLayout>

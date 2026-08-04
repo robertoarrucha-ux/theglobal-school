@@ -1,0 +1,2308 @@
+[
+  {
+    "slug": "napoleon-in-command",
+    "type": "viaje",
+    "title": "Napoleón: El Camino al Imperio",
+    "summary": "Sigue mis pasos, desde los salones del poder en París hasta los campos de batalla que forjaron un imperio. Comprende la ambición, la estrategia y la audacia que redibujaron el mapa",
+    "description": "Sigue mis pasos, desde los salones del poder en París hasta los campos de batalla que forjaron un imperio. Comprende la ambición, la estrategia y la audacia que redibujaron el mapa de Europa. Esto no es simplemente un recorrido; es una lección de mando.\n\nEstudiar a Napoleón es analizar a uno de los líderes más influyentes de la historia, cuyas acciones redibujaron el mapa de Europa y modernizaron sus leyes e instituciones. Su figura es un caso de estudio sobre el poder, la ambición y el genio militar.",
+    "coverImageUrl": "/media/2026/01/Napoleon-Bonaparte-Viaje-Educativo.webp",
+    "gallery": [
+      "https://picsum.photos/seed/Arc de Triomphe Paris/1080/720",
+      "https://picsum.photos/seed/historic chateau/1080/720"
+    ],
+    "city": "París",
+    "country": "Francia",
+    "cities": [
+      "París",
+      "Versalles",
+      "Fontainebleau",
+      "Lyon"
+    ],
+    "format": "presencial",
+    "startDate": "2024-09-15",
+    "endDate": "2024-09-24",
+    "durationDays": 10,
+    "publicPrice": 3400,
+    "currency": "EUR",
+    "capacity": 20,
+    "spotsLeft": 12,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 20 participantes)",
+      "Pre-work curado: 3 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Militar",
+    "leader": {
+      "name": "Napoleón Bonaparte",
+      "title": "Emperador de los Franceses",
+      "narrative": "Sigue mis pasos, desde los salones del poder en París hasta los campos de batalla que forjaron un imperio. Comprende la ambición, la estrategia y la audacia que redibujaron el mapa de Europa. Esto no es simplemente un recorrido; es una lección de mando."
+    },
+    "rationale": {
+      "importance": "Estudiar a Napoleón es analizar a uno de los líderes más influyentes de la historia, cuyas acciones redibujaron el mapa de Europa y modernizaron sus leyes e instituciones. Su figura es un caso de estudio sobre el poder, la ambición y el genio militar.",
+      "learning": "Comprenderás los principios de la estrategia y táctica napoleónica, el uso de la propaganda, la logística de un ejército imperial y la creación de un legado a través del Código Civil. Es una inmersión profunda en el liderazgo en tiempos de transformación radical.",
+      "relevance": "Las lecciones sobre estrategia, gestión de crisis, construcción de marca personal y reformas institucionales son atemporales. Profesionales en liderazgo, derecho, gestión pública y estrategia encontrarán en Napoleón un modelo complejo y fascinante para analizar y del cual extraer valiosas lecciones."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a París y Fundamentos Imperiales",
+        "description": "Llegada al corazón de París y check-in en un hotel que evoca la grandeza imperial. La primera inmersión en la historia nos lleva a Les Invalides. Bajo su majestuosa cúpula dorada, sentiremos el peso del legado napoleónico ante su tumba. La jornada culmina con una cena de bienvenida y una conferencia privada que desvelará los secretos de su irresistible ascenso al poder.",
+        "relevance": "Más que una tumba, es un santuario al poderío militar francés. Aquí, rodeados de armaduras y estandartes, comenzaremos a entender la magnitud del hombre que desafió a Europa y definió una era."
+      },
+      {
+        "day": 2,
+        "title": "El Arte del Poder en el Louvre",
+        "description": "Pasearemos por las galerías del Louvre, no como turistas, sino como estrategas del arte. Seguiremos el rastro de las obras maestras que Napoleón \"liberó\" de toda Europa, descubriendo cómo utilizó el arte para legitimar su poder y construir la imagen de un imperio glorioso. Un experto nos guiará a través de la pintura y escultura que definieron su reinado.",
+        "relevance": "El Louvre, transformado por Napoleón en el museo más grande del mundo, es el testamento de su visión cultural. Cada sala cuenta una historia de conquista, propaganda y la democratización del arte."
+      },
+      {
+        "day": 3,
+        "title": "Versalles: Sombra y Símbolo del Poder",
+        "description": "Excursión al Palacio de Versalles. Aunque es el símbolo del Antiguo Régimen que la Revolución derrocó, Napoleón lo utilizó para sus propios fines, alojando a dignatarios y soñando con superar su esplendor. Pasearemos por el Salón de los Espejos y los vastos jardines, discutiendo la compleja relación de Napoleón con la monarquía que le precedió.",
+        "relevance": "Versalles representa el poder absoluto que Napoleón anhelaba y finalmente reclamó. Visitarlo nos permite comprender el contexto del que surgió y la escala de la ambición que lo impulsaba a superarlo."
+      },
+      {
+        "day": 4,
+        "title": "Fontainebleau: Grandeza y Abdicación",
+        "description": "Viajaremos al opulento Château de Fontainebleau, un palacio que encapsula siglos de historia francesa. Exploraremos sus salones privados y nos detendremos en el mismo patio donde, con una emotiva despedida a su Vieja Guardia, Napoleón abdicó por primera vez. Una jornada para reflexionar sobre la cumbre y el ocaso del poder.",
+        "relevance": "Fontainebleau es un escenario de contrastes: el lujo de la corte imperial frente a la amarga realidad de la derrota. Es el lugar perfecto para analizar la psicología del liderazgo en momentos de triunfo y fracaso."
+      },
+      {
+        "day": 5,
+        "title": "Tácticas y Estrategia en la École Militaire",
+        "description": "Nos adentraremos en la École Militaire de París, donde el propio Napoleón se formó como cadete. Participaremos en un seminario exclusivo sobre estrategia militar, analizando batallas clave como Austerlitz y Waterloo en mapas de campaña interactivos. Un general retirado del ejército francés compartirá su perspectiva sobre el genio táctico napoleónico.",
+        "relevance": "Aquí, en la cuna de su formación militar, deconstruiremos las innovaciones tácticas (la columna de ataque, el uso masivo de artillería) que le permitieron dominar los campos de batalla de Europa durante casi dos décadas."
+      },
+      {
+        "day": 6,
+        "title": "Viaje a Lyon: El Corazón Industrial del Imperio",
+        "description": "Tomaremos un tren de alta velocidad a Lyon, el motor económico de la Francia napoleónica. Visitaremos los \"traboules\" secretos de los tejedores de seda en el barrio de Croix-Rousse y descubriremos cómo la floreciente industria textil financió las ambiciones de Napoleón.",
+        "relevance": "Lyon revela una faceta crucial y a menudo olvidada del Imperio: la guerra no solo se gana con soldados, sino también con una economía robusta. Entenderemos la simbiosis entre el poder industrial y la hegemonía militar."
+      },
+      {
+        "day": 7,
+        "title": "El Legado del Código Napoleónico",
+        "description": "Asistiremos a una ponencia en la Facultad de Derecho de la Universidad de Lyon sobre el impacto transformador del Código Napoleónico. Un jurista nos explicará cómo esta obra monumental modernizó la ley, consagró la igualdad de los ciudadanos y sentó las bases de los sistemas legales modernos en todo el mundo.",
+        "relevance": "Más allá de las batallas, el Código Civil es quizás el legado más perdurable de Napoleón. Esta sesión nos permitirá apreciar cómo sus reformas administrativas y legales siguen moldeando nuestra sociedad actual."
+      },
+      {
+        "day": 8,
+        "title": "Gastronomía Imperial en la Capital Culinaria",
+        "description": "Lyon es la capital gastronómica de Francia, y exploraremos su cultura culinaria en un \"bouchon\" tradicional. Disfrutaremos de una cena que reinterpreta platos de la época imperial, acompañada de vinos de la región del Ródano, discutiendo cómo la comida también reflejaba el estatus y el poder.",
+        "relevance": "Experimenta el lado más sibarita del poder. Una cena opulenta nos transportará a los banquetes imperiales, explorando la cultura y el refinamiento que florecieron a la sombra de las águilas napoleónicas."
+      },
+      {
+        "day": 9,
+        "title": "París Imperial: Un Legado en Piedra",
+        "description": "De vuelta en París, un recorrido arquitectónico nos mostrará cómo Napoleón soñó con transformar la ciudad en una \"nueva Roma\". Desde el Arco de Triunfo del Carrusel hasta la elegante Rue de Rivoli y la Iglesia de la Madeleine, veremos cómo su visión monumental dejó una marca indeleble en el paisaje urbano.",
+        "relevance": "Cada monumento y avenida construidos bajo su mandato son una declaración de poder y gloria. Leeremos la ciudad como un texto histórico que narra la ambición de un hombre por dejar un legado eterno."
+      },
+      {
+        "day": 10,
+        "title": "Reflexión Final y Despedida",
+        "description": "Dispondremos de la mañana para una última visita personal o para comprar recuerdos de esta campaña. Nos reuniremos para un almuerzo de despedida en un restaurante histórico, donde compartiremos las lecciones aprendidas sobre liderazgo, ambición y el complejo legado de Napoleón. Traslado al aeropuerto.",
+        "relevance": "Cerramos el círculo, sintetizando las múltiples facetas del hombre y el mito. Una oportunidad para reflexionar sobre cómo la historia de Napoleón sigue resonando en nuestro mundo, inspirando y advirtiendo a partes iguales."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "Prepárate para la Campaña",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Napoleón: Una Vida",
+          "author": "Andrew Roberts"
+        },
+        {
+          "type": "Película",
+          "title": "Napoleón",
+          "author": "Ridley Scott"
+        },
+        {
+          "type": "Playlist",
+          "title": "Música del Imperio",
+          "author": "Varios Artistas Clásicos"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-napoleon-in-command",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "renaissance-masters",
+    "type": "viaje",
+    "title": "Los Maestros del Renacimiento",
+    "summary": "Viaja conmigo por el corazón del Renacimiento. No solo veremos arte; lo deconstruiremos. Exploraremos la fusión de ciencia, anatomía y belleza sublime que definió mi obra y la de m",
+    "description": "Viaja conmigo por el corazón del Renacimiento. No solo veremos arte; lo deconstruiremos. Exploraremos la fusión de ciencia, anatomía y belleza sublime que definió mi obra y la de mis contemporáneos. Ve el mundo a través de los ojos de un inventor, un artista, un verdadero hombre del Renacimiento.\n\nEl Renacimiento fue una explosión de creatividad que sentó las bases del arte y la ciencia modernos. Este viaje explora cómo una nueva visión del ser humano, combinada con el mecenazgo y la competencia, produjo obras que han definido la civilización occidental.",
+    "coverImageUrl": "/media/2026/01/Los-Maestros-del-Renacimiento-Una-expedicion-dirigida-por-Leonardo-da-Vinci.webp",
+    "gallery": [
+      "https://picsum.photos/seed/Florence Duomo/1080/720",
+      "https://picsum.photos/seed/Sistine Chapel/1080/720"
+    ],
+    "city": "Florencia",
+    "country": "Italia",
+    "cities": [
+      "Florencia",
+      "Siena",
+      "Roma",
+      "Venecia"
+    ],
+    "format": "presencial",
+    "startDate": "2024-10-05",
+    "endDate": "2024-10-14",
+    "durationDays": 10,
+    "publicPrice": 3680,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 2,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 3 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Arte",
+    "leader": {
+      "name": "Leonardo da Vinci",
+      "title": "El Genio Universal",
+      "narrative": "Viaja conmigo por el corazón del Renacimiento. No solo veremos arte; lo deconstruiremos. Exploraremos la fusión de ciencia, anatomía y belleza sublime que definió mi obra y la de mis contemporáneos. Ve el mundo a través de los ojos de un inventor, un artista, un verdadero hombre del Renacimiento."
+    },
+    "rationale": {
+      "importance": "El Renacimiento fue una explosión de creatividad que sentó las bases del arte y la ciencia modernos. Este viaje explora cómo una nueva visión del ser humano, combinada con el mecenazgo y la competencia, produjo obras que han definido la civilización occidental.",
+      "learning": "Aprenderás a analizar el arte no solo por su belleza, sino por su contexto histórico, técnico y filosófico. Entenderás las innovaciones en perspectiva, anatomía y composición, y el papel del artista como intelectual y emprendedor en un mundo cambiante.",
+      "relevance": "La creatividad, la innovación y la capacidad de combinar disciplinas (arte y ciencia) son habilidades cruciales hoy. Este viaje inspira a pensar de forma interdisciplinaria y a gestionar proyectos complejos, relevante para creativos, diseñadores, emprendedores y cualquiera que busque la excelencia."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Florencia: La Cuna del Genio",
+        "description": "Bienvenidos a Florencia. Tras instalarnos, nos sumergiremos en la Galería Uffizi para un recorrido privado al atardecer. Un historiador del arte nos mostrará la evolución desde el gótico hasta el pleno Renacimiento, culminando en las salas dedicadas a Leonardo, Miguel Ángel y Rafael.",
+        "relevance": "Aquí, en el epicentro del Renacimiento, entenderemos el caldo de cultivo de competencia, mecenazgo e innovación que impulsó a una generación de genios a alcanzar cotas de creatividad nunca antes vistas."
+      },
+      {
+        "day": 2,
+        "title": "Arquitectura Divina y Escultura Humana en Florencia",
+        "description": "La mañana estará dedicada a la proeza de la ingeniería: ascenderemos a la cúpula de Brunelleschi en el Duomo. Por la tarde, un encuentro cara a cara con la perfección: el David de Miguel Ángel en la Galleria dell'Accademia. Analizaremos cada músculo y cada vena de esta icónica estatua.",
+        "relevance": "Este día contrasta la escala monumental de la fe, representada en la cúpula, con la celebración del potencial humano, encarnado en David. Dos pilares fundamentales del pensamiento renacentista."
+      },
+      {
+        "day": 3,
+        "title": "Siena: El Esplendor Gótico y la Rival de Florencia",
+        "description": "Excursión a Siena, la joya medieval de la Toscana. Pasearemos por la Piazza del Campo, una de las plazas más bellas del mundo, y nos maravillaremos con la fachada a rayas de su Duomo. Un experto en arte sienés nos explicará la rivalidad artística y política que mantuvo con Florencia.",
+        "relevance": "Siena ofrece una perspectiva alternativa al Renacimiento, mostrando la fuerza y la belleza del estilo gótico tardío. Comprender su arte es entender las diferentes corrientes que coexistieron y compitieron en la Italia del Quattrocento."
+      },
+      {
+        "day": 4,
+        "title": "Viaje a Roma: El Poder del Mecenazgo Papal",
+        "description": "Tomaremos un tren de alta velocidad a Roma. Nuestra tarde la pasaremos en los Museos Vaticanos, con acceso exclusivo. Un guía experto nos llevará directamente a las Estancias de Rafael y, por supuesto, a la sobrecogedora Capilla Sixtina para admirar la obra cumbre de Miguel Ángel.",
+        "relevance": "En Roma, el arte se convierte en un instrumento de poder celestial y terrenal. Comprenderemos cómo el papado utilizó su inmensa riqueza para encargar obras que asombrarían al mundo y afirmarían su autoridad."
+      },
+      {
+        "day": 5,
+        "title": "San Pedro y la Grandeza de la Cristiandad",
+        "description": "Exploraremos la inmensidad de la Basílica de San Pedro, desde la Pietà de Miguel Ángel hasta el Baldaquino de Bernini. Ascenderemos a la cúpula para obtener una vista panorámica de la plaza diseñada por Bernini y de toda Roma. La jornada incluirá un debate sobre la Contrarreforma y su impacto en el arte.",
+        "relevance": "La Basílica de San Pedro no es solo una iglesia; es la declaración de poder más grandiosa de la Iglesia Católica. Analizaremos cómo su construcción abarcó el Renacimiento y el Barroco, reflejando cambios teológicos y artísticos."
+      },
+      {
+        "day": 6,
+        "title": "Ecos de la Antigüedad: El Panteón y el Foro Romano",
+        "description": "Caminaremos tras las huellas de los Césares en el Foro Romano y el Palatino. Luego, nos maravillaremos ante el Panteón de Agripa, la cúpula que inspiró a los arquitectos renacentistas. Un arqueólogo nos revelará los secretos de la antigua Roma.",
+        "relevance": "El Renacimiento fue un \"renacer\" del ideal clásico. Al visitar estos monumentos, conectaremos directamente con las fuentes de inspiración de artistas como Brunelleschi y Alberti, comprendiendo su obsesión por la proporción y la armonía."
+      },
+      {
+        "day": 7,
+        "title": "Llegada a Venecia: La Reina del Adriático",
+        "description": "Un último viaje en tren nos llevará a la mágica Venecia. Dejaremos las maletas y nos embarcaremos en un paseo privado en góndola por los canales secundarios para absorber la atmósfera única de la ciudad. La tarde culminará con un spritz en una terraza con vistas al Gran Canal, mientras el sol se pone sobre La Serenísima.",
+        "relevance": "Venecia ofrece un contrapunto fascinante a Florencia y Roma. Su poder no venía de la banca o la religión, sino del mar. Esta primera impresión nos permitirá sentir cómo el agua y el comercio moldearon su carácter único."
+      },
+      {
+        "day": 8,
+        "title": "Poder y Justicia en el Palacio Ducal",
+        "description": "Recorreremos los suntuosos salones del Palacio Ducal, sede del gobierno veneciano. Admiraremos los frescos de Tintoretto y Veronés antes de cruzar el famoso Puente de los Suspiros hacia las antiguas prisiones, sintiendo el contraste entre la opulencia del poder y la crudeza de la justicia.",
+        "relevance": "El Palacio Ducal es una obra maestra de propaganda política. Analizaremos cómo la República de Venecia utilizaba el arte y la arquitectura para proyectar una imagen de estabilidad, riqueza y justicia infalible."
+      },
+      {
+        "day": 9,
+        "title": "El Color Veneciano y el Arte del Vidrio en Murano",
+        "description": "Dedicaremos la mañana a la escuela veneciana de pintura en la Gallerie dell'Accademia. Por la tarde, tomaremos un vaporetto a la isla de Murano para una demostración privada de soplado de vidrio, el arte secreto que simbolizaba la riqueza de Venecia.",
+        "relevance": "Esta jornada combina el \"colorito\" de Tiziano y Tintoretto con la artesanía de lujo de Murano, dos pilares de la identidad cultural y económica de Venecia, mostrando cómo el arte y el comercio estaban intrínsecamente ligados."
+      },
+      {
+        "day": 10,
+        "title": "Adiós al Renacimiento",
+        "description": "Mañana libre para perderse por última vez en el laberinto de calles y canales de Venecia. Nos reuniremos para un almuerzo de despedida en un restaurante con vistas a la laguna, compartiendo nuestras reflexiones. Traslado en taxi acuático privado al aeropuerto.",
+        "relevance": "Cerramos nuestro viaje por el Renacimiento, habiendo explorado sus tres capitales y una de sus joyas. La despedida desde el agua nos ofrece una última y memorable perspectiva de esta ciudad imposible, un broche de oro para una experiencia inolvidable."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 12
+      }
+    ],
+    "preWork": {
+      "title": "Manual del Aprendiz",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "La Agonía y el Éxtasis",
+          "author": "Irving Stone"
+        },
+        {
+          "type": "Película",
+          "title": "La Agonía y el Éxtasis",
+          "author": "Carol Reed"
+        },
+        {
+          "type": "Lectura",
+          "title": "Leonardo da Vinci",
+          "author": "Walter Isaacson"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-renaissance-masters",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "charles-v-empire-tour",
+    "type": "viaje",
+    "title": "La Ruta de Carlos V: El Imperio sin Ocaso",
+    "summary": "Mi imperio se extendía por todo el globo, un dominio donde el sol nunca se ponía. Este viaje no es un mero recorrido, es una inmersión en la compleja red de poder, diplomacia y gue",
+    "description": "Mi imperio se extendía por todo el globo, un dominio donde el sol nunca se ponía. Este viaje no es un mero recorrido, es una inmersión en la compleja red de poder, diplomacia y guerra que definieron el siglo XVI. Desde mi nacimiento en Flandes hasta mi coronación imperial y mi retiro en España, comprenderás la carga y la gloria de gobernar el mundo.\n\nCarlos V gobernó el primer imperio global de la historia. Este viaje traza el arco de su vida a través de Europa, explorando cómo un solo hombre manejó un mosaico de reinos, se enfrentó a la Reforma Protestante y luchó contra los imperios rivales de Francia y el Otomano.",
+    "coverImageUrl": "/media/2026/01/La-Ruta-de-Carlos-V.webp",
+    "gallery": [
+      "https://picsum.photos/seed/Brussels square/1080/720",
+      "https://picsum.photos/seed/Toledo Alcazar/1080/720"
+    ],
+    "city": "Gante",
+    "country": "Europa",
+    "cities": [
+      "Gante",
+      "Bruselas",
+      "Aquisgrán",
+      "Toledo"
+    ],
+    "format": "presencial",
+    "startDate": "2025-04-12",
+    "endDate": "2025-04-21",
+    "durationDays": 10,
+    "publicPrice": 4800,
+    "currency": "EUR",
+    "capacity": 16,
+    "spotsLeft": 11,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 16 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Política",
+    "leader": {
+      "name": "Carlos V",
+      "title": "Emperador del Sacro Imperio Romano Germánico",
+      "narrative": "Mi imperio se extendía por todo el globo, un dominio donde el sol nunca se ponía. Este viaje no es un mero recorrido, es una inmersión en la compleja red de poder, diplomacia y guerra que definieron el siglo XVI. Desde mi nacimiento en Flandes hasta mi coronación imperial y mi retiro en España, comprenderás la carga y la gloria de gobernar el mundo."
+    },
+    "rationale": {
+      "importance": "Carlos V gobernó el primer imperio global de la historia. Este viaje traza el arco de su vida a través de Europa, explorando cómo un solo hombre manejó un mosaico de reinos, se enfrentó a la Reforma Protestante y luchó contra los imperios rivales de Francia y el Otomano.",
+      "learning": "Adquirirás una visión a nivel macro de la geopolítica europea del siglo XVI. Comprenderás la logística de gobernar un imperio descentralizado, las complejidades de la diplomacia, la guerra y la relación entre el poder temporal y el espiritual (Emperador y Papa).",
+      "relevance": "Este viaje es una maestría en gestión de sistemas complejos y liderazgo internacional. Es fundamental para ejecutivos, diplomáticos y estrategas que operan en entornos globales, enseñando lecciones sobre gestión de la diversidad cultural, negociación y el inmenso peso de la toma de decisiones a gran escala."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Bruselas y la Gran Plaza",
+        "description": "Bienvenidos a Bruselas, el corazón de mis dominios en los Países Bajos. Nos instalaremos antes de dirigirnos a la Grand-Place, donde la opulencia de los gremios atestigua la riqueza de estas tierras. Una cena de bienvenida nos introducirá en el complejo mapa político de la Europa que heredé.",
+        "relevance": "Bruselas era un centro neurálgico de mi imperio. La Grand-Place no es solo una plaza, es una declaración del poder económico burgués con el que tuve que negociar y, a veces, someter."
+      },
+      {
+        "day": 2,
+        "title": "El Palacio de Coudenberg: Escenario de la Abdicación",
+        "description": "Exploraremos los restos arqueológicos del Palacio de Coudenberg, el escenario de mi dramática abdicación. A través de reconstrucciones y los cimientos originales, reviviremos el momento en que dividí mi vasto imperio, un acto que conmocionó a Europa. Un historiador experto nos hablará sobre la política de los Habsburgo.",
+        "relevance": "Aquí, donde renuncié al poder, yace la lección más profunda sobre la naturaleza efímera del dominio terrenal. Es un lugar para reflexionar sobre el peso de la corona y la fatiga del gobierno."
+      },
+      {
+        "day": 3,
+        "title": "Gante y Aquisgrán: Cuna y Legitimidad",
+        "description": "Viaje a Gante, mi ciudad natal, para visitar la Catedral de San Bavón, donde fui bautizado. Luego cruzaremos a Alemania para visitar Aquisgrán, la capital de Carlomagno. Veremos la Capilla Palatina, donde fui coronado Rey de los Alemanes, conectando mi linaje con el primer gran emperador europeo.",
+        "relevance": "Gante representa mis raíces flamencas, mientras que Aquisgrán simboliza mi legitimidad imperial. Esta jornada une el nacimiento personal con el renacimiento de la idea imperial en la cristiandad."
+      },
+      {
+        "day": 4,
+        "title": "París: El Campo del Drap d'Or y la Rivalidad con Francia",
+        "description": "Viaje a París. Aunque no era mi dominio, Francia fue mi gran rival. Nos dirigiremos a las afueras para visitar el sitio del \"Campo del Drap d'Or\", donde mi rival, Francisco I, y Enrique VIII de Inglaterra se encontraron. Discutiremos la geopolítica y las constantes guerras que marcaron mi reinado.",
+        "relevance": "Francia representa el contrapeso a mi poder. Entender la rivalidad con la casa de Valois es crucial para comprender las alianzas, las guerras y la diplomacia que definieron mi época."
+      },
+      {
+        "day": 5,
+        "title": "Llegada a Madrid y el Poder de Castilla",
+        "description": "Vuelo a Madrid. Nos adentraremos en el Madrid de los Austrias y visitaremos el Palacio Real, construido sobre el antiguo Alcázar que fue mi residencia. Un experto nos explicará cómo los reinos de Castilla y Aragón se convirtieron en la base de mi poder global y la fuente de las riquezas de América.",
+        "relevance": "España fue el ancla de mi imperio global. Desde aquí, administré un dominio transatlántico, y el oro de las Indias financió mis ambiciones europeas. Madrid es el puente entre el Viejo y el Nuevo Mundo."
+      },
+      {
+        "day": 6,
+        "title": "Toledo: Ciudad Imperial y Corazón de España",
+        "description": "Excursión a Toledo, una de mis capitales imperiales. Pasearemos por sus sinuosas calles, visitando la imponente Catedral Primada y el Alcázar, que fue una de mis principales residencias. Discutiremos el levantamiento de los Comuneros, una rebelión que desafió mi autoridad al inicio de mi reinado.",
+        "relevance": "Toledo es el alma de Castilla. Fue aquí donde consolidé mi poder en España tras superar las revueltas iniciales. La ciudad es un testimonio de la compleja relación entre un rey extranjero y su nuevo reino."
+      },
+      {
+        "day": 7,
+        "title": "Viaje a Bolonia: La Coronación Imperial",
+        "description": "Vuelo a Bolonia, Italia. Nos dirigiremos a la Basílica de San Petronio, el lugar exacto donde el Papa Clemente VII me coronó Emperador del Sacro Imperio Romano Germánico en 1530, la última coronación imperial realizada por un Papa.",
+        "relevance": "Bolonia es el escenario de mi consagración definitiva. Este acto solidificó mi posición como el líder secular de la cristiandad, uniendo el poder temporal de los Habsburgo con la bendición espiritual del Papado."
+      },
+      {
+        "day": 8,
+        "title": "Milán: El Ducado Estratégico",
+        "description": "Viaje a Milán, una de las joyas más disputadas de Italia. Visitaremos el Castillo Sforzesco y discutiremos la importancia estratégica del Ducado de Milán como un puente entre mis dominios españoles e imperiales. Veremos \"La Última Cena\" de Leonardo, una obra maestra que sobrevivió a las convulsiones de mi época.",
+        "relevance": "Controlar Milán era controlar el norte de Italia y asegurar el \"Camino Español\". La ciudad es un peón clave en el gran tablero de ajedrez europeo y un centro de arte y cultura que floreció bajo mi esfera de influencia."
+      },
+      {
+        "day": 9,
+        "title": "El Monasterio de Yuste: El Retiro del Emperador",
+        "description": "Vuelo de regreso a España (vía Madrid) y viaje a la región de Extremadura para visitar el Monasterio de Yuste. En este tranquilo lugar, pasé mis últimos días. Exploraremos mis aposentos, sencillos pero conectados con el altar mayor de la iglesia, y reflexionaremos sobre un final de vida dedicado a la contemplación.",
+        "relevance": "Yuste es el epílogo. Después de gobernar el mundo, elegí este humilde rincón para prepararme para la muerte. Es un lugar de una profunda introspección sobre el poder, la fe y la mortalidad."
+      },
+      {
+        "day": 10,
+        "title": "Reflexión Final y Partida",
+        "description": "Después de una mañana de reflexión en el sereno entorno de Yuste, compartiremos un almuerzo de despedida basado en la gastronomía local. Discutiremos el complejo legado de un hombre que gobernó dos mundos. Traslado al aeropuerto de Madrid para los vuelos de regreso.",
+        "relevance": "Nuestro viaje traza el arco completo de una vida extraordinaria, desde el poder absoluto hasta el retiro ascético. Nos despedimos con una comprensión más profunda de la era que forjó la Europa moderna."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 8,
+        "discountPercent": 7
+      },
+      {
+        "threshold": 12,
+        "discountPercent": 15
+      }
+    ],
+    "preWork": {
+      "title": "Decretos Imperiales",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "El Emperador: Carlos V y su tiempo",
+          "author": "Geoffrey Parker"
+        },
+        {
+          "type": "Serie",
+          "title": "Carlos, Rey Emperador",
+          "author": "RTVE"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-charles-v-empire-tour",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "grand-tour-enlightenment",
+    "type": "viaje",
+    "title": "El Gran Tour de las Luces",
+    "summary": "¡Écrasez l’infâme! (¡Aplastad al infame!). Únete a mí en un viaje intelectual a través de la Europa de la Razón. Desafiaremos dogmas, debatiremos en salones y cafés, y seguiremos l",
+    "description": "¡Écrasez l’infâme! (¡Aplastad al infame!). Únete a mí en un viaje intelectual a través de la Europa de la Razón. Desafiaremos dogmas, debatiremos en salones y cafés, y seguiremos la luz del conocimiento desde París hasta Roma. Este no es un simple viaje, es una campaña por la libertad de pensamiento.\n\nLa Ilustración fue el movimiento intelectual que demolió el Antiguo Régimen y sentó las bases de las democracias modernas. Este viaje sigue la ruta de las ideas que defendieron la razón, los derechos humanos y la libertad, cambiando para siempre el curso de la historia occidental.",
+    "coverImageUrl": "/media/2026/01/El-Gran-Tour-de-las-Luces.webp",
+    "gallery": [
+      "https://picsum.photos/seed/Paris cafe/1080/720",
+      "https://picsum.photos/seed/Rome Pantheon/1080/720"
+    ],
+    "city": "París",
+    "country": "Europa",
+    "cities": [
+      "París",
+      "Ginebra",
+      "Roma",
+      "Venecia"
+    ],
+    "format": "presencial",
+    "startDate": "2025-05-10",
+    "endDate": "2025-05-19",
+    "durationDays": 10,
+    "publicPrice": 5400,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 7,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Política",
+    "leader": {
+      "name": "Voltaire",
+      "title": "Filósofo de la Ilustración",
+      "narrative": "¡Écrasez l’infâme! (¡Aplastad al infame!). Únete a mí en un viaje intelectual a través de la Europa de la Razón. Desafiaremos dogmas, debatiremos en salones y cafés, y seguiremos la luz del conocimiento desde París hasta Roma. Este no es un simple viaje, es una campaña por la libertad de pensamiento."
+    },
+    "rationale": {
+      "importance": "La Ilustración fue el movimiento intelectual que demolió el Antiguo Régimen y sentó las bases de las democracias modernas. Este viaje sigue la ruta de las ideas que defendieron la razón, los derechos humanos y la libertad, cambiando para siempre el curso de la historia occidental.",
+      "learning": "Participarás en debates sobre la separación de poderes, la libertad de expresión y el contrato social. Entenderás cómo se difundían las ideas a través de salones, cafés y la imprenta, y cómo la crítica a la autoridad sentó las bases para la revolución.",
+      "relevance": "El pensamiento crítico, la argumentación y la defensa de los principios son habilidades esenciales. Este viaje es vital para abogados, políticos, periodistas y cualquier profesional que busque afinar su capacidad para cuestionar el statu quo y construir narrativas que impulsen el cambio."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a París: El Salón de Madame Geoffrin",
+        "description": "Bienvenidos a París, el faro de la Ilustración. Nos instalaremos en el barrio de Saint-Germain-des-Prés. Por la noche, recrearemos un salón del siglo XVIII con una cena y un debate guiado por un filósofo moderno, explorando las ideas radicales que cambiaron el mundo.",
+        "relevance": "Los salones eran los crisoles de la Ilustración, donde las ideas sobre la libertad, la razón y los derechos se forjaban y difundían. Comenzar aquí es sumergirse directamente en el corazón intelectual de la época."
+      },
+      {
+        "day": 2,
+        "title": "La Enciclopedia y el Café Procope",
+        "description": "Visitaremos la Biblioteca Nacional de Francia para ver una primera edición de la Enciclopedia de Diderot y d'Alembert. Luego, tomaremos un café en el Procope, el más antiguo de París, frecuentado por figuras como Rousseau, Diderot y yo mismo. Discutiremos el poder del conocimiento impreso.",
+        "relevance": "La Enciclopedia fue el arma más potente de la Ilustración, un intento monumental de organizar todo el conocimiento humano. El Café Procope era nuestro cuartel general, un espacio público para el debate intelectual fuera del control de la corte."
+      },
+      {
+        "day": 3,
+        "title": "Bruselas: Exilio y Libertad de Prensa",
+        "description": "Viaje a Bruselas. Esta ciudad, a menudo un refugio para pensadores perseguidos, tenía una próspera industria editorial clandestina. Visitaremos talleres de impresión históricos y discutiremos el papel crucial de la libertad de prensa (y la falta de ella) en la difusión de ideas subversivas.",
+        "relevance": "Bruselas representa la resistencia intelectual. Fue un centro vital para imprimir y contrabandear los libros prohibidos en Francia, demostrando que las ideas, una vez liberadas, no pueden ser fácilmente encarceladas."
+      },
+      {
+        "day": 4,
+        "title": "Ginebra y Ferney: Mi Reino de la Razón",
+        "description": "Viaje a Ginebra, la ciudad-república de Calvino que tuvo una relación de amor-odio con mi colega Rousseau. Luego cruzaremos la frontera hacia Ferney (Francia), donde estableceré mi \"reino\" filosófico. Visitaremos mi château, desde donde lancé campañas por la justicia como el caso Calas.",
+        "relevance": "Ferney fue mi plataforma para atacar la injusticia en toda Europa. Desde este pequeño rincón, demostré cómo un solo individuo, armado con la razón y una pluma afilada, podía desafiar a los poderes más grandes del continente."
+      },
+      {
+        "day": 5,
+        "title": "Los Alpes: La Naturaleza Sublime de Rousseau",
+        "description": "Desde Ginebra, haremos una excursión a los Alpes, inspirándonos en la visión de Jean-Jacques Rousseau. Discutiremos el concepto de la \"naturaleza\" y el \"buen salvaje\" en contraste con la sociedad corrupta. Un paseo por paisajes espectaculares nos conectará con las ideas románticas que surgieron de la Ilustración.",
+        "relevance": "Mientras yo defendía la razón y el progreso en la ciudad, Rousseau encontraba la verdad en la naturaleza virgen. Este día ofrece una perspectiva crucial sobre las diferentes corrientes dentro de la propia Ilustración."
+      },
+      {
+        "day": 6,
+        "title": "Viaje a Roma: La Ilustración frente a la Antigüedad",
+        "description": "Vuelo a Roma. El \"Grand Tour\" tradicionalmente culminaba aquí. Nuestra primera visita será al Panteón, el monumento antiguo más admirado por los ilustrados por su perfección geométrica. Un experto en la Roma del siglo XVIII nos guiará por la ciudad que vieron Winckelmann y Gibbon.",
+        "relevance": "Para los ilustrados, Roma era un museo al aire libre y una lección de historia. Estudiaron sus ruinas no por devoción, sino para extraer lecciones sobre la grandeza y decadencia de las civilizaciones, un espejo para su propia época."
+      },
+      {
+        "day": 7,
+        "title": "El Vaticano: Confrontando a \"l'Infâme\"",
+        "description": "Nos enfrentaremos al poder de la Iglesia con una visita crítica a los Museos Vaticanos y la Basílica de San Pedro. Analizaremos cómo el escepticismo ilustrado chocó con el dogma y la opulencia del poder papal. La jornada terminará con un debate sobre la separación de la Iglesia y el Estado.",
+        "relevance": "El Vaticano era el corazón de \"l'infâme\" (la infamia), mi término para la superstición y la intolerancia religiosa. Visitarlo con ojos críticos es entender contra qué luchábamos y por qué la libertad de conciencia era tan fundamental."
+      },
+      {
+        "day": 8,
+        "title": "Llegada a Venecia: El Carnaval y la Decadencia",
+        "description": "Viaje en tren a Venecia. La Serenísima en el siglo XVIII era una ciudad de placer, máscaras y decadencia, el patio de recreo de Europa. Nos sumergiremos en esta atmósfera con un paseo por sus calles y una visita a un taller de máscaras venecianas, explorando la figura de Casanova.",
+        "relevance": "Venecia representa la libertad hedonista, una sociedad en el crepúsculo de su gloria. Era un laboratorio social fascinante para los observadores de la condición humana, un lugar donde la moralidad pública y privada a menudo divergían."
+      },
+      {
+        "day": 9,
+        "title": "Música y Ópera en la Venecia de Vivaldi",
+        "description": "Exploraremos el mundo musical de Venecia, visitando el Ospedale della Pietà, donde Vivaldi compuso sus obras maestras. Por la noche, asistiremos a una representación de ópera barroca en el histórico teatro La Fenice, experimentando el entretenimiento más sofisticado de la época.",
+        "relevance": "La música era una parte esencial de la cultura ilustrada y Venecia era su capital. La ópera pública, accesible a un público más amplio, fue una innovación social y artística que refleja el espíritu de la época."
+      },
+      {
+        "day": 10,
+        "title": "Últimas Reflexiones en el Café Florian y Partida",
+        "description": "Nuestro viaje concluye con un café en el histórico Caffè Florian en la Plaza de San Marcos, un lugar de encuentro para artistas e intelectuales durante siglos. Compartiremos nuestras conclusiones sobre el legado de la Ilustración antes de tomar un taxi acuático al aeropuerto.",
+        "relevance": "El café, como el de París, es un símbolo de la nueva esfera pública. Terminar nuestro viaje aquí es un último brindis por la conversación, el debate y la búsqueda incesante del conocimiento que definieron el Siglo de las Luces."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "Manifiesto de la Razón",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Cándido, o el optimismo",
+          "author": "Voltaire"
+        },
+        {
+          "type": "Película",
+          "title": "Amadeus",
+          "author": "Miloš Forman"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-grand-tour-enlightenment",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "sabores-del-imperio",
+    "type": "viaje",
+    "title": "Sabores del Imperio: De Roma a Viena",
+    "summary": "Acompañadme en un banquete a través del tiempo. Seguiremos las antiguas rutas comerciales que llevaron especias y recetas desde el corazón de Roma hasta los confines del Sacro Impe",
+    "description": "Acompañadme en un banquete a través del tiempo. Seguiremos las antiguas rutas comerciales que llevaron especias y recetas desde el corazón de Roma hasta los confines del Sacro Imperio. Descubriremos cómo la caída de un imperio y el nacimiento de otros nuevos transformó los ingredientes y las mesas de Europa. Este es un viaje para el estómago y para la mente.\n\nEste viaje traza una fascinante ruta culinaria que sigue la expansión y transformación de los imperios en Europa. Desde las recetas de la antigua Roma hasta la opulencia de la Viena imperial, la comida actúa como un registro histórico de las influencias culturales, el comercio y el poder.",
+    "coverImageUrl": "/media/2026/01/Sabores-del-Imperio.webp",
+    "gallery": [],
+    "city": "Roma",
+    "country": "Europa",
+    "cities": [
+      "Roma",
+      "Bolonia",
+      "Múnich",
+      "Viena"
+    ],
+    "format": "presencial",
+    "startDate": "2025-09-20",
+    "endDate": "2025-09-29",
+    "durationDays": 10,
+    "publicPrice": 5000,
+    "currency": "EUR",
+    "capacity": 16,
+    "spotsLeft": 12,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 16 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Gastronomía",
+    "leader": {
+      "name": "Marco Gavio Apicio",
+      "title": "Gourmand de la Antigua Roma",
+      "narrative": "Acompañadme en un banquete a través del tiempo. Seguiremos las antiguas rutas comerciales que llevaron especias y recetas desde el corazón de Roma hasta los confines del Sacro Imperio. Descubriremos cómo la caída de un imperio y el nacimiento de otros nuevos transformó los ingredientes y las mesas de Europa. Este es un viaje para el estómago y para la mente."
+    },
+    "rationale": {
+      "importance": "Este viaje traza una fascinante ruta culinaria que sigue la expansión y transformación de los imperios en Europa. Desde las recetas de la antigua Roma hasta la opulencia de la Viena imperial, la comida actúa como un registro histórico de las influencias culturales, el comercio y el poder.",
+      "learning": "Comprenderás cómo evoluciona la gastronomía a través de las fronteras y los siglos. Aprenderás a identificar las influencias romanas en la cocina italiana, la transición a la robusta cocina germánica y cómo la diversidad de un imperio multicultural como el Austrohúngaro se refleja en su mesa.",
+      "relevance": "La capacidad de entender la evolución de un producto y su adaptación a diferentes mercados es crucial. Este viaje ofrece lecciones sobre la logística de la cadena de suministro, la adaptación cultural y la historia del producto, muy relevantes para profesionales de la alimentación, la logística y los negocios internacionales."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Roma: Las Raíces del Gusto",
+        "description": "Benvenuti a Roma. Nuestra primera cena será en el barrio de Testaccio, el antiguo centro logístico y gastronómico del Imperio Romano. En una trattoria histórica, degustaremos platos de la \"cucina povera\" romana, como la cacio e pepe o la coda alla vaccinara, entendiendo sus humildes orígenes.",
+        "relevance": "Testaccio nos conecta directamente con el vientre de la antigua Roma. Comer aquí es saborear la historia, platos que han evolucionado durante siglos pero que conservan el alma de la cocina popular romana."
+      },
+      {
+        "day": 2,
+        "title": "Mercados Romanos y Cocina Imperial",
+        "description": "Exploraremos el vibrante mercado de Campo de' Fiori. Por la tarde, participaremos en una clase de cocina única, donde recrearemos recetas del libro \"De re coquinaria\" de Apicio, adaptadas para el paladar moderno. Descubriremos el uso de ingredientes como el \"garum\" y especias exóticas.",
+        "relevance": "Cocinar recetas de la antigua Roma es una forma de arqueología experimental. Nos permite comprender los sabores, las técnicas y la sofisticación de una civilización a menudo solo recordada por sus legiones."
+      },
+      {
+        "day": 3,
+        "title": "Bolonia: La Grassa, La Dotta, La Rossa",
+        "description": "Viaje en tren a Bolonia, la capital gastronómica de Italia. Por la tarde, haremos un recorrido a pie por el \"Quadrilatero\", el barrio del mercado medieval, rebosante de pasta fresca, mortadela y Parmigiano Reggiano. La cena será en una osteria clásica, con un plato de auténticos \"tagliatelle al ragù\".",
+        "relevance": "Bolonia, \"la Gorda\", es el corazón de la despensa italiana. Aquí, la comida es una ciencia y una religión. Entenderemos por qué su cocina, basada en la riqueza de sus productos, se ha convertido en un estándar mundial."
+      },
+      {
+        "day": 4,
+        "title": "El Oro Negro y Rojo de Módena",
+        "description": "Excursión de un día a la región de Módena. Por la mañana, visitaremos una \"acetaia\" para desentrañar los secretos del Aceto Balsamico Tradizionale, con una cata de vinagres de 12 y 25 años. Después del almuerzo, visitaremos un productor de Parmigiano Reggiano para ver el proceso desde la leche hasta la rueda. Y no podía faltar una parada en Maranello para los amantes de Ferrari.",
+        "relevance": "El balsámico y el parmesano son dos de los tesoros culinarios más imitados del mundo. Conocer su producción artesanal y tradicional es una lección sobre la importancia del tiempo, la paciencia y la denominación de origen."
+      },
+      {
+        "day": 5,
+        "title": "Cruce de los Alpes a Múnich: La Abundancia Bávara",
+        "description": "Viaje panorámico en tren a través de los Alpes hasta Múnich. Para contrastar con la cocina italiana, nuestra primera noche bávara la pasaremos en una cervecería histórica (Hofbräuhaus o similar), degustando pretzels gigantes, codillo de cerdo y, por supuesto, cerveza de trigo local, todo ello con música tradicional.",
+        "relevance": "El cruce de los Alpes no es solo un cambio de paisaje, es una transición culinaria. De la ligereza del aceite de oliva a la contundencia de la manteca de cerdo; de la sutileza del vino a la celebración de la cerveza. Es la frontera gastronómica de Europa."
+      },
+      {
+        "day": 6,
+        "title": "Múnich: Cerveza, Würste y el Jardín Inglés",
+        "description": "Por la mañana, un \"tour de salchichas\" nos llevará por el Viktualienmarkt para probar diferentes tipos de \"würste\" bávaras. Por la tarde, nos relajaremos como un local en uno de los \"Biergärten\" (jardines de cerveza) del Jardín Inglés, entendiendo la cultura de la cerveza al aire libre.",
+        "relevance": "La cerveza y las salchichas son el alma de la cultura bávara. Este día nos enseña que la comida puede ser un pilar de la vida social y comunitaria, uniendo a la gente en una celebración compartida."
+      },
+      {
+        "day": 7,
+        "title": "Llegada a Viena: El Esplendor del Café y los Pasteles",
+        "description": "Viaje en tren a Viena. Nuestra primera inmersión en la capital de los Habsburgo será en un café vienés tradicional, patrimonio de la UNESCO. Pediremos un \"melange\" y un trozo de tarta Sacher o Apfelstrudel, mientras un historiador local nos habla de la cultura del café como centro de la vida intelectual y artística.",
+        "relevance": "El café vienés es una institución, un \"salón público\" donde nacieron ideas revolucionarias en la música, el arte y la psicología. Es un lugar para ver y ser visto, para leer el periódico y para debatir, un microcosmos de la Viena imperial."
+      },
+      {
+        "day": 8,
+        "title": "El Schnitzel y los Vinos de Viena",
+        "description": "Participaremos en una clase de cocina para aprender a preparar el perfecto Wiener Schnitzel. El almuerzo será nuestra propia creación. Por la tarde, subiremos a las colinas de los bosques de Viena para visitar un \"Heuriger\", una taberna rústica donde los viticultores locales sirven su vino joven.",
+        "relevance": "El schnitzel es el plato nacional de Austria, un símbolo de la identidad vienesa. Combinarlo con una visita a un \"Heuriger\" nos muestra las dos caras de la gastronomía local: la tradición imperial y la cultura vinícola rústica que rodea la ciudad."
+      },
+      {
+        "day": 9,
+        "title": "Palacios y Mercados: Delicias Imperiales",
+        "description": "Visitaremos el Palacio de Schönbrunn, la residencia de verano de los Habsburgo. Después, nos sumergiremos en el Naschmarkt, el mercado más grande y cosmopolita de Viena, un reflejo de la diversidad del antiguo Imperio Austrohúngaro. La cena de despedida será en un restaurante de lujo que reinterpreta la cocina imperial.",
+        "relevance": "Desde la opulencia de los palacios hasta el bullicio multicultural del mercado, este día resume la historia de Viena como capital de un vasto imperio. La comida, con sus influencias de Hungría, Bohemia y más allá, es el testamento más sabroso de ese legado."
+      },
+      {
+        "day": 10,
+        "title": "Desayuno Imperial y Despedida",
+        "description": "Disfrutaremos de un último desayuno vienés, quizás con un \"Kaiserschmarrn\" (tortita del emperador). Tiempo libre para una última visita al centro histórico antes del traslado al aeropuerto, con la memoria llena de los sabores que han definido la historia de Europa Central.",
+        "relevance": "Incluso el desayuno en Viena tiene una historia imperial. Nos despedimos de una ciudad que ha perfeccionado el arte de vivir bien, dejando un dulce sabor de boca y una profunda apreciación por cómo la comida da forma a la cultura."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 8,
+        "discountPercent": 7
+      },
+      {
+        "threshold": 12,
+        "discountPercent": 14
+      }
+    ],
+    "preWork": {
+      "title": "El Festín del Emperador",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "La marcha Radetzky",
+          "author": "Joseph Roth"
+        },
+        {
+          "type": "Película",
+          "title": "Amadeus",
+          "author": "Miloš Forman"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-sabores-del-imperio",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "gutenberg-revolution",
+    "type": "viaje",
+    "title": "La Revolución de Gutenberg: Tinta, Papel y Conocimiento",
+    "summary": "Mi invención no fue solo una máquina; fue la chispa que encendió la Reforma, el Renacimiento y la era de la ciencia. Sígueme en un viaje a los orígenes de la palabra impresa. Descu",
+    "description": "Mi invención no fue solo una máquina; fue la chispa que encendió la Reforma, el Renacimiento y la era de la ciencia. Sígueme en un viaje a los orígenes de la palabra impresa. Descubrirás cómo el humilde acto de presionar tinta sobre papel derribó imperios, construyó naciones y liberó la mente humana.\n\nLa invención de la imprenta es posiblemente la innovación más importante de la historia de la humanidad. Este viaje nos lleva a su origen para entender cómo esta tecnología disruptiva democratizó el conocimiento, impulsó la Reforma Protestante y pavimentó el camino para la revolución científica.",
+    "coverImageUrl": "/media/2026/01/La-Revolucion-de-Gutenberg.webp",
+    "gallery": [],
+    "city": "Maguncia",
+    "country": "Reino Unido y Alemania",
+    "cities": [
+      "Maguncia",
+      "Estrasburgo",
+      "Frankfurt",
+      "Amberes"
+    ],
+    "format": "presencial",
+    "startDate": "2025-07-12",
+    "endDate": "2025-07-21",
+    "durationDays": 10,
+    "publicPrice": 4200,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 15,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Ciencia y Tecnología",
+    "leader": {
+      "name": "Johannes Gutenberg",
+      "title": "Inventor de la Imprenta de Tipos Móviles",
+      "narrative": "Mi invención no fue solo una máquina; fue la chispa que encendió la Reforma, el Renacimiento y la era de la ciencia. Sígueme en un viaje a los orígenes de la palabra impresa. Descubrirás cómo el humilde acto de presionar tinta sobre papel derribó imperios, construyó naciones y liberó la mente humana."
+    },
+    "rationale": {
+      "importance": "La invención de la imprenta es posiblemente la innovación más importante de la historia de la humanidad. Este viaje nos lleva a su origen para entender cómo esta tecnología disruptiva democratizó el conocimiento, impulsó la Reforma Protestante y pavimentó el camino para la revolución científica.",
+      "learning": "Comprenderás el contexto técnico y emprendedor de una de las mayores innovaciones de la historia. Participarás en talleres prácticos de tipografía y encuadernación, y analizarás cómo la imprenta creó el primer mercado masivo de información, un precursor de Internet.",
+      "relevance": "Vivimos en una era de disrupción tecnológica constante. Entender la revolución de Gutenberg ofrece un poderoso paralelismo para analizar el impacto de tecnologías como la IA. Es un viaje esencial para innovadores, emprendedores, educadores y profesionales de los medios de comunicación."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Maguncia: La Cuna de la Impresión",
+        "description": "Bienvenidos a Maguncia (Mainz), la ciudad donde todo comenzó. Tras instalarnos, visitaremos el Museo Gutenberg. Aquí, nos maravillaremos ante las dos Biblias de Gutenberg originales, las joyas de la corona de la imprenta. Una demostración en una réplica de la prensa nos mostrará el ingenio de la invención.",
+        "relevance": "Estar frente a una Biblia de Gutenberg es estar ante el kilómetro cero de la era de la información. Aquí comprenderemos el monumental salto técnico y cultural que supuso pasar de los manuscritos a los libros impresos."
+      },
+      {
+        "day": 2,
+        "title": "El Taller de Gutenberg y los Secretos del Oficio",
+        "description": "Un recorrido guiado por Maguncia nos llevará a los lugares donde Gutenberg vivió y trabajó. En un taller especializado, participaremos en una clase práctica de composición tipográfica y encuadernación, experimentando de primera mano los desafíos del impresor del siglo XV.",
+        "relevance": "Este día desmitifica la invención. Al componer tipos y manejar la prensa, apreciaremos la complejidad del proceso y el genio práctico de Gutenberg para resolver docenas de problemas técnicos."
+      },
+      {
+        "day": 3,
+        "title": "Estrasburgo: Años de Exilio y Experimentación",
+        "description": "Viaje a Estrasburgo, la ciudad donde pasé años cruciales experimentando en secreto. Visitaremos el barrio de la Petite France y discutiremos sobre los misteriosos proyectos en los que trabajé, desde la fabricación de espejos para peregrinos hasta los primeros prototipos de mi imprenta.",
+        "relevance": "Estrasburgo revela al Gutenberg emprendedor y experimentador. Fue aquí donde perfeccionó las aleaciones para los tipos y la tinta a base de aceite, innovaciones cruciales para el éxito de su imprenta."
+      },
+      {
+        "day": 4,
+        "title": "Frankfurt: El Nacimiento del Mercado del Libro",
+        "description": "Nos dirigiremos a Frankfurt, sede de la feria del libro más importante del mundo, una tradición que comenzó poco después de mi invención. Un experto nos guiará por la historia de la feria y cómo la imprenta creó un mercado masivo para el conocimiento y las ideas.",
+        "relevance": "Si Maguncia fue la cuna de la producción, Frankfurt fue la cuna de la distribución. Aquí, el libro pasó de ser un objeto de lujo a una mercancía, catalizando la difusión de ideas a una velocidad sin precedentes."
+      },
+      {
+        "day": 5,
+        "title": "La Reforma: El Primer Best-Seller de la Imprenta",
+        "description": "Un seminario sobre el impacto de la imprenta en la Reforma Protestante. Analizaremos cómo las 95 tesis de Lutero, reproducidas masivamente, se convirtieron en el primer \"viral\" de la historia. Discutiremos el papel de la imprenta como herramienta de propaganda y revolución religiosa.",
+        "relevance": "La Reforma es inseparable de la imprenta. Lutero entendió su poder y la usó para desafiar a Roma. Este día es clave para entender cómo una innovación tecnológica puede cambiar radicalmente el poder, la política y la fe."
+      },
+      {
+        "day": 6,
+        "title": "Amberes: El Centro de la Impresión del Norte de Europa",
+        "description": "Viaje a Amberes, Bélgica. Visitaremos el fascinante Museo Plantin-Moretus, la única imprenta renacentista y barroca conservada en el mundo y Patrimonio de la Humanidad. Veremos las prensas originales, miles de tipos de plomo y una biblioteca invaluable.",
+        "relevance": "La imprenta Plantin-Moretus muestra la evolución y la industrialización de mi invento. Pasamos del taller artesanal a una verdadera empresa editorial internacional, un centro de humanismo y ciencia."
+      },
+      {
+        "day": 7,
+        "title": "Cartografía y Ciencia: Mapeando el Nuevo Mundo",
+        "description": "En el Museo Plantin-Moretus, nos centraremos en su papel en la Edad de los Descubrimientos. Veremos cómo impresores como Ortelius y Mercator utilizaron la imprenta para crear los primeros atlas modernos, mapeando un mundo en rápida expansión y difundiendo los descubrimientos científicos.",
+        "relevance": "La imprenta no solo difundió textos, sino también imágenes y mapas. Esto revolucionó la navegación y la ciencia, permitiendo una comprensión compartida y corregible del mundo físico."
+      },
+      {
+        "day": 8,
+        "title": "El Arte del Grabado y la Ilustración de Libros",
+        "description": "Amberes fue un centro para grandes artistas como Rubens, que colaboraron con los impresores. En un taller de grabado, aprenderemos las técnicas del grabado en madera y cobre que permitieron ilustrar los libros, desde tratados de botánica hasta obras literarias.",
+        "relevance": "La combinación de texto e imagen fue una de las sinergias más poderosas de la imprenta. Esta sesión explora cómo la ilustración transformó la educación, la ciencia y el arte."
+      },
+      {
+        "day": 9,
+        "title": "La Contra-Reforma y la Imprenta Católica",
+        "description": "De vuelta en Alemania, exploraremos cómo la Iglesia Católica adoptó la imprenta como una herramienta para la Contra-Reforma. Visitaremos una biblioteca barroca para ver cómo la tipografía y el diseño se usaron para crear obras suntuosas que reafirmaban la fe católica.",
+        "relevance": "Este día muestra que la tecnología es neutral; puede ser usada para la revolución o para la reacción. Es una lección importante sobre cómo las instituciones se adaptan y apropian de las nuevas tecnologías."
+      },
+      {
+        "day": 10,
+        "title": "El Legado de la Galaxia Gutenberg y Despedida",
+        "description": "Una reflexión final sobre el impacto duradero de la imprenta, desde la alfabetización masiva hasta el nacimiento de la esfera pública y la era digital. Almuerzo de despedida en Frankfurt y traslado al aeropuerto.",
+        "relevance": "Vivimos en un mundo moldeado por la imprenta. Esta jornada final conecta los puntos desde el siglo XV hasta la era de Internet, reflexionando sobre cómo la forma en que comunicamos da forma a lo que somos."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 9,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 14,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Manuscrito del Impresor",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "La Galaxia Gutenberg",
+          "author": "Marshall McLuhan"
+        },
+        {
+          "type": "Película",
+          "title": "El nombre de la rosa",
+          "author": "Jean-Jacques Annaud"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-gutenberg-revolution",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "olympia-legacy",
+    "type": "viaje",
+    "title": "Olympia: El Legado de los Juegos Antiguos",
+    "summary": "La gloria (kleos) no se gana, se arrebata. Fui el corredor más grande de la antigüedad, un triunfador en cuatro olimpiadas consecutivas. Únete a mí para viajar a la cuna de la comp",
+    "description": "La gloria (kleos) no se gana, se arrebata. Fui el corredor más grande de la antigüedad, un triunfador en cuatro olimpiadas consecutivas. Únete a mí para viajar a la cuna de la competición. No solo visitarás ruinas; sentirás el sudor, la disciplina y el deseo ardiente de la victoria. Entrenaremos cuerpo y mente para entender qué significaba ser un atleta a los ojos de los dioses.\n\nEste viaje es una inmersión en los orígenes de la competición atlética y el espíritu olímpico. Al visitar Olimpia, Nemea y Corinto, no solo exploramos ruinas, sino que revivimos los valores de excelencia (areté), el honor y la tregua sagrada que rodeaban a los juegos en la antigüedad.",
+    "coverImageUrl": "/media/2026/01/Olympia-El-Legado.webp",
+    "gallery": [],
+    "city": "Atenas",
+    "country": "Grecia",
+    "cities": [
+      "Atenas",
+      "Corinto",
+      "Nemea",
+      "Olimpia"
+    ],
+    "format": "presencial",
+    "startDate": "2025-06-20",
+    "endDate": "2025-06-29",
+    "durationDays": 10,
+    "publicPrice": 3920,
+    "currency": "EUR",
+    "capacity": 20,
+    "spotsLeft": 12,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 20 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Deportes",
+    "leader": {
+      "name": "Leónidas de Rodas",
+      "title": "El Triastés Olímpico",
+      "narrative": "La gloria (kleos) no se gana, se arrebata. Fui el corredor más grande de la antigüedad, un triunfador en cuatro olimpiadas consecutivas. Únete a mí para viajar a la cuna de la competición. No solo visitarás ruinas; sentirás el sudor, la disciplina y el deseo ardiente de la victoria. Entrenaremos cuerpo y mente para entender qué significaba ser un atleta a los ojos de los dioses."
+    },
+    "rationale": {
+      "importance": "Este viaje es una inmersión en los orígenes de la competición atlética y el espíritu olímpico. Al visitar Olimpia, Nemea y Corinto, no solo exploramos ruinas, sino que revivimos los valores de excelencia (areté), el honor y la tregua sagrada que rodeaban a los juegos en la antigüedad.",
+      "learning": "Comprenderás la conexión entre deporte, religión y política en la antigua Grecia. A través de talleres prácticos, experimentarás las disciplinas del pentatlón y sentirás la emoción de correr en el estadio original. Analizarás la mentalidad del atleta antiguo, su búsqueda de la gloria inmortal (kleos).",
+      "relevance": "La mentalidad de un atleta de élite —disciplina, resiliencia y enfoque en la excelencia— es directamente aplicable a cualquier campo profesional. Este viaje es ideal para deportistas, entrenadores y líderes de equipo que buscan inspiración en los fundamentos de la competición y el alto rendimiento."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Atenas: La Cuna de la Civilización",
+        "description": "Bienvenidos a Atenas. Tras dejar el equipaje, subiremos a la colina de Filopapo para una vista panorámica de la Acrópolis al atardecer. La cena será una introducción a la dieta mediterránea, la base del físico de cualquier atleta griego, mientras discutimos la filosofía del \"cuerpo sano en mente sana\".",
+        "relevance": "Atenas es el punto de partida intelectual. Antes de enfocarnos en el cuerpo, debemos entender la mente griega: la filosofía, la democracia y el ideal de excelencia (areté) que sentaron las bases para la competición atlética como parte de la educación del ciudadano."
+      },
+      {
+        "day": 2,
+        "title": "El Estadio Panatenaico y los Juegos Modernos",
+        "description": "Por la mañana, correremos unas vueltas en el Estadio Panatenaico, una reconstrucción en mármol del estadio antiguo y sede de los primeros Juegos Olímpicos modernos en 1896. Un historiador olímpico nos contará la historia de su renacimiento y el legado de Pierre de Coubertin.",
+        "relevance": "Este estadio es el puente entre el mundo antiguo y el moderno. Correr en su pista es conectar con 2.500 años de historia atlética, sintiendo la transición desde los juegos en honor a los dioses hasta el movimiento olímpico internacional de hoy."
+      },
+      {
+        "day": 3,
+        "title": "Corinto y los Juegos Ístmicos",
+        "description": "Viaje a Corinto. Exploraremos el antiguo Diolkos, la calzada por la que se arrastraban los barcos, una proeza de la ingeniería. Luego visitaremos el sitio de los Juegos Ístmicos, celebrados en honor a Poseidón. Aquí, el premio no era de olivo, sino una corona de pino o apio.",
+        "relevance": "Corinto nos muestra que Olimpia no era el único gran evento. Los Juegos Ístmicos, parte del \"Periodos\" (circuito de juegos), demuestran la importancia del atletismo en toda Grecia y la variedad de cultos y premios asociados a la competición."
+      },
+      {
+        "day": 4,
+        "title": "Nemea: La Guarida del León y los Juegos Nemeos",
+        "description": "Nos dirigiremos a Nemea, famosa por el mito de Hércules y el León. Visitaremos el santuario de Zeus y el estadio perfectamente conservado, donde podremos alinearnos en la línea de salida de piedra original. Recrearemos el juramento de los atletas y discutiremos el papel de la mitología en el deporte.",
+        "relevance": "Nemea conecta directamente el mito heroico con la competición atlética. Estar en su estadio, con el túnel de los atletas intacto, es una de las experiencias más evocadoras. Es sentir el paso de la leyenda al atleta y comprender que cada competidor aspiraba a ser un héroe."
+      },
+      {
+        "day": 5,
+        "title": "Llegada a Olimpia: El Santuario Sagrado",
+        "description": "Viaje a través del Peloponeso hasta Olimpia, el lugar más sagrado del deporte antiguo. Nuestra primera tarde la pasaremos en el museo arqueológico, hogar de obras maestras como el Hermes de Praxíteles y los frontones del Templo de Zeus, que narran historias de orden contra el caos.",
+        "relevance": "El museo de Olimpia es crucial para entender el contexto. Antes de ver el sitio, debemos ver el arte que lo adornaba. Los frontones del templo nos enseñan el ideal griego: la victoria de la civilización y la razón (simbolizada por los atletas) sobre la barbarie y la fuerza bruta."
+      },
+      {
+        "day": 6,
+        "title": "El Corazón de Olimpia: Templo de Zeus y el Taller de Fidias",
+        "description": "Exploraremos el Altis, el recinto sagrado de Olimpia. Nos detendremos ante las ruinas del Templo de Zeus, que albergó una de las Siete Maravillas del Mundo Antiguo: la estatua de Zeus de Fidias. Visitaremos el taller donde el gran escultor creó esta obra colosal.",
+        "relevance": "Aquí entendemos que los Juegos Olímpicos eran, ante todo, un festival religioso. La competición era una ofrenda a Zeus. Pararse donde estuvo su estatua es sentir la escala de la devoción y la magnificencia que rodeaba a los juegos."
+      },
+      {
+        "day": 7,
+        "title": "El Día de la Competición: El Estadio y la Palestra",
+        "description": "Hoy es el día. Entraremos al estadio a través del mismo túnel abovedado que los atletas antiguos. Correremos un \"stadion\" (aprox. 192 metros) en la pista original. Antes, visitaremos la Palestra y el Gimnasio, los lugares de entrenamiento, para un taller práctico sobre las disciplinas del pentatlón: lanzamiento de disco y jabalina.",
+        "relevance": "Esta es la experiencia culminante. Correr en el estadio de Olimpia es la conexión más directa y visceral con los atletas de la antigüedad. Tocar la línea de salida, lanzar el disco... es pasar de la teoría a la práctica, del espectador al participante."
+      },
+      {
+        "day": 8,
+        "title": "El Legado de los Vencedores y los Zanes",
+        "description": "Analizaremos el legado de la victoria. Veremos el Filipeion, un monumento a la victoria de una familia real, y los \"Zanes\", las estatuas de Zeus financiadas con las multas de los atletas que hacían trampas. Un debate sobre la fama, la fortuna y la corrupción en el deporte antiguo y moderno.",
+        "relevance": "Olimpia no era solo gloria; también había política, ego y trampas. Esta jornada explora la compleja realidad del deporte de alto nivel, mostrándonos que la naturaleza humana, con sus virtudes y sus vicios, ha cambiado muy poco en 2.500 años."
+      },
+      {
+        "day": 9,
+        "title": "Regreso a Atenas y la Academia de Platón",
+        "description": "Regresaremos a Atenas. Por la tarde, nos alejaremos del centro para visitar el sitio arqueológico de la Academia de Platón. En este sereno olivar, discutiremos la relación entre la educación física y la filosófica, y cómo el ideal de un ciudadano completo incluía ambas.",
+        "relevance": "Cerrar el círculo volviendo a la filosofía. La Academia nos recuerda que, para los griegos, el desarrollo del cuerpo no era un fin en sí mismo, sino una parte integral de la formación de un individuo virtuoso y un ciudadano útil para la polis. Es la unión final de músculo e mente."
+      },
+      {
+        "day": 10,
+        "title": "Despedida Olímpica",
+        "description": "Mañana libre en Atenas para compras de última hora en Plaka o una revisita a un lugar favorito. Nos reuniremos para un almuerzo de despedida con vistas a la Acrópolis, compartiendo las lecciones aprendidas sobre competición, honor y el espíritu olímpico. Traslado al aeropuerto.",
+        "relevance": "La última vista de la Acrópolis sirve como un recordatorio del ideal de perfección por el que lucharon los atletas y los artistas griegos. Nos vamos no solo con recuerdos de lugares, sino con una comprensión más profunda del impulso humano por superar nuestros límites."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Manual del Atleta",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "La Ilíada (Libro 23, Los juegos fúnebres por Patroclo)",
+          "author": "Homero"
+        },
+        {
+          "type": "Película",
+          "title": "Carros de Fuego",
+          "author": "Hugh Hudson"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-olympia-legacy",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "french-revolution",
+    "type": "viaje",
+    "title": "La Revolución Francesa: Libertad, Igualdad, Fraternidad",
+    "summary": "Ciudadanos, la historia nos llama. Acompañadme a los días que hicieron temblar los tronos de Europa. Desde la toma de la Bastilla hasta el Reinado del Terror, seréis testigos de có",
+    "description": "Ciudadanos, la historia nos llama. Acompañadme a los días que hicieron temblar los tronos de Europa. Desde la toma de la Bastilla hasta el Reinado del Terror, seréis testigos de cómo un pueblo se levantó para reclamar su soberanía. Este no es un viaje para los débiles de corazón, es una lección sobre el precio de la libertad.\n\nLa Revolución Francesa es el evento fundacional de la era moderna, un cataclismo que destruyó el absolutismo monárquico y difundió los ideales de libertad, igualdad y fraternidad por todo el mundo. Este viaje es una inmersión en sus días más turbulentos.",
+    "coverImageUrl": "/media/2026/01/La-Revolucion-Francesa.webp",
+    "gallery": [],
+    "city": "París",
+    "country": "Francia",
+    "cities": [
+      "París",
+      "Versalles"
+    ],
+    "format": "presencial",
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-14",
+    "durationDays": 10,
+    "publicPrice": 1980,
+    "currency": "EUR",
+    "capacity": 20,
+    "spotsLeft": 15,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 20 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Revolución",
+    "leader": {
+      "name": "Maximilien Robespierre",
+      "title": "El Incorruptible",
+      "narrative": "Ciudadanos, la historia nos llama. Acompañadme a los días que hicieron temblar los tronos de Europa. Desde la toma de la Bastilla hasta el Reinado del Terror, seréis testigos de cómo un pueblo se levantó para reclamar su soberanía. Este no es un viaje para los débiles de corazón, es una lección sobre el precio de la libertad."
+    },
+    "rationale": {
+      "importance": "La Revolución Francesa es el evento fundacional de la era moderna, un cataclismo que destruyó el absolutismo monárquico y difundió los ideales de libertad, igualdad y fraternidad por todo el mundo. Este viaje es una inmersión en sus días más turbulentos.",
+      "learning": "Comprenderás las causas, fases y consecuencias de la Revolución. Analizarás la tensión entre los ideales y la violencia política, desde la Declaración de los Derechos del Hombre hasta el Reinado del Terror, y cómo un movimiento por la libertad pudo desembocar en una dictadura.",
+      "relevance": "Entender la dinámica de una revolución ofrece un marco para analizar cualquier proceso de cambio radical, ya sea social o empresarial. Este viaje desarrolla el pensamiento crítico sobre el poder, la ideología y el liderazgo en tiempos de crisis, esencial para líderes en cualquier campo."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "París: Vísperas de la Revolución",
+        "description": "Llegada a París. Nos reuniremos en la Plaza de la Concordia, donde la guillotina reclamó miles de vidas, incluida la del rey Luis XVI. Una cena introductoria explorará las causas de la Revolución: la crisis financiera, la desigualdad y las ideas de la Ilustración.",
+        "relevance": "Empezar donde la monarquía terminó nos sumerge de lleno en la brutalidad y la radicalidad de la Revolución. Este lugar simboliza la ruptura total con el Antiguo Régimen."
+      },
+      {
+        "day": 2,
+        "title": "La Toma de la Bastilla y el Despertar del Pueblo",
+        "description": "Visitaremos la Plaza de la Bastilla, el símbolo del despotismo real. Un historiador nos narrará los eventos del 14 de julio de 1789. Por la tarde, en el barrio de Les Halles, hablaremos sobre el papel de la gente común de París (los \"sans-culottes\") como motor de la Revolución.",
+        "relevance": "La Bastilla no era una simple prisión; su caída fue un terremoto simbólico que demostró que el poder del rey ya no era absoluto y que el pueblo se había convertido en un actor político formidable."
+      },
+      {
+        "day": 3,
+        "title": "Versalles: El Ocaso del Antiguo Régimen",
+        "description": "Excursión al Palacio de Versalles. Recorreremos los lujosos apartamentos reales y el Salón de los Espejos, contrastando la opulencia de la corte con la miseria del pueblo. Reviviremos la \"Marcha sobre Versalles\", cuando las mujeres de París forzaron a la familia real a regresar a la capital.",
+        "relevance": "Versalles es la encarnación del Antiguo Régimen. Ver su extravagancia nos ayuda a comprender la rabia y el resentimiento que alimentaron la Revolución. Fue la burbuja dorada que el pueblo se dispuso a reventar."
+      },
+      {
+        "day": 4,
+        "title": "Los Clubes Jacobinos y el Debate Político",
+        "description": "Visita al antiguo Convento de los Jacobinos, donde se reunía el club político más influyente. A través de un debate simulado, exploraremos las facciones de la Revolución (jacobinos, girondinos) y las ideas radicales que llevaron a la proclamación de la República.",
+        "relevance": "Los clubes políticos fueron los motores intelectuales de la Revolución. Entender su funcionamiento interno es comprender cómo se forjó la ideología que transformó Francia y el mundo."
+      },
+      {
+        "day": 5,
+        "title": "El Juicio y Ejecución del Rey",
+        "description": "Seguiremos los últimos pasos de Luis XVI, desde su encarcelamiento en la Torre del Temple hasta su juicio en la Convención Nacional y su ejecución. Un debate ético nos enfrentará a la cuestión del regicidio y la legitimidad de la justicia revolucionaria.",
+        "relevance": "La ejecución del rey fue el punto de no retorno, un acto que rompió con mil años de monarquía. Analizarlo nos permite discutir los límites de la justicia y la soberanía popular."
+      },
+      {
+        "day": 6,
+        "title": "El Reinado del Terror y la Virtud",
+        "description": "Exploraremos la Conciergerie, la \"antecámara de la guillotina\" donde María Antonieta y muchos otros pasaron sus últimas horas. Un debate guiado nos enfrentará a las paradojas del Terror: ¿fue una traición a los ideales de 1789 o un mal necesario para salvar la República?",
+        "relevance": "La Conciergerie es el corazón oscuro de la Revolución. Nos obliga a confrontar las preguntas más difíciles sobre la violencia política y cómo los ideales de libertad pueden llevar a la tiranía en nombre de la \"virtud\"."
+      },
+      {
+        "day": 7,
+        "title": "Arte y Propaganda en el Louvre Revolucionario",
+        "description": "Visitaremos el Museo del Louvre, transformado por la Revolución de palacio real a museo público. Analizaremos cómo obras de artistas como Jacques-Louis David (\"La Muerte de Marat\") se convirtieron en poderosas herramientas de propaganda para el nuevo régimen.",
+        "relevance": "La Revolución entendió el poder de la imagen. El Louvre se convirtió en un instrumento para educar al ciudadano y glorificar a los nuevos mártires y héroes de la República."
+      },
+      {
+        "day": 8,
+        "title": "La Reacción Termidoriana y el Fin de Robespierre",
+        "description": "Seguiremos los eventos que llevaron a la caída de Robespierre. Visitaremos el Hôtel de Ville, donde se refugió antes de ser arrestado, y discutiremos las causas de la reacción que puso fin al Terror y dio paso a una fase más conservadora de la Revolución.",
+        "relevance": "La caída de Robespierre demuestra cómo las revoluciones a menudo devoran a sus propios hijos. Es una lección sobre el agotamiento del radicalismo y el deseo de estabilidad tras un período de caos."
+      },
+      {
+        "day": 9,
+        "title": "El Ascenso de Napoleón: ¿Heredero o Traidor?",
+        "description": "Un seminario analizará el ascenso de Napoleón Bonaparte como producto directo de la Revolución. ¿Fue él quien consolidó sus logros o quien traicionó sus ideales de libertad estableciendo un nuevo imperio? Visitaremos la iglesia de San Sulpicio, escenario de uno de sus golpes de estado.",
+        "relevance": "Napoleón es la figura más compleja y controvertida que emerge de la Revolución. Discutir su legado es esencial para entender las consecuencias a largo plazo de los eventos revolucionarios."
+      },
+      {
+        "day": 10,
+        "title": "El Legado de la Revolución y Despedida",
+        "description": "Nuestra jornada finaliza en el Panteón, donde descansan los héroes de la República. Reflexionaremos sobre el legado duradero de la Revolución: la Declaración de los Derechos del Hombre y del Ciudadano, el fin del feudalismo y el nacimiento del nacionalismo moderno. Almuerzo de despedida y traslado al aeropuerto.",
+        "relevance": "El Panteón celebra la gloria de la República que nació de la Revolución. Concluir aquí nos permite sopesar el balance final de este evento cataclísmico que, a pesar de su sangre y caos, sentó las bases de la democracia liberal moderna."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "Manual del Ciudadano",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Historia de dos ciudades",
+          "author": "Charles Dickens"
+        },
+        {
+          "type": "Película",
+          "title": "Los Miserables",
+          "author": "Tom Hooper"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-french-revolution",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "industrial-revolution",
+    "type": "viaje",
+    "title": "La Revolución Industrial: El Mundo Forjado a Vapor",
+    "summary": "Mi máquina de vapor no solo bombeaba agua de las minas, sino que impulsó una nueva era para la humanidad. Acompáñame en un viaje al corazón de la Revolución Industrial. Sentiremos ",
+    "description": "Mi máquina de vapor no solo bombeaba agua de las minas, sino que impulsó una nueva era para la humanidad. Acompáñame en un viaje al corazón de la Revolución Industrial. Sentiremos el calor de las forjas y el estruendo de los telares que cambiaron el mundo para siempre, para bien y para mal.\n\nLa Revolución Industrial fue una de las transformaciones más rápidas y profundas de la historia, comparable solo a la invención de la agricultura. Este viaje a su epicentro en el Reino Unido es clave para entender el nacimiento del mundo moderno, la urbanización y el capitalismo.",
+    "coverImageUrl": "/media/2026/01/La-Revolucion-Industrial-El-Mundo-Forjado-a-Vapor.webp",
+    "gallery": [],
+    "city": "Mánchester",
+    "country": "Reino Unido",
+    "cities": [
+      "Mánchester",
+      "Liverpool",
+      "Londres"
+    ],
+    "format": "presencial",
+    "startDate": "2026-01-15",
+    "endDate": "2026-01-24",
+    "durationDays": 10,
+    "publicPrice": 2500,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 14,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Ciencia y Tecnología",
+    "leader": {
+      "name": "James Watt",
+      "title": "Ingeniero e Inventor",
+      "narrative": "Mi máquina de vapor no solo bombeaba agua de las minas, sino que impulsó una nueva era para la humanidad. Acompáñame en un viaje al corazón de la Revolución Industrial. Sentiremos el calor de las forjas y el estruendo de los telares que cambiaron el mundo para siempre, para bien y para mal."
+    },
+    "rationale": {
+      "importance": "La Revolución Industrial fue una de las transformaciones más rápidas y profundas de la historia, comparable solo a la invención de la agricultura. Este viaje a su epicentro en el Reino Unido es clave para entender el nacimiento del mundo moderno, la urbanización y el capitalismo.",
+      "learning": "Comprenderás la sinergia entre innovación tecnológica (máquina de vapor, ferrocarril), capital y nuevas formas de organización social. Analizarás tanto el progreso y la creación de riqueza como los enormes costos sociales: explotación laboral, contaminación y la aparición de la clase obrera.",
+      "relevance": "Vivimos una nueva revolución tecnológica con la IA y la automatización. Este viaje ofrece un marco histórico indispensable para analizar los procesos de disrupción, sus impactos sociales y las responsabilidades éticas de la innovación. Es fundamental para emprendedores, ingenieros, economistas y responsables políticos."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Mánchester: La \"Cottonopolis\"",
+        "description": "Llegada a Mánchester, la primera ciudad industrial del mundo. Visitaremos el Museo de la Ciencia y la Industria, ubicado en la estación de tren más antigua. Veremos máquinas de vapor y telares en funcionamiento que definieron esta era.",
+        "relevance": "Mánchester fue el epicentro del cambio. Aquí, la tecnología, el capital y la mano de obra se combinaron para crear un modelo de producción y una sociedad urbana completamente nuevos, con todas sus promesas y contradicciones."
+      },
+      {
+        "day": 2,
+        "title": "Liverpool: El Puerto del Imperio",
+        "description": "Viaje a Liverpool. Exploraremos los históricos Albert Docks, Patrimonio de la Humanidad y corazón de un puerto que manejaba el 40% del comercio mundial. Discutiremos el papel del puerto en el comercio de algodón, azúcar y, trágicamente, esclavos.",
+        "relevance": "Liverpool era la puerta de entrada y salida del Imperio Británico. Su prosperidad estaba inextricablemente ligada a la economía global, incluido el comercio triangular, lo que nos permite entender la escala mundial de la revolución."
+      },
+      {
+        "day": 3,
+        "title": "El Ferrocarril Liverpool-Mánchester",
+        "description": "Recorreremos en tren la ruta del primer ferrocarril interurbano del mundo. En el Museo del Ferrocarril Nacional de York (excursión), comprenderemos cómo el ferrocarril revolucionó el transporte, el comercio, el tiempo y el espacio.",
+        "relevance": "El ferrocarril fue el invento que realmente \"encogió\" el mundo. Permitió el movimiento rápido de bienes y personas, creó zonas horarias estandarizadas y transformó el paisaje físico y mental de la sociedad."
+      },
+      {
+        "day": 4,
+        "title": "Ironbridge: La Cuna del Hierro",
+        "description": "Excursión al desfiladero de Ironbridge, Patrimonio de la Humanidad y cuna de la Revolución Industrial. Veremos el primer puente de hierro del mundo y los altos hornos originales, entendiendo cómo la producción masiva de hierro fue la columna vertebral de esta nueva era.",
+        "relevance": "Si el algodón fue el motor, el hierro fue el esqueleto de la Revolución Industrial. Ironbridge es el lugar donde la humanidad aprendió a dominar este material a una escala sin precedentes, posibilitando todo lo demás."
+      },
+      {
+        "day": 5,
+        "title": "La Vida del Obrero y la Reforma Social",
+        "description": "De vuelta en Mánchester, visitaremos el Museo de Historia del Pueblo para explorar las condiciones de vida de la clase trabajadora y el nacimiento de los movimientos sindicales. Discutiremos las obras de reformadores sociales y el papel de Friedrich Engels, quien escribió sobre la situación de la clase obrera en esta misma ciudad.",
+        "relevance": "Esta jornada se centra en el coste humano del progreso. Entender la lucha por los derechos laborales y las reformas sociales es tan importante como comprender la tecnología, ya que ambas modelaron el mundo moderno."
+      },
+      {
+        "day": 6,
+        "title": "Londres: Capital Financiera del Mundo",
+        "description": "Viaje a Londres. Visitaremos el Banco de Inglaterra y la City de Londres para entender cómo se financió la revolución y cómo nació el capitalismo moderno. Un paseo por Canary Wharf ofrecerá un contraste con el actual centro financiero.",
+        "relevance": "Londres representa el cerebro financiero de la Revolución Industrial. El capital que fluyó desde aquí financió ferrocarriles, fábricas y minas en todo el mundo, estableciendo un sistema económico global que aún perdura."
+      },
+      {
+        "day": 7,
+        "title": "El Gran Hedor y la Ingeniería Victoriana",
+        "description": "Un recorrido por el sistema de alcantarillado de Joseph Bazalgette nos hablará de los enormes desafíos sanitarios de la urbanización masiva. Luego, visitaremos la estación de bombeo de Crossness, una \"catedral industrial\" que muestra el orgullo cívico de la ingeniería victoriana.",
+        "relevance": "La Revolución Industrial creó problemas a una escala nunca vista, y requirió soluciones de ingeniería igualmente audaces. La historia del \"Gran Hedor\" es una lección sobre la crisis, la innovación y la inversión en infraestructura pública."
+      },
+      {
+        "day": 8,
+        "title": "Charles Dickens y la Crítica Social",
+        "description": "Paseo literario por el Londres de Dickens, desde los juzgados de \"Bleak House\" hasta los barrios de \"Oliver Twist\". Visitaremos el Museo de Charles Dickens para discutir cómo la literatura se convirtió en una poderosa herramienta de crítica social y concienciación.",
+        "relevance": "Dickens fue la conciencia de la era industrial. A través de sus novelas, dio voz a los olvidados y expuso las injusticias del nuevo sistema, demostrando que el arte puede ser un motor de cambio social."
+      },
+      {
+        "day": 9,
+        "title": "El Legado de la Industria en el Museo de Victoria y Alberto",
+        "description": "Visita al Museo de Victoria y Alberto, que nació de la Gran Exposición de 1851, la gran feria mundial de la industria. Analizaremos cómo el diseño y las artes aplicadas reaccionaron a la producción en masa, con movimientos como el Arts and Crafts.",
+        "relevance": "La Gran Exposición fue la celebración del triunfo industrial británico. El museo que de ella surgió nos permite evaluar el impacto estético y social de esta era, y las reacciones que provocó en busca de la belleza y la artesanía."
+      },
+      {
+        "day": 10,
+        "title": "Reflexión Final y Despedida",
+        "description": "Reflexionaremos sobre el legado global de la Revolución Industrial, desde sus innovaciones hasta sus consecuencias medioambientales. Almuerzo de despedida y traslado al aeropuerto.",
+        "relevance": "Concluir nuestro viaje nos permite evaluar el impacto global de esta revolución, cuyas consecuencias sociales, económicas y medioambientales aún hoy estamos gestionando. Es una reflexión sobre el precio y los beneficios del progreso."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 7
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 12
+      }
+    ],
+    "preWork": {
+      "title": "Manual del Industrialista",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Tiempos difíciles",
+          "author": "Charles Dickens"
+        },
+        {
+          "type": "Película",
+          "title": "El joven Karl Marx",
+          "author": "Raoul Peck"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-industrial-revolution",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "great-war-trenches",
+    "type": "viaje",
+    "title": "Ecos de la Gran Guerra: De las Trincheras a Versalles",
+    "summary": "Yo vi el fuego y el barro. En este viaje, pisaremos la tierra sagrada donde una generación se perdió. No es para glorificar la guerra, sino para entender su terrible humanidad, el ",
+    "description": "Yo vi el fuego y el barro. En este viaje, pisaremos la tierra sagrada donde una generación se perdió. No es para glorificar la guerra, sino para entender su terrible humanidad, el colapso de los imperios y el frágil intento de paz que le siguió. Escucha las historias que los cañones silenciaron.\n\nLa Primera Guerra Mundial fue la catástrofe inaugural del siglo XX. Este viaje nos lleva a sus campos de batalla más icónicos para comprender la escala de la destrucción, el fin de los viejos imperios y el fallido intento de paz que sembró las semillas de un conflicto aún mayor.",
+    "coverImageUrl": "/media/2026/01/Ecos-de-la-Gran-Guerra.webp",
+    "gallery": [],
+    "city": "Ypres",
+    "country": "Europa",
+    "cities": [
+      "Ypres",
+      "Somme",
+      "Verdún",
+      "París"
+    ],
+    "format": "presencial",
+    "startDate": "2026-03-10",
+    "endDate": "2026-03-19",
+    "durationDays": 10,
+    "publicPrice": 2100,
+    "currency": "EUR",
+    "capacity": 20,
+    "spotsLeft": 17,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 20 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Militar",
+    "leader": {
+      "name": "Henri Barbusse",
+      "title": "Cronista del Frente",
+      "narrative": "Yo vi el fuego y el barro. En este viaje, pisaremos la tierra sagrada donde una generación se perdió. No es para glorificar la guerra, sino para entender su terrible humanidad, el colapso de los imperios y el frágil intento de paz que le siguió. Escucha las historias que los cañones silenciaron."
+    },
+    "rationale": {
+      "importance": "La Primera Guerra Mundial fue la catástrofe inaugural del siglo XX. Este viaje nos lleva a sus campos de batalla más icónicos para comprender la escala de la destrucción, el fin de los viejos imperios y el fallido intento de paz que sembró las semillas de un conflicto aún mayor.",
+      "learning": "Experimentarás la geografía de la guerra de trincheras y comprenderás el impacto de nuevas tecnologías como el gas y la artillería pesada. Analizarás las decisiones de liderazgo y las consecuencias del Tratado de Versalles, una lección crucial sobre cómo se gana una guerra y cómo se pierde la paz.",
+      "relevance": "La gestión de conflictos, la negociación post-conflicto y la comprensión de las quejas históricas son habilidades vitales. Este viaje ofrece una perspectiva inigualable para diplomáticos, mediadores, líderes militares y ejecutivos sobre las consecuencias de las decisiones estratégicas y la importancia de construir una paz sostenible."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Bruselas y Prólogo de la Guerra",
+        "description": "Llegada a Bruselas. Nuestra primera cena se centrará en el preludio de la guerra: el sistema de alianzas, la carrera armamentista y el asesinato de Sarajevo. Visitaremos el Museo Real del Ejército e Historia Militar para contextualizar el conflicto.",
+        "relevance": "Bélgica fue el primer país invadido, el \"pobre pequeño país\" cuya neutralidad fue violada, desencadenando la entrada británica en la guerra. Empezar aquí es entender el origen del conflicto en el frente occidental."
+      },
+      {
+        "day": 2,
+        "title": "Ypres: El Bautismo de Fuego y Gas",
+        "description": "Traslado a Ypres. Visitaremos el museo \"In Flanders Fields\" y las trincheras reconstruidas en el Santuario del Bosque. Al atardecer, asistiremos a la emotiva ceremonia del \"Last Post\" en la Puerta de Menin, que conmemora a los desaparecidos.",
+        "relevance": "Ypres simboliza la tenacidad y el horror de la guerra de trincheras y el uso de nuevas armas químicas. Es una introducción visceral a la escala industrial de la matanza."
+      },
+      {
+        "day": 3,
+        "title": "Paschendaele: El Barro y la Locura",
+        "description": "Dedicaremos el día al Saliente de Ypres, centrándonos en la Batalla de Passchendaele. Visitaremos el Cementerio de Tyne Cot, el más grande de la Commonwealth en el mundo, y caminaremos por el terreno que se convirtió en un mar de lodo.",
+        "relevance": "Passchendaele es sinónimo de la futilidad y el sufrimiento extremo de la guerra de trincheras. El paisaje, aún hoy, habla del infierno que vivieron los soldados."
+      },
+      {
+        "day": 4,
+        "title": "El Somme: La Batalla Más Sangrienta",
+        "description": "Viaje a la región del Somme. Visitaremos el Memorial de Thiepval a los Desaparecidos y el cráter de Lochnagar, producto de una mina subterránea. Caminaremos por los campos de batalla que presenciaron una de las ofensivas más mortíferas de la historia británica.",
+        "relevance": "El Somme representa la catástrofe del primer día y la brutal curva de aprendizaje de los ejércitos. Aquí, las tácticas del siglo XIX se encontraron con la tecnología del siglo XX, con resultados devastadores."
+      },
+      {
+        "day": 5,
+        "title": "El Frente Americano: Bosque de Belleau",
+        "description": "Nos desviaremos para visitar el campo de batalla del Bosque de Belleau, donde el Cuerpo de Marines de EE. UU. se ganó su reputación en 1918. Analizaremos el impacto de la llegada de las tropas americanas y su diferente enfoque del combate.",
+        "relevance": "La intervención estadounidense fue decisiva. Estudiar una de sus primeras grandes batallas nos permite comprender el vigor y la inexperiencia que aportaron al estancado frente occidental."
+      },
+      {
+        "day": 6,
+        "title": "Verdún: La Batalla de Atrición",
+        "description": "Nos dirigiremos a Verdún, el símbolo de la resistencia francesa. Exploraremos los fuertes de Douaumont y Vaux y el impresionante Osario, que contiene los restos de cientos de miles de soldados no identificados. Un día para comprender el concepto de guerra total.",
+        "relevance": "Verdún fue un infierno de diez meses que encarna la guerra de desgaste. \"¡No pasarán!\" fue el lema, y el coste humano fue inmenso. Es un testimonio del nacionalismo y la resistencia a cualquier precio."
+      },
+      {
+        "day": 7,
+        "title": "El Frente Alemán: Perspectivas desde el Otro Lado",
+        "description": "Visitaremos cementerios y memoriales alemanes cerca de Verdún y el Somme. Un historiador nos hablará de la experiencia del soldado alemán, sus motivaciones y las dificultades que enfrentó. Un debate sobre la narrativa del \"enemigo\".",
+        "relevance": "Para entender un conflicto, es crucial ver ambos lados. Esta jornada humaniza al \"otro\" y nos ayuda a comprender la experiencia compartida de sufrimiento en las trincheras, más allá de las nacionalidades."
+      },
+      {
+        "day": 8,
+        "title": "París: El Armisticio y el Hogar del Soldado",
+        "description": "Viaje a París. Visitaremos el claro de Compiègne, donde se firmó el Armisticio en un vagón de tren. Por la tarde, en Les Invalides, nos centraremos en el tratamiento de los heridos de guerra y el impacto psicológico del \"shell shock\".",
+        "relevance": "El Armisticio marcó el fin de la lucha, pero no del sufrimiento. Esta jornada conecta el fin político de la guerra con su largo y doloroso epílogo humano."
+      },
+      {
+        "day": 9,
+        "title": "Versalles: La Paz de los Vencedores",
+        "description": "Visitaremos el Palacio de Versalles, centrándonos en el Salón de los Espejos, donde se firmó el Tratado de Versalles. Un debate sobre las duras condiciones impuestas a Alemania y sus consecuencias, sentando las bases para futuros conflictos.",
+        "relevance": "El tratado firmado aquí buscaba la paz, pero sus términos punitivos sembraron las semillas de futuros conflictos. Es una lección crucial sobre cómo terminar una guerra y las dificultades de construir una paz duradera."
+      },
+      {
+        "day": 10,
+        "title": "El Legado de un Mundo Roto",
+        "description": "Mañana en París. Reflexionaremos sobre la caída de los Imperios Austrohúngaro, Ruso, Otomano y Alemán. Almuerzo de despedida y traslado al aeropuerto.",
+        "relevance": "La Gran Guerra no solo destruyó vidas, sino también imperios y un orden mundial. Concluir aquí nos permite entender cómo el mapa de Europa y Oriente Medio fue redibujado, un legado que aún hoy nos afecta."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "Órdenes del Frente",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Sin novedad en el frente",
+          "author": "Erich Maria Remarque"
+        },
+        {
+          "type": "Película",
+          "title": "1917",
+          "author": "Sam Mendes"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-great-war-trenches",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "ww2-conflict-and-memory",
+    "type": "viaje",
+    "title": "II Guerra Mundial: De Normandía a Núremberg",
+    "summary": "Hay eventos que fracturan la historia. La Segunda Guerra Mundial es uno de ellos. En este viaje, seguiremos la senda de la liberación y la justicia, desde las playas del Desembarco",
+    "description": "Hay eventos que fracturan la historia. La Segunda Guerra Mundial es uno de ellos. En este viaje, seguiremos la senda de la liberación y la justicia, desde las playas del Desembarco hasta los tribunales de Núremberg, sin rehuir la oscura noche del Holocausto. Es un viaje para recordar y para afirmar: \"Nunca más\".\n\nLa Segunda Guerra Mundial fue el conflicto más destructivo de la historia y un punto de inflexión moral para la humanidad. Este viaje sigue el arco de la liberación de Europa, desde el Día D hasta la justicia de Núremberg, confrontando en su centro la brutalidad industrializada del Holocausto.",
+    "coverImageUrl": "/media/2026/01/Europa-en-la-Sombra-de-la-II-Guerra.webp",
+    "gallery": [],
+    "city": "Normandía",
+    "country": "Europa",
+    "cities": [
+      "Normandía",
+      "París",
+      "Auschwitz",
+      "Núremberg"
+    ],
+    "format": "presencial",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-14",
+    "durationDays": 10,
+    "publicPrice": 2300,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 16,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Militar",
+    "leader": {
+      "name": "Eleonora Rosenberg",
+      "title": "Historiadora de la Memoria",
+      "narrative": "Hay eventos que fracturan la historia. La Segunda Guerra Mundial es uno de ellos. En este viaje, seguiremos la senda de la liberación y la justicia, desde las playas del Desembarco hasta los tribunales de Núremberg, sin rehuir la oscura noche del Holocausto. Es un viaje para recordar y para afirmar: \"Nunca más\"."
+    },
+    "rationale": {
+      "importance": "La Segunda Guerra Mundial fue el conflicto más destructivo de la historia y un punto de inflexión moral para la humanidad. Este viaje sigue el arco de la liberación de Europa, desde el Día D hasta la justicia de Núremberg, confrontando en su centro la brutalidad industrializada del Holocausto.",
+      "learning": "Comprenderás la logística y el coraje de la liberación de Europa, el funcionamiento de la maquinaria de exterminio nazi y el nacimiento del derecho penal internacional. Es una profunda reflexión sobre la memoria, la responsabilidad y los mecanismos que llevan a la barbarie.",
+      "relevance": "Este viaje es una lección fundamental sobre ética, justicia y la fragilidad de la civilización. Es esencial para abogados, jueces, defensores de los derechos humanos y líderes que enfrentan decisiones morales complejas, reforzando el imperativo de actuar contra la injusticia."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Londres: El Blitz y el Espíritu de Resistencia",
+        "description": "Llegada a Londres. Visitaremos las \"Cabinet War Rooms\" de Churchill y exploraremos el espíritu del Blitz. Una cena introductoria nos situará en el contexto de una Europa al borde del abismo y la solitaria resistencia británica en 1940.",
+        "relevance": "Londres fue el bastión de la resistencia contra el nazismo. Empezar aquí es entender la determinación de una nación y un líder que se negaron a rendirse, sentando las bases para la futura liberación."
+      },
+      {
+        "day": 2,
+        "title": "Playas de Normandía: El Día D",
+        "description": "Viaje a Caen (Francia). Nos dirigiremos a las playas del desembarco, incluyendo Omaha Beach y el cementerio americano en Colleville-sur-Mer. Sentiremos la escala de la operación que marcó el principio del fin del Tercer Reich.",
+        "relevance": "El Día D fue la mayor invasión anfibia de la historia. Estar aquí es comprender el inmenso coraje, la planificación y el coste humano de la liberación de Europa."
+      },
+      {
+        "day": 3,
+        "title": "El Bocage: La Batalla por Normandía",
+        "description": "Exploraremos el \"bocage\", el difícil terreno de setos y campos que convirtió la campaña de Normandía en una sangrienta guerra de desgaste. Visitaremos Sainte-Mère-Église, uno de los primeros pueblos liberados por los paracaidistas estadounidenses.",
+        "relevance": "El Día D fue solo el comienzo. La batalla por Normandía fue una lucha brutal que nos enseña sobre la adaptación táctica y la cruda realidad del combate más allá de la playa."
+      },
+      {
+        "day": 4,
+        "title": "París Liberado y la Resistencia",
+        "description": "Viaje a París. Recorreremos los lugares clave de la Liberación de París en agosto de 1944. Un experto nos hablará sobre la vida bajo la ocupación y el crucial papel de la Resistencia francesa, con sus luces y sombras.",
+        "relevance": "París representa la esperanza y la resistencia. Su liberación fue un momento de euforia, pero también revela las complejidades y divisiones de una nación ocupada, y el mito construido a su alrededor."
+      },
+      {
+        "day": 5,
+        "title": "Cracovia y el Gueto",
+        "description": "Vuelo a Cracovia, Polonia. Haremos un recorrido a pie por el antiguo barrio judío de Kazimierz y el sitio del gueto de Cracovia, explorando la rica cultura que fue destruida. Visitaremos la fábrica de Oskar Schindler, reflexionando sobre los actos de resistencia y rescate.",
+        "relevance": "Antes de enfrentar el abismo, es vital entender la vida que fue aniquilada. Cracovia nos muestra la vibrante civilización judía de Europa del Este antes del Holocausto y las complejas decisiones morales de la época."
+      },
+      {
+        "day": 6,
+        "title": "Auschwitz-Birkenau: El Abismo del Holocausto",
+        "description": "Día dedicado a una visita solemne y guiada al campo de concentración y exterminio de Auschwitz-Birkenau. Una jornada de silencio, memoria y reflexión profunda sobre la industrialización del asesinato.",
+        "relevance": "Auschwitz es el epicentro de la oscuridad del siglo XX. Es un lugar de memoria fundamental para entender la escala del Holocausto y las profundidades de la inhumanidad, un recordatorio sombrío del \"porqué\" de la guerra."
+      },
+      {
+        "day": 7,
+        "title": "Berlín: La Caída del Tercer Reich",
+        "description": "Vuelo a Berlín. Visitaremos los lugares que marcaron los últimos días del régimen nazi: el solar del búnker de Hitler, el Reichstag y el Memorial a los Judíos Asesinados de Europa. Analizaremos la batalla final por la ciudad.",
+        "relevance": "Berlín es la escena del crimen y el lugar del juicio final para el régimen nazi. Es una ciudad que ha confrontado su pasado de manera única, y sus monumentos nos obligan a reflexionar sobre la memoria y la culpa."
+      },
+      {
+        "day": 8,
+        "title": "Núremberg: La Justicia de los Vencedores",
+        "description": "Viaje a Núremberg. Visitaremos el Campo Zeppelin, donde se celebraban los congresos del partido nazi, y luego la Sala 600 del Palacio de Justicia, donde se celebraron los Juicios de Núremberg contra los principales líderes nazis.",
+        "relevance": "Esta jornada contrasta la propaganda masiva del régimen con el intento de la humanidad de imponer la razón y la justicia sobre la barbarie. Aquí se sentaron los precedentes para la persecución de crímenes de guerra."
+      },
+      {
+        "day": 9,
+        "title": "El Legado de los Juicios",
+        "description": "Seminario en el Memorium de los Juicios de Núremberg sobre el nacimiento del derecho penal internacional y conceptos como \"crímenes contra la humanidad\". Discutiremos los juicios posteriores y el largo camino de la justicia internacional.",
+        "relevance": "Núremberg no fue un final, sino un comienzo. Entender su legado es comprender las bases de instituciones como la Corte Penal Internacional y el continuo debate sobre la justicia global."
+      },
+      {
+        "day": 10,
+        "title": "Reconstrucción y \"Nunca Más\"",
+        "description": "Reflexión final sobre la reconstrucción de una Europa devastada y la creación de nuevas alianzas para evitar futuros conflictos. Almuerzo de despedida en Núremberg y traslado al aeropuerto.",
+        "relevance": "De las cenizas de la guerra surgió un nuevo deseo de paz y cooperación. Este día final conecta el fin del conflicto con el comienzo de un nuevo capítulo para Europa, basado en la promesa de \"Nunca Más\"."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 9,
+        "discountPercent": 6
+      },
+      {
+        "threshold": 14,
+        "discountPercent": 12
+      }
+    ],
+    "preWork": {
+      "title": "Archivos de Guerra",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "El hombre en busca de sentido",
+          "author": "Viktor Frankl"
+        },
+        {
+          "type": "Serie",
+          "title": "Hermanos de Sangre",
+          "author": "HBO"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-ww2-conflict-and-memory",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "cold-war-and-reunion",
+    "type": "viaje",
+    "title": "El Telón de Acero: De la División a la Europa Unida",
+    "summary": "Sobrevivimos a la catástrofe y soñamos con un futuro diferente. Este viaje explora las dos Europas que emergieron de la guerra: una encadenada por la ideología, la otra buscando la",
+    "description": "Sobrevivimos a la catástrofe y soñamos con un futuro diferente. Este viaje explora las dos Europas que emergieron de la guerra: una encadenada por la ideología, la otra buscando la unidad. Veremos el Muro, símbolo de división, y los lugares donde nació la Unión Europea, símbolo de esperanza.\n\nEste viaje explora la historia de Europa desde su punto más bajo de división (la Guerra Fría) hasta su mayor logro: la creación de la Unión Europea. Es un relato de reconciliación, visión a largo plazo y construcción de instituciones supranacionales para garantizar la paz.",
+    "coverImageUrl": "/media/2026/01/El-Telon-de-Acero-guerra-fria-De-la-Division-a-la-Europa-Unida.webp",
+    "gallery": [],
+    "city": "Berlín",
+    "country": "Europa",
+    "cities": [
+      "Berlín",
+      "Roma",
+      "Bruselas"
+    ],
+    "format": "presencial",
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-10",
+    "durationDays": 10,
+    "publicPrice": 2450,
+    "currency": "EUR",
+    "capacity": 22,
+    "spotsLeft": 21,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 22 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Política",
+    "leader": {
+      "name": "Konrad Adenauer",
+      "title": "Canciller de la Reconciliación",
+      "narrative": "Sobrevivimos a la catástrofe y soñamos con un futuro diferente. Este viaje explora las dos Europas que emergieron de la guerra: una encadenada por la ideología, la otra buscando la unidad. Veremos el Muro, símbolo de división, y los lugares donde nació la Unión Europea, símbolo de esperanza."
+    },
+    "rationale": {
+      "importance": "Este viaje explora la historia de Europa desde su punto más bajo de división (la Guerra Fría) hasta su mayor logro: la creación de la Unión Europea. Es un relato de reconciliación, visión a largo plazo y construcción de instituciones supranacionales para garantizar la paz.",
+      "learning": "Comprenderás la lógica de la división de la Guerra Fría en Berlín y, en contraste, los principios fundacionales de la UE en Roma y Bruselas. Analizarás el mayor experimento de gobernanza multinivel del mundo y la importancia de la cooperación económica para lograr la paz política.",
+      "relevance": "La capacidad de construir alianzas, negociar en entornos multiculturales y liderar proyectos a largo plazo es esencial. Este viaje es una clase magistral para líderes del sector público y privado, diplomáticos y estrategas sobre cómo convertir la visión en instituciones duraderas."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Berlín: La Ciudad Dividida",
+        "description": "Llegada a Berlín. Recorreremos la East Side Gallery, el tramo más largo conservado del Muro de Berlín. Visitaremos el Checkpoint Charlie y el Memorial del Muro para entender la vida en una ciudad partida en dos.",
+        "relevance": "Berlín fue el corazón y el símbolo más palpable de la Guerra Fría. Caminar a lo largo del Muro es sentir la cicatriz física e ideológica que dividió a Europa y al mundo durante casi medio siglo."
+      },
+      {
+        "day": 2,
+        "title": "El Puente Aéreo y la Guerra de Espías",
+        "description": "Visitaremos el monumento al Puente Aéreo de Berlín en el antiguo aeropuerto de Tempelhof. Por la tarde, un tour sobre la guerra de espías nos llevará al Puente de Glienicke, el \"puente de los espías\", para discutir el mundo secreto de la CIA y la KGB.",
+        "relevance": "El Puente Aéreo fue la primera gran victoria de la Guerra Fría para Occidente. El espionaje, por su parte, era el frente invisible. Esta jornada nos muestra las dos caras del conflicto: la pública y la secreta."
+      },
+      {
+        "day": 3,
+        "title": "La Vida en el Este: El Museo de la RDA",
+        "description": "Nos sumergiremos en la vida cotidiana de la Alemania Oriental en el interactivo Museo de la RDA. Desde los coches Trabant hasta los apartamentos prefabricados y la vigilancia de la Stasi, es una mirada fascinante a un mundo desaparecido.",
+        "relevance": "Para entender por qué cayó el Muro, hay que entender cómo era la vida detrás de él. Este museo ofrece una perspectiva humana y a menudo surrealista de la vida bajo el comunismo."
+      },
+      {
+        "day": 4,
+        "title": "Praga: La Primavera Aplastada",
+        "description": "Vuelo a Praga. Visitaremos la Plaza de Wenceslao, epicentro de la \"Primavera de Praga\" de 1968, el intento de crear un \"socialismo con rostro humano\" que fue aplastado por los tanques soviéticos. Un disidente de la época compartirá su testimonio.",
+        "relevance": "Praga representa la esperanza de reforma dentro del bloque del Este y la brutal realidad de la Doctrina Brézhnev. Es clave para entender que la oposición al sistema no solo vino de fuera, sino también de dentro."
+      },
+      {
+        "day": 5,
+        "title": "Roma: El Nacimiento de la Comunidad",
+        "description": "Vuelo a Roma. Nos dirigiremos al Capitolio, a la Sala de los Horacios y Curiacios, donde se firmó el Tratado de Roma en 1957, creando la Comunidad Económica Europea. Un experto en estudios europeos nos explicará la visión de los padres fundadores.",
+        "relevance": "Mientras Berlín se dividía, Roma unía. La firma de este tratado fue un acto revolucionario de paz y pragmatismo, el primer paso para hacer que una futura guerra entre naciones europeas fuera \"no solo impensable, sino materialmente imposible\"."
+      },
+      {
+        "day": 6,
+        "title": "La Visión de Schuman y Monnet",
+        "description": "Un seminario sobre los \"Padres Fundadores de Europa\", como Robert Schuman y Jean Monnet. Analizaremos la Declaración Schuman de 1950 y la brillante idea de empezar la integración a través del carbón y el acero, las industrias de la guerra.",
+        "relevance": "La genialidad del proyecto europeo reside en su método. No empezó con grandes discursos, sino con un plan práctico y sectorial. Es una lección magistral de estrategia incremental para lograr un objetivo ambicioso."
+      },
+      {
+        "day": 7,
+        "title": "Bruselas: El Corazón de la Europa Unida",
+        "description": "Vuelo a Bruselas. Visitaremos el \"Barrio Europeo\", sede de la Comisión Europea y el Parlamento Europeo. En el Parlamentarium, un centro de visitantes interactivo, exploraremos cómo funciona la Unión Europea hoy en día.",
+        "relevance": "Bruselas es la capital de facto de la UE. Entender sus instituciones es clave para comprender cómo 27 naciones soberanas colaboran, legislan y negocian en un proyecto político único en la historia."
+      },
+      {
+        "day": 8,
+        "title": "La Caída del Muro: 9 de Noviembre de 1989",
+        "description": "Regreso a Berlín. Seguiremos la cronología de la noche en que cayó el Muro, desde la conferencia de prensa que lo desencadenó hasta el cruce masivo en el puente de Bornholmer Straße. Una velada para celebrar la libertad y la reunificación.",
+        "relevance": "La caída del Muro fue un evento espontáneo y sísmico que marcó el fin de la Guerra Fría. Revivir esa noche es celebrar el poder del pueblo y el colapso de un sistema basado en la represión."
+      },
+      {
+        "day": 9,
+        "title": "El Desafío de la Reunificación",
+        "description": "Un experto nos hablará de los enormes desafíos económicos y sociales de la reunificación alemana. Visitaremos barrios del antiguo Este de Berlín para ver la transformación y los problemas que aún persisten.",
+        "relevance": "La reunificación no fue solo un acto político, sino un proceso largo y costoso. Analizarlo nos enseña sobre la gestión de transiciones a gran escala y la integración de sistemas muy diferentes."
+      },
+      {
+        "day": 10,
+        "title": "El Futuro de Europa y Despedida",
+        "description": "Visita a la Puerta de Brandeburgo, ahora símbolo de una Alemania y una Europa reunificadas. Reflexión final sobre los desafíos actuales y el futuro del proyecto europeo. Almuerzo de despedida y traslado al aeropuerto de Berlín.",
+        "relevance": "El viaje concluye mirando hacia el futuro. Desde la división hasta la unidad, la historia de Europa en la segunda mitad del siglo XX es una de superación y desafíos constantes. Nos vamos preguntando: ¿qué sigue para Europa?"
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 12,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 18,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "Archivos Diplomáticos",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Postguerra: Una historia de Europa desde 1945",
+          "author": "Tony Judt"
+        },
+        {
+          "type": "Película",
+          "title": "La vida de los otros",
+          "author": "Florian Henckel von Donnersmarck"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-cold-war-and-reunion",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "cheese-and-wine-trail",
+    "type": "viaje",
+    "title": "La Ruta del Queso y el Vino",
+    "summary": "El terroir no solo está en el vino, sino también en el queso. Este viaje es una celebración de la paciencia, la tradición y la alquimia que transforma la leche y la uva en arte. Se",
+    "description": "El terroir no solo está en el vino, sino también en el queso. Este viaje es una celebración de la paciencia, la tradición y la alquimia que transforma la leche y la uva en arte. Seguiremos las rutas de los rebaños y las vides, desde las bodegas de Borgoña hasta las cuevas de maduración del Jura y los pastos de Normandía.\n\nEl queso y el vino son dos de los mayores tesoros gastronómicos de Europa, productos que encapsulan la geografía, la cultura y la historia de una región. Este viaje es una inmersión en el concepto de 'terroir', explorando cómo la tradición y la artesanía crean sabores únicos e inimitables.",
+    "coverImageUrl": "/media/2026/01/La-Ruta-del-Queso-y-el-Vino-en-Europa.webp",
+    "gallery": [],
+    "city": "París",
+    "country": "Francia y Suiza",
+    "cities": [
+      "París",
+      "Beaune",
+      "Jura",
+      "Gruyères",
+      "Normandía"
+    ],
+    "format": "presencial",
+    "startDate": "2026-06-10",
+    "endDate": "2026-06-19",
+    "durationDays": 10,
+    "publicPrice": 3200,
+    "currency": "EUR",
+    "capacity": 16,
+    "spotsLeft": 16,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 16 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Gastronomía",
+    "leader": {
+      "name": "Hélène Dubois",
+      "title": "Maestra Quesera y Sumiller",
+      "narrative": "El terroir no solo está en el vino, sino también en el queso. Este viaje es una celebración de la paciencia, la tradición y la alquimia que transforma la leche y la uva en arte. Seguiremos las rutas de los rebaños y las vides, desde las bodegas de Borgoña hasta las cuevas de maduración del Jura y los pastos de Normandía."
+    },
+    "rationale": {
+      "importance": "El queso y el vino son dos de los mayores tesoros gastronómicos de Europa, productos que encapsulan la geografía, la cultura y la historia de una región. Este viaje es una inmersión en el concepto de 'terroir', explorando cómo la tradición y la artesanía crean sabores únicos e inimitables.",
+      "learning": "Desarrollarás un profundo conocimiento sobre la producción artesanal, desde el viñedo hasta la bodega y desde el pasto hasta la cueva de maduración. Aprenderás a catar como un profesional, a crear maridajes y a apreciar la importancia de las denominaciones de origen protegido (AOP).",
+      "relevance": "La habilidad para discernir y comunicar la calidad, la autenticidad y el origen de un producto es un activo de gran valor. Este viaje es ideal para profesionales del marketing, la sumillería, la hostelería y cualquier emprendedor que busque construir una marca basada en la excelencia y la narrativa de producto."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "París: La Meca del Fromage",
+        "description": "Llegada a París. Nuestra primera parada es una de las mejores queserías de la ciudad para una degustación guiada. Aprenderemos a clasificar los quesos por familias y a crear maridajes perfectos con vinos franceses. Cena ligera en un bar de vinos.",
+        "relevance": "París es el gran escenario donde se exhiben los mejores quesos y vinos de toda Francia. Es el lugar perfecto para educar nuestro paladar y adquirir el vocabulario para apreciar las complejidades que descubriremos en nuestro viaje."
+      },
+      {
+        "day": 2,
+        "title": "Borgoña: El Corazón del Pinot Noir y Chardonnay",
+        "description": "Viaje a Beaune, la capital vinícola de Borgoña. Recorreremos la \"Route des Grands Crus\" y visitaremos una bodega familiar para una cata de sus prestigiosos vinos. Almuerzo en los viñedos y visita al histórico Hospices de Beaune.",
+        "relevance": "Borgoña es la tierra sagrada del vino. Entender su sistema de \"climats\", parcelas de viñedo con microclimas únicos, es fundamental para comprender el concepto de \"terroir\" en su máxima expresión."
+      },
+      {
+        "day": 3,
+        "title": "El Carácter de Borgoña: Epoisses y Abadías",
+        "description": "Nos adentraremos en el mundo del Epoisses, un queso con carácter, lavado con Marc de Bourgogne. Visitaremos una granja para ver su elaboración y realizar una cata. Por la tarde, visita a la Abadía de Cîteaux, cuna de la orden cisterciense y del queso de abadía.",
+        "relevance": "Los monjes fueron los guardianes del conocimiento agrícola durante siglos. La abadía de Cîteaux conecta la tradición monástica con la creación de productos icónicos, demostrando que la paciencia y la fe son ingredientes esenciales."
+      },
+      {
+        "day": 4,
+        "title": "Jura: Comté y el Fuerte de Maduración",
+        "description": "Viaje a la región de Jura. Visitaremos una \"fruitière\" donde se produce el queso Comté y luego descenderemos al Fuerte de Saint-Antoine, una antigua fortaleza militar convertida en una catedral subterránea para la maduración de miles de ruedas de Comté.",
+        "relevance": "El Comté es el ejemplo perfecto de un producto cooperativo y de larga maduración. El Fuerte de Saint-Antoine es un lugar mágico que demuestra cómo las condiciones ambientales y el tiempo son los escultores finales del sabor."
+      },
+      {
+        "day": 5,
+        "title": "El \"Vin Jaune\" y el Maridaje Perfecto",
+        "description": "Exploraremos los viñedos de Château-Chalon, cuna del \"Vin Jaune\", un vino oxidativo único. Aprenderemos sobre su peculiar método de elaboración bajo un velo de levadura (\"voile\") y realizaremos una cata vertical, maridándolo con Comté viejo.",
+        "relevance": "El Vin Jaune es uno de los vinos más singulares del mundo. Esta jornada es una clase magistral sobre maridaje, donde el vino y el queso de la misma región se elevan mutuamente a otro nivel."
+      },
+      {
+        "day": 6,
+        "title": "Suiza: Gruyères y la Tradición Alpina",
+        "description": "Cruzaremos la frontera hacia Suiza y nos dirigiremos al pueblo medieval de Gruyères. Visitaremos \"La Maison du Gruyère\" para ver la producción del famoso queso y luego subiremos al castillo que domina el valle.",
+        "relevance": "Gruyères nos permite comparar su queso con el Comté, dos gigantes alpinos con historias y sabores distintos. Es una lección sobre cómo pequeñas variaciones en el proceso y el \"terroir\" crean productos únicos."
+      },
+      {
+        "day": 7,
+        "title": "Fondue y Raclette: La Cultura del Queso Fundido",
+        "description": "Un día dedicado a la celebración del queso fundido. En un chalet alpino, aprenderemos a preparar la auténtica fondue \"moitié-moitié\" (mitad Gruyère, mitad Vacherin Fribourgeois) y disfrutaremos de una raclette tradicional, discutiendo los orígenes de estos platos como comida de pastores.",
+        "relevance": "La fondue y la raclette son más que comida; son rituales sociales. Esta jornada explora el aspecto comunitario del queso y cómo se convierte en el centro de una celebración."
+      },
+      {
+        "day": 8,
+        "title": "Normandía: Cuna del Camembert y la Sidra",
+        "description": "Viaje a la verde Normandía (vía París). Visitaremos el pueblo de Camembert y una granja que produce Camembert de Normandía AOP con leche cruda. Aprenderemos la diferencia con las versiones industriales y lo maridaremos, no con vino, sino con la sidra local.",
+        "relevance": "Normandía nos enseña sobre la importancia de la leche cruda y la denominación de origen protegida (AOP). Es una lección sobre la lucha por preservar la autenticidad frente a la producción en masa."
+      },
+      {
+        "day": 9,
+        "title": "Livrarot y Pont-l'Évêque: Los Otros Tesoros de Normandía",
+        "description": "Exploraremos la \"Ruta del Queso\" de Normandía, descubriendo otros quesos AOP como el Livarot, conocido como \"el Coronel\" por las tiras que lo rodean, y el Pont-l'Évêque, uno de los quesos más antiguos de la región. Degustaremos también el Calvados, el destilado de manzana local.",
+        "relevance": "Esta jornada amplía nuestra comprensión del \"terroir\" normando, demostrando cómo una misma región puede producir una diversidad de quesos con personalidades muy marcadas."
+      },
+      {
+        "day": 10,
+        "title": "Despedida en París",
+        "description": "Regreso a París. Tarde libre para comprar nuestros quesos y vinos favoritos. Cena de despedida en un restaurante que celebre los productos que hemos descubierto durante nuestro viaje. Traslado al aeropuerto al día siguiente.",
+        "relevance": "Cerramos el círculo en París, con un paladar más sabio y una apreciación más profunda de las historias detrás de cada queso y vino. Es una celebración final de la diversidad y riqueza de los \"terroirs\" de Francia y Suiza."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 8,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 12,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Manual del Epicúreo",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Un Año en Provenza",
+          "author": "Peter Mayle"
+        },
+        {
+          "type": "Película",
+          "title": "Entre Copas (Sideways)",
+          "author": "Alexander Payne"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-cheese-and-wine-trail",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "imperial-feasts",
+    "type": "viaje",
+    "title": "Festines Imperiales: Un Viaje por la Abundancia Europea",
+    "summary": "La mesa ha sido siempre un escenario de poder. Desde los \"smörgåsbord\" vikingos hasta los opulentos banquetes de los grandes hoteles parisinos, la comida ha servido para celebrar, ",
+    "description": "La mesa ha sido siempre un escenario de poder. Desde los \"smörgåsbord\" vikingos hasta los opulentos banquetes de los grandes hoteles parisinos, la comida ha servido para celebrar, negociar y dominar. En este viaje, no solo comeremos; descifraremos el lenguaje oculto en los grandes festines de Europa.\n\nEste viaje explora la cultura del 'festín' y la abundancia en Europa, desde el smörgåsbord nórdico hasta el 'grand buffet' parisino. Es una mirada a cómo diferentes culturas celebran la comida en comunidad y cómo la mesa se ha utilizado históricamente como un escenario de poder y hospitalidad.",
+    "coverImageUrl": "/media/2026/01/Festines-Imperiales-Un-Viaje-por-la-Abundancia-Europea.webp",
+    "gallery": [],
+    "city": "Estocolmo",
+    "country": "Norte de Europa",
+    "cities": [
+      "Estocolmo",
+      "Copenhague",
+      "Múnich",
+      "París"
+    ],
+    "format": "presencial",
+    "startDate": "2026-07-20",
+    "endDate": "2026-07-29",
+    "durationDays": 10,
+    "publicPrice": 3800,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 18,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Gastronomía",
+    "leader": {
+      "name": "Antonius Björn",
+      "title": "Historiador Culinario",
+      "narrative": "La mesa ha sido siempre un escenario de poder. Desde los \"smörgåsbord\" vikingos hasta los opulentos banquetes de los grandes hoteles parisinos, la comida ha servido para celebrar, negociar y dominar. En este viaje, no solo comeremos; descifraremos el lenguaje oculto en los grandes festines de Europa."
+    },
+    "rationale": {
+      "importance": "Este viaje explora la cultura del 'festín' y la abundancia en Europa, desde el smörgåsbord nórdico hasta el 'grand buffet' parisino. Es una mirada a cómo diferentes culturas celebran la comida en comunidad y cómo la mesa se ha utilizado históricamente como un escenario de poder y hospitalidad.",
+      "learning": "Comprenderás las diferentes filosofías de la abundancia: la organizada del norte, la comunal y alegre de Baviera, y la opulenta y artística de París. Analizarás la logística detrás de los grandes mercados y restaurantes que sostienen estas tradiciones gastronómicas.",
+      "relevance": "La gestión de eventos, la logística de la cadena de suministro y la creación de experiencias memorables son habilidades clave en muchas industrias. Este viaje ofrece una perspectiva única sobre la organización y presentación a gran escala, ideal para profesionales de la hostelería, la gestión de eventos y la logística."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Estocolmo: El Origen del Smörgåsbord",
+        "description": "Llegada a Estocolmo. Nuestra primera cena será un auténtico \"smörgåsbord\" sueco en un restaurante histórico. Aprenderemos el orden correcto para disfrutar de los arenques, el salmón, los platos calientes y los postres.",
+        "relevance": "El smörgåsbord es la contribución sueca al mundo de los buffets. Entender su estructura y evolución es comprender una cultura que valora tanto la abundancia como el orden, reflejando su transición de poder imperial a sociedad organizada."
+      },
+      {
+        "day": 2,
+        "title": "El Mercado de Östermalm y el \"Fika\"",
+        "description": "Visitaremos el Östermalms Saluhall, un mercado histórico de hierro y vidrio, para admirar la calidad de los productos suecos. Por la tarde, participaremos en una \"fika\", la sagrada pausa sueca para el café y el pastel, discutiendo su importancia social.",
+        "relevance": "El mercado muestra la despensa nórdica, mientras que la \"fika\" revela una faceta más íntima de la cultura sueca: una celebración de la pausa y la conversación, en contraste con la abundancia del smörgåsbord."
+      },
+      {
+        "day": 3,
+        "title": "Copenhague: Smørrebrød y el Nuevo Festín Nórdico",
+        "description": "Viaje a Copenhague. Exploraremos la evolución de la comida abundante en Dinamarca, desde el sándwich abierto \"smørrebrød\", una obra de arte en sí misma, hasta la influencia de la \"Nueva Cocina Nórdica\" que ha revolucionado la gastronomía mundial.",
+        "relevance": "Copenhague muestra cómo una tradición de comida sencilla y abundante puede reinventarse con un enfoque en la estacionalidad, los ingredientes locales y la innovación, transformando el concepto de \"festín\" para el siglo XXI."
+      },
+      {
+        "day": 4,
+        "title": "El Mercado de Torvehallerne y el \"Hygge\"",
+        "description": "Nos sumergiremos en el vibrante mercado de Torvehallerne, probando delicias locales. Por la noche, una cena en un restaurante acogedor nos introducirá al concepto de \"hygge\", la filosofía danesa de la comodidad y el bienestar, un festín para el alma.",
+        "relevance": "Torvehallerne es el epicentro de la escena gastronómica de Copenhague. Combinarlo con la idea de \"hygge\" nos enseña que el festín no siempre es opulencia, sino también calidez, confort y buena compañía."
+      },
+      {
+        "day": 5,
+        "title": "Múnich: La Generosidad del Biergarten Bávaro",
+        "description": "Vuelo a Múnich. Nos sumergiremos en la cultura del \"Biergarten\", donde la comida es abundante, compartida y acompaña a la cerveza. Terminaremos con un festín de codillo de cerdo, salchichas y pretzels en una cervecería tradicional.",
+        "relevance": "El Biergarten representa el festín popular y democrático. A diferencia de un buffet formal, es un espacio comunal donde la abundancia de la tierra se celebra de manera informal y alegre, un pilar de la identidad bávara."
+      },
+      {
+        "day": 6,
+        "title": "El Viktualienmarkt y el Desayuno Bávaro",
+        "description": "Exploraremos el Viktualienmarkt, el mercado de alimentos más famoso de Múnich. Probaremos el \"Weisswurstfrühstück\", el tradicional desayuno bávaro de salchicha blanca, pretzel y cerveza de trigo, entendiendo sus rituales y horarios.",
+        "relevance": "El mercado es el corazón palpitante de la gastronomía de Múnich. El desayuno de salchicha blanca es un ritual cultural que nos enseña sobre la importancia de la tradición y el tiempo en la comida."
+      },
+      {
+        "day": 7,
+        "title": "París: El Arte del \"Grand Buffet\"",
+        "description": "Viaje en tren a París. Por la noche, viviremos la experiencia de un \"grand buffet\" en un hotel histórico o brasserie de lujo, un espectáculo de opulencia, arte efímero y \"savoir-faire\" culinario.",
+        "relevance": "París codificó la alta cocina y el servicio. El \"grand buffet\" francés no es solo comida, es una exhibición de arte culinario, una demostración de técnica y abundancia que desciende directamente de los banquetes de la corte real."
+      },
+      {
+        "day": 8,
+        "title": "El Vientre de París: El Mercado de Rungis",
+        "description": "Visita de madrugada al Marché Rungis (visita especial), el mercado mayorista más grande del mundo. Veremos la increíble logística que abastece a la capital de la gastronomía, desde carnes y pescados hasta quesos y flores.",
+        "relevance": "Rungis es el motor oculto de la gastronomía parisina. Entender su escala y complejidad es fundamental para apreciar el festín final que disfrutaremos en los restaurantes de la ciudad."
+      },
+      {
+        "day": 9,
+        "title": "Escoffier y el Nacimiento del Restaurante Moderno",
+        "description": "Un seminario sobre Auguste Escoffier, el chef que modernizó la cocina francesa y creó el sistema de brigada. Cena en una brasserie clásica para ver su legado en acción, desde la organización de la cocina hasta el menú.",
+        "relevance": "Escoffier transformó el caótico mundo de las cocinas del siglo XIX en un sistema eficiente y profesional. Su influencia es la base de casi todos los restaurantes de alta cocina del mundo actual."
+      },
+      {
+        "day": 10,
+        "title": "Despedida en la Capital de la Gastronomía",
+        "description": "Mañana libre para explorar una \"pâtisserie\" o \"boulangerie\" por última vez. Nuestro almuerzo de despedida será en La Grande Épicerie, un templo gourmet, para una reflexión final sobre la industria que sostiene los grandes festines de Europa. Traslado al aeropuerto.",
+        "relevance": "Concluir en París nos permite apreciar toda la cadena de valor gastronómica, desde el producto crudo en Rungis hasta la máxima expresión del lujo en sus tiendas y restaurantes, el resumen perfecto de nuestro viaje por la abundancia europea."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Apetito del Viajero",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "El Vientre de París",
+          "author": "Émile Zola"
+        },
+        {
+          "type": "Película",
+          "title": "El Festín de Babette",
+          "author": "Gabriel Axel"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-imperial-feasts",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "beer-legacy-tour",
+    "type": "viaje",
+    "title": "El Legado de Gambrinus: La Ruta de la Cerveza",
+    "summary": "Desde las abadías trapenses hasta los salones de cerveza de Praga, la cerveza ha sido el alma de Europa. Yo, Gambrinus, te invito a un viaje a través de los siglos para descubrir l",
+    "description": "Desde las abadías trapenses hasta los salones de cerveza de Praga, la cerveza ha sido el alma de Europa. Yo, Gambrinus, te invito a un viaje a través de los siglos para descubrir las historias, los estilos y las tradiciones que han convertido a esta bebida en mucho más que un simple fermento. ¡Levantemos nuestras jarras a la historia!\n\nLa cerveza es una de las bebidas más antiguas y universales, un pilar de la cultura y la vida social en muchas naciones. Este viaje traza un mapa de los estilos más influyentes de Europa, explorando cómo la geografía, la religión y la regulación han dado forma a todo, desde una Lambic belga hasta una Stout irlandesa.",
+    "coverImageUrl": "/media/2026/01/El-Legado-de-Gambrinus-La-Ruta-de-la-Cerveza.webp",
+    "gallery": [],
+    "city": "Bruselas",
+    "country": "Europa",
+    "cities": [
+      "Bruselas",
+      "Múnich",
+      "Praga",
+      "Dublín"
+    ],
+    "format": "presencial",
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-10",
+    "durationDays": 10,
+    "publicPrice": 3500,
+    "currency": "EUR",
+    "capacity": 20,
+    "spotsLeft": 20,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 20 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Gastronomía",
+    "leader": {
+      "name": "Gambrinus",
+      "title": "Rey de la Cerveza",
+      "narrative": "Desde las abadías trapenses hasta los salones de cerveza de Praga, la cerveza ha sido el alma de Europa. Yo, Gambrinus, te invito a un viaje a través de los siglos para descubrir las historias, los estilos y las tradiciones que han convertido a esta bebida en mucho más que un simple fermento. ¡Levantemos nuestras jarras a la historia!"
+    },
+    "rationale": {
+      "importance": "La cerveza es una de las bebidas más antiguas y universales, un pilar de la cultura y la vida social en muchas naciones. Este viaje traza un mapa de los estilos más influyentes de Europa, explorando cómo la geografía, la religión y la regulación han dado forma a todo, desde una Lambic belga hasta una Stout irlandesa.",
+      "learning": "Obtendrás un profundo conocimiento de los principales estilos de cerveza europeos, sus métodos de elaboración y su contexto histórico. Aprenderás a catar cerveza como un profesional, identificando aromas, sabores y texturas, y a maridarla con las cocinas locales.",
+      "relevance": "Comprender la historia de un producto, su diversidad regional y su significado cultural es clave en el marketing global y la creación de marcas. Este viaje es perfecto para profesionales de la hostelería, el marketing de bebidas, y cualquiera que aprecie el arte y la ciencia de la elaboración de cerveza."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Bruselas: El Corazón de la Cerveza Belga",
+        "description": "Llegada a Bruselas. Nuestra primera cena será una inmersión en la cocina belga con maridaje de cervezas, desde una refrescante Witbier hasta una compleja Dubbel. Un experto cervecero nos introducirá en la increíble diversidad de los estilos belgas.",
+        "relevance": "Bélgica es a la cerveza lo que Francia es al vino. Empezar aquí es sumergirse en un ecosistema cervecero único, reconocido por la UNESCO, donde la innovación y la tradición van de la mano."
+      },
+      {
+        "day": 2,
+        "title": "Cervezas Lambic y Gueuze: La Fermentación Espontánea",
+        "description": "Visitaremos una cervecería en el valle del Senne, cuna de las cervezas Lambic. Aprenderemos sobre el proceso único de fermentación espontánea y probaremos Gueuze, Kriek y otras variedades directamente de la fuente.",
+        "relevance": "La Lambic es la cerveza más antigua y singular del mundo, un vínculo directo con las prácticas cerveceras medievales. Es una lección de microbiología, paciencia y el concepto de 'terroir' aplicado a la cerveza."
+      },
+      {
+        "day": 3,
+        "title": "Viaje a Múnich: La Capital de la Lager y el Reinheitsgebot",
+        "description": "Vuelo a Múnich. Nos sumergiremos directamente en la cultura local con una visita a un 'Biergarten' tradicional, disfrutando de una Helles lager fresca bajo los castaños. Discutiremos la Ley de Pureza de 1516 (Reinheitsgebot) y su impacto duradero.",
+        "relevance": "Múnich representa la tradición y la consistencia. El Reinheitsgebot es una de las primeras leyes de protección al consumidor del mundo y ha definido la cerveza alemana durante más de 500 años."
+      },
+      {
+        "day": 4,
+        "title": "Oktoberfest, Weissbier y los Salones de Cerveza",
+        "description": "Visitaremos el Theresienwiese, sede del Oktoberfest, para conocer su historia. Luego, en una cervecería histórica, aprenderemos sobre la cerveza de trigo (Weissbier) y su ritual de servicio. La noche terminará en uno de los grandes salones de cerveza de Múnich.",
+        "relevance": "Esta jornada explora la cerveza como evento cultural masivo (Oktoberfest) y como pilar de la vida social cotidiana en los 'Bierhalles'. Es entender la cerveza como centro de la comunidad."
+      },
+      {
+        "day": 5,
+        "title": "Viaje a Praga: La Cuna de la Pilsner",
+        "description": "Viaje en tren a Praga. Nos dirigiremos a una 'pivnice' (taberna) tradicional para probar la cerveza que cambió el mundo: la Pilsner. Discutiremos cómo la invención de esta lager pálida en 1842 revolucionó la industria cervecera global.",
+        "relevance": "El 90% de la cerveza que se consume hoy en el mundo desciende del estilo nacido en Pilsen. Praga es la capital de un país con el mayor consumo de cerveza per cápita, y entender la Pilsner es entender la cerveza moderna."
+      },
+      {
+        "day": 6,
+        "title": "Lagers Oscuras y la Cultura de las Tabernas Checas",
+        "description": "Exploraremos el otro lado de la cerveza checa: las potentes y sabrosas lagers oscuras (tmavé pivo). Un recorrido por tabernas históricas en el barrio de Malá Strana nos revelará la cultura única de los pubs checos y sus diferentes formas de servir la cerveza.",
+        "relevance": "Praga nos enseña que la cerveza no es solo lo que está en el vaso, sino cómo se sirve. La cultura de la taberna y la habilidad del 'tapster' son tan importantes como la propia bebida, elevando el acto de servir a una forma de arte."
+      },
+      {
+        "day": 7,
+        "title": "Viaje a Dublín: El Reino de la Stout",
+        "description": "Vuelo a Dublín. Nuestra primera parada será un pub tradicional para disfrutar de una pinta de Guinness perfectamente servida. Un historiador local nos contará la historia de Arthur Guinness y cómo su cerveza se convirtió en un icono de Irlanda.",
+        "relevance": "Dublín es sinónimo de Stout. Entender la historia de Guinness es una lección de branding, innovación (el uso del nitrógeno) y cómo una empresa puede entrelazarse con la identidad nacional."
+      },
+      {
+        "day": 8,
+        "title": "Guinness Storehouse y la Revolución de la Cerveza Artesanal",
+        "description": "Visitaremos la Guinness Storehouse en St. James's Gate para un recorrido inmersivo que culmina con una pinta en el Gravity Bar, con vistas de 360 grados de la ciudad. Por la tarde, exploraremos la floreciente escena de la cerveza artesanal de Dublín.",
+        "relevance": "La Storehouse es una clase magistral de marketing experiencial. Contrastarla con las cervecerías artesanales modernas nos permite ver el ciclo completo de la industria: de un gigante histórico a una nueva ola de innovación y diversidad."
+      },
+      {
+        "day": 9,
+        "title": "Pubs Históricos y Música Tradicional",
+        "description": "Un recorrido a pie nos llevará por algunos de los pubs literarios más famosos de Dublín. La noche terminará con una sesión de música tradicional irlandesa, donde la cerveza, la conversación y la música se fusionan en una experiencia cultural única.",
+        "relevance": "En Irlanda, el pub es el corazón de la vida social, un 'tercer lugar' fuera del hogar y el trabajo. Esta jornada explora la cerveza como catalizador de la comunidad, la creatividad y la tradición oral."
+      },
+      {
+        "day": 10,
+        "title": "Despedida en la Isla Esmeralda",
+        "description": "Mañana libre para una última exploración de Dublín. Nos reuniremos para un almuerzo de despedida en un gastropub, reflexionando sobre los diferentes mundos que hemos descubierto en un vaso de cerveza. Traslado al aeropuerto.",
+        "relevance": "Cerramos nuestro viaje con una apreciación más profunda de la cerveza como un artefacto cultural, un producto de su entorno y un espejo de la historia de las naciones que la elaboran."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 10,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 15,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Vademécum del Cervecero",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "La Biblia de la Cerveza",
+          "author": "Jeff Alworth"
+        },
+        {
+          "type": "Película",
+          "title": "El irlandés",
+          "author": "John Michael McDonagh"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-beer-legacy-tour",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  },
+  {
+    "slug": "julius-caesar-law-tour",
+    "type": "viaje",
+    "title": "Lex Iulia: El Legado Jurídico de César",
+    "summary": "Veni, vidi, vici. Pero mi legado no se forjó solo con la espada, sino también con la ley. Este viaje es para aquellos que entienden que el poder sin un marco legal es mera tiranía.",
+    "description": "Veni, vidi, vici. Pero mi legado no se forjó solo con la espada, sino también con la ley. Este viaje es para aquellos que entienden que el poder sin un marco legal es mera tiranía. Seguiremos mis pasos para ver cómo la conquista, la administración y la reforma se entrelazan. Comprenderéis cómo se construye un Estado.\n\nJulio César fue una figura transformadora cuya vida marcó el fin de la República Romana y el comienzo del Imperio. Este viaje, diseñado para estudiantes de derecho, se centra en su faceta menos explorada: la de legislador y administrador, cuyo trabajo sentó las bases para el posterior desarrollo del derecho romano clásico.",
+    "coverImageUrl": "/media/2026/01/Lex-Iulia-El-Legado-Juridico-de-Cesar.webp",
+    "gallery": [],
+    "city": "Roma",
+    "country": "Europa",
+    "cities": [
+      "Roma",
+      "Alesia (FR)",
+      "Alejandría (EG)"
+    ],
+    "format": "presencial",
+    "startDate": "2026-09-05",
+    "endDate": "2026-09-14",
+    "durationDays": 10,
+    "publicPrice": 4500,
+    "currency": "EUR",
+    "capacity": 18,
+    "spotsLeft": 18,
+    "language": "Español",
+    "paymentMode": "platform",
+    "publisher": {
+      "name": "The New Global School",
+      "type": "tgs"
+    },
+    "highlights": [
+      "Itinerario guiado de 10 días",
+      "Grupo reducido (máx. 18 participantes)",
+      "Pre-work curado: 2 recursos",
+      "Descuentos por grupo disponibles"
+    ],
+    "category": "Derecho",
+    "leader": {
+      "name": "Julio César",
+      "title": "Dictador Perpetuo",
+      "narrative": "Veni, vidi, vici. Pero mi legado no se forjó solo con la espada, sino también con la ley. Este viaje es para aquellos que entienden que el poder sin un marco legal es mera tiranía. Seguiremos mis pasos para ver cómo la conquista, la administración y la reforma se entrelazan. Comprenderéis cómo se construye un Estado."
+    },
+    "rationale": {
+      "importance": "Julio César fue una figura transformadora cuya vida marcó el fin de la República Romana y el comienzo del Imperio. Este viaje, diseñado para estudiantes de derecho, se centra en su faceta menos explorada: la de legislador y administrador, cuyo trabajo sentó las bases para el posterior desarrollo del derecho romano clásico.",
+      "learning": "Analizarás las 'Leges Iuliae' (Leyes Julias) en su contexto histórico, desde la reforma del calendario hasta las leyes contra el lujo y la corrupción. Comprenderás la tensión entre el poder militar (imperium) y la autoridad legal, y cómo César utilizó la ley como una herramienta para consolidar el poder y administrar un vasto territorio.",
+      "relevance": "Este viaje ofrece lecciones fundamentales sobre la relación entre derecho, poder y gobernanza. Es una oportunidad única para futuros abogados de reflexionar sobre el origen de conceptos como la ciudadanía, la soberanía y la codificación de la ley, y cómo estos se forjan en momentos de profunda transformación política."
+    },
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Llegada a Roma: El Foro, Corazón de la Ley",
+        "description": "Llegada a Roma. Nuestra primera visita será al Foro Romano al atardecer. Aquí, entre las ruinas de basílicas y templos, discutiremos el papel del Foro como centro de la vida jurídica, política y comercial de la República.",
+        "relevance": "El Foro era el escenario donde se promulgaban las leyes, se celebraban los juicios y los oradores debatían el futuro de Roma. Empezar aquí es situarnos en el epicentro del derecho romano y la oratoria forense."
+      },
+      {
+        "day": 2,
+        "title": "El Senado y la Lucha por el Poder",
+        "description": "Visitaremos la Curia Julia, la nueva sede del Senado que yo mismo ordené construir. A través de un debate simulado, analizaremos el conflicto entre mi facción (los Populares) y la aristocracia senatorial (los Optimates), explorando las tensiones constitucionales que llevaron a la guerra civil.",
+        "relevance": "La lucha entre el Senado y los líderes militares como yo definió el último siglo de la República. Es una lección fundamental sobre la separación de poderes, los bloqueos constitucionales y la crisis de un sistema político."
+      },
+      {
+        "day": 3,
+        "title": "Las 'Leges Iuliae': Reformando el Estado",
+        "description": "Un seminario con un experto en derecho romano sobre mis reformas legislativas: la Lex Iulia Municipalis para organizar las ciudades, las leyes suntuarias para controlar el lujo y mis esfuerzos para reformar la distribución de grano y la deuda. Discutiremos su impacto y motivación.",
+        "relevance": "Mis leyes no fueron meros edictos, sino un intento sistemático de abordar los problemas sociales y económicos que plagaban la República. Es un caso de estudio sobre el uso de la legislación como herramienta de ingeniería social y política."
+      },
+      {
+        "day": 4,
+        "title": "Viaje a la Galia: Lex Iulia de Civitate",
+        "description": "Vuelo a Lyon (Francia). Desde aquí, viajaremos al sitio de Alesia, donde culminó mi conquista de la Galia. Discutiremos una de mis decisiones más trascendentales: la concesión de la ciudadanía romana a los habitantes de la Galia Cisalpina y, más tarde, a otras provincias.",
+        "relevance": "La expansión de la ciudadanía fue una herramienta clave para la romanización y la consolidación del poder. Aquí analizaremos el concepto de ciudadanía en el mundo antiguo y sus implicaciones legales, un precursor de los debates modernos sobre inmigración e integración."
+      },
+      {
+        "day": 5,
+        "title": "La Administración de una Provincia Conquistada",
+        "description": "En un museo galorromano, estudiaremos cómo se organizaba la administración de una nueva provincia: la recaudación de impuestos, la construcción de infraestructuras y la aplicación del derecho romano junto con las costumbres locales. Discutiremos el papel del gobernador y los límites de su poder.",
+        "relevance": "Gobernar un imperio requería un sofisticado aparato administrativo. La Galia ofrece un ejemplo práctico de cómo Roma integraba nuevos territorios, una lección sobre gobernanza en un entorno multicultural."
+      },
+      {
+        "day": 6,
+        "title": "Cruzando el Rubicón: 'Alea Iacta Est'",
+        "description": "Regreso a Italia (vía vuelo). Simbólicamente, nos detendremos cerca del río Rubicón. Aquí analizaremos el acto que desencadenó la guerra civil: mi decisión de cruzar el río con una legión, desafiando la prohibición del Senado. Discutiremos los conceptos de 'imperium' y traición ('maiestas').",
+        "relevance": "El cruce del Rubicón es el último acto de desobediencia a una orden del Senado, un momento de crisis constitucional donde la autoridad legal choca con el poder militar. Es el punto de no retorno legal y político, una lección sobre la toma de decisiones bajo una presión extrema."
+      },
+      {
+        "day": 7,
+        "title": "El Legado Jurídico del 'Dictador'",
+        "description": "De vuelta en Roma, un seminario se centrará en mi nombramiento como 'Dictador Perpetuo'. Analizaremos la base legal (o la falta de ella) para esta posición y cómo estiró las instituciones republicanas hasta su punto de ruptura, allanando el camino para el Principado de Augusto.",
+        "relevance": "Mi dictadura es un caso de estudio sobre el derecho constitucional en tiempos de emergencia. Nos obliga a preguntarnos: ¿puede una crisis justificar la suspensión de las normas? ¿Dónde está la línea entre un salvador de la patria y un tirano?"
+      },
+      {
+        "day": 8,
+        "title": "Viaje a Egipto: César, Cleopatra y la Ley Internacional",
+        "description": "Vuelo a Alejandría, Egipto. Exploraremos el lugar donde intervine en la guerra civil egipcia y conocí a Cleopatra. Discutiremos las complejidades del 'derecho internacional' romano: la relación con reinos clientes, los tratados y la justificación de la intervención militar.",
+        "relevance": "Egipto nos muestra la diplomacia y el 'derecho de gentes' en acción. Mi relación con Cleopatra no fue solo un romance, sino una alianza estratégica que tuvo profundas implicaciones legales y políticas para Roma y Egipto."
+      },
+      {
+        "day": 9,
+        "title": "Los Idus de Marzo: El Asesinato y sus Consecuencias Legales",
+        "description": "Regresaremos a Roma. Visitaremos el lugar del asesinato, en el Teatro de Pompeyo. Analizaremos las justificaciones legales de los conspiradores ('tiranicidio') y el caos que siguió, culminando en la 'Lex Titia' que otorgó poder absoluto al Segundo Triunvirato.",
+        "relevance": "Mi asesinato no restauró la República, sino que la destruyó por completo. Es el trágico epílogo que demuestra cómo la violencia política, incluso cuando se justifica con argumentos legales, a menudo conduce a un resultado peor: la anarquía y una nueva dictadura."
+      },
+      {
+        "day": 10,
+        "title": "De César a Augusto: El Nacimiento del Imperio y Despedida",
+        "description": "Nuestra jornada concluye en el Ara Pacis, el Altar de la Paz de Augusto. Reflexionaremos sobre cómo mi sobrino-nieto, Augusto, aprendió de mis errores y logró consolidar el poder bajo una fachada republicana, creando el Imperio. Almuerzo de despedida y traslado al aeropuerto.",
+        "relevance": "El legado de César solo puede entenderse a través de Augusto. Al concluir en un monumento a la paz imperial, comprendemos la transición final de la República al Imperio, una transformación que mis acciones, legales e ilegales, hicieron posible."
+      }
+    ],
+    "pricingTiers": [
+      {
+        "threshold": 9,
+        "discountPercent": 5
+      },
+      {
+        "threshold": 14,
+        "discountPercent": 10
+      }
+    ],
+    "preWork": {
+      "title": "El Códice del Conquistador",
+      "items": [
+        {
+          "type": "Lectura",
+          "title": "Comentarios a la guerra de las Galias",
+          "author": "Julio César"
+        },
+        {
+          "type": "Serie",
+          "title": "Roma",
+          "author": "HBO"
+        }
+      ]
+    },
+    "status": "scheduled",
+    "votes": 0,
+    "voteThreshold": 0,
+    "_source": "viajes-expeditions",
+    "_importId": "exp-julius-caesar-law-tour",
+    "publisherType": "tgs",
+    "publicListed": true,
+    "programStatus": "published"
+  }
+]

@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LANG, UI, BRAND } from '../../lib/site';
+
+export async function getStaticPaths({ paginate }: any) {
+  const posts = (await getCollection('posts', (p) => p.data.lang === LANG))
+    .sort((a, b) => (b.data.date || '').localeCompare(a.data.date || ''));
+  return paginate(posts, { pageSize: 24 });
+}
+
+const { page } = Astro.props as any;
+const ui = UI[LANG];
+const L = LANG === 'es';
+const title = L ? 'Blog — Personas, Planeta, Propósito' : 'Blog — People, Purpose, Planet';
+const intro = L
+  ? 'Artículos sobre liderazgo, innovación social, sostenibilidad y educación.'
+  : 'Articles on leadership, social innovation, sustainability and education.';
+---
+<BaseLayout title={`${title} · ${BRAND}`} description={intro}>
+  <section class="home-hero">
+    <div class="home-wrap">
+      <p class="eyebrow">Blog</p>
+      <h1>{L ? 'Personas, Planeta, Propósito' : 'People, Purpose, Planet'}</h1>
+      <p class="lead">{intro}</p>
+    </div>
+  </section>
+
+  <section class="home-wrap">
+    <div class="card-grid">
+      {page.data.map((p: any) => (
+        <a class="card stretch" href={`/${p.data.slug}/`}>
+          {p.data.hero && <img src={p.data.hero} alt={p.data.title} width="400" height="225" loading="lazy" />}
+          <div class="body">
+            <h3>{p.data.title}</h3>
+            <p>{(p.data.description || '').slice(0, 120)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <nav class="pager">
+      {page.url.prev && <a href={page.url.prev}>← {L ? 'Anteriores' : 'Newer'}</a>}
+      <span>{L ? 'Página' : 'Page'} {page.currentPage} / {page.lastPage}</span>
+      {page.url.next && <a href={page.url.next}>{L ? 'Siguientes' : 'Older'} →</a>}
+    </nav>
+  </section>
+</BaseLayout>
+
+<style>
+  .pager { display: flex; gap: 1.5rem; align-items: center; justify-content: center; margin: 3rem 0 1rem; font-family: var(--font-head); font-weight: 500; }
+  .pager span { color: var(--ink-mute); }
+</style>

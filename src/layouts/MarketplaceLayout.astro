@@ -1,0 +1,95 @@
+---
+import '../styles/marketplace.css';
+import { LANG, SELF_ORIGIN, OTHER_ORIGIN, UI } from '../lib/site';
+
+interface Props { title: string; description?: string; canonical?: string; ogImage?: string; }
+const { title, description = '', canonical = '', ogImage = '' } = Astro.props;
+const L = LANG === 'es';
+const canonicalUrl = canonical || SELF_ORIGIN[LANG] + Astro.url.pathname;
+const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
+---
+<!doctype html>
+<html lang={LANG}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {ogFull && <meta property="og:image" content={ogFull} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#07000f" />
+  </head>
+  <body class="mkt">
+    <header class="mkt-header">
+      <div class="inner">
+        <a href="/" class="mkt-brand">The <span>New Global</span> School</a>
+        <nav class="mkt-nav">
+          <a href={L ? '/experiencias/' : '/experiences/'}>{L ? 'Experiencias' : 'Experiences'}</a>
+          <a href="/blog/">Blog</a>
+          <a href={L ? '/nosotros/' : '/about-us/'}>{L ? 'Nosotros' : 'About'}</a>
+          <a href={OTHER_ORIGIN[LANG] + '/'}>{UI[LANG].langSwitch}</a>
+          <a class="to-site" href="https://aliados.theglobal.school/">{L ? 'Únete como aliado' : 'Become an ally'}</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <script is:inline>
+      // Oculta imágenes rotas para revelar el gradiente de marca (fallback elegante).
+      document.addEventListener('error', (e) => {
+        const t = e.target;
+        if (t && t.tagName === 'IMG') t.style.display = 'none';
+      }, true);
+    </script>
+    <script is:inline>
+      // Slideshow: auto-avance suave del carrusel de galería (pausa al interactuar).
+      (function () {
+        var strip = document.querySelector('.gallery-strip[data-autoplay]');
+        if (!strip || strip.children.length < 2) return;
+        var paused = false, i = 0;
+        ['pointerdown', 'mouseenter', 'touchstart'].forEach(function (e) { strip.addEventListener(e, function () { paused = true; }, { passive: true }); });
+        strip.addEventListener('mouseleave', function () { paused = false; });
+        setInterval(function () {
+          if (paused) return;
+          i = (i + 1) % strip.children.length;
+          var el = strip.children[i];
+          strip.scrollTo({ left: el.offsetLeft - (strip.offsetWidth - el.offsetWidth) / 2, behavior: 'smooth' });
+        }, 4500);
+      })();
+    </script>
+    <script is:inline>
+      // Widget de votación en páginas de detalle de viaje (.xp-vote[data-slug]).
+      (function () {
+        var box = document.querySelector('.xp-vote[data-slug]');
+        if (!box) return;
+        var slug = box.getAttribute('data-slug');
+        var es = document.documentElement.lang === 'es';
+        var votedTxt = es ? 'Votado ✓' : 'Voted ✓';
+        var countEl = box.querySelector('.xp-vote-count');
+        var btn = box.querySelector('.xp-vote-btn');
+        fetch('/api/votes').then(function (r) { return r.json(); }).then(function (j) {
+          countEl.textContent = (j.counts && j.counts[slug]) || 0;
+          if (j.voted && j.voted.indexOf(slug) !== -1) { btn.disabled = true; btn.textContent = votedTxt; }
+        }).catch(function () { countEl.textContent = '0'; });
+        btn.addEventListener('click', function () {
+          btn.disabled = true;
+          fetch('/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slug: slug }) })
+            .then(function (r) { return r.json(); }).then(function (j) {
+              if (j.votes != null) countEl.textContent = j.votes;
+              btn.textContent = votedTxt;
+            }).catch(function () { btn.disabled = false; });
+        });
+      })();
+    </script>
+    <footer class="mkt-header" style="position:static;border-top:1px solid var(--line);border-bottom:0;margin-top:2rem">
+      <div class="inner" style="color:var(--txt-soft);font-size:.85rem">
+        <span>© {new Date().getFullYear()} The New Global School · Viena · CDMX</span>
+        <a class="to-site" href="/">{L ? 'Volver al sitio' : 'Back to main site'}</a>
+      </div>
+    </footer>
+  </body>
+</html>

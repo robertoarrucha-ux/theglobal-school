@@ -1,0 +1,6 @@
+URLs de imágenes propias a procesar: 22
+  FAIL https://theglobal.school/wp-content/uploads/2019/09/Copia-de-7-reasons-why-we-love-vienna-.png -> HTTP Error 404: Not Found
+
+Imágenes: ok=20 skip=1 fail=1
+Archivos .md reescritos: 22
+Peso total de /media: 78.1 MB

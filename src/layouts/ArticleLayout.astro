@@ -1,0 +1,36 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { LANG } from '../lib/site';
+
+const { data: d } = Astro.props;
+const locale = LANG === 'es' ? 'es-ES' : 'en-US';
+const prettyDate = d.date
+  ? new Date(d.date.replace(' ', 'T')).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
+  : '';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  image: d.hero ? new URL(d.hero, Astro.site).href : undefined,
+  datePublished: d.date ? d.date.replace(' ', 'T') : undefined,
+  inLanguage: d.lang,
+  publisher: { '@type': 'Organization', name: 'The New Global School' },
+  mainEntityOfPage: d.canonical || Astro.url.href,
+};
+---
+<BaseLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  {d.hero && (
+    <div class="article-hero"><img src={d.hero} alt={d.title} width="1100" height="550" /></div>
+  )}
+  <article class="article">
+    {d.targetKeyword && <p class="eyebrow">{d.targetKeyword}</p>}
+    <h1>{d.title}</h1>
+    {prettyDate && <p class="article-meta">{prettyDate}</p>}
+    <div class="article-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import { LANG, BRAND, UI, SELF_ORIGIN, OTHER_ORIGIN } from '../lib/site';
+import { footerGroups } from '../lib/nav';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  altPath?: string;   // ruta equivalente en el otro idioma (si se conoce)
+}
+const { title, description = '', canonical = '', ogImage = '', altPath } = Astro.props;
+const ui = UI[LANG];
+const path = Astro.url.pathname;
+const canonicalUrl = canonical || SELF_ORIGIN[LANG] + path;
+const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
+const groups = footerGroups(LANG);
+const L = LANG === 'es';
+---
+<!doctype html>
+<html lang={LANG}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {/* hreflang: self + alterno si se conoce el emparejamiento */}
+    <link rel="alternate" hreflang={LANG} href={canonicalUrl} />
+    {altPath && (
+      <link rel="alternate" hreflang={LANG === 'en' ? 'es' : 'en'} href={OTHER_ORIGIN[LANG] + altPath} />
+    )}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={BRAND} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {ogFull && <meta property="og:image" content={ogFull} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#8300e9" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a href="/" class="brand-mark">The <span>New Global</span> School</a>
+        <nav class="nav">
+          {ui.nav.map((n) => <a href={n.href}>{n.label}</a>)}
+          <a class="lang-switch" href={OTHER_ORIGIN[LANG] + '/'}>{ui.langSwitch}</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-mark">The <span>New Global</span> School</div>
+            <p>{ui.footer}</p>
+            <p class="footer-links">
+              <a href="/">{L ? 'Inicio' : 'Home'}</a> · <a href="/blog/">Blog</a> ·
+              <a href={L ? '/contacto/' : '/contact/'}>{L ? 'Contacto' : 'Contact'}</a> ·
+              <a href={OTHER_ORIGIN[LANG] + '/'}>{ui.langSwitch}</a>
+            </p>
+          </div>
+          {groups.map((g) => (
+            <div class="footer-col">
+              <h4>{g.title}</h4>
+              <ul>{g.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+            </div>
+          ))}
+        </div>
+        <div class="footer-bottom">© {new Date().getFullYear()} {BRAND} · Viena · CDMX</div>
+      </div>
+    </footer>
+  </body>
+</html>

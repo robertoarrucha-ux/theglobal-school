@@ -1,0 +1,324 @@
+---
+title: "Certification in Sustainability ISO 37101"
+seoTitle: "Certification in Sustainability ISO 37101"
+description: "Get certified internationally in Management Systems for Sustainable Development in Communities. Certification in Sustainability ISO 37101"
+slug: "certification-in-sustainability-iso-37101"
+lang: "en"
+type: "page"
+date: "2023-06-27 10:36:46"
+canonical: "https://theglobal.school/certification-in-sustainability-iso-37101/"
+ogTitle: "Certification in Sustainability ISO 37101"
+ogImage: "/media/2024/02/The-New-Global-School.webp"
+hero: "/media/2023/06/creative-marketing-9.webp"
+targetKeyword: "Certification in Sustainability ISO 37101"
+sourceUrl: "https://theglobal.school/certification-in-sustainability-iso-37101/"
+images: ["/media/2023/06/creative-marketing-9.webp", "/media/2023/06/creative-marketing-7.webp", "/media/2023/07/ezgif.com-gif-maker.webp", "/media/2019/05/Gabriel-Ekman-SIMC-Kigali-Circle-150x150.webp", "/media/2019/05/Sebas-150x150.webp", "/media/2019/05/Natalia-Lever-Circle-Alumni-150x150.webp", "/media/2019/05/Liana-Taylor-Cropped-150x150.webp", "/media/2023/06/pecb-slogan-bottom.webp", "/media/2023/06/Logo-Transparent-black-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp"]
+---
+### **Certification in Sustainability ISO 37101**
+
+# Management Systems for Sustainable Development in Communities ISO 37101
+
+![](/media/2023/06/creative-marketing-9.webp "creative-marketing-9")
+
+![](/media/2023/06/creative-marketing-7.webp "creative-marketing-7")
+
+### **What is ISO 37101?**
+
+ISO 37101 is an **international standard** which specifies the requirements of and provides guidance on the establishment of a management system for **sustainable development in communities**.
+
+The standard aims to help communities establish a framework that allows them to improve their standing in their social, economic and environmental aspects.
+
+The requirements of the standard can be applied to communities of all sizes in their sustainable development efforts towards **smart, more resilient and more efficient infrastructure and ultimately help improve their overall well-being.**
+
+The standard addresses specific sustainability issues such as **governance, education, innovation, health care, interdependence, safety, inclusivity, etc.**, and has the flexibility of adding other sustainability issues which may prove relevant to the community implementing it.
+
+## **Implementation of Certification in Sustainability ISO 37101**
+
+By implementing a sustainable development management system based on ISO 37101, a community will:
+
+- Build consensus on sustainable development within communities
+- Put in place a system which takes into account the pillars of sustainable development (economic, social, and environmental aspects) as well as the UN SDGs.
+- Improve the sustainability, smartness and resilience of strategies, programs, projects, plans and services that are under the direct responsibility of communities
+- Preserve and improve the environment
+- Improve resilience and optimize resource usage
+- Foster a systematic approach to engaging all interested parties
+- Increase the efficiency and attractiveness of communities
+- Obtain international recognition
+
+## **Reason of getting the Certification in Sustainability ISO 37101**
+
+### Reputation & Recognition
+
+Stand out from the crowd. High level of knowledge, skill, and expertise.
+
+Work in any sector, industry and part of the world.
+
+### Professional & Affordable
+
+**Professional and guided study groups** allow us to **cut by 60%** the cost of any other professional degree.
+
+### Trustworthiness
+
+Employers and clients prefer to work with individuals who hold international certifications.
+
+### Leadership
+
+Become a leading voice in Sustainability, access leadership positions and multiply X3 your income.
+
+### Network
+
+Access to a high-level network of sustainability professionals who trust each other.
+
+![Certification in Sustainability ISO 37101<br />
+](/media/2023/07/ezgif.com-gif-maker.webp "Certification in Sustainability ISO 37101")
+
+### **How do I get Certified?**
+
+**1. Enrol for the Exam**
+
+**2. Confirm your spot and Receive your self-study material**
+
+**4. Access to our study-groups network**
+
+**5. Take the Exam**
+
+**6. Receive your International Certification ISO 37101**
+
+## 
+
+## **Are study-groups worth it?**
+
+Group of studies is an 100% effective way of learning:
+
+1. Collaboration & Network.  
+2. Increased motivation.  
+3. Diverse learning styles.  
+4. Accountability.  
+5. Improved retention.
+
+## **Why should you pursue a Certification in Sustainability ISO 37101?**
+
+By becoming ISO 37101 certified, you will prove that you have the credentials to help a community live, work, develop and prosper in a manner that is socially, environmentally and economically sustainable.
+
+The ISO 37101 demonstrates your capability credentials to work with communities in fundamentally change their approach toward sustainable development:
+
+1. **Making them more attractive to investors;**
+2. **Improve their practices of environmental preservation;**
+3. **Improve their adaptability to economic and social changes;**
+4. **Steer them toward more responsible resource usage, etc.**
+
+### **Exam Dates & Fees**
+
+**Agust 25th,**
+
+**Vienna, Austria**
+
+**September 29th,**
+
+**Vienna, Austria**
+
+**October 27th,**
+
+**Vienna, Austria**
+
+## Best price 100% Guaranteed!
+
+## Foundation ©
+
+€500
+
+- A two-days self-study material
+- Access to the study group of sustainability professionals (Online)
+- Comprehensive information on the fundamental concepts and principles of a management system
+- Three hours exam
+- Certificate
+
+[ENROL NOW](https://buy.stripe.com/cN2dShfMh4X29wc4gU)
+
+## Lead Implementer ©
+
+€1,200
+
+- A five-days self-study material
+- Access to the study group of sustainability professionals (Online)
+- Thorough information on auditing sustainable development management programs
+- Three hours exam
+- Certificate
+
+[ENROL NOW](https://buy.stripe.com/00gcOd8jP616fUA9Bf)
+
+## Lead Auditor ©
+
+€1,200
+
+- A five-days self-study material
+- Access to the study group of sustainability professionals (Online)
+- Thorough information on stablishing sustainable development management programs
+- Three hours exam
+- Certificate
+
+[ENROL NOW](https://buy.stripe.com/28o4hH1Vr3SYfUAaF4)
+
+### The best is the connnection
+
+![](/media/2019/05/Gabriel-Ekman-SIMC-Kigali-Circle-150x150.webp)
+
+The best of this experience is not only to be around the coaches and mentors but the entrepreneurs who are here sharing their dreams.
+
+Gabriel Ekman - Sweden
+
+[BAG Innovation](https://www.baginnovation.rw/)
+
+### Enlightening
+
+![Sebastian - theglobal.schoo](/media/2019/05/Sebas-150x150.webp)
+
+The experience has been very enlightening and inspirational, recommended for those who are willing to challenge the status quo
+
+Sebastian Baayel - Ghana
+
+African Entrepreneurship and Innovation Centre
+
+### Remarkable
+
+![](/media/2019/05/Natalia-Lever-Circle-Alumni-150x150.webp)
+
+Thanks for all the tools, but above all for the remarkable change-makers who I can call now my friends
+
+Natalia Lever - Mexico
+
+[The Climate Reality Project Latam](https://www.facebook.com/ClimateLatino/)
+
+### Well prepared
+
+![](/media/2019/05/Liana-Taylor-Cropped-150x150.webp)
+
+Inspiring presentations, well prepared, insightful, interactive and easy to work with.
+
+Liana Taylor - Germany
+
+[Hive Europe](https://www.hive.org/)
+
+## FAQ
+
+**You can also reach us on Whatsapp: +43 677 61 73 5010 ([Or click here](https://api.whatsapp.com/send?phone=4367761735010&text=Hello,%20I%20want%20to%20apply%20to%20ISO%2037101)).**
+
+##### What is ISO?
+
+ISO (International Organization for Standardization) is **an independent, non-governmental organization that develops standards to ensure the quality, safety and efficiency of products, services and systems**.
+
+##### I live abroad, can I take the exam?
+
+**Yes.** You can enrol if you live abroad, you will need to travel to Vienna to take the exam.
+
+##### What are the differences in the type of levels?
+
+Foundation: A professional certified on the fundamental concepts and principles of a management system
+
+Lead Auditor: In-depth information on how to manage the audit of a management system
+
+Lead Implementer: Thorough information on establishing management programs
+
+##### Is this a good investment?
+
+**1. Reputation & Recognition**  
+Stand out from the crowd. High level of knowledge, skill, and expertise.
+
+Work in any sector, industry and part of the world.
+
+**2. Accesible & Affordable**  
+Self & study groups exams to internationally certify your knowledge and skills without an expensive university degree.
+
+**3. Trustworthiness**  
+Employers and clients prefer to work with individuals who hold international certifications.
+
+**4. Leadership**  
+Become a leading voice in Sustainability, access leadership positions and multiply X3 your income.
+
+**5. Network**  
+Access to a high-level network of certified professionals who trust each other.
+
+##### Can I take an online training?
+
+Yes. You can choose to access to a professional trainer through recorded online videos.
+
+However, we encourage you to join our study-group network and interact with other professionals preparing for the certification exam.
+
+##### How does the study-group work?
+
+We provide a safe virtual space for professionals to interact, share, study and get ready for the certification exam.
+
+##### Where does the certification take place?
+
+At Headquarters of Impacy Hub Vienna.
+
+Lindengasse 56, 1070 Vienna, Austria.
+
+##### More Certifications?
+
+ISO 37101 Management Systems for Sustainable Development in Communities  
+ISO 50001 Energy Management Systems  
+ISO 14001 Environmental Management  
+ISO 26000 Social Responsibility  
+ISO 9001 Quality Management Systems  
+ISO 21502 Project Management
+
+You can request more info by email: [hello@theglobal.school](mailto:hello@theglobal.school)
+
+##### Payment methods?
+
+**Option 1. Credit / Debit Card.**
+
+**Option 2. Bank Transfer. Send copy of your transfer to [hello@theglobal.school](mailto:hello@theglobal.school,)**
+
+- **Holder Account:** Global School – Verein für interkulturelle Kommunikation und Bildung
+- **IBAN:** AT61 3207 3000 00861823
+- **Bank:** Raiffeisenbank Bruck-Carnuntum
+- **SWIFT:** RLNWATWWBRL
+- **Bank Address:** Raiffeisenplatz 1.2460 Bruck/Leitha, Lower-Austria, Austria.
+
+##### Refunds?
+
+THE GLOBAL SCHOOL has a 10-day refund policy on the purchase of Certifications. If this condition is met, we recommend that you contact us at [certifications@theglobal.school no later](https://theglobal.school/about-us/) than 30 days after the payment was made.
+
+This will allow us to issue a credit note for your future payments (event fees, other certificates, etc.).
+
+##### Disccounts?
+
+**We offer disccounts to:**
+
+1. Groups of min. 10 candidates.
+
+2. Environmental NGOs
+
+3. Entrepreneurs
+
+Request your disscount on Whatsapp, send us a message: +43 677 61 73 5010 ([or click here](https://api.whatsapp.com/send?phone=4367761735010&amp;text=Hello,%20I%20want%20to%20apply%20to%20ISO%2037101))
+
+##### What if I fail the exam?
+
+You can take another exam with only administrative fee of 50 euros.
+
+You have up to 1 year after the notification of your results.
+
+##### Can I access the course content?
+
+You can receive the brochure with more information, including the course content structure and summary, [click here.](https://forms.gozen.io/vPKctD7GTu2ESQlS44sd)
+
+##### Can we deliver corporate or in-house training?
+
+Yes, our special in-house delivery staff work incessantly to provide training to clients who wish to have the convenience and comfort of working within their familiar surroundings.
+
+##### Can we deliver the training to more than 100 persons?
+
+Yes, we can train over 100 candidates. In such cases where the candidates are more in number, we are providing training in batches.
+
+### **Receive the guide with more information**
+
+## **Powered By**
+
+![](/media/2023/06/pecb-slogan-bottom.webp "pecb-slogan-bottom")
+
+![](/media/2023/06/Logo-Transparent-black-The-Global-School-for-New-Leadeship-scaled.webp "Logo Transparent black The Global School for New Leadeship")
+
+![Top compliance Aliado & Representante Oficial The global school for social leaders](/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp "Impact-Hub-Vienna-Logo webp")

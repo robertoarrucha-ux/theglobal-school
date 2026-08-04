@@ -1,0 +1,65 @@
+{
+ "en/for-leaders": {
+  "lang": "en",
+  "slug": "for-leaders",
+  "name": "For Leaders",
+  "posts": [
+   "a-message-for-greta-haters",
+   "carbon-economy",
+   "cultural-transformation-by-leaders",
+   "holistic-development",
+   "how-civil-society-action-led-to-fairer-taxation-in-mexico",
+   "lessons-indigenous",
+   "systems-change",
+   "tech-vs-mindfulness",
+   "un-antonio-guterres",
+   "women-leadership"
+  ]
+ },
+ "en/must-read": {
+  "lang": "en",
+  "slug": "must-read",
+  "name": "Must Read",
+  "posts": [
+   "doughnut-economics",
+   "environmental-crisis",
+   "happiness-is-expensive",
+   "holistic-development",
+   "journey-with-the-indigenous-of-brazil",
+   "lessons-indigenous",
+   "letter-to-humanity-from-2050",
+   "nature-solutions",
+   "system-crisis",
+   "tips-how-to-live-a-sustainable-lifestyle"
+  ]
+ },
+ "es/debes-leer": {
+  "lang": "es",
+  "slug": "debes-leer",
+  "name": "Debes Leer",
+  "posts": [
+   "carta-a-la-humanidad-desde-2100",
+   "economia-de-la-dona",
+   "paises-contaminantes-de-america-latina"
+  ]
+ },
+ "en/purpose-driven-consultants-educators": {
+  "lang": "en",
+  "slug": "purpose-driven-consultants-educators",
+  "name": "Purpose-Driven Consultants &amp; Educators",
+  "posts": [
+   "consulting-vs-coaching-difference",
+   "how-consulting-businesses-are-working-online",
+   "tips-for-your-online-consulting-academy"
+  ]
+ },
+ "es/must-read-es": {
+  "lang": "es",
+  "slug": "must-read-es",
+  "name": "Must Read",
+  "posts": [
+   "la-desigualdad-nos-esta-matando",
+   "la-felicidad-es-muy-cara"
+  ]
+ }
+}
