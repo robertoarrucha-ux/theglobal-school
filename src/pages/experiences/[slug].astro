@@ -81,7 +81,7 @@ const jsonLd = {
             {x.sections.map((s: any, i: number) => (
               <details class="acc" open={i === 0}>
                 <summary>{s.title}<span class="acc-icon" aria-hidden="true"></span></summary>
-                <div class="acc-body xp-richbody" set:html={marked.parse(s.md)} />
+                <div class="acc-body xp-richbody" set:html={marked.parse(s.md, { breaks: true })} />
               </details>
             ))}
           </>

@@ -167,7 +167,7 @@ function renderFragments(x, lang) {
 
   const sections = a(x.sections).length
     ? (x.description ? `<p class="xp-lead">${esc(x.description)}</p>` : '') +
-      a(x.sections).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''}><summary>${esc(s.title)}<span class="acc-icon" aria-hidden="true"></span></summary><div class="acc-body xp-richbody">${marked.parse(s.md || '')}</div></details>`).join('')
+      a(x.sections).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''}><summary>${esc(s.title)}<span class="acc-icon" aria-hidden="true"></span></summary><div class="acc-body xp-richbody">${marked.parse(s.md || '', { breaks: true })}</div></details>`).join('')
     : '';
 
   const collaborators = a(x.collaborators).length
