@@ -21,13 +21,33 @@ function loadCredential(): Record<string, any> | null {
   return null;
 }
 
+// Normaliza un doc a la forma que esperan las plantillas. Las experiencias creadas
+// desde el panel de Aliados guardan `publisherType` (string) en vez de `publisher`
+// (objeto), y pueden omitir campos → esto evita crashes en build (ej. x.publisher.type).
+function normalizeExperience(x: any): Experience {
+  const publisher = (x.publisher && typeof x.publisher === 'object')
+    ? x.publisher
+    : {
+        type: x.publisherType === 'ally' ? 'ally' : 'tgs',
+        name: x.publisherType === 'ally' ? (x.publisherName || x.allyName || 'Aliado') : 'The New Global School',
+      };
+  return {
+    ...x,
+    type: x.type === 'viaje' ? 'viaje' : 'evento',
+    publisher,
+    highlights: Array.isArray(x.highlights) ? x.highlights : [],
+    publicPrice: typeof x.publicPrice === 'number' ? x.publicPrice : (Number(x.publicPrice) || 0),
+    currency: x.currency || 'EUR',
+  } as Experience;
+}
+
 let cache: Promise<Experience[]> | null = null;
 
 async function fetchFromFirestore(): Promise<Experience[]> {
   const cred = loadCredential();
   if (!cred) {
     console.warn('[experiences] Sin credenciales Firestore → usando puente JSON local.');
-    return bridge();
+    return bridge().map(normalizeExperience);
   }
   try {
     const { getApps, initializeApp, cert } = await import('firebase-admin/app');
@@ -35,10 +55,10 @@ async function fetchFromFirestore(): Promise<Experience[]> {
     const app = getApps().length ? getApps()[0] : initializeApp({ credential: cert(cred as any) }, 'experiences-reader');
     const db = getFirestore(app, DATABASE_ID);
     const snap = await db.collection(COLLECTION).where('publicListed', '==', true).get();
-    const items = snap.docs.map((d) => d.data() as Experience);
+    const items = snap.docs.map((d) => normalizeExperience(d.data()));
     if (!items.length) {
       console.warn('[experiences] Firestore vacío → puente JSON.');
-      return bridge();
+      return bridge().map(normalizeExperience);
     }
     // eventos primero, luego viajes; dentro, por fecha ascendente
     items.sort((a, b) => {
@@ -49,7 +69,7 @@ async function fetchFromFirestore(): Promise<Experience[]> {
     return items;
   } catch (err) {
     console.warn('[experiences] Error leyendo Firestore → puente JSON:', (err as Error).message);
-    return bridge();
+    return bridge().map(normalizeExperience);
   }
 }
 
