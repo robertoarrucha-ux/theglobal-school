@@ -1,10 +1,11 @@
 import { onRequest } from 'firebase-functions/v2/https';
 import { onDocumentWritten } from 'firebase-functions/v2/firestore';
-import { defineSecret, defineString } from 'firebase-functions/params';
+import { defineSecret } from 'firebase-functions/params';
 import { getApps, initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import crypto from 'node:crypto';
 import nodemailer from 'nodemailer';
+import { marked } from 'marked';
 
 // Secrets de Acumbamail DEDICADOS a theglobal.school (desacoplados de Aliados,
 // que usa SMTP_PASS en el mismo project). Mismo valor de cuenta Acumbamail.
@@ -104,7 +105,7 @@ export const submitLead = onRequest(
 // El workflow re-lee Firestore en cada build → publica siempre el estado fresco.
 const MARKETPLACE_DB = 'ai-studio-6aba9233-6f6c-455d-be53-29923fe66f0f';
 const GH_TOKEN = defineSecret('GH_DISPATCH_TOKEN'); // PAT con scope repo (dispara Actions)
-const GH_REPO = defineString('GH_REPO', { default: '' }); // 'owner/repo' (set en functions/.env)
+// GH_REPO ('owner/repo') se lee de env normal (functions/.env) → sin prompt en deploy.
 
 export const onExperienceChange = onDocumentWritten(
   { document: 'experiences/{expId}', database: MARKETPLACE_DB, region: 'us-central1', secrets: [GH_TOKEN], maxInstances: 3 },
@@ -116,7 +117,7 @@ export const onExperienceChange = onDocumentWritten(
 
     const action = !before ? 'created' : !after ? 'deleted' : 'updated';
     const slug = (after || before)?.slug || event.params.expId;
-    const repo = GH_REPO.value();
+    const repo = process.env.GH_REPO || '';
     const token = GH_TOKEN.value();
     if (!repo || !token) {
       console.error('onExperienceChange: falta GH_REPO o GH_DISPATCH_TOKEN — no se pudo disparar el build.');
@@ -139,6 +140,69 @@ export const onExperienceChange = onDocumentWritten(
       else console.log(`onExperienceChange: build disparado (${action}: ${slug})`);
     } catch (err) {
       console.error('onExperienceChange error:', err && err.message);
+    }
+  }
+);
+
+// --- Actualización en vivo del detalle ("freshen") ---
+// GET /api/experience?slug=X&lang=es|en -> { slug, html: {title,summary,meta,price,highlights,sections,collaborators,gallery,testimonials} }
+// La página estática se auto-refresca con esto al cargar, así los visitantes ven los
+// cambios en segundos sin esperar el rebuild. Fragmentos ya renderizados en HTML (una
+// sola fuente de render; el cliente solo hace innerHTML). Cacheado en el CDN (lecturas mínimas).
+function fmtDate(iso, locale) {
+  try { return new Date(iso + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }); }
+  catch { return iso || ''; }
+}
+function renderFragments(x, lang) {
+  const L = lang === 'es';
+  const locale = L ? 'es-ES' : 'en-US';
+  const a = (arr) => (Array.isArray(arr) ? arr : []);
+  const dateStr = x.endDate ? `${fmtDate(x.startDate, locale)} – ${fmtDate(x.endDate, locale)}` : fmtDate(x.startDate, locale);
+
+  const meta = `📍 ${x.venue ? esc(x.venue) + ' · ' : ''}${esc(x.city || '')}, ${esc(x.country || '')} &nbsp;·&nbsp; 🗓 ${dateStr} &nbsp;·&nbsp; 🗣 ${esc(x.language || '')}`;
+  const price = Number(x.publicPrice) === 0
+    ? (L ? 'Gratis' : 'Free')
+    : `${esc(x.currency || '')} ${Number(x.publicPrice || 0).toLocaleString()}<span class="cur"> / ${L ? 'persona' : 'person'}</span>`;
+  const highlights = a(x.highlights).map((h) => `<li>${esc(h)}</li>`).join('');
+
+  const sections = a(x.sections).length
+    ? (x.description ? `<p class="xp-lead">${esc(x.description)}</p>` : '') +
+      a(x.sections).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''}><summary>${esc(s.title)}<span class="acc-icon" aria-hidden="true"></span></summary><div class="acc-body xp-richbody">${marked.parse(s.md || '')}</div></details>`).join('')
+    : '';
+
+  const collaborators = a(x.collaborators).length
+    ? `<h2>${L ? 'Colaboradores y Expositores' : 'Collaborators & Speakers'}</h2><div class="collab-grid">` +
+      a(x.collaborators).map((c) => `<figure class="collab-tile"${c.name ? ` title="${esc(c.name)}"` : ''}><img src="${esc(c.imageUrl)}" alt="${esc(c.name || 'Colaborador')}" loading="lazy">${c.name ? `<figcaption>${esc(c.name)}</figcaption>` : ''}</figure>`).join('') + `</div>`
+    : '';
+
+  const gallery = a(x.eventGallery).length
+    ? `<div class="gallery-strip" data-autoplay>` +
+      a(x.eventGallery).map((g, i) => `<figure class="gslide"><img src="${esc(g.imageUrl)}" alt="${esc(g.caption || x.title || '')}" loading="${i === 0 ? 'eager' : 'lazy'}" width="1000" height="560"></figure>`).join('') + `</div>`
+    : '';
+
+  const testimonials = a(x.testimonials).length
+    ? `<h2>${L ? 'Lo que dicen los participantes' : 'What participants say'}</h2><div class="testi-grid">` +
+      a(x.testimonials).map((t) => `<figure class="testi-card glass">${t.headline ? `<p class="testi-headline">${esc(t.headline)}</p>` : ''}<blockquote>${esc(t.quote)}</blockquote><figcaption>${t.photo ? `<img class="testi-avatar" src="${esc(t.photo)}" alt="${esc(t.author)}" loading="lazy" width="46" height="46">` : ''}<div><strong>${esc(t.author)}</strong>${t.org ? (t.orgUrl ? `<a href="${esc(t.orgUrl)}" target="_blank" rel="noopener">${esc(t.org)}</a>` : `<span>${esc(t.org)}</span>`) : ''}</div></figcaption></figure>`).join('') + `</div>`
+    : '';
+
+  return { title: x.title || '', summary: x.summary || '', meta, price, highlights, sections, collaborators, gallery, testimonials };
+}
+
+export const experiencePublic = onRequest(
+  { region: 'us-central1', cors: ['https://theglobal.school', 'https://es.theglobal.school', 'http://localhost:4321'], maxInstances: 10 },
+  async (req, res) => {
+    const slug = (req.query.slug || '').toString().trim();
+    const lang = req.query.lang === 'en' ? 'en' : 'es';
+    if (!/^[a-z0-9-]{1,80}$/.test(slug)) return res.status(400).json({ error: 'slug' });
+    try {
+      const db = votesDb();
+      const snap = await db.collection('experiences').where('slug', '==', slug).where('publicListed', '==', true).limit(1).get();
+      if (snap.empty) { res.set('Cache-Control', 'public, max-age=30'); return res.status(404).json({ error: 'not_found' }); }
+      res.set('Cache-Control', 'public, max-age=30, s-maxage=60');
+      return res.json({ slug, html: renderFragments(snap.docs[0].data(), lang) });
+    } catch (err) {
+      console.error('experiencePublic error:', err && err.message);
+      return res.status(500).json({ error: 'server' });
     }
   }
 );

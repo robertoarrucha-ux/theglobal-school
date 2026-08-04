@@ -47,21 +47,21 @@ const jsonLd = {
     <img src={x.coverImageUrl} alt={x.title} />
     <div class="mkt-wrap inner">
       <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Evento' : 'Viaje'}</span>
-      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0">{x.title}</h1>
-      <p style="color:var(--txt-soft);max-width:640px">{x.summary}</p>
-      <p style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {dateStr} &nbsp;·&nbsp; 🗣 {x.language}</p>
+      <h1 data-fresh="title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0">{x.title}</h1>
+      <p data-fresh="summary" style="color:var(--txt-soft);max-width:640px">{x.summary}</p>
+      <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {dateStr} &nbsp;·&nbsp; 🗣 {x.language}</p>
     </div>
   </section>
 
-  {x.eventGallery && x.eventGallery.length > 0 && (
-    <section class="mkt-wrap xp-gallery">
+  <section class="mkt-wrap xp-gallery" data-fresh="gallery" hidden={!(x.eventGallery && x.eventGallery.length > 0)}>
+    {x.eventGallery && x.eventGallery.length > 0 && (
       <div class="gallery-strip" data-autoplay>
         {x.eventGallery.map((g: any, i: number) => (
           <figure class="gslide"><img src={g.imageUrl} alt={g.caption || x.title} loading={i === 0 ? 'eager' : 'lazy'} width="1000" height="560" /></figure>
         ))}
       </div>
-    </section>
-  )}
+    )}
+  </section>
 
   <div class="mkt-wrap xp-detail-grid">
     <div>
@@ -75,61 +75,65 @@ const jsonLd = {
         </div>
       )}
 
-      {x.sections && x.sections.length > 0 ? (
-        <div class="xp-accordions">
-          {x.description && <p class="xp-lead">{x.description}</p>}
-          {x.sections.map((s: any, i: number) => (
-            <details class="acc" open={i === 0}>
-              <summary>{s.title}<span class="acc-icon" aria-hidden="true"></span></summary>
-              <div class="acc-body xp-richbody" set:html={marked.parse(s.md)} />
-            </details>
-          ))}
+      <div class="xp-accordions" data-fresh="sections" hidden={!(x.sections && x.sections.length > 0)}>
+        {x.sections && x.sections.length > 0 && (
+          <>
+            {x.description && <p class="xp-lead">{x.description}</p>}
+            {x.sections.map((s: any, i: number) => (
+              <details class="acc" open={i === 0}>
+                <summary>{s.title}<span class="acc-icon" aria-hidden="true"></span></summary>
+                <div class="acc-body xp-richbody" set:html={marked.parse(s.md)} />
+              </details>
+            ))}
+          </>
+        )}
+      </div>
+      {!(x.sections && x.sections.length > 0) && (
+        <div data-fresh-fallback>
+          {FullContent ? <div class="xp-richbody"><FullContent /></div> : (<><h2>Acerca de</h2><p>{x.description}</p></>)}
         </div>
-      ) : FullContent ? (
-        <div class="xp-richbody"><FullContent /></div>
-      ) : (
-        <>
-          <h2>Acerca de</h2>
-          <p>{x.description}</p>
-        </>
       )}
 
-      {x.collaborators && x.collaborators.length > 0 && (
-        <section class="xp-collabs">
-          <h2>Colaboradores y Expositores</h2>
-          <div class="collab-grid">
-            {x.collaborators.map((c: any) => (
-              <figure class="collab-tile" title={c.name || ''}>
-                <img src={c.imageUrl} alt={c.name || 'Colaborador'} loading="lazy" />
-                {c.name && <figcaption>{c.name}</figcaption>}
-              </figure>
-            ))}
-          </div>
-        </section>
-      )}
+      <section class="xp-collabs" data-fresh="collaborators" hidden={!(x.collaborators && x.collaborators.length > 0)}>
+        {x.collaborators && x.collaborators.length > 0 && (
+          <>
+            <h2>Colaboradores y Expositores</h2>
+            <div class="collab-grid">
+              {x.collaborators.map((c: any) => (
+                <figure class="collab-tile" title={c.name || ''}>
+                  <img src={c.imageUrl} alt={c.name || 'Colaborador'} loading="lazy" />
+                  {c.name && <figcaption>{c.name}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </>
+        )}
+      </section>
 
-      {x.testimonials && x.testimonials.length > 0 && (
-        <section class="xp-testimonials">
-          <h2>Lo que dicen los participantes</h2>
-          <div class="testi-grid">
-            {x.testimonials.map((t: any) => (
-              <figure class="testi-card glass">
-                {t.headline && <p class="testi-headline">{t.headline}</p>}
-                <blockquote>{t.quote}</blockquote>
-                <figcaption>
-                  {t.photo && <img class="testi-avatar" src={t.photo} alt={t.author} loading="lazy" width="46" height="46" />}
-                  <div>
-                    <strong>{t.author}</strong>
-                    {t.org && (t.orgUrl
-                      ? <a href={t.orgUrl} target="_blank" rel="noopener">{t.org}</a>
-                      : <span>{t.org}</span>)}
-                  </div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
-      )}
+      <section class="xp-testimonials" data-fresh="testimonials" hidden={!(x.testimonials && x.testimonials.length > 0)}>
+        {x.testimonials && x.testimonials.length > 0 && (
+          <>
+            <h2>Lo que dicen los participantes</h2>
+            <div class="testi-grid">
+              {x.testimonials.map((t: any) => (
+                <figure class="testi-card glass">
+                  {t.headline && <p class="testi-headline">{t.headline}</p>}
+                  <blockquote>{t.quote}</blockquote>
+                  <figcaption>
+                    {t.photo && <img class="testi-avatar" src={t.photo} alt={t.author} loading="lazy" width="46" height="46" />}
+                    <div>
+                      <strong>{t.author}</strong>
+                      {t.org && (t.orgUrl
+                        ? <a href={t.orgUrl} target="_blank" rel="noopener">{t.org}</a>
+                        : <span>{t.org}</span>)}
+                    </div>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
+        )}
+      </section>
 
       {x.leader && (
         <blockquote class="xp-leader glass">
@@ -150,7 +154,7 @@ const jsonLd = {
       )}
 
       <h2>Destacados</h2>
-      <ul class="xp-highlights">{x.highlights.map((h: string) => <li>{h}</li>)}</ul>
+      <ul class="xp-highlights" data-fresh="highlights">{x.highlights.map((h: string) => <li>{h}</li>)}</ul>
 
       {x.itinerary && x.itinerary.length > 0 ? (
         <>
@@ -205,7 +209,7 @@ const jsonLd = {
 
     <aside>
       <div class="xp-book glass">
-        <div class="price">{x.publicPrice === 0 ? 'Gratis' : <>{x.currency} {x.publicPrice.toLocaleString()}<span class="cur"> / persona</span></>}</div>
+        <div class="price" data-fresh="price">{x.publicPrice === 0 ? 'Gratis' : <>{x.currency} {x.publicPrice.toLocaleString()}<span class="cur"> / persona</span></>}</div>
         <div style="margin:1rem 0">
           <div class="row"><span>Fechas</span><span>{dateStr}</span></div>
           <div class="row"><span>Formato</span><span>{x.format || 'Presencial'}</span></div>

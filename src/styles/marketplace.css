@@ -69,6 +69,9 @@
 .ally-points li { padding-left: 1.7rem; position: relative; color: var(--txt-soft); }
 .ally-points li::before { content: '✓'; position: absolute; left: 0; color: var(--yellow); font-weight: 700; }
 
+/* Los contenedores [data-fresh] usan el atributo hidden cuando están vacíos → forzar ocultado. */
+[hidden] { display: none !important; }
+
 /* Galería / slideshow de fotos del evento (carrusel nativo, carga rápido) */
 .xp-gallery { margin: 1.5rem auto 0; }
 .gallery-strip { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: .5rem; scrollbar-width: thin; }

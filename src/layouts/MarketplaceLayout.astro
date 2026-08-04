@@ -47,9 +47,11 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
     </script>
     <script is:inline>
       // Slideshow: auto-avance suave del carrusel de galería (pausa al interactuar).
-      (function () {
+      // Expuesto en window para re-inicializar tras el "freshen" (cuando se reemplaza la galería).
+      window.__tngsInitGallery = function () {
         var strip = document.querySelector('.gallery-strip[data-autoplay]');
-        if (!strip || strip.children.length < 2) return;
+        if (!strip || strip.children.length < 2 || strip.__tngsInit) return;
+        strip.__tngsInit = true;
         var paused = false, i = 0;
         ['pointerdown', 'mouseenter', 'touchstart'].forEach(function (e) { strip.addEventListener(e, function () { paused = true; }, { passive: true }); });
         strip.addEventListener('mouseleave', function () { paused = false; });
@@ -59,6 +61,41 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
           var el = strip.children[i];
           strip.scrollTo({ left: el.offsetLeft - (strip.offsetWidth - el.offsetWidth) / 2, behavior: 'smooth' });
         }, 4500);
+      };
+      window.__tngsInitGallery();
+    </script>
+    <script is:inline>
+      // Actualización en vivo: la página estática se refresca desde Firestore al cargar,
+      // así los visitantes ven publicaciones/ediciones en segundos, sin esperar el rebuild.
+      // El endpoint devuelve fragmentos HTML ya renderizados (una sola fuente de render).
+      (function () {
+        if (!document.querySelector('[data-fresh="title"]')) return; // solo páginas de detalle
+        var parts = location.pathname.replace(/\/+$/, '').split('/');
+        var slug = parts[parts.length - 1];
+        if (!slug) return;
+        var lang = document.documentElement.lang === 'es' ? 'es' : 'en';
+        fetch('/api/experience?slug=' + encodeURIComponent(slug) + '&lang=' + lang, { headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (j) {
+            if (!j || !j.html) return;
+            var h = j.html;
+            setText('[data-fresh="title"]', h.title);
+            setText('[data-fresh="summary"]', h.summary);
+            setHtml('[data-fresh="meta"]', h.meta);
+            setHtml('[data-fresh="price"]', h.price);
+            setHtml('[data-fresh="highlights"]', h.highlights);
+            block('[data-fresh="sections"]', h.sections, function (has) {
+              var fb = document.querySelector('[data-fresh-fallback]');
+              if (fb) fb.hidden = has; // oculta el contenido migrado si ahora hay secciones
+            });
+            block('[data-fresh="collaborators"]', h.collaborators);
+            block('[data-fresh="gallery"]', h.gallery, function () { if (window.__tngsInitGallery) window.__tngsInitGallery(); });
+            block('[data-fresh="testimonials"]', h.testimonials);
+          })
+          .catch(function () {});
+        function setText(sel, val) { var e = document.querySelector(sel); if (e && val != null && e.textContent !== val) e.textContent = val; }
+        function setHtml(sel, val) { var e = document.querySelector(sel); if (e && val != null) e.innerHTML = val; }
+        function block(sel, val, cb) { var e = document.querySelector(sel); if (!e) return; var has = !!(val && val.trim()); e.innerHTML = has ? val : ''; e.hidden = !has; if (cb) cb(has); }
       })();
     </script>
     <script is:inline>
