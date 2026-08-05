@@ -88,6 +88,14 @@
 @media (min-width: 720px) { .gslide { flex-basis: 62%; } }
 .gslide img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); }
 
+/* Quiénes somos (autoridad en el home) */
+.about-sec { margin-top: 3.5rem; }
+.about-lead { color: var(--txt-soft); font-size: 1.2rem; line-height: 1.7; max-width: 760px; margin: .3rem 0 2rem; }
+.about-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.about-card { padding: 1.7rem 1.6rem; border-radius: 18px; }
+.about-card h3 { font-family: var(--font-display); font-size: 1.55rem; color: var(--txt); margin: 0 0 .5rem; }
+.about-card p { color: var(--txt-soft); line-height: 1.6; margin: 0; }
+
 /* Testimonios (grilla de tarjetas; avatares lazy = no afecta la carga) */
 .xp-testimonials { margin-top: 2.5rem; }
 .xp-testimonials > h2 { margin-bottom: 1.2rem; }

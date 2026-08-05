@@ -51,7 +51,43 @@ const t = {
   blogEyebrow: L ? 'Del blog' : 'From the blog',
   blogTitle: L ? 'Ideas y reflexiones' : 'Ideas & reflections',
   blogAll: L ? 'Ver todo el blog' : 'See the full blog',
+  aboutEyebrow: L ? 'Quiénes somos' : 'About us',
+  aboutTitle: L ? 'Más de una década formando líderes globales' : 'Over a decade shaping global leaders',
+  aboutLead: L
+    ? 'Desde 2010, The New Global School diseña experiencias educativas y eventos internacionales para líderes de gobierno, empresa y sociedad civil. Con base en Viena y presencia en América Latina, unimos rigor académico, inmersión cultural y una red global de aliados.'
+    : 'Since 2010, The New Global School has designed educational experiences and international events for leaders in government, business and civil society. Based in Vienna and active across Latin America, we combine academic rigor, cultural immersion and a global network of partners.',
+  aboutPillars: L
+    ? [
+        { title: 'Desde 2010', text: 'Más de una década de trayectoria formando a tomadores de decisión en Europa y América Latina.' },
+        { title: 'Alcance internacional', text: 'Con base en Viena (Austria) y una red de aliados que conecta continentes, culturas e instituciones.' },
+        { title: 'Rigor y reputación', text: 'Programas con certificaciones internacionales y participantes de universidades, gobiernos y organismos como Naciones Unidas.' },
+      ]
+    : [
+        { title: 'Since 2010', text: 'More than a decade of experience training decision-makers across Europe and Latin America.' },
+        { title: 'International reach', text: 'Based in Vienna, Austria, with a network of partners connecting continents, cultures and institutions.' },
+        { title: 'Rigor and reputation', text: 'Programs with international certifications and participants from universities, governments and bodies such as the United Nations.' },
+      ],
+  testiEyebrow: L ? 'Testimonios' : 'Testimonials',
+  testiTitle: L ? 'Lo que dicen nuestros participantes' : 'What our participants say',
 };
+
+const testimonials = (L
+  ? [
+      { headline: 'Inversión', quote: 'El programa está diseñado para saber liderar en las realidades de nuestros países. Es una mejor inversión que un máster en Europa.', author: 'Lorena Gómez', org: 'Máster por Brunel University London y Doctorado por la Universidad de Viena' },
+      { headline: 'Excelente', quote: 'Es una excelente organización que brinda una gran oportunidad de vivir esta magnífica experiencia, adquirir conocimientos y nuevas amistades.', author: 'Marcela Mejía', org: 'Oficina de Naciones Unidas contra la Droga y el Delito, Colombia' },
+      { headline: 'Contenidos', quote: 'Una gran experiencia. Grandes contenidos y ¡mejores personas!', author: 'Irma Murillo', org: 'Sistema Estatal Anticorrupción, México' },
+      { headline: 'Fascinante', quote: 'Es fascinante la forma en que las herramientas ayudan a resolver problemas reales.', author: 'Billy Batware', org: 'Academia Regional de las Naciones Unidas' },
+      { headline: 'Personas maravillosas', quote: 'Gracias por todas las herramientas y enseñanzas, un programa práctico donde conocí a personas maravillosas.', author: 'Natalia Lever', org: 'The Climate Reality Project Latin America' },
+      { headline: 'Experiencia única', quote: '¡Una experiencia única! Las herramientas metodológicas y el material son de mucha utilidad.', author: 'Juliana Galindo', org: 'The Guernica Centre for International Justice' },
+      { headline: 'Excelente', quote: '¡Excelente experiencia académica y cultural!', author: 'Karina Nuñez', org: "Orphan's Promise Latin America" },
+      { headline: 'Única', quote: '¡Una experiencia de vida única!', author: 'Verónica Narvaez', org: 'Directora de Gestión Ambiental, Santo Domingo, Ecuador' },
+    ]
+  : [
+      { headline: 'The best is the connection', quote: 'The best of this experience is not only to be around the coaches and mentors but the entrepreneurs who are here sharing their dreams.', author: 'Gabriel Ekman, Sweden', org: 'BAG Innovation' },
+      { headline: 'Enlightening', quote: 'The experience has been very enlightening and inspirational, recommended for those who are willing to challenge the status quo.', author: 'Sebastian Baayel, Ghana', org: 'African Entrepreneurship and Innovation Centre' },
+      { headline: 'Remarkable', quote: 'Thanks for all the tools, but above all for the remarkable change-makers who I can now call my friends.', author: 'Natalia Lever, Mexico', org: 'The Climate Reality Project Latam' },
+      { headline: 'Well prepared', quote: 'Inspiring presentations, well prepared, insightful, interactive and easy to work with.', author: 'Liana Taylor, Germany', org: 'Hive Europe' },
+    ]) as { headline: string; quote: string; author: string; org: string }[];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -74,6 +110,20 @@ const jsonLd = {
     <div class="hero-cta">
       <a class="btn-primary" href="#programas">{t.explore}</a>
       <a class="btn-ghost" href={applyUrl}>{t.becomeAlly} →</a>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS (autoridad) -->
+  <section class="mkt-wrap about-sec" id="nosotros">
+    <div class="sec-head"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
+    <p class="about-lead">{t.aboutLead}</p>
+    <div class="about-pillars">
+      {t.aboutPillars.map((p) => (
+        <div class="about-card glass">
+          <h3>{p.title}</h3>
+          <p>{p.text}</p>
+        </div>
+      ))}
     </div>
   </section>
 
@@ -169,6 +219,25 @@ const jsonLd = {
     </div>
     </>
     )}
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="mkt-wrap xp-testimonials" id="testimonios">
+    <div class="sec-head"><p class="eyebrow">{t.testiEyebrow}</p><h2>{t.testiTitle}</h2></div>
+    <div class="testi-grid">
+      {testimonials.map((tt) => (
+        <figure class="testi-card glass">
+          <p class="testi-headline">{tt.headline}</p>
+          <blockquote>{tt.quote}</blockquote>
+          <figcaption>
+            <div>
+              <strong>{tt.author}</strong>
+              <span>{tt.org}</span>
+            </div>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
   </section>
 
   <!-- ALIADOS -->
