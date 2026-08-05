@@ -19,6 +19,7 @@ const FullContent = rendered?.Content;
 const fmt = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
 const dateStr = x.endDate ? `${fmt(x.startDate)} – ${fmt(x.endDate)}` : fmt(x.startDate);
 const priceStr = x.publicPrice === 0 ? 'Free' : `${x.currency} ${x.publicPrice.toLocaleString()}`;
+const fmtFormat = (f: string) => (({ presencial: 'In person', online: 'Online', hibrido: 'Hybrid' } as Record<string, string>)[f] || 'In person');
 
 // "Your complete experience": trips use program lists or the standard default;
 // events only show what the ally filled in (no trip default).
@@ -219,7 +220,7 @@ const jsonLd = {
         <div class="price" data-fresh="price">{x.publicPrice === 0 ? 'Free' : <>{x.currency} {x.publicPrice.toLocaleString()}<span class="cur"> / person</span></>}</div>
         <div style="margin:1rem 0">
           <div class="row"><span>Dates</span><span>{dateStr}</span></div>
-          <div class="row"><span>Format</span><span>{x.format || 'In person'}</span></div>
+          <div class="row"><span>Format</span><span>{fmtFormat(x.format)}</span></div>
           {x.spotsLeft != null && <div class="row"><span>Spots left</span><span>{x.spotsLeft} / {x.capacity}</span></div>}
           <div class="row"><span>Host</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
         </div>

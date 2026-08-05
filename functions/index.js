@@ -219,10 +219,12 @@ export const experiencePublic = onRequest(
     if (!/^[a-z0-9-]{1,80}$/.test(slug)) return res.status(400).json({ error: 'slug' });
     try {
       const db = votesDb();
-      const snap = await db.collection('experiences').where('slug', '==', slug).where('publicListed', '==', true).limit(1).get();
-      if (snap.empty) { res.set('Cache-Control', 'public, max-age=30'); return res.status(404).json({ error: 'not_found' }); }
+      // Puede haber 2 docs con el mismo slug (versión ES y EN) → elegir el del idioma pedido.
+      const snap = await db.collection('experiences').where('slug', '==', slug).where('publicListed', '==', true).get();
+      const doc = snap.docs.find((d) => { const s = d.data().sites; return !s || !s.length || s.includes(lang); });
+      if (!doc) { res.set('Cache-Control', 'public, max-age=30'); return res.status(404).json({ error: 'not_found' }); }
       res.set('Cache-Control', 'public, max-age=30, s-maxage=60');
-      return res.json({ slug, html: renderFragments(snap.docs[0].data(), lang) });
+      return res.json({ slug, html: renderFragments(doc.data(), lang) });
     } catch (err) {
       console.error('experiencePublic error:', err && err.message);
       return res.status(500).json({ error: 'server' });

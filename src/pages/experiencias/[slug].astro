@@ -21,6 +21,7 @@ const dateStr = x.endDate ? `${fmt(x.startDate)} – ${fmt(x.endDate)}` : fmt(x.
 const inclInc = x.included?.length ? x.included : (x.type === 'viaje' ? inc.included : []);
 const inclNot = x.notIncluded?.length ? x.notIncluded : (x.type === 'viaje' ? inc.notIncluded : []);
 const showIncl = inclInc.length > 0 || inclNot.length > 0;
+const fmtFormat = (f: string) => (({ presencial: 'Presencial', online: 'Online', hibrido: 'Híbrido' } as Record<string, string>)[f] || 'Presencial');
 
 // Contenido completo migrado (eventos TNGS con página original: LALA, Mujeres, Diplomado...).
 const contentPage = await getEntry('pages', `es/page/${x.slug}`).catch(() => null);
@@ -220,7 +221,7 @@ const jsonLd = {
         <div class="price" data-fresh="price">{x.publicPrice === 0 ? 'Gratis' : <>{x.currency} {x.publicPrice.toLocaleString()}<span class="cur"> / persona</span></>}</div>
         <div style="margin:1rem 0">
           <div class="row"><span>Fechas</span><span>{dateStr}</span></div>
-          <div class="row"><span>Formato</span><span>{x.format || 'Presencial'}</span></div>
+          <div class="row"><span>Formato</span><span>{fmtFormat(x.format)}</span></div>
           {x.spotsLeft != null && <div class="row"><span>Cupos</span><span>{x.spotsLeft} / {x.capacity}</span></div>}
           <div class="row"><span>Anfitrión</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
         </div>
