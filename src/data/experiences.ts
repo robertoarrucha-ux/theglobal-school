@@ -53,6 +53,9 @@ export interface Experience {
   // "Tu experiencia completa" (viajes), editable por programa; vacío = lista estándar.
   included?: string[];
   notIncluded?: string[];
+  // Idiomas del sitio donde se publica (EN theglobal.school / ES es.theglobal.school).
+  // Vacío/ausente = ambos (retrocompatible).
+  sites?: ('en' | 'es')[];
 }
 
 // 16 expediciones reales importadas de Viajes (generadas por migration/transform_expeditions.mjs).

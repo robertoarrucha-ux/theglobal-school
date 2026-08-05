@@ -5,6 +5,10 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { Experience } from '../data/experiences';
 import { getExperiences as bridge } from '../data/experiences';
+import { LANG } from './site';
+
+// ¿La experiencia se publica en el idioma de este build? (vacío/ausente = ambos)
+const inLang = (x: Experience) => !x.sites || x.sites.length === 0 || x.sites.includes(LANG as 'en' | 'es');
 
 const DATABASE_ID = 'ai-studio-6aba9233-6f6c-455d-be53-29923fe66f0f';
 const COLLECTION = 'experiences';
@@ -47,7 +51,7 @@ async function fetchFromFirestore(): Promise<Experience[]> {
   const cred = loadCredential();
   if (!cred) {
     console.warn('[experiences] Sin credenciales Firestore → usando puente JSON local.');
-    return bridge().map(normalizeExperience);
+    return bridge().map(normalizeExperience).filter(inLang);
   }
   try {
     const { getApps, initializeApp, cert } = await import('firebase-admin/app');
@@ -55,10 +59,10 @@ async function fetchFromFirestore(): Promise<Experience[]> {
     const app = getApps().length ? getApps()[0] : initializeApp({ credential: cert(cred as any) }, 'experiences-reader');
     const db = getFirestore(app, DATABASE_ID);
     const snap = await db.collection(COLLECTION).where('publicListed', '==', true).get();
-    const items = snap.docs.map((d) => normalizeExperience(d.data()));
+    const items = snap.docs.map((d) => normalizeExperience(d.data())).filter(inLang);
     if (!items.length) {
-      console.warn('[experiences] Firestore vacío → puente JSON.');
-      return bridge().map(normalizeExperience);
+      console.warn(`[experiences] Sin experiencias para "${LANG}" en Firestore.`);
+      return [];
     }
     // eventos primero, luego viajes; dentro, por fecha ascendente
     items.sort((a, b) => {
