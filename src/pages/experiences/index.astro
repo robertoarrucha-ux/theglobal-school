@@ -11,11 +11,11 @@ const fmtDate = (iso: string) =>
   new Date(iso + 'T00:00:00').toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
 const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Free</span>' : `${x.currency} ${x.publicPrice.toLocaleString()}`);
 ---
-<MarketplaceLayout title="Events & Trips — The New Global School" description="Discover international events and educational trips by The New Global School and partner allies.">
+<MarketplaceLayout title="Events & Trips, The New Global School" description="Discover international events and educational trips by The New Global School and partner allies.">
   <section class="mkt-wrap mkt-hero">
     <p class="eyebrow">Marketplace</p>
     <h1>Events & Trips for Global Leaders</h1>
-    <p>International events and educational journeys — hosted by The New Global School and partner allies across Europe and Latin America.</p>
+    <p>International events and educational journeys, hosted by The New Global School and partner allies across Europe and Latin America.</p>
   </section>
 
   <div class="mkt-wrap">

@@ -26,7 +26,7 @@ const inclInc = x.included?.length ? x.included : (x.type === 'viaje' ? inc.incl
 const inclNot = x.notIncluded?.length ? x.notIncluded : (x.type === 'viaje' ? inc.notIncluded : []);
 const showIncl = inclInc.length > 0 || inclNot.length > 0;
 
-// JSON-LD (Event schema) — clave para SEO + respuesta de IA
+// JSON-LD (Event schema), clave para SEO + respuesta de IA
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': x.type === 'evento' ? 'Event' : 'TouristTrip',
@@ -45,7 +45,7 @@ const jsonLd = {
   organizer: { '@type': 'Organization', name: 'The New Global School' },
 };
 ---
-<MarketplaceLayout title={`${x.title} — The New Global School`} description={x.summary} ogImage={x.coverImageUrl}>
+<MarketplaceLayout title={`${x.title}, The New Global School`} description={x.summary} ogImage={x.coverImageUrl}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <section class="xp-detail-hero">
@@ -143,7 +143,7 @@ const jsonLd = {
       {x.leader && (
         <blockquote class="xp-leader glass">
           <p>“{x.leader.narrative}”</p>
-          <footer>— {x.leader.name}, <span>{x.leader.title}</span></footer>
+          <footer>{x.leader.name}, <span>{x.leader.title}</span></footer>
         </blockquote>
       )}
 
@@ -195,7 +195,7 @@ const jsonLd = {
           <h2>{x.preWork.title || 'Preparation'}</h2>
           <ul class="xp-prework">
             {x.preWork.items.map((it: any) => (
-              <li><span class="tag">{it.type}</span> <strong>{it.title}</strong>{it.author ? ` — ${it.author}` : ''}</li>
+              <li><span class="tag">{it.type}</span> <strong>{it.title}</strong>{it.author ? `, ${it.author}` : ''}</li>
             ))}
           </ul>
         </>

@@ -26,7 +26,7 @@ const seo = z.object({
 // id = ruta relativa completa (lang/type/slug) para evitar colisiones EN/ES.
 const fullId = ({ entry }: { entry: string }) => entry.replace(/\.md$/, '');
 
-// 3 tipos distintos (posts, pages, projects) — propósitos y diseños diferentes.
+// 3 tipos distintos (posts, pages, projects), propósitos y diseños diferentes.
 const posts = defineCollection({
   loader: glob({ pattern: '{en,es}/post/*.md', base: './content', generateId: fullId }),
   schema: seo,

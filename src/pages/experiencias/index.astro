@@ -11,11 +11,11 @@ const fmtDate = (iso: string) =>
   new Date(iso + 'T00:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
 const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Gratis</span>' : `${x.currency} ${x.publicPrice.toLocaleString()}`);
 ---
-<MarketplaceLayout title="Eventos y Viajes — The New Global School" description="Descubre eventos internacionales y viajes educativos de The New Global School y aliados.">
+<MarketplaceLayout title="Eventos y Viajes, The New Global School" description="Descubre eventos internacionales y viajes educativos de The New Global School y aliados.">
   <section class="mkt-wrap mkt-hero">
     <p class="eyebrow">Marketplace</p>
     <h1>Eventos y Viajes para Líderes Globales</h1>
-    <p>Eventos internacionales y viajes educativos — organizados por The New Global School y aliados en Europa y América Latina.</p>
+    <p>Eventos internacionales y viajes educativos, organizados por The New Global School y aliados en Europa y América Latina.</p>
   </section>
 
   <div class="mkt-wrap">

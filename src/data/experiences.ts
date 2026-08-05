@@ -1,4 +1,4 @@
-// M2 — datos de MUESTRA del marketplace (calzan con el schema M1 de Aliados).
+// M2, datos de MUESTRA del marketplace (calzan con el schema M1 de Aliados).
 // En producción esto lo reemplaza un lector de Firestore (Admin SDK) en build.
 export type ExperienceType = 'viaje' | 'evento';
 export type PaymentMode = 'platform' | 'direct';
@@ -31,7 +31,7 @@ export interface Experience {
   highlights: string[];
   agenda?: { label: string; title: string; detail: string }[];
 
-  // --- Campos ricos de EXPEDICIÓN (viaje temático narrado) — opcionales ---
+  // --- Campos ricos de EXPEDICIÓN (viaje temático narrado), opcionales ---
   category?: string;
   cities?: string[];
   leader?: { name: string; title: string; narrative: string };
@@ -50,7 +50,7 @@ export interface Experience {
   collaborators?: { imageUrl: string; name?: string }[];
   eventGallery?: { imageUrl: string; caption?: string }[];
   testimonials?: { quote: string; author: string; org?: string; orgUrl?: string; photo?: string; headline?: string }[];
-  // "Tu experiencia completa" (viajes) — editable por programa; vacío = lista estándar.
+  // "Tu experiencia completa" (viajes), editable por programa; vacío = lista estándar.
   included?: string[];
   notIncluded?: string[];
 }
@@ -67,7 +67,7 @@ export function getExperiences(): Experience[] {
   return [...TNGS_EVENTS, ...EXPEDITIONS];
 }
 
-// (Eventos de muestra originales — ya no se usan, reemplazados por TNGS_EVENTS.)
+// (Eventos de muestra originales, ya no se usan, reemplazados por TNGS_EVENTS.)
 const SAMPLE_EVENTS: Experience[] = [
   {
     slug: 'summit-liderazgo-regenerativo-viena-2026',

@@ -48,7 +48,7 @@ Este conocimiento y educación, aunado a la adopción de diferentes códigos en 
 
 > Jojutla, la otra cara de la destrucción del terremoto en México – Noticias Vespertinas (Comunicado de prensa) <https://t.co/4SP6YqIhEf> [pic.twitter.com/wrRPWXrYiT](https://t.co/wrRPWXrYiT)
 >
-> — Rodol Fito C (@R\_F\_C) [1 de marzo de 2018](https://twitter.com/R_F_C/status/969070740522741760?ref_src=twsrc%5Etfw)
+> Rodol Fito C (@R\_F\_C) [1 de marzo de 2018](https://twitter.com/R_F_C/status/969070740522741760?ref_src=twsrc%5Etfw)
 
 De la misma manera, la gente estaba dispuesta a sacrificar tiempo, esfuerzo e integridad física para ayudar a perfectos desconocidos. Unas horas más tarde, los esfuerzos de ayuda por parte de la sociedad civil se intensificaron y aumentaron en magnitud y complejidad, las personas empezaron a donar insumos y recursos: comida, ropa, agua, herramienta y maquinaria, todo en función de la voluntad y recursos de individuos que actuaban de manera independiente y altruista.
 
@@ -60,7 +60,7 @@ Cada tráiler cargaba alrededor de treinta toneladas de ayuda. Entre el caos, la
 
 > Las fotos de un joven abrazando a su perro para tranquilizarlo después del terremoto de México enternecen las redes sociales: <https://t.co/qNVT8a6aEz> [pic.twitter.com/uZJlbxFuee](https://t.co/uZJlbxFuee)
 >
-> — Schnauzi.com (@Schnauzicom) [19 de febrero de 2018](https://twitter.com/Schnauzicom/status/965611481189502977?ref_src=twsrc%5Etfw)
+> Schnauzi.com (@Schnauzicom) [19 de febrero de 2018](https://twitter.com/Schnauzicom/status/965611481189502977?ref_src=twsrc%5Etfw)
 
 Estos grupos se dividían en filas y transportaban y clasificaban la ayuda de manera paralela de tal manera que al tiempo que el tráiler terminaba de ser descargado, todo su contenido estaba más o menos categorizado y organizado; todo este proceso duraba aproximadamente hora y media.
 
@@ -80,7 +80,7 @@ Aquí cabe mencionar que los sistemas de comunicación des-localizados tales com
 
 > Novo terremoto atinge estado de Oaxaca, no México <https://t.co/ed1N43rQfE> [pic.twitter.com/pkalx92UhQ](https://t.co/pkalx92UhQ)
 >
-> — jailson de Queiroz (@jailsontjf) [19 de febrero de 2018](https://twitter.com/jailsontjf/status/965580580053245953?ref_src=twsrc%5Etfw)
+> jailson de Queiroz (@jailsontjf) [19 de febrero de 2018](https://twitter.com/jailsontjf/status/965580580053245953?ref_src=twsrc%5Etfw)
 
 **También es importante hacer énfasis que la organización social efectiva en ausencia del poder público (como sucedió en México después de los terremotos) es la definición política de anarquía.** Es importante estar conscientes que las autoridades son lentas y poco eficientes para distribuir ayuda y hay casos en los que interfirieron más de lo que ayudaron. Asímismo, existieron ejemplos donde las autoridades intentaron aprovechar y secuestrar la ayuda proporcionada por la sociedad civil para propósitos electorales y políticos.
 
@@ -92,6 +92,6 @@ La frustración de la sociedad ante los poderes políticos se manifestó intensa
 
 > Declaran emergencia por terremoto en el sur de México <https://t.co/B7IM1g8D4A> [pic.twitter.com/tJ7OVxINLp](https://t.co/tJ7OVxINLp)
 >
-> — Notihoy (@notihoyweb) [19 de febrero de 2018](https://twitter.com/notihoyweb/status/965564124821254146?ref_src=twsrc%5Etfw)
+> Notihoy (@notihoyweb) [19 de febrero de 2018](https://twitter.com/notihoyweb/status/965564124821254146?ref_src=twsrc%5Etfw)
 
 Las autoridades políticas tienen la obligación de organizar y distribuir la ayuda a largo plazo pero debido a los abusos comprobados que han hecho, deben ser escrutadas y supervisadas intensivamente por la sociedad civil. Además, es deseable que los recursos a las campañas políticas deben ser reducidos y redirigidos a la construcción y mantenimiento de la infraestructura social. Finalmente, en un contexto donde el aumento en la población y el cambio climático garantizan nuevas catástrofes ecológicas y sociales, **es claro que hay que inculcar en la sociedad los conceptos de altruismo, bienestar social, bien común, respeto al derecho ajeno y autosuficiencia, lo nos permitirá tener una sociedad más igualitaria y responsiva que estará mejor preparada para contender eficientemente con futuras catástrofes.**

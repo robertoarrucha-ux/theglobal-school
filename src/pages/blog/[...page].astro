@@ -12,7 +12,7 @@ export async function getStaticPaths({ paginate }: any) {
 const { page } = Astro.props as any;
 const ui = UI[LANG];
 const L = LANG === 'es';
-const title = L ? 'Blog — Personas, Planeta, Propósito' : 'Blog — People, Purpose, Planet';
+const title = L ? 'Blog, Personas, Planeta, Propósito' : 'Blog, People, Purpose, Planet';
 const intro = L
   ? 'Artículos sobre liderazgo, innovación social, sostenibilidad y educación.'
   : 'Articles on leadership, social innovation, sustainability and education.';

@@ -62,7 +62,7 @@ Por ejemplo, si bien los hombres y las mujeres votan en proporciones similares, 
 
 En el mercado de trabajo, la remuneración de las mujeres es inferior a la de los hombres y tienen una probabilidad mucho menor de ostentar cargos directivos: menos del 6 por ciento de los directores generales de empresas del índice S&P 500 son mujeres. Y aunque las mujeres trabajan más horas que los hombres, es más probable que se trate de trabajo de cuidados no remunerado.
 
-“La labor que ha sido tan eficaz en garantizar el fin de las diferencias en ámbitos como la salud y la educación debe evolucionar ahora y abordar algo mucho más complejo: el sesgo profundamente arraigado —tanto entre hombres como en mujeres— contra una verdadera igualdad.  Las políticas actuales, a pesar de sus buenas intenciones, tienen un alcance limitado”, dice Achim Steiner, Administrador del PNUD.
+“La labor que ha sido tan eficaz en garantizar el fin de las diferencias en ámbitos como la salud y la educación debe evolucionar ahora y abordar algo mucho más complejo: el sesgo profundamente arraigado, tanto entre hombres como en mujeres, contra una verdadera igualdad.  Las políticas actuales, a pesar de sus buenas intenciones, tienen un alcance limitado”, dice Achim Steiner, Administrador del PNUD.
 
 Este año se cumplen 25 años desde la Declaración y Plataforma de Acción de Beijing (Beijing+25), el programa de empoderamiento de las mujeres más visionario de la historia.
 

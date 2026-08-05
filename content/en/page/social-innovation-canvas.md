@@ -545,13 +545,13 @@ An example of dual distribution is business format franchising, where the franch
 
 **Recycling Containers:** Recycling is an example of a reverse marketing channel.
 
-If you’ve read about the other three channels, you would have noticed that they have one thing in common — the flow. Each one flows from producer to intermediary (if there is one) to consumer.
+If you’ve read about the other three channels, you would have noticed that they have one thing in common, the flow. Each one flows from producer to intermediary (if there is one) to consumer.
 
-Technology, however, has made another flow possible. This one goes in the reverse direction and may go — from consumer to intermediary to the beneficiary.
+Technology, however, has made another flow possible. This one goes in the reverse direction and may go, from consumer to intermediary to the beneficiary.
 
 Think of making money from the resale of a product or recycling.
 
-There is another distinction between reverse channels and the more traditional ones — the introduction of a beneficiary. In reverse flow, you won’t find a producer.
+There is another distinction between reverse channels and the more traditional ones, the introduction of a beneficiary. In reverse flow, you won’t find a producer.
 
 You’ll only find a User or a Beneficiary.
 

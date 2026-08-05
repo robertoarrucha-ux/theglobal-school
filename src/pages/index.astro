@@ -25,8 +25,8 @@ const price = (x: any) => (x.publicPrice === 0 ? `<span class="free">${L ? 'Grat
 const t = {
   h1: L ? 'Viajes y Eventos Educativos para Líderes Globales' : 'Educational Trips & Events for Global Leaders',
   lead: L
-    ? 'Experiencias internacionales de aprendizaje —eventos y viajes— para líderes de gobierno, empresa y sociedad civil. Organizadas por The New Global School y una red de aliados en Europa y América Latina.'
-    : 'International learning experiences — events and journeys — for leaders in government, business and civil society. Hosted by The New Global School and a network of allies across Europe and Latin America.',
+    ? 'Experiencias internacionales de aprendizaje, eventos y viajes, para líderes de gobierno, empresa y sociedad civil. Organizadas por The New Global School y una red de aliados en Europa y América Latina.'
+    : 'International learning experiences, events and journeys, for leaders in government, business and civil society. Hosted by The New Global School and a network of allies across Europe and Latin America.',
   explore: L ? 'Explorar experiencias' : 'Explore experiences',
   becomeAlly: L ? 'Únete como aliado' : 'Become an ally',
   programsEyebrow: L ? 'Programas' : 'Programs',
@@ -41,10 +41,10 @@ const t = {
     : 'Publish your programs on our platform, reach an audience of leaders, and let us handle promotion, registration and payments. You focus on the experience.',
   allyPoints: L
     ? ['Vitrina indexable con tráfico y reputación ya establecidos', 'Registro y pagos gestionados (o cobras directo, tú eliges)', 'Certificación y respaldo de marca The New Global School']
-    : ['Indexable storefront with established traffic and reputation', 'Managed registration and payments (or collect directly — your choice)', 'Certification and The New Global School brand backing'],
+    : ['Indexable storefront with established traffic and reputation', 'Managed registration and payments (or collect directly, your choice)', 'Certification and The New Global School brand backing'],
   votedEyebrow: L ? 'Lo más votado' : 'Most voted',
   votedTitle: L ? '¿Qué viaje te interesa más?' : 'Which trip interests you most?',
-  votedIntro: L ? 'Vota por tu expedición favorita. Un voto por persona — así vemos qué viaje despierta más interés.' : 'Vote for your favourite expedition. One vote per person — so we can see which trip draws the most interest.',
+  votedIntro: L ? 'Vota por tu expedición favorita. Un voto por persona, así vemos qué viaje despierta más interés.' : 'Vote for your favourite expedition. One vote per person, so we can see which trip draws the most interest.',
   vote: L ? 'Votar' : 'Vote',
   voted: L ? 'Votado' : 'Voted',
   votesLabel: L ? 'votos' : 'votes',
@@ -63,7 +63,7 @@ const jsonLd = {
   location: { '@type': 'Place', address: 'Vienna, Austria' },
 };
 ---
-<MarketplaceLayout title={`${BRAND} — ${t.h1}`} description={t.lead}>
+<MarketplaceLayout title={`${BRAND}, ${t.h1}`} description={t.lead}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <!-- HERO -->

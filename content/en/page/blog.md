@@ -88,7 +88,7 @@ Have you also seen the exponential surge of Wellness and Wellbeing courses, coac
 
 ## [Holistic Development](https://theglobal.school/holistic-development/)
 
-“Because mindsets and paradigms guide behaviors, changing them can have a profound impact… People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.” — Donna Meadows, lead author, Limits to Growth²  1....
+“Because mindsets and paradigms guide behaviors, changing them can have a profound impact… People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.”, Donna Meadows, lead author, Limits to Growth²  1....
 
 [read more](https://theglobal.school/holistic-development/)
 

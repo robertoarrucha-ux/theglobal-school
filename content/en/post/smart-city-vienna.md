@@ -20,7 +20,7 @@ The 1st place was snapped up by Vienna in 2018 when Melbourne used to hold it. 
 
 Each year the Economist Intelligence Report gives 140 cities scores out of 100 on a range of factors such as living standards, crime, transport infrastructure, access to education and healthcare, as well as political and economic stability.
 
-Vienna — known for its convenient public transport, refreshing Alpine tap water, and varied cultural life — scored 99.1 points out of 100, as it did last year.
+Vienna, known for its convenient public transport, refreshing Alpine tap water, and varied cultural life, scored 99.1 points out of 100, as it did last year.
 
 Vienna leads also on 1st place in another survey, the annual quality of living index by human resources consulting firm Mercer, for the 10th time in a row in 2019.
 

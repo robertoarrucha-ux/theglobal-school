@@ -24,7 +24,7 @@ Over the last few months, the meetings industry has been impacted by a global he
 
 While many of us may be hoping that an increased understanding or containment of [coronavirus](https://www.northstarmeetingsgroup.com/Coronavirus) will mean a back-to-normal approach to face-to-face meetings, it is worth asking the question: Could coronavirus be the first of several sustainability issues the event industry faces in 2020?
 
-There are many definitions of the term *sustainability* — confusingly, many dictionaries offer separate definitions of [economic](https://sustainability.umw.edu/areas-of-sustainability/economic-sustainability/) and [environmental sustainability](https://sustainability.umd.edu/how-would-you-define-environmental-sustainability). Coronavirus will likely be one of many economic sustainability threats our industry faces in the near future.
+There are many definitions of the term *sustainability*, confusingly, many dictionaries offer separate definitions of [economic](https://sustainability.umw.edu/areas-of-sustainability/economic-sustainability/) and [environmental sustainability](https://sustainability.umd.edu/how-would-you-define-environmental-sustainability). Coronavirus will likely be one of many economic sustainability threats our industry faces in the near future.
 
 So, can we learn something from the industry’s response to coronavirus that will help us as we face similar challenges down the road related to climate change (flooding, rising sea levels, food scarcity, etc.)?
 
@@ -62,15 +62,15 @@ The second obvious lesson to be taken from the coronavirus outbreak is that the�
 
 Since 2017, [Positive Impact Events](https://www.positiveimpactevents.com/) has had a number of memorandums of understanding with different United Nations bodies, including the [United Nations Framework Convention on Climate Change.](https://unfccc.int/) One of our responsibilities within this memorandum of understanding is to encourage event industry alignment with UNFCCC work (e.g., getting feedback from the industry on measurement tools).
 
-Another responsibility is to collaborate, so UNFCCC are able to focus more on the event industry; the fact of the matter is that governments focus on tourism — so the UN has a mandate to act on tourism, not events. 
+Another responsibility is to collaborate, so UNFCCC are able to focus more on the event industry; the fact of the matter is that governments focus on tourism, so the UN has a mandate to act on tourism, not events. 
 
 Seeing the use of the WHO guidelines is an example of what could happen to our industry as climate change issues increase. It likely won’t matter what guidelines we produce as an industry via our associations because businesses and governments don’t know our industry associations; they know the United Nations.
 
 So, it’s in our industry’s best interest to create a strategic relationship with the UN and work together to address major issues, reaching beyond individual associations or experts to develop guidelines.
 
-There’s no better time to start than right now — 2020 is the 75th anniversary of the United Nations. To mark this, the UN is delivering a year-long initiative which they describe as “the largest, most inclusive conversation on the role of global cooperation in building a better future for all.” The [UN75 initiative](https://www.un.org/en/un75) will spark dialogues throughout 2020 in diverse settings across the world.
+There’s no better time to start than right now, 2020 is the 75th anniversary of the United Nations. To mark this, the UN is delivering a year-long initiative which they describe as “the largest, most inclusive conversation on the role of global cooperation in building a better future for all.” The [UN75 initiative](https://www.un.org/en/un75) will spark dialogues throughout 2020 in diverse settings across the world.
 
-Any event professional reading the outline of that campaign will see it as a direct reflection of our job description — bringing people together for a global, inclusive conversation.
+Any event professional reading the outline of that campaign will see it as a direct reflection of our job description, bringing people together for a global, inclusive conversation.
 
 So how will we use 2020 to align with this major UN campaign and raise the profile of events? Will we start using language and context that businesses and governments will understand?
 
@@ -78,7 +78,7 @@ Will we tell a story of how events can be used to provide education and inspirat
 
 ---
 
-If this has inspired you to act — which is the purpose of [“Better Meetings, Better Future,”](https://www.northstarmeetingsgroup.com/News/Industry/Northstar-Positive-Impact-Events-Launch-Better-Meetings-Better-Future) the Positive Impact Events and Northstar Meetings Group initiative — please [sign up](https://www.positiveimpactevents.com/ambassadors) to become a Positive Impact Events ambassador and use your voice to champion a more sustainable event industry. If you do, we will send you materials at least four times a year. Consider also asking your peers, clients or associations how they are communicating the role of events to create a more sustainable world that works for everyone.
+If this has inspired you to act, which is the purpose of [“Better Meetings, Better Future,”](https://www.northstarmeetingsgroup.com/News/Industry/Northstar-Positive-Impact-Events-Launch-Better-Meetings-Better-Future) the Positive Impact Events and Northstar Meetings Group initiative, please [sign up](https://www.positiveimpactevents.com/ambassadors) to become a Positive Impact Events ambassador and use your voice to champion a more sustainable event industry. If you do, we will send you materials at least four times a year. Consider also asking your peers, clients or associations how they are communicating the role of events to create a more sustainable world that works for everyone.
 
 ![](/media/2020/03/fiona.webp)[Fiona Pelham](https://www.linkedin.com/in/fiona-pelham-5b97866)
 

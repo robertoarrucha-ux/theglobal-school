@@ -16,7 +16,7 @@ images: ["/media/2019/12/THE-GLOBAL-SCHOOL-LEADERS-1-1024x576.webp", "/media/202
 ---
 In October 2019, following a landmark legal case, Mexico’s tax administration was forced to publish information on almost every case of tax rebate and cancellation issued from 2007 to 2015. The publication of this data, which included cases involving many of Mexico’s wealthiest and well-known personalities, sent shockwaves through Mexican society. Outraged citizens flooded social media with images of the ostentatious spending of tax-rebate recipients. The public outcry had swift results: later that month, in a sweeping move, the Mexican parliament passed a bill nullifying all tax rebates and cancellations going forward.
 
-This process was a victory for transparency and accountability—and an example of how civil society can play an effective role in advancing an agenda of equality and inclusion.
+This process was a victory for transparency and accountability, and an example of how civil society can play an effective role in advancing an agenda of equality and inclusion.
 
 The NGO Fundar, the key force behind the campaign to release the tax data, has been a longstanding advocate for increasing citizen access to information on public finances. Fundar was established following the Mexican peso crisis and economic recession of 1994-1995. As Fundar activists recall, at the time it was impossible for the public to tell with any degree of accuracy how much money was being collected and spent by the public sector.
 
@@ -42,7 +42,7 @@ As a result, the only source of new revenue will come from clamping down on corr
 
 The disclosure of tax privileges was an NGO-led initiative, but it helped create widespread political support among Mexican citizens for the removal of unfair tax distortions. Fundar’s success shows how NGOs can prove to be valuable allies for governments that are pursuing inclusive, pro-social agendas. Another key lesson from Fundar’s work is the importance of messages that are both clear and vivid. The arresting images of the lavish lifestyles of the rebate recipients was more effective in changing public opinion than any dry text or decontextualized numbers could be.
 
-Like the recent successful campaign to increase the minimum wage in Mexico, the removal of tax exemptions demonstrates the constructive overlap between a reformist government’s agenda and the complementary work of civil society actors. Fundar’s success at leveraging strategic litigation, public outreach, and the changing political environment provides another model for how civil society can play an effective role in winning future reforms—both in Mexico, and beyond.
+Like the recent successful campaign to increase the minimum wage in Mexico, the removal of tax exemptions demonstrates the constructive overlap between a reformist government’s agenda and the complementary work of civil society actors. Fundar’s success at leveraging strategic litigation, public outreach, and the changing political environment provides another model for how civil society can play an effective role in winning future reforms, both in Mexico, and beyond.
 
 **![](/media/2020/02/Paul2-300x300.webp)**
 

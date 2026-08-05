@@ -28,17 +28,17 @@ For the first time in history, a major political party in the United States has 
 
 This is baffling to us, especially in light of what we see in our corporate research. In two articles from 2012 we discussed findings from our analysis of 360-degree reviews that women in leadership positions were perceived as being every bit as effective as men. In fact, while the differences were not huge, women scored at a statistically significantly higher level than men on the vast majority of leadership competencies we measured.
 
-We recently updated that research, again looking at our database of 360-degree reviews in which we ask individuals to rate each leaders’ effectiveness overall and to judge how strong they are on specific competencies, and had similar findings: that women in leadership positions are perceived just as — if not more — competent as their male counterparts.
+We recently updated that research, again looking at our database of 360-degree reviews in which we ask individuals to rate each leaders’ effectiveness overall and to judge how strong they are on specific competencies, and had similar findings: that women in leadership positions are perceived just as, if not more, competent as their male counterparts.
 
 Still, the disturbing fact is that the percentage of women in senior leadership roles in businesses has remained relatively steady since we conducted our original research. Only 4.9% of Fortune 500 CEOs and 2% of S&P 500 CEOs are women. And those numbers are declining globally.
 
 There are of course many factors that contribute to this dearth of women at senior levels. For centuries, there have been broad, cultural biases against women and stereotypes die slowly. People have long believed that many women elect not to aspire to the highest ranks of the organization and take themselves out of the running (though recent research disputes that). Lots of research has shown that unconscious bias places a significant role in hiring and promotion decisions, which also contributes to the lower number of women in key positions.
 
-Our current data presents even more compelling evidence that this bias is incorrect and unwarranted. Women are perceived by their managers — particularly their male managers — to be slightly more effective than men at every hierarchical level and in virtually every functional area of the organization. That includes the traditional male bastions of IT, operations, and legal.
+Our current data presents even more compelling evidence that this bias is incorrect and unwarranted. Women are perceived by their managers, particularly their male managers, to be slightly more effective than men at every hierarchical level and in virtually every functional area of the organization. That includes the traditional male bastions of IT, operations, and legal.
 
 As you can see in the chart below, women were rated as excelling in taking initiative, acting with resilience, practicing self-development, driving for results, and displaying high integrity and honesty. In fact, they were thought to be more effective in 84% of the competencies that we most frequently measure.
 
-According to our updated data, men were rated as being better on two capabilities —”develops strategic perspective” and “technical or professional expertise,” which were the same capabilities where they earned higher ratings in our original research as well.
+According to our updated data, men were rated as being better on two capabilities, ”develops strategic perspective” and “technical or professional expertise,” which were the same capabilities where they earned higher ratings in our original research as well.
 
 ---
 
@@ -87,13 +87,13 @@ It’s possible that these lower levels of confidence at younger ages could moti
 
 We see a similar trend in women’s perceptions of their overall leadership effectiveness, with their rating rising as they get older. This data is from a study that includes 40,184 men and 22,600 women and measures the overall effectiveness rating of males and females on 49 unique behaviors that predict a leaders effectiveness.
 
-Again, women at younger ages rate themselves significantly lower than men but their ratings climb — and eventually supersede those of men — as they get older.
+Again, women at younger ages rate themselves significantly lower than men but their ratings climb, and eventually supersede those of men, as they get older.
 
 ![](https://hbr.org/resources/images/article_assets/2019/06/W180611_ZENGER_WOMENSEE.png)
 
 ![](https://hbr.org/resources/images/article_assets/2019/06/W180611_ZENGER_WOMENSEE.png)
 
-This data continues to reinforce our observations from our previous research — women make highly competent leaders, according to those who work most closely with them — and what’s holding them back is not lack of capability but a dearth of opportunity. When given those opportunities, women are just as likely to succeed in higher level positions as men.
+This data continues to reinforce our observations from our previous research, women make highly competent leaders, according to those who work most closely with them, and what’s holding them back is not lack of capability but a dearth of opportunity. When given those opportunities, women are just as likely to succeed in higher level positions as men.
 
 Keep in mind that our data is mostly perceptions of current and past behavior and performance. That’s different than a promotional decision that involves movement to a higher position and involves taking a bigger risk. If 96 out of 100 people currently serving in comparable positions are male, and you are making the decision about who to promote, and you have a highly qualified female and a highly qualified male, what are you inclined to do? It may seem safer to choose the man.
 

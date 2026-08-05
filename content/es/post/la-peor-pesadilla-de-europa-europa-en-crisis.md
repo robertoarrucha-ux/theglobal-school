@@ -38,7 +38,7 @@ Los riesgos de pobreza están aumentando: el 17.4% de los ciudadanos de la UE es
 
 Las denuncias de brutalidad policial contra minorías, como las protestas en Francia de 2020 por racismo sistémico, han avivado la desconfianza en las instituciones. 🚨👮‍♂️
 
-La censura se está colando, con la Ley de Servicios Digitales de la UE (2022) generando debates sobre libertad de expresión versus regulación. Además, un laberinto de burocracia absurda —piensa en las 26,911 palabras del Reglamento General de Protección de Datos de la UE (GDPR)— es una receta para el desencanto. 📜😤
+La censura se está colando, con la Ley de Servicios Digitales de la UE (2022) generando debates sobre libertad de expresión versus regulación. Además, un laberinto de burocracia absurda, piensa en las 26,911 palabras del Reglamento General de Protección de Datos de la UE (GDPR), es una receta para el desencanto. 📜😤
 
 **Esta tormenta perfecta es terreno fértil para el extremismo.**
 
@@ -71,7 +71,7 @@ Reducir la Burocracia para Desatar el Emprendimiento ✂️💼
 
 **2. Elimina la burocracia que estrangula a las pequeñas empresas.**
 
-Simplifica los códigos tributarios —la tasa efectiva del 50% para PYMES en Bélgica podría bajar al 30% con deducciones simplificadas— y reduce la superposición regulatoria.
+Simplifica los códigos tributarios, la tasa efectiva del 50% para PYMES en Bélgica podría bajar al 30% con deducciones simplificadas, y reduce la superposición regulatoria.
 
 **3. Fortalecer la Autonomía en Defensa 🛡️**Con la duda sobre el compromiso de EE. UU., Europa debe reforzar su propio ejército. Incrementar el gasto al 2.5% del PIB colectivo para 2030, desde el 1.8%, es clave.  
 Invertir en Capital Humano para Combatir la Pobreza 📚💪
@@ -82,7 +82,7 @@ El modelo de formación profesional de Alemania podría escalarse en toda la UE 
 
 5. **Promover una Regulación Inteligente Sobre la Censura**Equilibra la gobernanza digital con la libertad. Refina la Ley de Servicios Digitales para priorizar la transparencia sobre el control, inspirándose en la regulación ligera de Suiza.
 
-**Conclusión: Un Giro, No un Colapso 🔄**La pesadilla de Europa —el fin del marco de seguridad transatlántico— no tiene que ser su epitafio. Su historia de resiliencia demuestra su capacidad para adaptarse. Con acciones audaces, Europa puede regresar, no solo intacta, sino más fuerte, en sus propios términos. 🌍💪
+**Conclusión: Un Giro, No un Colapso 🔄**La pesadilla de Europa, el fin del marco de seguridad transatlántico, no tiene que ser su epitafio. Su historia de resiliencia demuestra su capacidad para adaptarse. Con acciones audaces, Europa puede regresar, no solo intacta, sino más fuerte, en sus propios términos. 🌍💪
 
 **Roberto A. Arrucha**
 

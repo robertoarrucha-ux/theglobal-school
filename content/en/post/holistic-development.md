@@ -14,7 +14,7 @@ targetKeyword: "Holistic Development"
 sourceUrl: "https://theglobal.school/holistic-development/"
 images: ["/media/2020/07/0_UrnT15y8yX0U0cPX.webp", "/media/2020/07/jurgen-crop.webp"]
 ---
-> #### *“Because mindsets and paradigms guide behaviors, changing them can have a profound impact…* *People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.”* ***— Donna Meadows, lead author, Limits to Growth²***
+> #### *“Because mindsets and paradigms guide behaviors, changing them can have a profound impact…* *People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.”* ***, Donna Meadows, lead author, Limits to Growth²***
 
 ### 
 
@@ -22,7 +22,7 @@ images: ["/media/2020/07/0_UrnT15y8yX0U0cPX.webp", "/media/2020/07/jurgen-crop.w
 
 While development efforts showcase success stories, such as the decrease in the number of people living in extreme poverty, the current paradigm is unable to fully explain successes and failures of development interventions. As we increasingly **live beyond our planetary boundaries, inequality and mental health issues have been rising,** and happiness and wellbeing remain elusive for many around the world.
 
-Furthermore, given the number of crises — from climate change to COVID19 — alongside the ambitious nature of the Sustainable Development Goals (SDGs), there is an urgent **need to investigate the effectiveness of the 20th-century human development** paradigm for the 21st century.
+Furthermore, given the number of crises, from climate change to COVID19, alongside the ambitious nature of the Sustainable Development Goals (SDGs), there is an urgent **need to investigate the effectiveness of the 20th-century human development** paradigm for the 21st century.
 
 While the current human development approach shifted the development focus from **Gross Domestic Product (GDP)** to a somewhat broader perspective some 30 years ago, we have not made major progress since to truly advance human development in a holistic manner.
 
@@ -62,7 +62,7 @@ It is evident that Bhutan’s enlightened development approach and leadership ha
 
 > #### “Our generation is called upon to rethink, to redefine the true purpose of growth and, in doing so, to find a growth that is truly sustainable.
 >
-> #### We must never forget that, for lasting peace and happiness in this world, the journey forward has to be one that we must all make together… It all starts with leadership of the self”.⁸— ***His Majesty the 5th King of Bhutan, 2011***
+> #### We must never forget that, for lasting peace and happiness in this world, the journey forward has to be one that we must all make together… It all starts with leadership of the self”.⁸, ***His Majesty the 5th King of Bhutan, 2011***
 
 ### 
 
@@ -70,7 +70,7 @@ It is evident that Bhutan’s enlightened development approach and leadership ha
 
 The strong focus of development assistance on external factors and measurable progress has left aside an understanding of internal factors and potential hidden root causes. **Internal factors such as mindsets can play a transformative role** in people’s, nations’ and humanity’s development journey.
 
-While there has been researching on behavioural insights, **self-empowerment, personal development, leadership and transformation** in some specialized fields such as psychology, sociology, philosophy and neuroscience, there has been no — or minimal — direct connections made to human development approaches. There is indeed a significant knowledge gap on inner dimensions, which are more difficult to measure — such as people’s mindsets.
+While there has been researching on behavioural insights, **self-empowerment, personal development, leadership and transformation** in some specialized fields such as psychology, sociology, philosophy and neuroscience, there has been no, or minimal, direct connections made to human development approaches. There is indeed a significant knowledge gap on inner dimensions, which are more difficult to measure, such as people’s mindsets.
 
 These ‘soft’ inner factors have, so far, not been well considered in the field of **human development**, in contrast to ‘hard’ indicators such as income levels, life expectancy and years of education.
 

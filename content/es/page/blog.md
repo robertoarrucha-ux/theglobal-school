@@ -86,7 +86,7 @@ This moment humanity is going through can now be seen as a portal and as a hole.
 
 ## [Holistic Development](https://es.theglobal.school/holistic-development/)
 
-“Because mindsets and paradigms guide behaviors, changing them can have a profound impact… People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.” — Donna Meadows, lead author, Limits to Growth²  1....
+“Because mindsets and paradigms guide behaviors, changing them can have a profound impact… People who manage to intervene in systems at the level of paradigm hit a leverage point that totally transform systems.”, Donna Meadows, lead author, Limits to Growth²  1....
 
 [leer más](https://es.theglobal.school/holistic-development/)
 

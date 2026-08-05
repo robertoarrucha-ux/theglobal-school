@@ -35,7 +35,7 @@ According to [Google](https://yourplanyourplanet.sustainability.google/?utm_sour
 
 **2. How to freeze eggs?**  To freeze whole eggs, you simply mix the eggs together and pour the mixture into either an ice cube tray or a freezer-safe container or bag. If you will need to use individual eggs, it would make more sense to make sure each ice cube tray holds only one egg so that you can easily separate them.
 
-**3. How to freeze broccoli?**  Broccoli—florets and stems—must be blanched for effective freezing. If you freeze it raw, you’ll wind up with bitter, drab green, shrivelled stems. Blanching or steaming preserves the bright green colour and tasty flavour. You can either blanch in boiling water for three minutes or steam for five minutes.
+**3. How to freeze broccoli?**  Broccoli, florets and stems, must be blanched for effective freezing. If you freeze it raw, you’ll wind up with bitter, drab green, shrivelled stems. Blanching or steaming preserves the bright green colour and tasty flavour. You can either blanch in boiling water for three minutes or steam for five minutes.
 
 ### **So, what are the most powerful actions for sustainable living from home?**
 

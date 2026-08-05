@@ -20,7 +20,7 @@ If you repent of the problem and consume the news 24 hours a day, with little en
 
 > **When you are taking care of yourselves, you are taking care of everything else. Do not lose the spiritual dimension of this crisis; have the eagle aspect from above and see the whole; see more broadly.**
 
-There is a social demand in this crisis, but there is also a spiritual demand — the two go hand in hand. Without the social dimension, we fall into fanaticism. But without the spiritual dimension, we fall into pessimism and lack of meaning.
+There is a social demand in this crisis, but there is also a spiritual demand, the two go hand in hand. Without the social dimension, we fall into fanaticism. But without the spiritual dimension, we fall into pessimism and lack of meaning.
 
 **You were prepared to go through this crisis. Take your toolbox and use all the tools available to you.**
 

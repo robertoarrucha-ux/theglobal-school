@@ -42,24 +42,24 @@ She proposes 7 ways of thinking - that in her view should guide 21st-century eco
 
 **... and my thoughts on them**
 
-### **1. Change the goal—from GDP to the Doughnut. Doughnut Economics**
+### **1. Change the goal, from GDP to the Doughnut. Doughnut Economics**
 
 The continuous growth of the gross national product (GDP) has been the goal of mainstream economics’ ever since the mid-20th century. Raworth argues economic growth cannot by itself solve all other problems our societies are facing and it cannot last forever, due to the scarcity of resources. Delivering well-being for people and the planet (our “planetary household”) as laid out in the picture of the doughnut should be the main purpose of economics instead of growth and profits.
-Ever since I got in touch with the United Nations 17 Sustainable Development goals they are a guiding star for the impact I want to make in the world. The Sustainable Development Goals provide a blueprint for the transition to a healthier planet and a more just world — for present and future generations. 
+Ever since I got in touch with the United Nations 17 Sustainable Development goals they are a guiding star for the impact I want to make in the world. The Sustainable Development Goals provide a blueprint for the transition to a healthier planet and a more just world, for present and future generations. 
 Those goals are reflected in the inner and outer dimension of the doughnut. They are a powerful concept interlinking the social, ecological and economic aspects of sustainability. When I started my first activities in the social business world my major concern was inequality. 
 But studying migration management I more and more learned about the interconnectivity of social and ecological aspects, which led me to support Fridays for Future and join Entrepreneurs for Future and actively advocate for stronger political action on climate-related issues as social issues can only be really solved if ecological and economical issues are also taken care of.
 As a social entrepreneur, I feel that running a business on more KPIs than just financial growth by adding the social and ecological impact is very satisfying and I am deeply convinced, that this could also be a motivating way for all players in our society.
 
 ### 
 
-### **2. See the big picture—from self-contained market to embedded economy. Doughnut Economics**
+### **2. See the big picture, from self-contained market to embedded economy. Doughnut Economics**
 
 In neoliberal economics, the market rules. It’s supposed to most efficiently allocate resources when left to its own devices. The regulation ought to be minimal, the state’s role restricted to providing security to its citizens and protecting private property. Society is irrelevant, and the Earth’s resources seen as unlimited and thus left out of the equation.
 Kate Raworth advocates stepping back and taking a broader view to see the economy how it really is, embedded within Earth’s natural systems and within human society. Within the economy itself, households, the market, the state and the commons all have an equally important role to play in meeting human needs. None should be given primacy over the others, but they should all be supported to serve human welfare in mutually complementing ways. I could not agree more to this holistic picture
 
 ### 
 
-### **3. Nurture human nature—from rational economic man to social adaptable humans. Doughnut Economics**
+### **3. Nurture human nature, from rational economic man to social adaptable humans. Doughnut Economics**
 
 Neoclassical economics bases its theories on a limited view of human nature, the notorious endlessly rationalizing and self-maximizing homo economicus. Kate Raworth tries to draw a picture of him: Standing alone, with money in his hand, ego in his heart, a calculator in his head and nature at his feet. He hates work, he loves luxury and he knows the price of everything.  The whole concept was brought up to make it easier to argue economic models. 
 Raworth argues that we need a new picture of the person we picture as a base for our economic models taking into account our capacities for solidarity, empathy and reciprocity. How I hated the model of the "homo economicus" when studying economics! I remember long arguments then up to now that humans are not selfish and ego-driven. 
@@ -72,14 +72,14 @@ https://youtu.be/Sx13E8-zUtA
 
 ### 
 
-### **4. Get savvy with systems—from mechanical equilibrium to dynamic complexity. Doughnut Economics**
+### **4. Get savvy with systems, from mechanical equilibrium to dynamic complexity. Doughnut Economics**
 
 The book brings up the historic context of how economics as a science was shaped. Economics became a science when economists started to introduce diagrams and concepts resembling Newtons diagrams and mechanic thinking. Economists have for a long time strived to simplify economic models to resemble linear mechanical models.
 However, our world gets more and more complex day by day and the only way to master this complexity is system thinking. Thinking in terms of systems can do a far better job helping us understand how our world works and what actions we could take to reverse negative developments. I think this is especially true if you look at fast technological developments that will shape our future
 
 ### 
 
-### **5. Design to distribute—from ‘growth will even it up again’ to distributive by design. Doughnut Economics**
+### **5. Design to distribute, from ‘growth will even it up again’ to distributive by design. Doughnut Economics**
 
 Raworth says inequality is neither good for growth nor a necessary stage of development. On the contrary, more unequal societies are shown to be less healthy and happy and to face a higher degree of environmental degradation. 
 Redistributing income is not enough to address the situation, for most of the rise in inequality we see today is due to wealth concentration resulting from returns on capital. When we started our venture [***goood network***](https://goood-mobile.at/) we were lucky to work with Karl Wagner, former director of external affairs of the Club of Rome. T
@@ -88,7 +88,7 @@ To have an unequal society instead of an equal one is our choice, it is not a gi
 
 ### 
 
-### **6. Create to regenerate—from ‘growth will clean it up again’ to regenerative by design. Doughnut Economics**
+### **6. Create to regenerate, from ‘growth will clean it up again’ to regenerative by design. Doughnut Economics**
 
 As regards the environment, our current economic setup is eating up Earth’s resources at one end and spewing out waste from the other. We should instead strive to design a circular economy with all the energy and resources in constant flow – reused, renewed, returned to the planet’s life cycle where the "waste" of one process can be turned into input for another process.
 The circular economy is rather a new concept for me, but I think it is super fascinating. As a consumer, I am drawn to intelligent products based on circular concepts and as an innovator and entrepreneur, I see opportunities emerging from new collaborations. 
@@ -96,7 +96,7 @@ The circular economy is rather a new concept for me, but I think it is super fas
 
 ### 
 
-### **7. Be agnostic about growth—from growth addicted to growth agnostic. Doughnut Economics**
+### **7. Be agnostic about growth, from growth addicted to growth agnostic. Doughnut Economics**
 
 **So my wish for 2020: Let´s break free of our old picture of economics and transform to a 21-century concept of economics. Even if you are on a New Years diet- get involved with the Doughnut- I am convinced it will serve us and our world well.**
 https://youtu.be/gxcez9kE19w

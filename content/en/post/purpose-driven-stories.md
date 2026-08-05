@@ -68,7 +68,7 @@ Synch with this trend, we want to share with you the best of our content this 20
 > Thank you Stephanie Frappart.   
 > \*[#InspiringLeaders](https://twitter.com/hashtag/InspiringLeaders?src=hash&ref_src=twsrc%5Etfw) [#Leaders](https://twitter.com/hashtag/Leaders?src=hash&ref_src=twsrc%5Etfw) [#FemaleLeader](https://twitter.com/hashtag/FemaleLeader?src=hash&ref_src=twsrc%5Etfw) [#womenleadership](https://twitter.com/hashtag/womenleadership?src=hash&ref_src=twsrc%5Etfw) [#purposefulleadership](https://twitter.com/hashtag/purposefulleadership?src=hash&ref_src=twsrc%5Etfw) [pic.twitter.com/jUxWppiW3d](https://t.co/jUxWppiW3d)
 >
-> — The Global School for Social Leaders (@globschool) [December 2, 2020](https://twitter.com/globschool/status/1334251960762036230?ref_src=twsrc%5Etfw)
+> The Global School for Social Leaders (@globschool) [December 2, 2020](https://twitter.com/globschool/status/1334251960762036230?ref_src=twsrc%5Etfw)
 
 **2. Rethinking the war on drugs. A talk with Oswaldo Zavala**
 
@@ -76,4 +76,4 @@ Synch with this trend, we want to share with you the best of our content this 20
 > Do not miss this interesting talk with [@Oswaldo\_\_Zavala](https://twitter.com/Oswaldo__Zavala?ref_src=twsrc%5Etfw), a researcher in New York City specialized in Drugs Trafficking.   
 > \*[#Impact](https://twitter.com/hashtag/Impact?src=hash&ref_src=twsrc%5Etfw) [#PurposeDriven](https://twitter.com/hashtag/PurposeDriven?src=hash&ref_src=twsrc%5Etfw) [#socialinnovation](https://twitter.com/hashtag/socialinnovation?src=hash&ref_src=twsrc%5Etfw) [#sdgs](https://twitter.com/hashtag/sdgs?src=hash&ref_src=twsrc%5Etfw) [#Leadership](https://twitter.com/hashtag/Leadership?src=hash&ref_src=twsrc%5Etfw) [#Drugs](https://twitter.com/hashtag/Drugs?src=hash&ref_src=twsrc%5Etfw) [#Narcos](https://twitter.com/hashtag/Narcos?src=hash&ref_src=twsrc%5Etfw) <https://t.co/yPFNfvxtfS>
 >
-> — The Global School for Social Leaders (@globschool) [November 11, 2020](https://twitter.com/globschool/status/1326558979938455555?ref_src=twsrc%5Etfw)
+> The Global School for Social Leaders (@globschool) [November 11, 2020](https://twitter.com/globschool/status/1326558979938455555?ref_src=twsrc%5Etfw)

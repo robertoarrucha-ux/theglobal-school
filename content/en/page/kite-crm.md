@@ -173,7 +173,7 @@ Let´s test your emails!
 - [How do we interpret it?](#)
 - [More tools?](#)
 
-**The break-even point (BEP)** in economics, business—and specifically cost accounting—**is the point at which total cost and total revenue are equal, i.e. “even”.**
+**The break-even point (BEP)** in economics, business, and specifically cost accounting, **is the point at which total cost and total revenue are equal, i.e. “even”.**
 
 There is no net loss or gain.
 

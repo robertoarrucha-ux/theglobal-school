@@ -18,7 +18,7 @@ images: ["https://media-exp1.licdn.com/dms/image/C4E12AQE4ossg_PjEaQ/article-inl
 
 It goes without saying that the mess our world is in right now is one of our own making. We all knew this would happen one day and there have been a plethora of data-backed warning interventions, like the one [Bill Gates brilliantly pitched in at TED in 2015](https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready). Yet, with very few exceptions, near to zero effort has been made globally to effectively mitigate this risk. What. A. Shame!
 
-Although I am a Medical Doctor, I am not one of the millions of self-proclaimed internet virology experts, or other COVID-19 nut-cases — I’d like to focus on verified, available evidence, and try to figure out some lessons we can all learn in the face of this global uncertainty. If air travel has become this safe today, it is mainly due to the fact the industry has effectively implemented the lessons learned from blackboxes and crash investigations.
+Although I am a Medical Doctor, I am not one of the millions of self-proclaimed internet virology experts, or other COVID-19 nut-cases, I’d like to focus on verified, available evidence, and try to figure out some lessons we can all learn in the face of this global uncertainty. If air travel has become this safe today, it is mainly due to the fact the industry has effectively implemented the lessons learned from blackboxes and crash investigations.
 
 I’m henceforth leaving a blackbox here, so maybe one day, our kids will avoid making the same mistakes. So far, in this current saga, only very few nations like Singapore and Hong Kong have effectively implemented their lessons-learned from the previous SARS wave that hit them. But as the global health system has crashed on us everywhere else today, I would like to offer five elements of reflection and a question for discussion and future reference:
 
@@ -48,7 +48,7 @@ Also, unlike building new hospitals for the communities, preventive medicine pol
 
 In the past 2 weeks I have been approached by at least three instances to help put together an effective track-and-trace software solution to tackle the current pandemic problem in a more timely fashion. The common denominator of these solutions is a question to all of us: How much private information are we individually willing to make public, for the sake of enhancing public health and safety? 
 
-All your contact details, your last location and related time stamp, the identity of people you had physical contact with in that particular location, etc. — There’s no silver-lining, and there lies the whole complexity of public healthcare and safety.
+All your contact details, your last location and related time stamp, the identity of people you had physical contact with in that particular location, etc. There’s no silver-lining, and there lies the whole complexity of public healthcare and safety.
 
 Finally, as promised, here are some free evidence-based and regularly updated scientific resources on COVID-19:
 

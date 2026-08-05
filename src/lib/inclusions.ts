@@ -1,4 +1,4 @@
-// Qué incluye / No incluye — lista ESTÁNDAR para expediciones (type='viaje'),
+// Qué incluye / No incluye, lista ESTÁNDAR para expediciones (type='viaje'),
 // portada de Viajes (Inclusions.tsx). Bilingüe.
 import type { Lang } from './site';
 

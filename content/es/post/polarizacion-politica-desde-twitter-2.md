@@ -1,7 +1,7 @@
 ---
 title: "Polarización política desde twitter"
 seoTitle: "Polarización política desde twitter - The New Global School"
-description: "La propuesta de pensar los follows y follows back en Twitter como indicadores no convecionales de la polarización dentro de un sistema político —o, acaso, indicadores que ayuden a revelar las preferencias de sus actores—, me pareció muy (¡muy!) interesante. Sin embargo, cuando quise aventurarme a hacer lo mismo para Argentina, me encontré con un problema central: la sección de Datos Abiertos de la Cámara de Diputados no ofrece un listado con las cuentas de Twitter de nuestros diputados y diputadas."
+description: "La propuesta de pensar los follows y follows back en Twitter como indicadores no convecionales de la polarización dentro de un sistema político, o, acaso, indicadores que ayuden a revelar las preferencias de sus actores, , me pareció muy (¡muy!) interesante. Sin embargo, cuando quise aventurarme a hacer lo mismo para Argentina, me encontré con un problema central: la sección de Datos Abiertos de la Cámara de Diputados no ofrece un listado con las cuentas de Twitter de nuestros diputados y diputadas."
 slug: "polarizacion-politica-desde-twitter-2"
 lang: "es"
 type: "post"
@@ -32,13 +32,13 @@ images: ["/media/2019/11/facebook-icon.webp", "/media/2019/11/instagram-icon.web
 
 En mayo de 2019 leí un artículo sobre las relaciones de los diputados españoles en Twitter. La nota, analizando follows y follows back en la red social del pajarito, mostraba cómo los representantes de ese país prefieren seguir a colegas de su mismo partido. La conclusión era que el Congreso español está fuertemente polarizado y cerrado sobre bloques partidarios.
 
-La propuesta de pensar los *follows* y *follows back* en Twitter como **indicadores no convecionales** de la polarización dentro de un sistema político —o, acaso, indicadores que ayuden a revelar las preferencias de sus actores—, me pareció muy (¡muy!) interesante. Sin embargo, cuando quise aventurarme a hacer lo mismo para Argentina, me encontré con un problema central: la sección de [Datos Abiertos de la Cámara de Diputados](https://datos.hcdn.gob.ar/) no ofrece un listado con las cuentas de Twitter de nuestros diputados y diputadas.
+La propuesta de pensar los *follows* y *follows back* en Twitter como **indicadores no convecionales** de la polarización dentro de un sistema político, o, acaso, indicadores que ayuden a revelar las preferencias de sus actores, , me pareció muy (¡muy!) interesante. Sin embargo, cuando quise aventurarme a hacer lo mismo para Argentina, me encontré con un problema central: la sección de [Datos Abiertos de la Cámara de Diputados](https://datos.hcdn.gob.ar/) no ofrece un listado con las cuentas de Twitter de nuestros diputados y diputadas.
 
-Quizás estás pensando: “*¿Y por qué no hiciste la lista vos?*”. Con más tiempo, paciencia y asistentes, ¡sin problemas! Pero listar las cuentas de 257 diputados, y conformar una *edge list* con 65,729 interacciones, excede *by far* la ambición —¡y el presupuesto!— de un blog como el mío.
+Quizás estás pensando: “*¿Y por qué no hiciste la lista vos?*”. Con más tiempo, paciencia y asistentes, ¡sin problemas! Pero listar las cuentas de 257 diputados, y conformar una *edge list* con 65,729 interacciones, excede *by far* la ambición, ¡y el presupuesto! de un blog como el mío.
 
 En su lugar, seleccioné una muestra intencional no probabilística compuesta por cuarenta cuentas de Twitter: veinte de dirigentes políticos de **Juntos por el Cambio**, y veinte de la alianza **Frente de Todos**. Las cuentas son de alta intensidad en términos de *followers*, periodicidad de twitteo, *favs* y RTs. Y, como verás, incluyo tanto a funcionarios/as del poder ejecutivo como a representantes del poder legislativo.
 
-Una vez que construí la base de datos con las cuentas de Twitter, ingresé a [*Does Follow*](https://doesfollow.com/) y conformé una *edge list* sobre 1.560 posibles interacciones. A renglón seguido, armé una *node list* contemplando cinco variables de cada usuario —*followers*, *follows*, sexo, año de creación de la cuenta y afiliación partidaria—. Finalmente, con ambas listas, creé dos visualizaciones.
+Una vez que construí la base de datos con las cuentas de Twitter, ingresé a [*Does Follow*](https://doesfollow.com/) y conformé una *edge list* sobre 1.560 posibles interacciones. A renglón seguido, armé una *node list* contemplando cinco variables de cada usuario, *followers*, *follows*, sexo, año de creación de la cuenta y afiliación partidaria, . Finalmente, con ambas listas, creé dos visualizaciones.
 
 > Nota: Las bases de datos fueron construidas entre los días 7-10 y 13 de febrero de 2020. La próxima vez, cuando quizás ya sepa programar en Python, el proceso será más rápido.
 
@@ -52,7 +52,7 @@ Si pudieran desactivarse los dos nodos más grandes de la red, Sergio Massa pasa
 
 Para conformar la matriz de adyacencia calculé las propiedades de los nodos a partir de **cuatro medidas de centralidad: intermediación, cercanía, valor propio y grado**. Seguidamente, *silencié* la variable de la afiliación partidaria. Por último, le pedí a **R** que me creara **grupos de pertenencia** para nuclear a los nodos sobre la base de *follows* y *follows back*.
 
-En la visualización que sigue podés ver dos grupos de pertenencia claramente diferenciados —salmón y turquesa—, y celdas de color gris. Independientemente del color que tenga, cada pixel coloreado representa un *follow* que una cuenta del eje horizontal ‘*From*’ le hace a una cuenta del eje vertical ‘*To*’. Dicho de otro modo, cada celda de color representa un *follow* que una cuenta del eje vertical ‘*To*’ recibe de una cuenta listada en el eje horizontal ‘*From*’.
+En la visualización que sigue podés ver dos grupos de pertenencia claramente diferenciados, salmón y turquesa, , y celdas de color gris. Independientemente del color que tenga, cada pixel coloreado representa un *follow* que una cuenta del eje horizontal ‘*From*’ le hace a una cuenta del eje vertical ‘*To*’. Dicho de otro modo, cada celda de color representa un *follow* que una cuenta del eje vertical ‘*To*’ recibe de una cuenta listada en el eje horizontal ‘*From*’.
 
 ![](/media/2020/02/1-2-997x1024.webp)
 
@@ -62,7 +62,7 @@ Matriz de adyacencia ponderada con grupos de pertenencia. Colores aleatorios.
 
 - **Victoria Donda**, cuyo partido político integra el Frente de Todos, quedó en el grupo salmón. El grupo salmón, como ya habrán advertido, nuclea a políticos de Juntos por el Cambio.
 - **Miguel Ángel Pichetto** no sigue a nadie, pero integra el grupo salmón porque es más seguido por políticos de Juntos por el Cambio.
-- ¿Te acordás de los “cuadraditos” grises? Representan *follows* por fuera de los grupos. La concentración de celdas grises es mayor en el cuadrante inferior derecho (25.5%). Eso significa que el grupo turquesa es… ¿más conciliador? **Sergio Massa**, **Felipe Solá**, **Gabriela Cerruti** y **Elizabeth Gómez Alcorta** son los que construyen puentes desde el grupo turquesa hacia el salmón. Desde el grupo salmón hacia el turquesa tienden lazos —aunque más débiles (12.75%)— **Horacio Rodríguez Larreta**, **Diego Santilli** y **Esteban Bullrich**.
+- ¿Te acordás de los “cuadraditos” grises? Representan *follows* por fuera de los grupos. La concentración de celdas grises es mayor en el cuadrante inferior derecho (25.5%). Eso significa que el grupo turquesa es… ¿más conciliador? **Sergio Massa**, **Felipe Solá**, **Gabriela Cerruti** y **Elizabeth Gómez Alcorta** son los que construyen puentes desde el grupo turquesa hacia el salmón. Desde el grupo salmón hacia el turquesa tienden lazos, aunque más débiles (12.75%), **Horacio Rodríguez Larreta**, **Diego Santilli** y **Esteban Bullrich**.
 - El grupo salmón, en términos comparativos, tiene nodos más grandes que el grupo turquesa.
 - La cuenta menos seguida de la muestra es la de **Sabina Frederic**, actual Ministra de Seguridad. La más seguida es la de **Mauricio Macri**.
 
@@ -74,7 +74,7 @@ La matriz revela la existencia de dos grupos intensos *dentro de sí* pero no *e
 
 # **¡Truco! Gobernadores**
 
-¿La grieta alcanza a los gobernadores? Seguí los mismos pasos que en la sección anterior —aunque esta vez no sobre una muestra, sino sobre la población total—, y los resultados son los siguientes.
+¿La grieta alcanza a los gobernadores? Seguí los mismos pasos que en la sección anterior, aunque esta vez no sobre una muestra, sino sobre la población total, , y los resultados son los siguientes.
 
 Adyacencias de red no ponderadas
 
@@ -92,7 +92,7 @@ Matriz de adyacencia ponderada con grupos de pertenencia. Colores aleatorios.
 2. **Grupo verde**: Gerardo Morales (Jujuy), Gustavo Bordet (Entre Ríos), Gustavo Valdés (Corrientes), Omar Perotti (Santa Fe), Rodolfo Suárez (Mendoza).
 3. **Grupo azul**: Gildo Insfrán (Formosa), Gustavo Sáenz (Salta), Mariano Arcioni (Chubut), Omar Gutiérrez (Neuquén), Raúl Jalil (Catamarca), Ricardo Quintela (La Rioja), Sergio Uñac (San Juan), Sergio Ziliotto (La Pampa), Gerardo Zamora (Santiago del Estero), Juan Manzur (Tucumán) y Alberto Rodríguez Saá (San Luis).
 
-En principio, no se constata grieta entre los gobernadores, pero sí cierta *indiferencia* entre unos y otros. El **76.48%** de la matriz es blanca y el *Ci* global es de **.505** — o de **.458** si se excluye a Alberto Fernández.
+En principio, no se constata grieta entre los gobernadores, pero sí cierta *indiferencia* entre unos y otros. El **76.48%** de la matriz es blanca y el *Ci* global es de **.505**, o de **.458** si se excluye a Alberto Fernández.
 
 # **¡Quiero retruco! Gabinete presidencial**
 
@@ -142,7 +142,7 @@ Veamos ahora qué nos dice la matriz de adyacencia con la red ponderada.
 
 Matriz de adyacencia ponderada con grupos de pertenencia. Colores aleatorios.
 
-Rencuentra dos eslabones aislados —Morales y Moïse— y tres grupos de pertenencia.
+Rencuentra dos eslabones aislados, Morales y Moïse, y tres grupos de pertenencia.
 
 1. **Grupo salmón**: Alberto Fernández (Argentina), Andrés Manuel López Obrador (México), Miguel Díaz Canel (Cuba) y Nicolás Maduro (Venezuela).
 2. **Grupo mostaza**: Alejandro Giammattei (Guatemala), Carlos Alvarado Quesada (Costa Rica), Danilo Medina (República Dominicana), Juan Orlando Hernández (Honduras), Laurentino Cortizo (Panamá), Lenín Moreno (Ecuador) y Nayib Bukele (El Salvador).
@@ -152,7 +152,7 @@ Los grupos salmón y verde parecen estar **cohesionados en torno a preferencias 
 
 Como en la de gobernadores, la intensidad de esta red también es baja: el **71.43%** de la matriz es blanca. O sea, hay pocos *follows* y *follows back* entre los nodos. Por su parte, el coeficiente de *clustering* global para esta red asciende a **.665**.
 
-- Los *follows* y *follows back* en Twitter son indicadores no convencionales que vale la pena explorar para estimar la polarización dentro de un sistema político — o, acaso, para revelar las preferencias de sus actores.
+- Los *follows* y *follows back* en Twitter son indicadores no convencionales que vale la pena explorar para estimar la polarización dentro de un sistema político, o, acaso, para revelar las preferencias de sus actores.
 
 ![](/media/2020/02/1-2-997x1024.webp)
 

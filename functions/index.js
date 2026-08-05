@@ -13,7 +13,7 @@ const SMTP_USER = defineSecret('TGS_SMTP_USER');
 const SMTP_PASS = defineSecret('TGS_SMTP_PASS');
 
 const SMTP_HOST = 'smtp.acumbamail.com';
-const SMTP_PORT = 465; // SSL — config probada en awards.pro-latam.org
+const SMTP_PORT = 465; // SSL, config probada en awards.pro-latam.org
 const FROM_EMAIL = 'hello@theglobal.school';
 const FROM_NAME = 'The New Global School';
 const NOTIFY_TO = 'hello@theglobal.school'; // destino interno de los leads
@@ -62,7 +62,7 @@ export const submitLead = onRequest(
       from: `"${FROM_NAME}" <${FROM_EMAIL}>`,
       to: NOTIFY_TO,
       replyTo: email,
-      subject: `Nuevo contacto web: ${name}${interest ? ` — ${interest}` : ''}`,
+      subject: `Nuevo contacto web: ${name}${interest ? `, ${interest}` : ''}`,
       html: `<h3>Nuevo mensaje desde el sitio (${lang.toUpperCase()})</h3>
         <p><b>Nombre:</b> ${esc(name)}</p>
         <p><b>Email:</b> ${esc(email)}</p>
@@ -74,9 +74,9 @@ export const submitLead = onRequest(
 
     // 2) Autorespuesta al remitente
     const t = lang === 'es'
-      ? { subj: 'Gracias por contactarnos — The New Global School',
+      ? { subj: 'Gracias por contactarnos, The New Global School',
           body: `Hola ${esc(name)},<br><br>Gracias por escribirnos. Hemos recibido tu mensaje y te responderemos muy pronto.<br><br>Un saludo,<br><b>The New Global School</b><br>Educación y Eventos para Líderes Globales` }
-      : { subj: 'Thank you for reaching out — The New Global School',
+      : { subj: 'Thank you for reaching out, The New Global School',
           body: `Hi ${esc(name)},<br><br>Thanks for getting in touch. We've received your message and will get back to you shortly.<br><br>Best regards,<br><b>The New Global School</b><br>Education & Events for Global Leaders` };
 
     const autoreply = {
@@ -120,7 +120,7 @@ export const onExperienceChange = onDocumentWritten(
     const repo = process.env.GH_REPO || '';
     const token = GH_TOKEN.value();
     if (!repo || !token) {
-      console.error('onExperienceChange: falta GH_REPO o GH_DISPATCH_TOKEN — no se pudo disparar el build.');
+      console.error('onExperienceChange: falta GH_REPO o GH_DISPATCH_TOKEN, no se pudo disparar el build.');
       return;
     }
 
@@ -153,7 +153,7 @@ function fmtDate(iso, locale) {
   try { return new Date(iso + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }); }
   catch { return iso || ''; }
 }
-// Lista estándar "Tu experiencia completa" (viajes) — espejo de src/lib/inclusions.ts.
+// Lista estándar "Tu experiencia completa" (viajes), espejo de src/lib/inclusions.ts.
 const DEFAULT_INCL = {
   es: {
     included: ['Alojamiento en hoteles con encanto y bien ubicados.', 'Todos los desayunos y los almuerzos o cenas especificados en el itinerario.', 'Guías expertos e historiadores durante todo el recorrido.', 'Entradas a todos los museos, monumentos y sitios históricos del itinerario.', 'Transporte privado cómodo para todos los traslados entre ciudades y actividades.', 'Talleres exclusivos, catas y experiencias inmersivas descritas en el programa.', 'Un paquete de bienvenida con materiales de lectura y un diario de viaje.', 'Seguro de viaje básico.'],

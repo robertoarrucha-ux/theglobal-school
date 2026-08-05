@@ -24,13 +24,13 @@ This document is an artifact, harvested from the digital learning journey that
 
 Also participating in this harvest, was:
 
-![](https://miro.medium.com/max/629/1*km3knL-aEhQa__paaRq9lQ.png)Screenshot of the ‘Wedding Table’ data visualization model developed by Lauren Moore Nignon — eventually each participant will be able to connect all the conversations they’ve taken part in, track notes, follow up on action items, side discussions, missed connections and context from conversations that they missed.
+![](https://miro.medium.com/max/629/1*km3knL-aEhQa__paaRq9lQ.png)Screenshot of the ‘Wedding Table’ data visualization model developed by Lauren Moore Nignon, eventually each participant will be able to connect all the conversations they’ve taken part in, track notes, follow up on action items, side discussions, missed connections and context from conversations that they missed.
 
 #### **Indigenous leaders, Educators and Storytellers Starting the Learning Journey**
 
 We would like the world to know that the Cobra Canoa is the beginning: it’s the beginning and it’s happening. It’s happening during a time when humanity is talking about the sixth mass extinction, when nature is actually in an evolution of falling apart due to the popular term called “climate change”.
 
-It’s a shared story that was co-created during a learning journey initiated from Rio de Janiero to São Paulo, and it was given the name Cobra Canoa as a symbol of regeneration of a cosmology that connects humans back to nature and back to the we-ness or belonging to a community — a community of happiness, joy, and companionship, not only between humans but between all life that is part of the bigger cosmology of being human.
+It’s a shared story that was co-created during a learning journey initiated from Rio de Janiero to São Paulo, and it was given the name Cobra Canoa as a symbol of regeneration of a cosmology that connects humans back to nature and back to the we-ness or belonging to a community, a community of happiness, joy, and companionship, not only between humans but between all life that is part of the bigger cosmology of being human.
 
 This new story happened when a group of people from different places on the planet, disconnected from each other, started using technology to have live interactive learning journey and actively co-creating new stories and new patterns for understanding life better. Life in itself was a classroom, nature was a classroom. The purpose of this in terms of our mission is to inspire people to create more learner centered schools, to empower students.
 
@@ -42,13 +42,13 @@ This new story happened when a group of people from different places on the plan
 
 ---
 
-In co-creating a new story, the networks are like a forest. The power of a story is really telling a story that is beyond us, where we are enmeshed with one another again — collective humanity rediscovering our belonging in the web of life, reawakening to our tribe activated and alive.
+In co-creating a new story, the networks are like a forest. The power of a story is really telling a story that is beyond us, where we are enmeshed with one another again, collective humanity rediscovering our belonging in the web of life, reawakening to our tribe activated and alive.
 
-This united narrative was stated by traveling teachers, travelling storytellers who are connecting languages and people coming from different parts of life, learning as much as we possibly can from every encounter and accelerating this educational shift as a radical emergency call by people who are connected to nature — not only indigenous people, but people from all cultures of the world that are really feeling compassion and love for all life on the planet.
+This united narrative was stated by traveling teachers, travelling storytellers who are connecting languages and people coming from different parts of life, learning as much as we possibly can from every encounter and accelerating this educational shift as a radical emergency call by people who are connected to nature, not only indigenous people, but people from all cultures of the world that are really feeling compassion and love for all life on the planet.
 
-It was fascinating to discover many intersections: perpetual learning, learning journeys, indigenous wisdom, connective storytelling, networked movements, collective leadership. Some of us have been working in these and other related intersections in theoretical, practical, and creative community contexts for the last decade and it was nice to find others — not as isolating.
+It was fascinating to discover many intersections: perpetual learning, learning journeys, indigenous wisdom, connective storytelling, networked movements, collective leadership. Some of us have been working in these and other related intersections in theoretical, practical, and creative community contexts for the last decade and it was nice to find others, not as isolating.
 
-![](https://miro.medium.com/max/648/1*lV0mHBN-6DDUoR9_XKGA6A.png)Reconnecting to indigenous leadership on climate change at CCC19 — a catalyst for Beyond Us
+![](https://miro.medium.com/max/648/1*lV0mHBN-6DDUoR9_XKGA6A.png)Reconnecting to indigenous leadership on climate change at CCC19, a catalyst for Beyond Us
 
 #### **Decolonizing, Grieving, Healing, and Reconciling**
 

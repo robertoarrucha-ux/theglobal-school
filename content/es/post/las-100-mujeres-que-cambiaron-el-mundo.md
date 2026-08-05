@@ -22,7 +22,7 @@ Estas son **las 100 mujeres que cambiaron el mundo**, según la prestigiosa rev
 
 **1. Marie Curie, 1867-1934**
 
-**Esta pionera en el campo de la radiactividad** —incluso acuñó el término— fue **la primera mujer profesora en la Universidad de París y la primera persona que recibió dos premios Nobel**, uno en Física y otro en Química. Sus descubrimientos abrieron el camino a los tratamientos del cáncer.
+**Esta pionera en el campo de la radiactividad**, incluso acuñó el término, fue **la primera mujer profesora en la Universidad de París y la primera persona que recibió dos premios Nobel**, uno en Física y otro en Química. Sus descubrimientos abrieron el camino a los tratamientos del cáncer.
 
 ![Marie Curie, científica polaco-francesa, descubridora del radio y el polonio, pionera de los tratamientos contra el cáncer (Museo de Ciencia y Tecnología de Suecia)](https://www.infobae.com/new-resizer/FbSqv6sv0z1Bz2WvdIBX4A87tHs=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)
 
@@ -32,19 +32,19 @@ Marie Curie, científica polaco-francesa, descubridora del radio y el polonio, p
 
 Tras la muerte de su esposo recolectó una pequeña fortuna en distintos países para **continuar la investigación de tratamientos contra el cáncer y fundar laboratorios**. Pronto estalló la **Primera Guerra Mundial**: ayudó entonces a **equipar las ambulancias con rayos X**, y en ocasiones las manejó personalmente hasta el frente de batalla.
 
-Patricia Fara, presidenta de la Sociedad Británica para la Historia de la Ciencia —quien nominó a la física, originalmente llamada **Maria Salomea Skłodowska**— la describió como una mujer que **nunca tuvo la suerte de su lado**: «En Polonia, su familia patriótica sufrió bajo el régimen ruso. En Francia la miraban con suspicacia por extranjera y, por supuesto, allí donde fuera, era discriminada por ser mujer».
+Patricia Fara, presidenta de la Sociedad Británica para la Historia de la Ciencia, quien nominó a la física, originalmente llamada **Maria Salomea Skłodowska**, la describió como una mujer que **nunca tuvo la suerte de su lado**: «En Polonia, su familia patriótica sufrió bajo el régimen ruso. En Francia la miraban con suspicacia por extranjera y, por supuesto, allí donde fuera, era discriminada por ser mujer».
 
 **2. Rosa Parks, 1913-2005**
 
 Esta hija de una maestra y de un carpintero **creció en el corazón del sur racista de los Estados Unidos** en plenos años de leyes y costumbres de **segregación**: Alabama a comienzos del siglo XX. En 1950, ya militante del movimiento de **derechos civiles**, comenzó a trabajar en la National Association for the Advancement of Colored People de Montgomery.
 
-![La activista contra la segregación —las leyes Jim Crow— fue una leyenda en vida: Rosa Parks inspiró al movimiento por los derechos civiles. (Underwood Archives/Getty Images)](https://www.infobae.com/new-resizer/04u_nZu06dzSsZyBNsyLJQK-OcQ=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)La activista contra la segregación —las leyes Jim Crow— fue una leyenda en vida: Rosa Parks inspiró al movimiento por los derechos civiles. (Underwood Archives/Getty Images)
+![La activista contra la segregación, las leyes Jim Crow, fue una leyenda en vida: Rosa Parks inspiró al movimiento por los derechos civiles. (Underwood Archives/Getty Images)](https://www.infobae.com/new-resizer/04u_nZu06dzSsZyBNsyLJQK-OcQ=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)La activista contra la segregación, las leyes Jim Crow, fue una leyenda en vida: Rosa Parks inspiró al movimiento por los derechos civiles. (Underwood Archives/Getty Images)
 
 Entonces la separación de blancos y afroamericanos en el transporte público era regla, desde que la Corte Suprema había establecido, en el caso **Plessy vs. Ferguson de 1896**, que las instalaciones racialmente separadas no eran inconstitucionales si eran iguales. Aunque otras personas habían protestado del mismo modo, el acto de Parks el 1 de diciembre de 1955 encendió la mecha que hizo estallar el movimiento de derechos civiles:
 
-—¿Por qué se niega? —le preguntó la policía, cuando la arrestaba por no levantarse de un asiento de bus, tal como le indicó el conductor, para dejárselo a un pasajero blanco.
+¿Por qué se niega? le preguntó la policía, cuando la arrestaba por no levantarse de un asiento de bus, tal como le indicó el conductor, para dejárselo a un pasajero blanco.
 
-—**¿Por qué andan todos ustedes empujándonos por todas partes?** —ella preguntó a su vez.
+**¿Por qué andan todos ustedes empujándonos por todas partes?**, ella preguntó a su vez.
 
 En la década de 1960 distintas instancias cambiaron el panorama para terminar con la segregación que discriminaba a los afroamericanos.
 
@@ -60,7 +60,7 @@ Su lema, **«acciones, no palabras»**, resultó perdurable. La WSPU, cercana a
 
 **4. Ada Lovelace, 1815–1852**
 
-Aunque **Silicon Valley se destaca por la fuerte impronta sexista de su cultura**, la primera programadora fue mujer. **Augusta Ada King**, nacida Byron —la única hija que el poeta **Lord Byron** tuvo dentro de su matrimonio con Anne Isabella Noel—, trabajó con **Charles Babbage** en la creación que el matemático llamó la Máquina Analítica; pero aunque él sólo consideraba que su creación servía para cálculos de números, **la condesa de Lovelace estimó que podía ejecutar otras habilidades.**
+Aunque **Silicon Valley se destaca por la fuerte impronta sexista de su cultura**, la primera programadora fue mujer. **Augusta Ada King**, nacida Byron, la única hija que el poeta **Lord Byron** tuvo dentro de su matrimonio con Anne Isabella Noel, , trabajó con **Charles Babbage** en la creación que el matemático llamó la Máquina Analítica; pero aunque él sólo consideraba que su creación servía para cálculos de números, **la condesa de Lovelace estimó que podía ejecutar otras habilidades.**
 
 ![Ada King, condesa de Lovelace, programadora. (Acuarela de Alfred Edward Chalon)](https://www.infobae.com/new-resizer/lKMraxbiN8nYVMm0qWZrrT2-oLY=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)Ada King, condesa de Lovelace, programadora. (Acuarela de Alfred Edward Chalon)
 
@@ -72,23 +72,23 @@ A pesar de su fascinación por la matemática, Lovelace se casó con el hombre q
 
 **5 Rosalind Franklin, 1920–1958**
 
-**Cuando se habla de estudios pioneros del ADN, se piensa en —por caso— James Dewey Watson**. Pero menos reconocida, esta **cristalógrafa británica** no sólo contribuyó de manera importante a la comprensión de la estructura básica de la vida, sino que **logró las primeras imágenes —mediante la difracción de rayos X— de la doble hélice**.
+**Cuando se habla de estudios pioneros del ADN, se piensa en, por caso, James Dewey Watson**. Pero menos reconocida, esta **cristalógrafa británica** no sólo contribuyó de manera importante a la comprensión de la estructura básica de la vida, sino que **logró las primeras imágenes, mediante la difracción de rayos X, de la doble hélice**.
 
 ![Rosalind Franklin MRC Laboratory of Molecular Biology/Jenifer Glynn](https://www.infobae.com/new-resizer/zwsh47dtM0EICtB4KifhSGBEWHU=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)Rosalind Franklin MRC Laboratory of Molecular Biology/Jenifer Glynn
 
-**Cuando se habla de estudios pioneros del ADN, se piensa en —por caso— James Dewey Watson**. Pero menos reconocida, esta **cristalógrafa británica** no sólo contribuyó de manera importante a la comprensión de la estructura básica de la vida, sino que **logró las primeras imágenes —mediante la difracción de rayos X— de la doble hélice**.
+**Cuando se habla de estudios pioneros del ADN, se piensa en, por caso, James Dewey Watson**. Pero menos reconocida, esta **cristalógrafa británica** no sólo contribuyó de manera importante a la comprensión de la estructura básica de la vida, sino que **logró las primeras imágenes, mediante la difracción de rayos X, de la doble hélice**.
 
 La famosa **foto 51**, que muestra una cruz oscura de puntos, fue tomada en **King’s College**, una institución destacada por su sexismo en el momento. Con sólo otra investigadora mujer, la química **Rosalind Franklin** sufrió un desprecio constante de sus pares varones. Sin su hallazgo sobre la fundación química de la herencia, no se conocerían el genoma humano ni la ingeniería genética. En vida fue reconocida por sus trabajos sobre **la estructura de los virus y el carbón.**
 
 **6. Margaret Thatcher, 1925–2013**
 
-La **Dama de Hierro** —como se la llamó— fue la primera mujer en ocupar la **jefatura de gobierno del Reino Unido**, en 1979. Inició una completa transformación del país: **la privatización de empresas estatales**, la limitación de los beneficios sociales, **la desregularización del sector financiero** y la flexibilización laboral son algunas de las marcas que dejó el **thatcherismo**, como se llamó, en su honor, la política conservadora que comenzó a desplegarse en los últimos años de la guerra fría.
+La **Dama de Hierro**, como se la llamó, fue la primera mujer en ocupar la **jefatura de gobierno del Reino Unido**, en 1979. Inició una completa transformación del país: **la privatización de empresas estatales**, la limitación de los beneficios sociales, **la desregularización del sector financiero** y la flexibilización laboral son algunas de las marcas que dejó el **thatcherismo**, como se llamó, en su honor, la política conservadora que comenzó a desplegarse en los últimos años de la guerra fría.
 
 ![October 1985: British prime minister Margaret Thatcher looking pensive at the Conservative Party Conference in Blackpool. (Photo by Hulton Archive/Getty Images)](https://www.infobae.com/new-resizer/mMfRC-FOk6AWn9taxmKgyVUCZU4=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)October 1985: British prime minister Margaret Thatcher looking pensive at the Conservative Party Conference in Blackpool. (Photo by Hulton Archive/Getty Images)
 
-La **Dama de Hierro** —como se la llamó— fue la primera mujer en ocupar la **jefatura de gobierno del Reino Unido**, en 1979. Inició una completa transformación del país: **la privatización de empresas estatales**, la limitación de los beneficios sociales, **la desregularización del sector financiero** y la flexibilización laboral son algunas de las marcas que dejó el **thatcherismo**, como se llamó, en su honor, la política conservadora que comenzó a desplegarse en los últimos años de la guerra fría.
+La **Dama de Hierro**, como se la llamó, fue la primera mujer en ocupar la **jefatura de gobierno del Reino Unido**, en 1979. Inició una completa transformación del país: **la privatización de empresas estatales**, la limitación de los beneficios sociales, **la desregularización del sector financiero** y la flexibilización laboral son algunas de las marcas que dejó el **thatcherismo**, como se llamó, en su honor, la política conservadora que comenzó a desplegarse en los últimos años de la guerra fría.
 
-Margaret Thatcher fue una pionera **opositora a la oposición de que los británicos participaran en la Unión Europea**; su completo alineamiento con los Estados Unidos—entonces, con Ronald Reagan en la presidencia— marcó su política exterior. En medio del descontento por el desempleo y el conflicto en **Irlanda del Norte**, la dictadura argentina le declaró la **Guerra de Malvinas**, y en 1982 la primera ministra recuperó su popularidad. Fue nombrada **baronesa**, lo cual le valió un lugar vitalicio entre los Tories.
+Margaret Thatcher fue una pionera **opositora a la oposición de que los británicos participaran en la Unión Europea**; su completo alineamiento con los Estados Unidos, entonces, con Ronald Reagan en la presidencia, marcó su política exterior. En medio del descontento por el desempleo y el conflicto en **Irlanda del Norte**, la dictadura argentina le declaró la **Guerra de Malvinas**, y en 1982 la primera ministra recuperó su popularidad. Fue nombrada **baronesa**, lo cual le valió un lugar vitalicio entre los Tories.
 
 ---
 
@@ -114,17 +114,17 @@ Escribió ficción, ensayos, un libro de viaje y otro para niños. Su obra ***V
 
 Mary Wollstonecraft, pionera feminista, escritora, pensadora. (Retrato de John Opie)
 
-Su **vida no convencional** —se le conocieron dos grandes romances antes de su matrimonio con el precursor del anarquismo William Godwin, con quien tuvo a **su hija Mary Shelley, autora de *Frankenstein***, y murió poco después del parto— fue objeto de crítica y veneración. Hoy se la considera un pilar indiscutible del feminismo.
+Su **vida no convencional**, se le conocieron dos grandes romances antes de su matrimonio con el precursor del anarquismo William Godwin, con quien tuvo a **su hija Mary Shelley, autora de *Frankenstein***, y murió poco después del parto, fue objeto de crítica y veneración. Hoy se la considera un pilar indiscutible del feminismo.
 
 **9. Florence Nightingale, 1820–1910**
 
-**La primera mujer que recibió la Orden al Mérito del Reino Unido** —entre otros honores—, la creadora de un **modelo profesional de la enfermería fue también escritora y aplicó sus conocimientos de matemática a la estadística sobre epidemiología**.
+**La primera mujer que recibió la Orden al Mérito del Reino Unido**, entre otros honores, , la creadora de un **modelo profesional de la enfermería fue también escritora y aplicó sus conocimientos de matemática a la estadística sobre epidemiología**.
 
 ![Florence luchó contra los prejuicios de su época y buscó su destino a fuerza de trabajo](https://www.infobae.com/new-resizer/qCoP1HXK8XZqbDHog5KSA9gwnns=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)
 
 Florence luchó contra los prejuicios de su época y buscó su destino a fuerza de trabajo
 
-Florence Nightingale dirigió el primer equipo oficial de enfermeras militares en Turquía, durante la guerra de Crimea; observó entonces que más soldados morían por enfermedad que por el resultado directo de sus heridas. «La **dama de la lámpara**» —como la llamaron porque realizaba rondas nocturnas de control de los pacientes— se dedicó entonces a estudiar cómo reducir las muertes evitables en campaña. **Creó la escuela de enfermería en el hospital Saint Thomas** y su trabajo inspiró los comienzos de la **Cruz Roja.**
+Florence Nightingale dirigió el primer equipo oficial de enfermeras militares en Turquía, durante la guerra de Crimea; observó entonces que más soldados morían por enfermedad que por el resultado directo de sus heridas. «La **dama de la lámpara**», como la llamaron porque realizaba rondas nocturnas de control de los pacientes, se dedicó entonces a estudiar cómo reducir las muertes evitables en campaña. **Creó la escuela de enfermería en el hospital Saint Thomas** y su trabajo inspiró los comienzos de la **Cruz Roja.**
 
 **10. Marie Stopes, 1880–1958**
 
@@ -154,13 +154,13 @@ La**reina guerrera de los icenos durante la ocupación romana de Britania**, fue
 
 **15. Diana, princesa de Gales, 1961–97**
 
-En 1981 **Carlos, hijo de la reina Isabel, se casó con la joven Diana Spencer porque «quería hacer lo correcto para el país»**, según dijo a un amigo. El mundo entero —más de 700 millones de personas, se estima— miró su boda por televisión. **El desdichado matrimonio terminó en divorcio en 1996**, luego de años de construcción del **primer ícono de la celebridad** tal como se comprende hoy: a la vez confesional y jubilosa.
+En 1981 **Carlos, hijo de la reina Isabel, se casó con la joven Diana Spencer porque «quería hacer lo correcto para el país»**, según dijo a un amigo. El mundo entero, más de 700 millones de personas, se estima, miró su boda por televisión. **El desdichado matrimonio terminó en divorcio en 1996**, luego de años de construcción del **primer ícono de la celebridad** tal como se comprende hoy: a la vez confesional y jubilosa.
 
 ![La princesa de Gales, Diana Spencer, con sus hijos, Harry y William.](https://www.infobae.com/new-resizer/zSrGR3-vJed5Y7QM1FH84qGOCiE=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp)
 
 La princesa de Gales, Diana Spencer, con sus hijos, Harry y William.
 
-La prensa siguió cada paso de la vida de **Lady Di**: su lucha contra la bulimia, la felicidad que encontró con sus hijos, los **príncipes William y Harry**; las infidelidades de Carlos con su actual esposa, **Camilla Parker-Bowles**; la antipatía que sentía por ella la casa real; sus romances; su separación y, por fin, **su muerte, en un accidente en París**, mientras la perseguían los *paparazzi*. **Su trabajo social —por el cual fue llamada «la princesa del pueblo»— se centró en los niños y los enfermos de cáncer, HIV y trastornos mentales.**
+La prensa siguió cada paso de la vida de **Lady Di**: su lucha contra la bulimia, la felicidad que encontró con sus hijos, los **príncipes William y Harry**; las infidelidades de Carlos con su actual esposa, **Camilla Parker-Bowles**; la antipatía que sentía por ella la casa real; sus romances; su separación y, por fin, **su muerte, en un accidente en París**, mientras la perseguían los *paparazzi*. **Su trabajo social, por el cual fue llamada «la princesa del pueblo», se centró en los niños y los enfermos de cáncer, HIV y trastornos mentales.**
 
 **16. Amelia Earhart, 1897-alrededor de 1937, aviadora.**
 

@@ -22,11 +22,11 @@ The Centre for Public Impact (CPI) use the mechanics of a card game to explore h
 >
 > **So why is it that we’ve been playing the same tired, worn-out cards?**
 >
-> We use target-driven managing — even when we know full well that making people accountable for results they don’t actually control inevitably leads to all kinds of gaming and dysfunction.
+> We use target-driven managing, even when we know full well that making people accountable for results they don’t actually control inevitably leads to all kinds of gaming and dysfunction.
 >
-> We insist on knowing ‘what works’ — even though for complex problems knowing ‘what worked’ somewhere else won’t tell us much at all about whether it will work here.
+> We insist on knowing ‘what works’, even though for complex problems knowing ‘what worked’ somewhere else won’t tell us much at all about whether it will work here.
 >
-> We build transactional services — despite the fact that we know that it’s relationships which make many services work.
+> We build transactional services, despite the fact that we know that it’s relationships which make many services work.
 >
 > And we, of course, use hierarchy as the ultimate trump card.
 >
@@ -52,9 +52,9 @@ In the place of insisting on understanding “what works” ahead of time we cho
 
 We replace transactionality with relationships understanding that for complex services we need to create the space for meaningful personal interactions.
 
-**And instead of hierarchy, we choose subsidiarity — instead of assuming that power needs to sit at the centre of government and at the top of organizations we assume the opposite. We push authority to where the knowledge, expertise and wisdom sits — rather than carrying information to where authority sits. We believe in radically redistributing both power and accountability across the system.**
+**And instead of hierarchy, we choose subsidiarity, instead of assuming that power needs to sit at the centre of government and at the top of organizations we assume the opposite. We push authority to where the knowledge, expertise and wisdom sits, rather than carrying information to where authority sits. We believe in radically redistributing both power and accountability across the system.**
 
-This is radical but it’s not ‘our’ vision — because this is real, these cards are being played by pioneers like Wigan Council, by Gateshead Council, by the Dutch home care provider Buurtzorg and by many more here and abroad.
+This is radical but it’s not ‘our’ vision, because this is real, these cards are being played by pioneers like Wigan Council, by Gateshead Council, by the Dutch home care provider Buurtzorg and by many more here and abroad.
 
 It’s fun to talk about this in the language of games and to be creative with it but the backdrop to this is serious. Something profound needs to change and hopefully these [Radical Visions](https://www.nesta.org.uk/report/radical-visions-future-government/), this one included, can help catalyze that.
 
