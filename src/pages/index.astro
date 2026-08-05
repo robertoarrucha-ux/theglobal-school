@@ -89,6 +89,14 @@ const testimonials = (L
       { headline: 'Well prepared', quote: 'Inspiring presentations, well prepared, insightful, interactive and easy to work with.', author: 'Liana Taylor, Germany', org: 'Hive Europe' },
     ]) as { headline: string; quote: string; author: string; org: string }[];
 
+// Iconos SVG inline para los pilares de "Quiénes somos" (sin librerías, theme-able).
+const ICONS: Record<string, string> = {
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.7 3.9 6 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-6-3.9-9s1.3-6.3 3.9-9Z"/></svg>',
+  award: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.4 7.5 22 12 19.5 16.5 22 15 13.4"/></svg>',
+};
+const ABOUT_ICONS = ['clock', 'globe', 'award'];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -118,8 +126,9 @@ const jsonLd = {
     <div class="sec-head"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
     <p class="about-lead">{t.aboutLead}</p>
     <div class="about-pillars">
-      {t.aboutPillars.map((p) => (
+      {t.aboutPillars.map((p, i) => (
         <div class="about-card glass">
+          <span class="about-icon" set:html={ICONS[ABOUT_ICONS[i]]} />
           <h3>{p.title}</h3>
           <p>{p.text}</p>
         </div>
@@ -231,6 +240,7 @@ const jsonLd = {
           <blockquote>{tt.quote}</blockquote>
           <figcaption>
             <div>
+              <div class="testi-stars" aria-hidden="true">★★★★★</div>
               <strong>{tt.author}</strong>
               <span>{tt.org}</span>
             </div>

@@ -92,7 +92,10 @@
 .about-sec { margin-top: 3.5rem; }
 .about-lead { color: var(--txt-soft); font-size: 1.2rem; line-height: 1.7; max-width: 760px; margin: .3rem 0 2rem; }
 .about-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
-.about-card { padding: 1.7rem 1.6rem; border-radius: 18px; }
+.about-card { padding: 1.7rem 1.6rem; border-radius: 18px; transition: transform .2s, border-color .2s; }
+.about-card:hover { transform: translateY(-4px); border-color: rgba(123, 47, 255, .45); }
+.about-icon { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; margin-bottom: 1.1rem; color: var(--yellow); background: linear-gradient(135deg, rgba(123, 47, 255, .28), rgba(240, 90, 14, .16)); border: 1px solid var(--line); }
+.about-icon svg { width: 27px; height: 27px; }
 .about-card h3 { font-family: var(--font-display); font-size: 1.55rem; color: var(--txt); margin: 0 0 .5rem; }
 .about-card p { color: var(--txt-soft); line-height: 1.6; margin: 0; }
 
@@ -109,6 +112,9 @@
 .testi-card figcaption strong { display: block; font-size: .92rem; color: var(--txt); }
 .testi-card figcaption span, .testi-card figcaption a { display: block; font-size: .8rem; color: var(--txt-soft); text-decoration: none; }
 .testi-card figcaption a:hover { color: var(--txt); text-decoration: underline; }
+.testi-card { transition: transform .2s, border-color .2s; }
+.testi-card:hover { transform: translateY(-4px); border-color: rgba(123, 47, 255, .4); }
+.testi-stars { color: var(--yellow); letter-spacing: 2px; font-size: .82rem; line-height: 1; margin-bottom: .35rem; }
 
 /* Colaboradores y Expositores (cuadrícula uniforme) */
 .xp-collabs { margin: 2.5rem 0; }
