@@ -72,6 +72,13 @@
 /* Los contenedores [data-fresh] usan el atributo hidden cuando están vacíos → forzar ocultado. */
 [hidden] { display: none !important; }
 
+/* Estado vacío del marketplace (ej. sitio EN sin experiencias publicadas aún) */
+.mkt-empty { text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem; border-radius: 20px; margin: 1rem 0 2rem; }
+.mkt-empty h3 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--txt); margin: 0 0 .6rem; }
+.mkt-empty p { color: var(--txt-soft); max-width: 520px; margin: 0 auto; line-height: 1.6; }
+.mkt-empty a { color: var(--purple-bright); }
+.mkt-empty a:hover { text-decoration: underline; }
+
 /* Galería / slideshow de fotos del evento (carrusel nativo, carga rápido) */
 .xp-gallery { margin: 1.5rem auto 0; }
 .gallery-strip { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: .5rem; scrollbar-width: thin; }

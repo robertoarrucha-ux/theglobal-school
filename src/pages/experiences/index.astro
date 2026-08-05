@@ -19,6 +19,13 @@ const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Free</span>
   </section>
 
   <div class="mkt-wrap">
+    {experiences.length === 0 ? (
+      <div class="mkt-empty glass">
+        <h3>Our English marketplace is coming soon</h3>
+        <p>We're preparing our international events and trips in English. Meanwhile, explore the <a href="/blog/">blog</a> or visit our <a href="https://es.theglobal.school/experiencias/">Spanish marketplace</a>.</p>
+      </div>
+    ) : (
+    <>
     <div class="mkt-filters" id="filters">
       <button class="mkt-chip" data-f="all" aria-pressed="true">All</button>
       <button class="mkt-chip" data-f="evento" aria-pressed="false">Events</button>
@@ -46,6 +53,8 @@ const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Free</span>
         </a>
       ))}
     </div>
+    </>
+    )}
   </div>
 
   <script>

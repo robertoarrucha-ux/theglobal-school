@@ -78,15 +78,18 @@ const jsonLd = {
   </section>
 
   <!-- MÁS VOTADOS (widget cliente, votos en vivo) -->
+  {votingData.length > 0 && (
   <section class="mkt-wrap voted-sec" id="voted-section">
     <div class="sec-head"><p class="eyebrow">{t.votedEyebrow}</p><h2>{t.votedTitle}</h2></div>
     <p class="voted-intro">{t.votedIntro}</p>
     <div class="voted-grid" id="voted-grid"></div>
   </section>
+  )}
   <script id="xp-vote-data" type="application/json" set:html={JSON.stringify(votingData)}></script>
   <script define:vars={{ voteTxt: t.vote, votedTxt: t.voted, votesTxt: t.votesLabel }}>
     (async () => {
       const el = document.getElementById('voted-grid');
+      if (!el) return;
       const data = JSON.parse(document.getElementById('xp-vote-data').textContent || '[]');
       const bySlug = Object.fromEntries(data.map((d) => [d.slug, d]));
       let counts = {}, voted = [];
@@ -136,6 +139,13 @@ const jsonLd = {
       <p class="eyebrow">{t.programsEyebrow}</p>
       <h2>{t.programsTitle}</h2>
     </div>
+    {experiences.length === 0 ? (
+      <div class="mkt-empty glass">
+        <h3>{L ? 'Próximamente' : 'Coming soon'}</h3>
+        <p set:html={L ? 'Estamos preparando más experiencias.' : 'We\'re preparing our international events and trips in English. Meanwhile, explore the <a href="/blog/">blog</a>.'} />
+      </div>
+    ) : (
+    <>
     <div class="mkt-filters" id="filters">
       <button class="mkt-chip" data-f="all" aria-pressed="true">{t.allEvents}</button>
       <button class="mkt-chip" data-f="evento" aria-pressed="false">{t.events}</button>
@@ -157,6 +167,8 @@ const jsonLd = {
         </a>
       ))}
     </div>
+    </>
+    )}
   </section>
 
   <!-- ALIADOS -->
