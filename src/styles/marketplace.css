@@ -222,9 +222,17 @@
 .xp-detail-hero { position: relative; min-height: 52vh; display: flex; align-items: flex-end; background: linear-gradient(135deg, var(--purple-glow), var(--bg-mid)); }
 .xp-detail-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .45; }
 .xp-detail-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-deep) 8%, transparent 70%); }
-.xp-detail-hero .inner { position: relative; z-index: 2; padding: 3rem 0; }
-.xp-detail-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2.5rem; padding: 3rem 0 5rem; align-items: start; }
-@media (max-width: 860px) { .xp-detail-grid { grid-template-columns: 1fr; } }
+.xp-detail-hero .inner { position: relative; z-index: 2; padding: 3rem clamp(1rem, 3vw, 2rem); max-width: 1280px; }
+.xp-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 2.5rem; padding: 3rem 0 5rem; align-items: start; max-width: 1280px; }
+.xp-detail-grid p, .xp-detail-grid li, .xp-richbody { overflow-wrap: break-word; }
+/* Pantallas medianas: aside un poco más angosto antes de colapsar */
+@media (max-width: 980px) { .xp-detail-grid { grid-template-columns: minmax(0, 1fr) 300px; gap: 1.8rem; } }
+/* Móvil: una sola columna, la caja de info/CTA arriba, sin sticky */
+@media (max-width: 860px) {
+  .xp-detail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .xp-detail-grid aside { order: -1; }
+  .xp-book { position: static; top: auto; }
+}
 .xp-detail-grid h2 { font-size: 1.9rem; margin: 2rem 0 .8rem; }
 .xp-detail-grid p, .xp-detail-grid li { color: var(--txt-soft); line-height: 1.7; }
 .xp-highlights { list-style: none; padding: 0; }
