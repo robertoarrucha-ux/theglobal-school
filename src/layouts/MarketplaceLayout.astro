@@ -26,7 +26,8 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
     <header class="mkt-header">
       <div class="inner">
         <a href="/" class="mkt-brand">The <span>New Global</span> School</a>
-        <nav class="mkt-nav">
+        <button class="mkt-burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="mkt-nav"><span></span><span></span><span></span></button>
+        <nav class="mkt-nav" id="mkt-nav">
           <a href={L ? '/experiencias/' : '/experiences/'}>{L ? 'Experiencias' : 'Experiences'}</a>
           <a href="/blog/">Blog</a>
           <a href={L ? '/nosotros/' : '/about-us/'}>{L ? 'Nosotros' : 'About'}</a>
@@ -38,6 +39,22 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
     <main>
       <slot />
     </main>
+    <script is:inline>
+      // Menú móvil: el botón hamburguesa abre/cierra la navegación.
+      (function () {
+        var b = document.querySelector('.mkt-burger'), n = document.getElementById('mkt-nav');
+        if (!b || !n) return;
+        b.addEventListener('click', function () {
+          var open = n.classList.toggle('open');
+          b.classList.toggle('open', open);
+          b.setAttribute('aria-expanded', String(open));
+        });
+        // Cerrar al tocar un enlace
+        n.addEventListener('click', function (e) {
+          if (e.target.closest('a')) { n.classList.remove('open'); b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }
+        });
+      })();
+    </script>
     <script is:inline>
       // Oculta imágenes rotas para revelar el gradiente de marca (fallback elegante).
       document.addEventListener('error', (e) => {

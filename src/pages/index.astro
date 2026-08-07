@@ -122,21 +122,6 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- QUIÉNES SOMOS (autoridad) -->
-  <section class="mkt-wrap about-sec" id="nosotros">
-    <div class="sec-head"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
-    <p class="about-lead">{t.aboutLead}</p>
-    <div class="about-pillars">
-      {t.aboutPillars.map((p, i) => (
-        <div class="about-card glass">
-          <span class="about-icon" set:html={ICONS[ABOUT_ICONS[i]]} />
-          <h3>{p.title}</h3>
-          <p>{p.text}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-
   <!-- MÁS VOTADOS (widget cliente, votos en vivo) -->
   {votingData.length > 0 && (
   <section class="mkt-wrap voted-sec" id="voted-section">
@@ -229,6 +214,21 @@ const jsonLd = {
     </div>
     </>
     )}
+  </section>
+
+  <!-- QUIÉNES SOMOS (autoridad) -->
+  <section class="mkt-wrap about-sec" id="nosotros">
+    <div class="sec-head"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
+    <p class="about-lead">{t.aboutLead}</p>
+    <div class="about-pillars">
+      {t.aboutPillars.map((p, i) => (
+        <div class="about-card glass">
+          <span class="about-icon" set:html={ICONS[ABOUT_ICONS[i]]} />
+          <h3>{p.title}</h3>
+          <p>{p.text}</p>
+        </div>
+      ))}
+    </div>
   </section>
 
   <!-- TESTIMONIOS -->
