@@ -153,6 +153,21 @@ function fmtDate(iso, locale) {
   try { return new Date(iso + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' }); }
   catch { return iso || ''; }
 }
+// Texto de estaciones para el hero: "Verano e Invierno 2027" / "Summer & Winter 2027".
+function seasonsText(x, L) {
+  const eds = Array.isArray(x.editions) ? x.editions : [];
+  if (!eds.length) {
+    return x.startDate ? new Date(x.startDate + 'T00:00:00').toLocaleDateString(L ? 'es-ES' : 'en-US', { month: 'long', year: 'numeric' }) : '';
+  }
+  const S = { summer: { es: 'Verano', en: 'Summer' }, winter: { es: 'Invierno', en: 'Winter' } };
+  const lang = L ? 'es' : 'en';
+  const parts = [];
+  if (eds.some((e) => e.season === 'summer')) parts.push(S.summer[lang]);
+  if (eds.some((e) => e.season === 'winter')) parts.push(S.winter[lang]);
+  const year = new Date(eds[0].startDate + 'T00:00:00').getFullYear();
+  const joined = parts.length === 2 ? `${parts[0]} ${L ? 'e' : '&'} ${parts[1]}` : parts.join(', ');
+  return `${joined} ${year}`;
+}
 // Lista estándar "Tu experiencia completa" (viajes), espejo de src/lib/inclusions.ts.
 const DEFAULT_INCL = {
   es: {
@@ -170,7 +185,7 @@ function renderFragments(x, lang) {
   const a = (arr) => (Array.isArray(arr) ? arr : []);
   const dateStr = x.endDate ? `${fmtDate(x.startDate, locale)} – ${fmtDate(x.endDate, locale)}` : fmtDate(x.startDate, locale);
 
-  const meta = `📍 ${x.venue ? esc(x.venue) + ' · ' : ''}${esc(x.city || '')}, ${esc(x.country || '')} &nbsp;·&nbsp; 🗓 ${dateStr} &nbsp;·&nbsp; 🗣 ${esc(x.language || '')}`;
+  const meta = `📍 ${x.venue ? esc(x.venue) + ' · ' : ''}${esc(x.city || '')}, ${esc(x.country || '')} &nbsp;·&nbsp; 🗓 ${esc(seasonsText(x, L))} &nbsp;·&nbsp; 🗣 ${esc(x.language || '')}`;
   const price = Number(x.publicPrice) === 0
     ? (L ? 'Gratis' : 'Free')
     : `${esc(x.currency || '')} ${Number(x.publicPrice || 0).toLocaleString()}<span class="cur"> / ${L ? 'persona' : 'person'}</span>`;

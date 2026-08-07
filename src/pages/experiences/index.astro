@@ -1,6 +1,7 @@
 ---
 import MarketplaceLayout from '../../layouts/MarketplaceLayout.astro';
 import { loadExperiences } from '../../lib/experiences';
+import { seasonsText } from '../../lib/editions';
 import { LANG } from '../../lib/site';
 
 // M2 (muestra): en ES redirige a /experiencias/. Datos reales vendrán de Firestore.
@@ -41,7 +42,7 @@ const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Free</span>
           </div>
           <div class="body">
             <div class="meta">
-              <span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {fmtDate(x.startDate)}</span>
+              <span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {seasonsText(x, false)}</span>
             </div>
             <h3>{x.title}</h3>
             <p class="summary">{x.summary}</p>

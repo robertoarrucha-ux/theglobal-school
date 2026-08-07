@@ -5,6 +5,7 @@ import { LANG, SELF_ORIGIN } from '../../lib/site';
 import { getEntry, render } from 'astro:content';
 import { marked } from 'marked';
 import { getInclusions } from '../../lib/inclusions';
+import { seasonsText, editionRows } from '../../lib/editions';
 const inc = getInclusions('en');
 
 export async function getStaticPaths() {
@@ -60,7 +61,7 @@ const jsonLd = {
       <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Event' : 'Trip'}</span>
       <h1 data-fresh="title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0">{x.title}</h1>
       <p data-fresh="summary" style="color:var(--txt-soft);max-width:640px">{x.summary}</p>
-      <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {dateStr} &nbsp;·&nbsp; 🗣 {x.language}</p>
+      <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {seasonsText(x, false)} &nbsp;·&nbsp; 🗣 {x.language}</p>
     </div>
   </section>
 
@@ -223,7 +224,9 @@ const jsonLd = {
     <aside>
       <div class="xp-book glass">
         <div style="margin:0 0 1rem">
-          <div class="row"><span>Dates</span><span>{dateStr}</span></div>
+          {editionRows(x, false).length > 0
+            ? editionRows(x, false).map((e) => <div class="row"><span>{e.label}</span><span>{e.range}</span></div>)
+            : <div class="row"><span>Dates</span><span>{dateStr}</span></div>}
           <div class="row"><span>Format</span><span>{fmtFormat(x.format)}</span></div>
           <div class="row"><span>Host</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
         </div>

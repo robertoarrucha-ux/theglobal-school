@@ -2,6 +2,7 @@
 import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
 import { getCollection } from 'astro:content';
 import { loadExperiences } from '../lib/experiences';
+import { seasonsText } from '../lib/editions';
 import { LANG, BRAND, SELF_ORIGIN } from '../lib/site';
 
 const L = LANG === 'es';
@@ -218,7 +219,7 @@ const jsonLd = {
             <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? t.events.replace(/s$/, '') : (L ? 'Viaje' : 'Trip')}</span>
           </div>
           <div class="body">
-            <div class="meta"><span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {x.startDate ? fmtDate(x.startDate) : ''}</span></div>
+            <div class="meta"><span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {seasonsText(x, L)}</span></div>
             <h3>{x.title}</h3>
             <p class="summary">{x.summary}</p>
             <div class="foot"><span class="xp-price consult">{L ? 'A consultar' : 'On request'}</span><span class="xp-pub">{x.publisher?.type === 'tgs' ? 'TNGS' : x.publisher?.name}</span></div>

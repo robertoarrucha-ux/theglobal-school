@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import { loadExperiences } from '../../lib/experiences';
 import { LANG, SELF_ORIGIN } from '../../lib/site';
 import { getInclusions } from '../../lib/inclusions';
+import { seasonsText, editionRows } from '../../lib/editions';
 const inc = getInclusions('es');
 
 export async function getStaticPaths() {
@@ -61,7 +62,7 @@ const jsonLd = {
       <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Evento' : 'Viaje'}</span>
       <h1 data-fresh="title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin:.6rem 0">{x.title}</h1>
       <p data-fresh="summary" style="color:var(--txt-soft);max-width:640px">{x.summary}</p>
-      <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {dateStr} &nbsp;·&nbsp; 🗣 {x.language}</p>
+      <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {seasonsText(x, true)} &nbsp;·&nbsp; 🗣 {x.language}</p>
     </div>
   </section>
 
@@ -224,7 +225,9 @@ const jsonLd = {
     <aside>
       <div class="xp-book glass">
         <div style="margin:0 0 1rem">
-          <div class="row"><span>Fechas</span><span>{dateStr}</span></div>
+          {editionRows(x, true).length > 0
+            ? editionRows(x, true).map((e) => <div class="row"><span>{e.label}</span><span>{e.range}</span></div>)
+            : <div class="row"><span>Fechas</span><span>{dateStr}</span></div>}
           <div class="row"><span>Formato</span><span>{fmtFormat(x.format)}</span></div>
           <div class="row"><span>Anfitrión</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
         </div>
