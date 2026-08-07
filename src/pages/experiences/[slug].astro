@@ -102,8 +102,20 @@ const jsonLd = {
       </div>
       {!(x.sections && x.sections.length > 0) && (
         <div data-fresh-fallback>
-          {FullContent ? <div class="xp-richbody"><FullContent /></div> : (<><h2>About</h2><p>{x.description}</p></>)}
+          {FullContent
+            ? <div class="xp-richbody"><FullContent /></div>
+            : (!x.leader && !x.rationale && x.description
+                ? <div class="xp-richbody"><h2>About</h2><Fragment set:html={marked.parse(x.description, { breaks: true })} /></div>
+                : null)}
         </div>
+      )}
+
+      {x.leader && (
+        <figure class="xp-leader glass">
+          <p class="xp-leader-label">Your historical guide</p>
+          <blockquote>{x.leader.narrative}</blockquote>
+          <figcaption>{x.leader.name} · <span>{x.leader.title}</span></figcaption>
+        </figure>
       )}
 
       <section class="xp-collabs" data-fresh="collaborators" hidden={!(x.collaborators && x.collaborators.length > 0)}>
@@ -146,13 +158,6 @@ const jsonLd = {
           </>
         )}
       </section>
-
-      {x.leader && (
-        <blockquote class="xp-leader glass">
-          <p>“{x.leader.narrative}”</p>
-          <footer>{x.leader.name}, <span>{x.leader.title}</span></footer>
-        </blockquote>
-      )}
 
       {x.rationale && (
         <>

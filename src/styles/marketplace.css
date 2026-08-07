@@ -259,10 +259,11 @@
 .xp-agenda-item .lbl { color: var(--purple-bright); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
 
 /* Bloques ricos de expedición */
-.xp-leader { margin: 1.5rem 0; padding: 1.4rem 1.6rem; border-radius: 16px; border-left: 3px solid var(--yellow); }
-.xp-leader p { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: var(--txt); margin: 0 0 .6rem; }
-.xp-leader footer { color: var(--txt-soft); font-size: .9rem; }
-.xp-leader footer span { color: var(--purple-bright); }
+.xp-leader { margin: 1.5rem 0 2rem; padding: 1.5rem 1.7rem; border-radius: 16px; border-left: 3px solid var(--yellow); }
+.xp-leader-label { font-family: var(--font-sans); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--yellow); margin: 0 0 .7rem; }
+.xp-leader blockquote { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: var(--txt); margin: 0 0 .8rem; line-height: 1.4; }
+.xp-leader figcaption { color: var(--txt-soft); font-size: .92rem; }
+.xp-leader figcaption span { color: var(--purple-bright); }
 .xp-rationale { display: grid; gap: 1rem; }
 .xp-rationale > div { padding: 1.1rem 1.3rem; border-radius: 14px; }
 .xp-rationale h4 { font-family: var(--font-sans); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--yellow); margin: 0 0 .4rem; }
