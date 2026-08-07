@@ -231,7 +231,7 @@
 @media (max-width: 860px) {
   .xp-detail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .xp-detail-grid aside { order: -1; }
-  .xp-book { position: static; top: auto; }
+  .xp-detail-grid .xp-book { position: static; top: auto; }
 }
 .xp-detail-grid h2 { font-size: 1.9rem; margin: 2rem 0 .8rem; }
 .xp-detail-grid p, .xp-detail-grid li { color: var(--txt-soft); line-height: 1.7; }
