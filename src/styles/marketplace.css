@@ -264,6 +264,20 @@
 .xp-leader blockquote { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: var(--txt); margin: 0 0 .8rem; line-height: 1.4; }
 .xp-leader figcaption { color: var(--txt-soft); font-size: .92rem; }
 .xp-leader figcaption span { color: var(--purple-bright); }
+
+/* Ruta del viaje (ciudades como chips conectadas) */
+.xp-route { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 1.6rem; }
+.xp-route .city { background: rgba(255, 255, 255, .06); border: 1px solid var(--line); border-radius: 999px; padding: .32rem .85rem; font-size: .85rem; color: var(--txt); }
+.xp-route .arrow { color: var(--purple-bright); font-weight: 700; }
+
+/* ¿Cómo funciona? (proceso B2B + CTA de cierre) */
+.xp-how { margin-top: 3rem; }
+.xp-how-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.3rem 0 1.6rem; }
+.xp-how-step { padding: 1.4rem; border-radius: 16px; }
+.xp-how-step .num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--purple-glow), var(--orange)); color: #fff; font-weight: 700; margin-bottom: .8rem; }
+.xp-how-step h4 { font-family: var(--font-sans); font-size: 1rem; color: var(--txt); margin: 0 0 .35rem; }
+.xp-how-step p { color: var(--txt-soft); font-size: .9rem; line-height: 1.5; margin: 0; }
+.xp-how-cta svg { width: 18px; height: 18px; vertical-align: -3px; margin-right: .45rem; }
 .xp-rationale { display: grid; gap: 1rem; }
 .xp-rationale > div { padding: 1.1rem 1.3rem; border-radius: 14px; }
 .xp-rationale h4 { font-family: var(--font-sans); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--yellow); margin: 0 0 .4rem; }
