@@ -56,6 +56,7 @@ export interface Experience {
   // Idiomas del sitio donde se publica (EN theglobal.school / ES es.theglobal.school).
   // Vacío/ausente = ambos (retrocompatible).
   sites?: ('en' | 'es')[];
+  videoUrl?: string;   // enlace de YouTube (se muestra como lite-embed con carga diferida)
 }
 
 // 16 expediciones reales importadas de Viajes (generadas por migration/transform_expeditions.mjs).

@@ -265,6 +265,16 @@
 .xp-leader figcaption { color: var(--txt-soft); font-size: .92rem; }
 .xp-leader figcaption span { color: var(--purple-bright); }
 
+/* Video (lite-YouTube: fachada + iframe al hacer clic) */
+.xp-video { margin: 1.5rem auto 0; }
+.lite-yt { position: relative; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; cursor: pointer; border: 1px solid var(--line); background: #000; }
+.lite-yt img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lite-yt-play { position: absolute; inset: 0; margin: auto; width: 68px; height: 48px; padding: 0; border: 0; background: none; cursor: pointer; }
+.lite-yt-play svg { width: 100%; height: 100%; }
+.lite-yt-play .yt-bg { fill: #212121; opacity: .82; transition: fill .2s, opacity .2s; }
+.lite-yt:hover .yt-bg { fill: #f00; opacity: 1; }
+.lite-yt-frame { width: 100%; height: 100%; border: 0; display: block; }
+
 /* Ruta del viaje (ciudades como chips conectadas) */
 .xp-route { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 1.6rem; }
 .xp-route .city { background: rgba(255, 255, 255, .06); border: 1px solid var(--line); border-radius: 999px; padding: .32rem .85rem; font-size: .85rem; color: var(--txt); }

@@ -56,6 +56,24 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
       })();
     </script>
     <script is:inline>
+      // Lite-YouTube: carga el iframe real solo al hacer clic (primer render sin YouTube).
+      (function () {
+        document.querySelectorAll('.lite-yt').forEach(function (el) {
+          el.addEventListener('click', function () {
+            var id = el.getAttribute('data-id');
+            if (!id) return;
+            var f = document.createElement('iframe');
+            f.className = 'lite-yt-frame';
+            f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+            f.title = 'Video';
+            f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            f.setAttribute('allowfullscreen', '');
+            el.replaceChildren(f);
+          }, { once: true });
+        });
+      })();
+    </script>
+    <script is:inline>
       // Oculta imágenes rotas para revelar el gradiente de marca (fallback elegante).
       document.addEventListener('error', (e) => {
         const t = e.target;
