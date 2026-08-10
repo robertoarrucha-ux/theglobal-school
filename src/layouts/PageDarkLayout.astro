@@ -1,0 +1,60 @@
+---
+// Página de contenido en la marca OSCURA/glass (coherente con home + marketplace).
+// Para arquetipos tipo landing (Institucional, Programa/Curso, Certificación, Herramienta,
+// Perfil, Evento, Proyecto, Donación, Aplicación). El blog y las Historias siguen en claro.
+import MarketplaceLayout from './MarketplaceLayout.astro';
+import { LANG } from '../lib/site';
+
+const { data: d, archetype = 'Institucional' } = Astro.props;
+const L = LANG === 'es';
+const contactHref = L ? '/contacto/' : '/contact/';
+
+const ARCH: Record<string, { label: string; cta: string; blurb: string }> = {
+  'Programa/Curso':  { label: L ? 'Programa' : 'Program', cta: L ? 'Solicita información' : 'Request information', blurb: L ? '¿Te interesa este programa? Escríbenos y te damos todos los detalles.' : 'Interested in this program? Contact us for full details.' },
+  'Certificación':   { label: L ? 'Certificación' : 'Certification', cta: L ? 'Solicita información' : 'Request information', blurb: L ? '¿Quieres certificarte? Cuéntanos y te guiamos en el proceso.' : 'Want to get certified? Reach out and we will guide you.' },
+  'Institucional':   { label: 'The New Global School', cta: L ? 'Contáctanos' : 'Contact us', blurb: L ? '¿Hablamos? Estamos para ayudarte.' : "Let's talk, we're here to help." },
+  'Perfil':          { label: L ? 'Perfil' : 'Profile', cta: L ? 'Contactar' : 'Get in touch', blurb: L ? '¿Quieres colaborar o invitar a un evento? Escríbenos.' : 'Want to collaborate or invite a speaker? Contact us.' },
+  'Evento/Campaña':  { label: L ? 'Evento' : 'Event', cta: L ? 'Quiero participar' : 'I want to join', blurb: L ? '¿Te interesa participar? Escríbenos.' : 'Interested in taking part? Contact us.' },
+  'Herramienta':     { label: L ? 'Metodología' : 'Methodology', cta: L ? 'Trabaja con nosotros' : 'Work with us', blurb: L ? '¿Quieres aplicar esta metodología en tu organización? Te acompañamos.' : 'Want to apply this methodology in your organization? We can help.' },
+  'Proyecto':        { label: L ? 'Proyecto' : 'Project', cta: L ? 'Súmate al proyecto' : 'Join the project', blurb: L ? '¿Quieres participar o apoyar este proyecto? Escríbenos.' : 'Want to take part or support this project? Contact us.' },
+  'Donación':        { label: L ? 'Contribuir' : 'Contribute', cta: L ? 'Quiero contribuir' : 'I want to contribute', blurb: L ? 'Tu aporte impulsa educación y liderazgo con impacto.' : 'Your contribution powers education and impactful leadership.' },
+  'Aplicación':      { label: L ? 'Convocatoria' : 'Application', cta: L ? 'Aplicar ahora' : 'Apply now', blurb: L ? '¿Te interesa? Envíanos tu aplicación y te contactamos.' : 'Interested? Send your application and we will get back to you.' },
+  'Otras':           { label: 'The New Global School', cta: L ? 'Contáctanos' : 'Contact us', blurb: L ? '¿Hablamos?' : "Let's talk." },
+};
+const a = ARCH[archetype] || ARCH['Institucional'];
+const ctaHref = d.ctaHref || contactHref;
+const ctaLabel = d.ctaLabel || a.cta;
+const ctaExternal = /^https?:\/\//.test(ctaHref);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: d.title, description: d.description, inLanguage: d.lang,
+  publisher: { '@type': 'Organization', name: 'The New Global School' },
+};
+---
+<MarketplaceLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="xp-detail-hero pd-hero">
+    {d.hero && <img src={d.hero} alt={d.title} />}
+    <div class="mkt-wrap inner">
+      <p class="pd-eyebrow">{a.label}</p>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);margin:.5rem 0">{d.title}</h1>
+      {d.description && <p style="color:var(--txt-soft);max-width:660px">{d.description}</p>}
+    </div>
+  </section>
+
+  <div class="mkt-wrap page-dark-body xp-richbody">
+    <slot />
+  </div>
+
+  {(a.cta || d.ctaHref) && (
+    <section class="mkt-wrap">
+      <div class="pd-cta glass">
+        {a.blurb && <p>{a.blurb}</p>}
+        <a class="btn-primary" href={ctaHref} {...(ctaExternal ? { rel: 'noopener', target: '_blank' } : {})}>{ctaLabel}</a>
+      </div>
+    </section>
+  )}
+</MarketplaceLayout>

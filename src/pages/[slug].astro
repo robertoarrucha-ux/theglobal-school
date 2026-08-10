@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import PageLayout from '../layouts/PageLayout.astro';
+import PageDarkLayout from '../layouts/PageDarkLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
 import categoriesData from '../../migration/categories.json';
 import pagesClassified from '../../migration/pages_classified.json';
@@ -54,11 +55,16 @@ export async function getStaticPaths() {
 const { entry, kind, category, archetype } = Astro.props as any;
 const rendered = kind === 'category' ? null : await render(entry);
 const Content = rendered?.Content;
+// Historias (long-form) y Legal siguen en tema claro; el resto de páginas landing van a la marca oscura.
+const LIGHT_PAGE = new Set(['Historia', 'Legal']);
+const usePageDark = kind !== 'posts' && kind !== 'category' && !LIGHT_PAGE.has(archetype);
 ---
 {kind === 'category' ? (
   <CategoryLayout category={category} />
 ) : kind === 'posts' ? (
   <ArticleLayout data={entry.data}><Content /></ArticleLayout>
+) : usePageDark ? (
+  <PageDarkLayout data={entry.data} archetype={archetype}><Content /></PageDarkLayout>
 ) : (
   <PageLayout data={entry.data} archetype={archetype}><Content /></PageLayout>
 )}

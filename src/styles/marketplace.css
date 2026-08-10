@@ -265,6 +265,15 @@
 .xp-leader figcaption { color: var(--txt-soft); font-size: .92rem; }
 .xp-leader figcaption span { color: var(--purple-bright); }
 
+/* Página de contenido en marca oscura (PageDarkLayout) */
+.pd-hero { min-height: 42vh; }
+.pd-eyebrow { color: var(--yellow); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; margin: 0; }
+.page-dark-body { max-width: 860px; padding-top: 2.5rem; padding-bottom: 1rem; }
+.page-dark-body h1 { font-family: var(--font-display); font-size: 1.9rem; color: var(--txt); margin: 1.6rem 0 .8rem; line-height: 1.2; }
+.page-dark-body hr { display: none; }
+.pd-cta { margin: 2.5rem 0 4rem; padding: 2rem 2.2rem; border-radius: 20px; display: flex; align-items: center; justify-content: space-between; gap: 1.3rem; flex-wrap: wrap; }
+.pd-cta p { margin: 0; font-family: var(--font-display); font-size: 1.35rem; color: var(--txt); max-width: 580px; }
+
 /* Video (lite-YouTube: fachada + iframe al hacer clic) */
 .xp-video { margin: 1.5rem auto 0; }
 .lite-yt { position: relative; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; cursor: pointer; border: 1px solid var(--line); background: #000; }
