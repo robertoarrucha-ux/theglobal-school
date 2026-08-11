@@ -1,0 +1,102 @@
+---
+// Landing de curso (marca oscura/glass). Da a los cursos en línea una estructura propia,
+// distinta a la de un post: catálogo -> grilla de tarjetas; individual -> hero + módulos + CTA.
+import MarketplaceLayout from './MarketplaceLayout.astro';
+import { LANG } from '../lib/site';
+import type { CourseParse } from '../lib/courses';
+
+const { data: d, course } = Astro.props as { data: any; course: CourseParse };
+const L = LANG === 'es';
+const contactHref = L ? '/contacto/' : '/contact/';
+const isCatalog = course?.kind === 'catalog';
+
+const free = /gratis|gratuito|free/i.test(`${d.title} ${d.description || ''}`);
+const badge = isCatalog
+  ? (L ? 'Cursos en línea' : 'Online courses')
+  : free ? (L ? 'Curso gratuito' : 'Free course') : (L ? 'Curso en línea' : 'Online course');
+
+const enrollHref = d.ctaHref || contactHref;
+const enrollLabel = d.ctaLabel || (free
+  ? (L ? 'Solicita acceso gratuito' : 'Request free access')
+  : (L ? 'Solicita información' : 'Request information'));
+const enrollExternal = /^https?:\/\//.test(enrollHref);
+
+const chips = [
+  free ? (L ? 'Acceso gratuito' : 'Free access') : null,
+  L ? 'En línea' : 'Online',
+  L ? 'A tu ritmo' : 'Self-paced',
+  course?.modules?.length ? (L ? `${course.modules.length} módulos` : `${course.modules.length} modules`) : null,
+].filter(Boolean) as string[];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: d.title,
+  description: d.description,
+  inLanguage: d.lang,
+  provider: { '@type': 'Organization', name: 'The New Global School', sameAs: 'https://theglobal.school' },
+  ...(course?.instructorName ? { instructor: { '@type': 'Person', name: course.instructorName } } : {}),
+  ...(free ? { isAccessibleForFree: true, offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' } } : {}),
+};
+---
+<MarketplaceLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="xp-detail-hero pd-hero course-hero">
+    {d.hero && <img src={d.hero} alt={d.title} />}
+    <div class="mkt-wrap inner">
+      <p class="pd-eyebrow">{badge}</p>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);margin:.5rem 0">{d.title}</h1>
+      {d.description && <p style="color:var(--txt-soft);max-width:660px">{d.description}</p>}
+      {!isCatalog && (
+        <div class="course-actions">
+          <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
+          {chips.length > 0 && (
+            <ul class="course-chips">{chips.map((c) => <li>{c}</li>)}</ul>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+
+  {isCatalog ? (
+    <section class="mkt-wrap course-catalog">
+      <div class="course-grid">
+        {course.cards.map((c) => (
+          <a class="course-card glass" href={c.href}>
+            <div class="cc-media">{c.img && <img src={c.img} alt={c.title} loading="lazy" />}</div>
+            <div class="cc-body">
+              <h3>{c.title}</h3>
+              {c.instructor && <p class="cc-tutor">{c.instructor}</p>}
+              <span class="cc-link">{L ? 'Ver curso' : 'View course'} →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  ) : (
+    <div class="mkt-wrap course-single">
+      {course?.modules?.length >= 2 && (
+        <aside class="course-syllabus glass">
+          <h2>{L ? 'Contenido del curso' : 'Course content'}</h2>
+          <ol>{course.modules.map((m) => <li>{m}</li>)}</ol>
+          <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
+        </aside>
+      )}
+      <div class="page-dark-body xp-richbody course-body">
+        <slot />
+      </div>
+    </div>
+  )}
+
+  {!isCatalog && (
+    <section class="mkt-wrap">
+      <div class="pd-cta glass">
+        <p>{free
+          ? (L ? '¿Listo para empezar? Accede gratis a este curso.' : 'Ready to start? Get free access to this course.')
+          : (L ? '¿Te interesa este curso? Escríbenos y te damos los detalles.' : 'Interested in this course? Contact us for the details.')}</p>
+        <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
+      </div>
+    </section>
+  )}
+</MarketplaceLayout>

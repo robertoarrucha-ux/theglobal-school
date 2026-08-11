@@ -3,7 +3,9 @@ import { getCollection, render } from 'astro:content';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import PageDarkLayout from '../layouts/PageDarkLayout.astro';
+import CourseLayout from '../layouts/CourseLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
+import { parseCourse } from '../lib/courses';
 import categoriesData from '../../migration/categories.json';
 import pagesClassified from '../../migration/pages_classified.json';
 import { LANG } from '../lib/site';
@@ -70,11 +72,16 @@ const Content = rendered?.Content;
 // Historias (long-form) y Legal siguen en tema claro; el resto de páginas landing van a la marca oscura.
 const LIGHT_PAGE = new Set(['Historia', 'Legal']);
 const usePageDark = kind !== 'posts' && kind !== 'category' && !LIGHT_PAGE.has(archetype);
+// Cursos en línea (arquetipo Programa/Curso): estructura propia (catálogo o landing de curso).
+const isCourse = kind === 'pages' && archetype === 'Programa/Curso';
+const course = isCourse ? parseCourse(entry.body) : null;
 ---
 {kind === 'category' ? (
   <CategoryLayout category={category} />
 ) : kind === 'posts' ? (
   <ArticleLayout data={entry.data} readingTime={readingTime} related={related}><Content /></ArticleLayout>
+) : isCourse ? (
+  <CourseLayout data={entry.data} course={course}><Content /></CourseLayout>
 ) : usePageDark ? (
   <PageDarkLayout data={entry.data} archetype={archetype}><Content /></PageDarkLayout>
 ) : (
