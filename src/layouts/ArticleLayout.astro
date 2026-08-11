@@ -22,13 +22,15 @@ const jsonLd = {
 ---
 <BaseLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  {d.hero && (
-    <div class="article-hero"><img src={d.hero} alt={d.title} width="1100" height="550" /></div>
-  )}
-  <article class="article">
-    {d.targetKeyword && <p class="eyebrow">{d.targetKeyword}</p>}
-    <h1>{d.title}</h1>
-    {prettyDate && <p class="article-meta">{prettyDate}</p>}
+  <article class="article-page">
+    <header class="article-head">
+      {d.targetKeyword && <p class="eyebrow">{d.targetKeyword}</p>}
+      <h1>{d.title}</h1>
+      {prettyDate && <p class="article-meta">{prettyDate}</p>}
+    </header>
+    {d.hero && (
+      <figure class="article-hero"><img src={d.hero} alt={d.title} width="1200" height="675" /></figure>
+    )}
     <div class="article-body">
       <slot />
     </div>
