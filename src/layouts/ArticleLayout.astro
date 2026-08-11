@@ -2,11 +2,13 @@
 import BaseLayout from './BaseLayout.astro';
 import { LANG } from '../lib/site';
 
-const { data: d } = Astro.props;
-const locale = LANG === 'es' ? 'es-ES' : 'en-US';
+const { data: d, readingTime, related = [] } = Astro.props;
+const L = LANG === 'es';
+const locale = L ? 'es-ES' : 'en-US';
 const prettyDate = d.date
   ? new Date(d.date.replace(' ', 'T')).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
   : '';
+const readLabel = readingTime ? (L ? `${readingTime} min de lectura` : `${readingTime} min read`) : '';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -16,23 +18,49 @@ const jsonLd = {
   image: d.hero ? new URL(d.hero, Astro.site).href : undefined,
   datePublished: d.date ? d.date.replace(' ', 'T') : undefined,
   inLanguage: d.lang,
+  author: { '@type': 'Organization', name: 'The New Global School' },
   publisher: { '@type': 'Organization', name: 'The New Global School' },
   mainEntityOfPage: d.canonical || Astro.url.href,
 };
 ---
 <BaseLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <article class="article-page">
     <header class="article-head">
       {d.targetKeyword && <p class="eyebrow">{d.targetKeyword}</p>}
       <h1>{d.title}</h1>
-      {prettyDate && <p class="article-meta">{prettyDate}</p>}
+      <div class="article-byline">
+        <span class="au-avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+        </span>
+        <span class="au-meta">
+          <span class="au-name">The New Global School</span>
+          <span class="au-line">{[prettyDate, readLabel].filter(Boolean).join(' · ')}</span>
+        </span>
+      </div>
     </header>
+
     {d.hero && (
       <figure class="article-hero"><img src={d.hero} alt={d.title} width="1200" height="675" /></figure>
     )}
+
     <div class="article-body">
       <slot />
     </div>
   </article>
+
+  {related && related.length > 0 && (
+    <aside class="article-related">
+      <h2>{L ? 'Sigue leyendo' : 'Keep reading'}</h2>
+      <div class="related-grid">
+        {related.map((r: any) => (
+          <a class="related-card" href={`/${r.slug}/`}>
+            <div class="rc-media">{r.hero && <img src={r.hero} alt={r.title} loading="lazy" width="400" height="250" />}</div>
+            <h3>{r.title}</h3>
+          </a>
+        ))}
+      </div>
+    </aside>
+  )}
 </BaseLayout>

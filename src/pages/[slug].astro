@@ -13,6 +13,19 @@ export async function getStaticPaths() {
   const pages = await getCollection('pages', (e) => e.data.lang === LANG);
   const projects = await getCollection('projects', (e) => e.data.lang === LANG);
 
+  // Detalles editoriales del blog: tiempo de lectura + artículos relacionados.
+  const postBySlug = new Map(posts.map((p) => [p.data.slug, p.data]));
+  const recentPosts = posts.map((p) => p.data).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  const catsForLang = (Object.values(categoriesData) as any[]).filter((c) => c.lang === LANG);
+  const readMin = (entry: any) => Math.max(1, Math.round(String(entry.body || '').split(/\s+/).filter(Boolean).length / 200));
+  const relatedFor = (slug: string) => {
+    const sib = new Set<string>();
+    for (const c of catsForLang) if (c.posts.includes(slug)) for (const s of c.posts) if (s !== slug) sib.add(s);
+    const picks = [...sib].map((s) => postBySlug.get(s)).filter(Boolean) as any[];
+    if (picks.length < 3) for (const p of recentPosts) { if (p.slug !== slug && !picks.includes(p)) { picks.push(p); if (picks.length >= 3) break; } }
+    return picks.slice(0, 3).map((p) => ({ title: p.title, slug: p.slug, hero: p.hero, date: p.date }));
+  };
+
   // mapa slug -> arquetipo (de la clasificación con tráfico GSC)
   const archOf = new Map<string, string>();
   for (const p of pagesClassified as any[]) {
@@ -24,7 +37,7 @@ export async function getStaticPaths() {
   for (const entry of posts) {
     if (seen.has(entry.data.slug)) continue;
     seen.add(entry.data.slug);
-    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'posts' } });
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'posts', readingTime: readMin(entry), related: relatedFor(entry.data.slug) } });
   }
   for (const entry of pages) {
     if (!entry.data.slug || seen.has(entry.data.slug)) continue;
@@ -41,7 +54,6 @@ export async function getStaticPaths() {
   }
 
   // páginas de categoría (root-level)
-  const postBySlug = new Map(posts.map((p) => [p.data.slug, p.data]));
   for (const cat of Object.values(categoriesData as Record<string, any>)) {
     if (cat.lang !== LANG || seen.has(cat.slug)) continue;
     const items = cat.posts.map((s: string) => postBySlug.get(s)).filter(Boolean);
@@ -52,7 +64,7 @@ export async function getStaticPaths() {
   return out;
 }
 
-const { entry, kind, category, archetype } = Astro.props as any;
+const { entry, kind, category, archetype, readingTime, related } = Astro.props as any;
 const rendered = kind === 'category' ? null : await render(entry);
 const Content = rendered?.Content;
 // Historias (long-form) y Legal siguen en tema claro; el resto de páginas landing van a la marca oscura.
@@ -62,7 +74,7 @@ const usePageDark = kind !== 'posts' && kind !== 'category' && !LIGHT_PAGE.has(a
 {kind === 'category' ? (
   <CategoryLayout category={category} />
 ) : kind === 'posts' ? (
-  <ArticleLayout data={entry.data}><Content /></ArticleLayout>
+  <ArticleLayout data={entry.data} readingTime={readingTime} related={related}><Content /></ArticleLayout>
 ) : usePageDark ? (
   <PageDarkLayout data={entry.data} archetype={archetype}><Content /></PageDarkLayout>
 ) : (

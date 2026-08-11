@@ -75,5 +75,12 @@ const L = LANG === 'es';
         <div class="footer-bottom">© {new Date().getFullYear()} {BRAND} · Viena · CDMX</div>
       </div>
     </footer>
+    <script is:inline>
+      // Oculta imágenes rotas (heroes/inline de URLs migradas que ya no existen).
+      document.addEventListener('error', function (e) {
+        var t = e.target;
+        if (t && t.tagName === 'IMG') { t.style.display = 'none'; var fig = t.closest('figure, .rc-media'); if (fig) fig.classList.add('img-broken'); }
+      }, true);
+    </script>
   </body>
 </html>
