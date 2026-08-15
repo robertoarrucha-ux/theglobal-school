@@ -11,6 +11,15 @@ const L = LANG === 'es';
 const contactHref = L ? '/contacto/' : '/contact/';
 const bodyHtml = inst?.bodyMarkdown ? marked.parse(inst.bodyMarkdown, { breaks: true }) : '';
 
+// Cifras reales (no migraron de WordPress). Se muestran en las páginas que tenían la banda.
+const STATS = [
+  { value: '+200K', label: L ? 'Comunidad en redes' : 'Social media community' },
+  { value: '+600', label: L ? 'Ex participantes' : 'Alumni & associates' },
+  { value: '15', label: L ? 'Años de experiencia' : 'Years of experience' },
+  { value: '+200', label: L ? 'Viajes y eventos realizados' : 'Trips & events held' },
+  { value: '4', label: L ? 'Premios y reconocimientos' : 'Awards & recognitions' },
+];
+
 const ctaHref = d.ctaHref || contactHref;
 const ctaLabel = d.ctaLabel || (L ? 'Hablemos' : "Let's talk");
 const ctaExternal = /^https?:\/\//.test(ctaHref);
@@ -74,7 +83,12 @@ const jsonLd = {
 
   {inst?.stats?.length > 0 && (
     <section class="mkt-wrap inst-section">
-      <ul class="inst-stats glass">{inst.stats.map((s) => <li>{s}</li>)}</ul>
+      <h2 class="inst-h">{L ? 'Nuestro trabajo en números' : 'Our work in numbers'}</h2>
+      <ul class="inst-stats glass">
+        {STATS.map((s) => (
+          <li><span class="stat-num">{s.value}</span><span class="stat-label">{s.label}</span></li>
+        ))}
+      </ul>
     </section>
   )}
 
