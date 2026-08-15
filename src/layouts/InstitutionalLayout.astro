@@ -59,6 +59,19 @@ const jsonLd = {
     </section>
   )}
 
+  {inst?.logos?.length > 0 && (
+    <section class="mkt-wrap inst-section">
+      <h2 class="inst-h">{inst.logosTitle?.replace(/\.$/, '') || (L ? 'Aliados' : 'Partners')}</h2>
+      <div class="inst-logos">
+        {inst.logos.map((lg) => (
+          lg.url
+            ? <a class="logo-tile" href={lg.url} rel="noopener" target="_blank"><img src={lg.img} alt="" loading="lazy" /></a>
+            : <div class="logo-tile"><img src={lg.img} alt="" loading="lazy" /></div>
+        ))}
+      </div>
+    </section>
+  )}
+
   {inst?.stats?.length > 0 && (
     <section class="mkt-wrap inst-section">
       <ul class="inst-stats glass">{inst.stats.map((s) => <li>{s}</li>)}</ul>

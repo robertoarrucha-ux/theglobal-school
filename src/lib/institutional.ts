@@ -20,10 +20,13 @@ export interface InstitutionalParse {
   topics: string[];
   team: TeamMember[];
   stats: string[];
+  logos: { img: string; url?: string }[];
+  logosTitle: string;
   hasStructured: boolean;
 }
 
 const PLAIN_IMG = /^!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)$/;
+const LINKED_IMG = /^\[!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)\]\(([^)]+)\)$/;
 const H4 = /^####\s+(.+?)\s*$/;
 const HEADING = /^#{1,6}\s+/;
 const BULLET = /^-\s+(.+)$/;
@@ -96,6 +99,45 @@ export function parseInstitutional(body: string): InstitutionalParse {
     }
   }
 
+  // ── Logos: tandas de 2+ imágenes sueltas (aliados, premios, reconocimientos) ──
+  const logos: { img: string; url?: string }[] = [];
+  let logosTitle = '';
+  const asImg = (idx: number): { img: string; url?: string } | null => {
+    const t = lines[idx].trim();
+    const li = t.match(LINKED_IMG);
+    if (li && !badImg(li[1])) return { img: li[1], url: li[2] };
+    const pi = t.match(PLAIN_IMG);
+    if (pi && !badImg(pi[1])) return { img: pi[1] };
+    return null;
+  };
+  for (let i = 0; i < lines.length; i++) {
+    if (consumed.has(i) || !asImg(i)) continue;
+    const run: { idx: number; img: string; url?: string }[] = [];
+    let j = i;
+    while (j < lines.length) {
+      if (consumed.has(j)) break;
+      const t = lines[j].trim();
+      if (!t) { j++; continue; }
+      const im = asImg(j);
+      if (!im) break;
+      run.push({ idx: j, ...im });
+      j++;
+    }
+    if (run.length >= 2) {
+      // encabezado previo como título de la sección de logos
+      for (let k = i - 1; k >= Math.max(0, i - 4); k--) {
+        const t = lines[k].trim();
+        if (!t) continue;
+        const hm = t.match(/^#{1,6}\s+(.+)$/);
+        if (hm && !consumed.has(k)) { if (!logosTitle) logosTitle = strip(hm[1]); consumed.add(k); }
+        break;
+      }
+      for (const r of run) { logos.push({ img: r.img, url: r.url }); consumed.add(r.idx); }
+      for (let k = i; k < j; k++) if (!lines[k].trim()) consumed.add(k);
+    }
+    i = Math.max(j - 1, i);
+  }
+
   // ── Resto de prosa: limpia título/subtítulo/HR y líneas ya consumidas ──
   let h1seen = false;
   const bodyMarkdown = lines
@@ -116,6 +158,8 @@ export function parseInstitutional(body: string): InstitutionalParse {
     topics,
     team,
     stats,
-    hasStructured: team.length > 0 || topics.length > 0,
+    logos,
+    logosTitle,
+    hasStructured: team.length > 0 || topics.length > 0 || logos.length > 0,
   };
 }
