@@ -72,8 +72,17 @@ const Content = rendered?.Content;
 // Historias (long-form) y Legal siguen en tema claro; el resto de páginas landing van a la marca oscura.
 const LIGHT_PAGE = new Set(['Historia', 'Legal']);
 const usePageDark = kind !== 'posts' && kind !== 'category' && !LIGHT_PAGE.has(archetype);
-// Cursos en línea (arquetipo Programa/Curso): estructura propia (catálogo o landing de curso).
-const isCourse = kind === 'pages' && archetype === 'Programa/Curso';
+// Cursos en línea: estructura propia (catálogo o landing de curso). Se detectan por arquetipo
+// Programa/Curso, o por señales de contenido (título de curso / lista de módulos), porque muchas
+// páginas de curso quedaron mal clasificadas como Perfil, Evento o Proyecto. Nunca posts (blog).
+const COURSE_TITLE = /\b(cursos?|m[óo]dulos?|masterclass|diplomado|course|module)\b/i;
+const COURSE_BODY = /\[\s*(m[óo]dulo|module)\s*\d|\[\s*descripci[óo]n\s*\]\(#\)/i;
+const isCourse =
+  kind !== 'posts' &&
+  kind !== 'category' &&
+  (archetype === 'Programa/Curso' ||
+    COURSE_TITLE.test(entry?.data?.title || '') ||
+    COURSE_BODY.test(entry?.body || ''));
 const course = isCourse ? parseCourse(entry.body) : null;
 ---
 {kind === 'category' ? (

@@ -4,11 +4,14 @@
 import MarketplaceLayout from './MarketplaceLayout.astro';
 import { LANG } from '../lib/site';
 import type { CourseParse } from '../lib/courses';
+import { marked } from 'marked';
 
 const { data: d, course } = Astro.props as { data: any; course: CourseParse };
 const L = LANG === 'es';
 const contactHref = L ? '/contacto/' : '/contact/';
 const isCatalog = course?.kind === 'catalog';
+const hasSyllabus = (course?.modules?.length || 0) >= 2;
+const aboutHtml = course?.aboutMarkdown ? marked.parse(course.aboutMarkdown, { breaks: true }) : '';
 
 const free = /gratis|gratuito|free/i.test(`${d.title} ${d.description || ''}`);
 const badge = isCatalog
@@ -75,16 +78,30 @@ const jsonLd = {
       </div>
     </section>
   ) : (
-    <div class="mkt-wrap course-single">
-      {course?.modules?.length >= 2 && (
+    <div class={`mkt-wrap course-single${hasSyllabus ? '' : ' no-aside'}`}>
+      {hasSyllabus && (
         <aside class="course-syllabus glass">
           <h2>{L ? 'Contenido del curso' : 'Course content'}</h2>
           <ol>{course.modules.map((m) => <li>{m}</li>)}</ol>
           <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
         </aside>
       )}
-      <div class="page-dark-body xp-richbody course-body">
-        <slot />
+      <div class="course-main">
+        {(course?.instructorName || course?.instructorImg) && (
+          <div class="course-instructor glass">
+            {course.instructorImg && <img src={course.instructorImg} alt={course.instructorName || ''} loading="lazy" />}
+            <div class="ci-meta">
+              <span class="ci-label">{L ? 'Impartido por' : 'Taught by'}</span>
+              {course.instructorName && <p class="ci-name">{course.instructorName}</p>}
+              {course.instructorRole && <p class="ci-role">{course.instructorRole}</p>}
+            </div>
+          </div>
+        )}
+        <div class="page-dark-body xp-richbody course-body">
+          {aboutHtml
+            ? <><h2 class="course-about-h">{L ? 'Sobre el curso' : 'About the course'}</h2><Fragment set:html={aboutHtml} /></>
+            : <slot />}
+        </div>
       </div>
     </div>
   )}

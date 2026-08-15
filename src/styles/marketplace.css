@@ -293,6 +293,15 @@
 
 /* Curso individual: temario + cuerpo */
 .course-single { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 2.5rem; align-items: start; max-width: 1180px; padding-top: 2.5rem; }
+.course-single.no-aside { grid-template-columns: minmax(0, 1fr); max-width: 820px; }
+.course-main { min-width: 0; }
+/* Tarjeta de instructor */
+.course-instructor { display: flex; align-items: center; gap: 1.1rem; padding: 1rem 1.2rem; border-radius: 16px; margin-bottom: 1.8rem; }
+.course-instructor img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; flex: 0 0 76px; background: rgba(255,255,255,.06); }
+.ci-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-soft); }
+.ci-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--txt); margin: .15rem 0 .1rem; }
+.ci-role { color: var(--txt-soft); font-size: .9rem; line-height: 1.4; margin: 0; }
+.course-about-h { font-family: var(--font-display); font-size: 1.5rem; color: var(--txt); margin: 0 0 1rem; }
 .course-syllabus { position: sticky; top: 90px; padding: 1.6rem 1.7rem; border-radius: 18px; }
 .course-syllabus h2 { font-family: var(--font-display); font-size: 1.2rem; color: var(--txt); margin: 0 0 1rem; }
 .course-syllabus ol { margin: 0 0 1.3rem; padding-left: 1.1rem; color: var(--txt-soft); }
