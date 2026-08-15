@@ -4,8 +4,10 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import PageDarkLayout from '../layouts/PageDarkLayout.astro';
 import CourseLayout from '../layouts/CourseLayout.astro';
+import InstitutionalLayout from '../layouts/InstitutionalLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
 import { parseCourse } from '../lib/courses';
+import { parseInstitutional } from '../lib/institutional';
 import categoriesData from '../../migration/categories.json';
 import pagesClassified from '../../migration/pages_classified.json';
 import { LANG } from '../lib/site';
@@ -84,6 +86,9 @@ const isCourse =
     COURSE_TITLE.test(entry?.data?.title || '') ||
     COURSE_BODY.test(entry?.body || ''));
 const course = isCourse ? parseCourse(entry.body) : null;
+// Páginas institucionales (nosotros, alianzas, about-us...) con equipo/temáticas: estructura propia.
+const inst = !isCourse && kind === 'pages' && archetype === 'Institucional' ? parseInstitutional(entry.body) : null;
+const useInst = inst?.hasStructured;
 ---
 {kind === 'category' ? (
   <CategoryLayout category={category} />
@@ -91,6 +96,8 @@ const course = isCourse ? parseCourse(entry.body) : null;
   <ArticleLayout data={entry.data} readingTime={readingTime} related={related}><Content /></ArticleLayout>
 ) : isCourse ? (
   <CourseLayout data={entry.data} course={course}><Content /></CourseLayout>
+) : useInst ? (
+  <InstitutionalLayout data={entry.data} inst={inst} />
 ) : usePageDark ? (
   <PageDarkLayout data={entry.data} archetype={archetype}><Content /></PageDarkLayout>
 ) : (

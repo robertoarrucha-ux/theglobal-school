@@ -1,0 +1,97 @@
+---
+// Página institucional (marca oscura/glass) con estructura: intro + temáticas + reputación + equipo.
+// Reemplaza el volcado de prosa/fotos sueltas que parecía blog post.
+import MarketplaceLayout from './MarketplaceLayout.astro';
+import { LANG } from '../lib/site';
+import { marked } from 'marked';
+import type { InstitutionalParse } from '../lib/institutional';
+
+const { data: d, inst } = Astro.props as { data: any; inst: InstitutionalParse };
+const L = LANG === 'es';
+const contactHref = L ? '/contacto/' : '/contact/';
+const bodyHtml = inst?.bodyMarkdown ? marked.parse(inst.bodyMarkdown, { breaks: true }) : '';
+
+const ctaHref = d.ctaHref || contactHref;
+const ctaLabel = d.ctaLabel || (L ? 'Hablemos' : "Let's talk");
+const ctaExternal = /^https?:\/\//.test(ctaHref);
+
+const socialIcon = (label: string) => {
+  const l = label.toLowerCase();
+  if (/link/.test(l)) return 'in';
+  if (/x|twitter/.test(l)) return 'X';
+  if (/insta/.test(l)) return 'IG';
+  if (/face/.test(l)) return 'f';
+  if (/you/.test(l)) return '▶';
+  return '↗';
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'The New Global School',
+  description: d.description,
+  url: 'https://theglobal.school',
+  ...(inst?.team?.length ? { employee: inst.team.map((t) => ({ '@type': 'Person', name: t.name, jobTitle: t.role })) } : {}),
+};
+---
+<MarketplaceLayout title={d.seoTitle || d.title} description={d.description} canonical={d.canonical} ogImage={d.hero}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="xp-detail-hero pd-hero">
+    {d.hero && <img src={d.hero} alt={d.title} />}
+    <div class="mkt-wrap inner">
+      <p class="pd-eyebrow">The New Global School</p>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);margin:.5rem 0">{d.title}</h1>
+      {d.description && <p style="color:var(--txt-soft);max-width:680px">{d.description}</p>}
+    </div>
+  </section>
+
+  {bodyHtml && (
+    <div class="mkt-wrap page-dark-body xp-richbody inst-body">
+      <Fragment set:html={bodyHtml} />
+    </div>
+  )}
+
+  {inst?.topics?.length > 0 && (
+    <section class="mkt-wrap inst-section">
+      <h2 class="inst-h">{L ? 'Temáticas' : 'Topics'}</h2>
+      <ul class="inst-topics">{inst.topics.map((t) => <li>{t}</li>)}</ul>
+    </section>
+  )}
+
+  {inst?.stats?.length > 0 && (
+    <section class="mkt-wrap inst-section">
+      <ul class="inst-stats glass">{inst.stats.map((s) => <li>{s}</li>)}</ul>
+    </section>
+  )}
+
+  {inst?.team?.length > 0 && (
+    <section class="mkt-wrap inst-section">
+      <h2 class="inst-h">{L ? 'Nuestro equipo' : 'Our team'}</h2>
+      <div class="inst-team">
+        {inst.team.map((m) => (
+          <article class="tm-card glass">
+            {m.img && <img class="tm-photo" src={m.img} alt={m.name} loading="lazy" />}
+            <h3 class="tm-name">{m.name}</h3>
+            {m.role && <p class="tm-role">{m.role}</p>}
+            {m.bio && <p class="tm-bio">{m.bio}</p>}
+            {m.socials.length > 0 && (
+              <div class="tm-socials">
+                {m.socials.map((s) => (
+                  <a href={s.url} rel="noopener" target="_blank" aria-label={s.label}>{socialIcon(s.label)}</a>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="mkt-wrap">
+    <div class="pd-cta glass">
+      <p>{L ? '¿Quieres colaborar o llevar un programa a tu organización? Escríbenos.' : 'Want to collaborate or bring a program to your organization? Contact us.'}</p>
+      <a class="btn-primary" href={ctaHref} {...(ctaExternal ? { rel: 'noopener', target: '_blank' } : {})}>{ctaLabel}</a>
+    </div>
+  </section>
+</MarketplaceLayout>
