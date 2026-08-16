@@ -25,10 +25,10 @@ const enrollLabel = d.ctaLabel || (free
 const enrollExternal = /^https?:\/\//.test(enrollHref);
 
 const chips = [
-  free ? (L ? 'Acceso gratuito' : 'Free access') : null,
-  L ? 'En línea' : 'Online',
-  L ? 'A tu ritmo' : 'Self-paced',
-  course?.modules?.length ? (L ? `${course.modules.length} módulos` : `${course.modules.length} modules`) : null,
+  free ? (L ? '⭐ Acceso gratuito' : '⭐ Free access') : null,
+  L ? '💻 En línea' : '💻 Online',
+  L ? '🕐 A tu ritmo' : '🕐 Self-paced',
+  course?.modules?.length ? (L ? `📦 ${course.modules.length} módulos` : `📦 ${course.modules.length} modules`) : null,
 ].filter(Boolean) as string[];
 
 const jsonLd = {
@@ -81,7 +81,7 @@ const jsonLd = {
     <div class={`mkt-wrap course-single${hasSyllabus ? '' : ' no-aside'}`}>
       {hasSyllabus && (
         <aside class="course-syllabus glass">
-          <h2>{L ? 'Contenido del curso' : 'Course content'}</h2>
+          <h2>🎓 {L ? 'Contenido del curso' : 'Course content'}</h2>
           <ol>{course.modules.map((m) => <li>{m}</li>)}</ol>
           <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
         </aside>
@@ -91,7 +91,7 @@ const jsonLd = {
           <div class="course-instructor glass">
             {course.instructorImg && <img src={course.instructorImg} alt={course.instructorName || ''} loading="lazy" />}
             <div class="ci-meta">
-              <span class="ci-label">{L ? 'Impartido por' : 'Taught by'}</span>
+              <span class="ci-label">👤 {L ? 'Impartido por' : 'Taught by'}</span>
               {course.instructorName && <p class="ci-name">{course.instructorName}</p>}
               {course.instructorRole && <p class="ci-role">{course.instructorRole}</p>}
             </div>
@@ -99,7 +99,7 @@ const jsonLd = {
         )}
         <div class="page-dark-body xp-richbody course-body">
           {aboutHtml
-            ? <><h2 class="course-about-h">{L ? 'Sobre el curso' : 'About the course'}</h2><Fragment set:html={aboutHtml} /></>
+            ? <><h2 class="course-about-h">📖 {L ? 'Sobre el curso' : 'About the course'}</h2><Fragment set:html={aboutHtml} /></>
             : <slot />}
         </div>
       </div>

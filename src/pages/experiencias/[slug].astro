@@ -140,7 +140,7 @@ const jsonLd = {
 
       {x.leader && (
         <figure class="xp-leader glass">
-          <p class="xp-leader-label">Tu guía histórico</p>
+          <p class="xp-leader-label">🏛️ Tu guía histórico</p>
           <blockquote>{x.leader.narrative}</blockquote>
           <figcaption>{x.leader.name} · <span>{x.leader.title}</span></figcaption>
         </figure>
@@ -189,7 +189,7 @@ const jsonLd = {
 
       {x.rationale && (
         <>
-          <h2>¿Por qué este viaje?</h2>
+          <h2>🎯 ¿Por qué este viaje?</h2>
           <div class="xp-rationale">
             <div class="glass"><h4>Importancia</h4><p>{x.rationale.importance}</p></div>
             <div class="glass"><h4>Aprendizaje</h4><p>{x.rationale.learning}</p></div>
@@ -198,12 +198,12 @@ const jsonLd = {
         </>
       )}
 
-      <h2>Destacados</h2>
+      <h2>✨ Destacados</h2>
       <ul class="xp-highlights" data-fresh="highlights">{x.highlights.map((h: string) => <li>{h}</li>)}</ul>
 
       {x.itinerary && x.itinerary.length > 0 ? (
         <>
-          <h2>Itinerario detallado</h2>
+          <h2>🗺️ Itinerario detallado</h2>
           <div class="xp-agenda">
             {x.itinerary.map((d: any) => (
               <div class="xp-agenda-item glass">
@@ -217,7 +217,7 @@ const jsonLd = {
         </>
       ) : x.agenda && (
         <>
-          <h2>{x.type === 'evento' ? 'Agenda' : 'Itinerario'}</h2>
+          <h2>{x.type === 'evento' ? '📅 Agenda' : '🗺️ Itinerario'}</h2>
           <div class="xp-agenda">
             {x.agenda.map((a: any) => (
               <div class="xp-agenda-item glass">
@@ -232,7 +232,7 @@ const jsonLd = {
 
       {x.preWork && x.preWork.items?.length > 0 && (
         <>
-          <h2>{x.preWork.title || 'Preparación: materiales recomendados'}</h2>
+          <h2>📚 {x.preWork.title || 'Preparación: materiales recomendados'}</h2>
           <ul class="xp-prework">
             {x.preWork.items.map((it: any) => (
               <li><span class="tag">{it.type}</span> <strong>{it.title}</strong>{it.author ? `, ${it.author}` : ''}</li>
@@ -254,7 +254,7 @@ const jsonLd = {
       </section>
 
       <section class="xp-how">
-        <h2>¿Cómo funciona?</h2>
+        <h2>🧭 ¿Cómo funciona?</h2>
         <div class="xp-how-steps">
           <div class="xp-how-step glass"><span class="num">1</span><h4>Cuéntanos tu objetivo</h4><p>Escríbenos con tu organización, el tema de interés y las fechas aproximadas.</p></div>
           <div class="xp-how-step glass"><span class="num">2</span><h4>Lo diseñamos a tu medida</h4><p>Adaptamos itinerario, ciudades, idioma y tamaño de grupo. Grupos privados disponibles.</p></div>

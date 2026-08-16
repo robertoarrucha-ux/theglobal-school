@@ -251,9 +251,10 @@
 }
 .xp-detail-grid h2 { font-size: 1.9rem; margin: 2rem 0 .8rem; }
 .xp-detail-grid p, .xp-detail-grid li { color: var(--txt-soft); line-height: 1.7; }
-.xp-highlights { list-style: none; padding: 0; }
-.xp-highlights li { padding-left: 1.6rem; position: relative; margin: .6rem 0; }
-.xp-highlights li::before { content: '✦'; position: absolute; left: 0; color: var(--yellow); }
+/* Destacados como tarjetas (rompe el muro de texto) */
+.xp-highlights { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .9rem; }
+.xp-highlights li { display: flex; gap: .6rem; align-items: flex-start; padding: .95rem 1.1rem; border-radius: 14px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line); color: var(--txt-soft); line-height: 1.45; margin: 0; }
+.xp-highlights li::before { content: '✦'; position: static; color: var(--yellow); flex: 0 0 auto; }
 .xp-agenda { display: grid; gap: .8rem; }
 .xp-agenda-item { padding: 1rem 1.2rem; border-radius: 14px; }
 .xp-agenda-item .lbl { color: var(--purple-bright); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
@@ -381,8 +382,16 @@
 .xp-incl h4.ok { color: #34d399; }
 .xp-incl h4.no { color: #f87171; }
 .xp-incl ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
-.xp-incl li { color: var(--txt-soft); font-size: .92rem; padding-left: 1rem; position: relative; line-height: 1.4; }
+.xp-incl li { color: var(--txt-soft); font-size: .92rem; padding-left: 1.6rem; position: relative; line-height: 1.5; }
 .xp-incl li::before { content: '·'; position: absolute; left: .2rem; color: var(--txt-soft); }
+.xp-incl h4.ok + ul li::before { content: '✓'; left: 0; color: #34d399; font-weight: 700; }
+.xp-incl h4.no + ul li::before { content: '✕'; left: 0; color: #f87171; font-weight: 700; }
+/* Emojis en headers de bloques dinámicos (via clase wrapper, sobrevive al freshen) */
+.xp-collabs h2::before { content: '🤝 '; }
+.xp-testimonials h2::before { content: '💬 '; }
+.xp-incl-wrap h2::before { content: '🎒 '; }
+/* Cita del guía con comilla decorativa */
+.xp-leader blockquote::before { content: '“'; color: var(--yellow); font-family: var(--font-display); font-size: 2.6rem; line-height: 0; vertical-align: -.5rem; margin-right: .15rem; opacity: .55; }
 
 /* Panel de reserva (sticky) */
 .xp-book { border-radius: 20px; padding: 1.6rem; position: sticky; top: 90px; }

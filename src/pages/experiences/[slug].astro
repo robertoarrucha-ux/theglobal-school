@@ -139,7 +139,7 @@ const jsonLd = {
 
       {x.leader && (
         <figure class="xp-leader glass">
-          <p class="xp-leader-label">Your historical guide</p>
+          <p class="xp-leader-label">🏛️ Your historical guide</p>
           <blockquote>{x.leader.narrative}</blockquote>
           <figcaption>{x.leader.name} · <span>{x.leader.title}</span></figcaption>
         </figure>
@@ -188,7 +188,7 @@ const jsonLd = {
 
       {x.rationale && (
         <>
-          <h2>Why this journey</h2>
+          <h2>🎯 Why this journey</h2>
           <div class="xp-rationale">
             <div class="glass"><h4>Why it matters</h4><p>{x.rationale.importance}</p></div>
             <div class="glass"><h4>What you'll learn</h4><p>{x.rationale.learning}</p></div>
@@ -197,12 +197,12 @@ const jsonLd = {
         </>
       )}
 
-      <h2>Highlights</h2>
+      <h2>✨ Highlights</h2>
       <ul class="xp-highlights" data-fresh="highlights">{x.highlights.map((h: string) => <li>{h}</li>)}</ul>
 
       {x.itinerary && x.itinerary.length > 0 ? (
         <>
-          <h2>Itinerary</h2>
+          <h2>🗺️ Itinerary</h2>
           <div class="xp-agenda">
             {x.itinerary.map((d: any) => (
               <div class="xp-agenda-item glass">
@@ -216,7 +216,7 @@ const jsonLd = {
         </>
       ) : x.agenda && (
         <>
-          <h2>{x.type === 'evento' ? 'Agenda' : 'Itinerary'}</h2>
+          <h2>{x.type === 'evento' ? '📅 Agenda' : '🗺️ Itinerary'}</h2>
           <div class="xp-agenda">
             {x.agenda.map((a: any) => (
               <div class="xp-agenda-item glass">
@@ -231,7 +231,7 @@ const jsonLd = {
 
       {x.preWork && x.preWork.items?.length > 0 && (
         <>
-          <h2>{x.preWork.title || 'Preparation'}</h2>
+          <h2>📚 {x.preWork.title || 'Preparation'}</h2>
           <ul class="xp-prework">
             {x.preWork.items.map((it: any) => (
               <li><span class="tag">{it.type}</span> <strong>{it.title}</strong>{it.author ? `, ${it.author}` : ''}</li>
@@ -253,7 +253,7 @@ const jsonLd = {
       </section>
 
       <section class="xp-how">
-        <h2>How it works</h2>
+        <h2>🧭 How it works</h2>
         <div class="xp-how-steps">
           <div class="xp-how-step glass"><span class="num">1</span><h4>Tell us your goal</h4><p>Message us with your organization, focus area and approximate dates.</p></div>
           <div class="xp-how-step glass"><span class="num">2</span><h4>We tailor it</h4><p>We adapt the itinerary, cities, language and group size. Private groups available.</p></div>
