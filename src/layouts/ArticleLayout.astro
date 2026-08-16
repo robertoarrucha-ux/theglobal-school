@@ -1,8 +1,9 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AwardsNote from '../components/AwardsNote.astro';
 import { LANG } from '../lib/site';
 
-const { data: d, readingTime, related = [] } = Astro.props;
+const { data: d, readingTime, related = [], isAward = false } = Astro.props;
 const L = LANG === 'es';
 const locale = L ? 'es-ES' : 'en-US';
 const prettyDate = d.date
@@ -46,6 +47,7 @@ const jsonLd = {
     )}
 
     <div class="article-body">
+      {isAward && <AwardsNote />}
       <slot />
     </div>
   </article>

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AwardsNote from '../components/AwardsNote.astro';
 import { LANG } from '../lib/site';
 
 // Plantilla de página consciente del ARQUETIPO (institucional, programa, perfil, legal...).
-const { data: d, archetype = 'Institucional' } = Astro.props;
+const { data: d, archetype = 'Institucional', isAward = false } = Astro.props;
 
 const L = LANG === 'es';
 const contactHref = L ? '/contacto/' : '/contact/';
@@ -49,6 +50,7 @@ const jsonLd = {
   </section>
 
   <article class="page-body">
+    {isAward && <AwardsNote />}
     <slot />
   </article>
 

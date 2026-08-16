@@ -23,6 +23,11 @@ export async function getStaticPaths() {
   const pages = await getCollection('pages', (e) => e.data.lang === LANG);
   const projects = await getCollection('projects', (e) => e.data.lang === LANG);
 
+  // Páginas que hablan de los Latin American Leaders Awards: se les añade la nota de atribución
+  // (Pro-Latam organiza; TNGS aliado) para corregir la señal a Google. Detección por título.
+  const AWARD_RE = /latin american (social )?leaders awards/i;
+  const isAwardEntry = (e: any) => AWARD_RE.test(e.data.title || '') || AWARD_RE.test(e.data.seoTitle || '');
+
   // Detalles editoriales del blog: tiempo de lectura + artículos relacionados.
   const postBySlug = new Map(posts.map((p) => [p.data.slug, p.data]));
   const recentPosts = posts.map((p) => p.data).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -47,7 +52,7 @@ export async function getStaticPaths() {
   for (const entry of posts) {
     if (seen.has(entry.data.slug)) continue;
     seen.add(entry.data.slug);
-    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'posts', readingTime: readMin(entry), related: relatedFor(entry.data.slug) } });
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'posts', readingTime: readMin(entry), related: relatedFor(entry.data.slug), isAward: isAwardEntry(entry) } });
   }
   for (const entry of pages) {
     if (!entry.data.slug || seen.has(entry.data.slug)) continue;
@@ -56,7 +61,7 @@ export async function getStaticPaths() {
     if (entry.data.slug === 'blog') continue; // /blog/ lo maneja el índice paginado
     if (REDIRECTED_SLUGS.has(entry.data.slug)) continue; // 301 a awards.pro-latam.org (ver gen_firebase.py)
     seen.add(entry.data.slug);
-    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'pages', archetype: arch } });
+    out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'pages', archetype: arch, isAward: isAwardEntry(entry) } });
   }
   for (const entry of projects) {
     if (!entry.data.slug || seen.has(entry.data.slug)) continue;
@@ -75,7 +80,7 @@ export async function getStaticPaths() {
   return out;
 }
 
-const { entry, kind, category, archetype, readingTime, related } = Astro.props as any;
+const { entry, kind, category, archetype, readingTime, related, isAward } = Astro.props as any;
 const rendered = kind === 'category' ? null : await render(entry);
 const Content = rendered?.Content;
 // Historias (long-form) y Legal siguen en tema claro; el resto de páginas landing van a la marca oscura.
@@ -100,13 +105,13 @@ const useInst = inst?.hasStructured;
 {kind === 'category' ? (
   <CategoryLayout category={category} />
 ) : kind === 'posts' ? (
-  <ArticleLayout data={entry.data} readingTime={readingTime} related={related}><Content /></ArticleLayout>
+  <ArticleLayout data={entry.data} readingTime={readingTime} related={related} isAward={isAward}><Content /></ArticleLayout>
 ) : isCourse ? (
   <CourseLayout data={entry.data} course={course}><Content /></CourseLayout>
 ) : useInst ? (
   <InstitutionalLayout data={entry.data} inst={inst} />
 ) : usePageDark ? (
-  <PageDarkLayout data={entry.data} archetype={archetype}><Content /></PageDarkLayout>
+  <PageDarkLayout data={entry.data} archetype={archetype} isAward={isAward}><Content /></PageDarkLayout>
 ) : (
-  <PageLayout data={entry.data} archetype={archetype}><Content /></PageLayout>
+  <PageLayout data={entry.data} archetype={archetype} isAward={isAward}><Content /></PageLayout>
 )}

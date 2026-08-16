@@ -1,0 +1,50 @@
+---
+// Nota de atribución para páginas que hablan de los Latin American Leaders Awards.
+// El premio lo organiza Pro-Latam - Invest in Latin America; TNGS participa como aliado.
+// Corrige la señal (visible + JSON-LD con organizer=Pro-Latam + sameAs) sin ceder la página
+// (no usa canonical cruzado): conserva el tráfico editorial en TNGS.
+import { LANG } from '../lib/site';
+const L = LANG === 'es';
+const AWARDS_URL = 'https://awards.pro-latam.org';
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Latin American Leaders Awards',
+  organizer: {
+    '@type': 'Organization',
+    name: 'Pro-Latam - Invest in Latin America',
+    url: AWARDS_URL,
+  },
+  url: AWARDS_URL,
+  sameAs: AWARDS_URL,
+};
+---
+<aside class="awards-note">
+  <p>
+    {L
+      ? 'Los Latin American Leaders Awards son organizados por '
+      : 'The Latin American Leaders Awards are organized by '}
+    <strong>Pro-Latam · Invest in Latin America</strong>.
+    {L
+      ? ' The New Global School participa como aliado. Sitio oficial: '
+      : ' The New Global School takes part as a partner. Official site: '}
+    <a href={AWARDS_URL} rel="noopener">awards.pro-latam.org</a>
+  </p>
+</aside>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+
+<style>
+  .awards-note {
+    margin: 1.6rem 0;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(131, 0, 233, 0.35);
+    background: rgba(131, 0, 233, 0.08);
+    border-radius: 12px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: inherit;
+  }
+  .awards-note p { margin: 0; }
+  .awards-note a { color: #9333ea; font-weight: 600; }
+  .awards-note strong { font-weight: 700; }
+</style>

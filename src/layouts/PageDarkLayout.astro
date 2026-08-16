@@ -3,9 +3,10 @@
 // Para arquetipos tipo landing (Institucional, Programa/Curso, Certificación, Herramienta,
 // Perfil, Evento, Proyecto, Donación, Aplicación). El blog y las Historias siguen en claro.
 import MarketplaceLayout from './MarketplaceLayout.astro';
+import AwardsNote from '../components/AwardsNote.astro';
 import { LANG } from '../lib/site';
 
-const { data: d, archetype = 'Institucional' } = Astro.props;
+const { data: d, archetype = 'Institucional', isAward = false } = Astro.props;
 const L = LANG === 'es';
 const contactHref = L ? '/contacto/' : '/contact/';
 
@@ -46,6 +47,7 @@ const jsonLd = {
   </section>
 
   <div class="mkt-wrap page-dark-body xp-richbody">
+    {isAward && <AwardsNote />}
     <slot />
   </div>
 
