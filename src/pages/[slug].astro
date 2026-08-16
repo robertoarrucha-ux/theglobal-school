@@ -18,6 +18,8 @@ export async function getStaticPaths() {
   const REDIRECTED_SLUGS = new Set([
     'latin-america-leaders-awards',
     'bienvenido-a-los-latin-american-leaders-awards',
+    'equipo-latam-awards',
+    'confirmacion-de-postulacion-latam-awards',
   ]);
   const posts = await getCollection('posts', (e) => e.data.lang === LANG);
   const pages = await getCollection('pages', (e) => e.data.lang === LANG);
@@ -25,8 +27,14 @@ export async function getStaticPaths() {
 
   // Páginas que hablan de los Latin American Leaders Awards: se les añade la nota de atribución
   // (Pro-Latam organiza; TNGS aliado) para corregir la señal a Google. Detección por título.
-  const AWARD_RE = /latin american (social )?leaders awards/i;
-  const isAwardEntry = (e: any) => AWARD_RE.test(e.data.title || '') || AWARD_RE.test(e.data.seoTitle || '');
+  // Cubre variantes: "Latam Awards", singular "Award", y distinto orden de palabras.
+  // NO matchea otros premios (African / Sustainability Leaders Awards).
+  const isLala = (s: string) => {
+    const x = (s || '').toLowerCase();
+    if (/latam awards/.test(x)) return true;
+    return /latin americ\w*/.test(x) && /leaders?/.test(x) && /awards?/.test(x);
+  };
+  const isAwardEntry = (e: any) => isLala(e.data.title) || isLala(e.data.seoTitle);
 
   // Detalles editoriales del blog: tiempo de lectura + artículos relacionados.
   const postBySlug = new Map(posts.map((p) => [p.data.slug, p.data]));
@@ -109,7 +117,7 @@ const useInst = inst?.hasStructured;
 ) : isCourse ? (
   <CourseLayout data={entry.data} course={course}><Content /></CourseLayout>
 ) : useInst ? (
-  <InstitutionalLayout data={entry.data} inst={inst} />
+  <InstitutionalLayout data={entry.data} inst={inst} isAward={isAward} />
 ) : usePageDark ? (
   <PageDarkLayout data={entry.data} archetype={archetype} isAward={isAward}><Content /></PageDarkLayout>
 ) : (

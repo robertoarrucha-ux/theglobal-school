@@ -2,11 +2,12 @@
 // Página institucional (marca oscura/glass) con estructura: intro + temáticas + reputación + equipo.
 // Reemplaza el volcado de prosa/fotos sueltas que parecía blog post.
 import MarketplaceLayout from './MarketplaceLayout.astro';
+import AwardsNote from '../components/AwardsNote.astro';
 import { LANG } from '../lib/site';
 import { marked } from 'marked';
 import type { InstitutionalParse } from '../lib/institutional';
 
-const { data: d, inst } = Astro.props as { data: any; inst: InstitutionalParse };
+const { data: d, inst, isAward = false } = Astro.props as { data: any; inst: InstitutionalParse; isAward?: boolean };
 const L = LANG === 'es';
 const contactHref = L ? '/contacto/' : '/contact/';
 const bodyHtml = inst?.bodyMarkdown ? marked.parse(inst.bodyMarkdown, { breaks: true }) : '';
@@ -54,6 +55,8 @@ const jsonLd = {
       {d.description && <p style="color:var(--txt-soft);max-width:680px">{d.description}</p>}
     </div>
   </section>
+
+  {isAward && <div class="mkt-wrap" style="padding-top:1.5rem"><AwardsNote /></div>}
 
   {bodyHtml && (
     <div class="mkt-wrap page-dark-body xp-richbody inst-body">

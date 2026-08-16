@@ -683,6 +683,16 @@
           "type": 301
         },
         {
+          "source": "/confirmacion-de-postulacion-latam-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
+          "source": "/confirmacion-de-postulacion-latam-awards/",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
           "source": "/consejos-de-vida-sustentable-para-la-vida-en-el-hogar/",
           "destination": "/5-consejos-vida-sustentable/",
           "type": 301
@@ -745,6 +755,16 @@
         {
           "source": "/energy-management-systems-iso-14001/",
           "destination": "https://es.theglobal.school/certificacion-en-gestion-ambiental-iso-14001/",
+          "type": 301
+        },
+        {
+          "source": "/equipo-latam-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
+          "source": "/equipo-latam-awards/",
+          "destination": "https://awards.pro-latam.org/",
           "type": 301
         },
         {
