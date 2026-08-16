@@ -623,6 +623,16 @@
           "type": 301
         },
         {
+          "source": "/bienvenido-a-los-latin-american-leaders-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
+          "source": "/bienvenido-a-los-latin-american-leaders-awards/",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
           "source": "/bienvenido/",
           "destination": "https://es.theglobal.school/conviertete-en-analista-columnista/",
           "type": 301
@@ -835,6 +845,16 @@
         {
           "source": "/la-peor-pesadilla-de-europa/",
           "destination": "https://es.theglobal.school/la-peor-pesadilla-de-europa-europa-en-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/latin-america-leaders-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
+          "source": "/latin-america-leaders-awards/",
+          "destination": "https://awards.pro-latam.org/",
           "type": 301
         },
         {

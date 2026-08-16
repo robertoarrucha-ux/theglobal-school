@@ -115,6 +115,11 @@ GAP_REDIRECTS = {
         ("/404-2/", "/"),
         ("/es.theglobal.school/", "/"),
         ("/welcome/", "/"),
+        # Latin American Leaders Awards: el premio lo organiza Pro-Latam -> 301 a su sitio oficial.
+        ("/latin-america-leaders-awards/", "https://awards.pro-latam.org/"),
+        ("/latin-america-leaders-awards", "https://awards.pro-latam.org/"),
+        ("/bienvenido-a-los-latin-american-leaders-awards/", "https://awards.pro-latam.org/"),
+        ("/bienvenido-a-los-latin-american-leaders-awards", "https://awards.pro-latam.org/"),
     ],
 }
 for lang, pairs in GAP_REDIRECTS.items():

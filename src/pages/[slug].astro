@@ -13,6 +13,12 @@ import pagesClassified from '../../migration/pages_classified.json';
 import { LANG } from '../lib/site';
 
 export async function getStaticPaths() {
+  // Slugs que se redirigen (301) a un dominio externo vía firebase.json (gen_firebase.py):
+  // no se construyen como página ni entran al sitemap. (getStaticPaths corre aislado: definir aquí.)
+  const REDIRECTED_SLUGS = new Set([
+    'latin-america-leaders-awards',
+    'bienvenido-a-los-latin-american-leaders-awards',
+  ]);
   const posts = await getCollection('posts', (e) => e.data.lang === LANG);
   const pages = await getCollection('pages', (e) => e.data.lang === LANG);
   const projects = await getCollection('projects', (e) => e.data.lang === LANG);
@@ -48,6 +54,7 @@ export async function getStaticPaths() {
     const arch = archOf.get(entry.data.slug) || 'Institucional';
     if (arch === 'Sistema') continue; // 404-2, duplicados de home, welcome -> se redirigen a home
     if (entry.data.slug === 'blog') continue; // /blog/ lo maneja el índice paginado
+    if (REDIRECTED_SLUGS.has(entry.data.slug)) continue; // 301 a awards.pro-latam.org (ver gen_firebase.py)
     seen.add(entry.data.slug);
     out.push({ params: { slug: entry.data.slug }, props: { entry, kind: 'pages', archetype: arch } });
   }
