@@ -9,6 +9,9 @@ import { LANG } from './site';
 
 // ¿La experiencia se publica en el idioma de este build? (vacío/ausente = ambos)
 const inLang = (x: Experience) => !x.sites || x.sites.length === 0 || x.sites.includes(LANG as 'en' | 'es');
+// Experiencias que se redirigen (301) fuera del sitio (ver gen_firebase.py). No se listan ni renderizan.
+const REDIRECTED_SLUGS = new Set(['latin-america-leaders-awards']);
+const notRedirected = (x: Experience) => !REDIRECTED_SLUGS.has(x.slug);
 
 const DATABASE_ID = 'ai-studio-6aba9233-6f6c-455d-be53-29923fe66f0f';
 const COLLECTION = 'experiences';
@@ -51,7 +54,7 @@ async function fetchFromFirestore(): Promise<Experience[]> {
   const cred = loadCredential();
   if (!cred) {
     console.warn('[experiences] Sin credenciales Firestore → usando puente JSON local.');
-    return bridge().map(normalizeExperience).filter(inLang);
+    return bridge().map(normalizeExperience).filter(inLang).filter(notRedirected);
   }
   try {
     const { getApps, initializeApp, cert } = await import('firebase-admin/app');
@@ -59,7 +62,7 @@ async function fetchFromFirestore(): Promise<Experience[]> {
     const app = getApps().length ? getApps()[0] : initializeApp({ credential: cert(cred as any) }, 'experiences-reader');
     const db = getFirestore(app, DATABASE_ID);
     const snap = await db.collection(COLLECTION).where('publicListed', '==', true).get();
-    const items = snap.docs.map((d) => normalizeExperience(d.data())).filter(inLang);
+    const items = snap.docs.map((d) => normalizeExperience(d.data())).filter(inLang).filter(notRedirected);
     if (!items.length) {
       console.warn(`[experiences] Sin experiencias para "${LANG}" en Firestore.`);
       return [];
@@ -73,7 +76,7 @@ async function fetchFromFirestore(): Promise<Experience[]> {
     return items;
   } catch (err) {
     console.warn('[experiences] Error leyendo Firestore → puente JSON:', (err as Error).message);
-    return bridge().map(normalizeExperience);
+    return bridge().map(normalizeExperience).filter(inLang).filter(notRedirected);
   }
 }
 

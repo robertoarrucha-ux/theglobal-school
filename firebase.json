@@ -773,6 +773,16 @@
           "type": 301
         },
         {
+          "source": "/experiencias/latin-america-leaders-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
+          "source": "/experiencias/latin-america-leaders-awards/",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
           "source": "/happiness-in-europe/",
           "destination": "https://theglobal.school/happiness-is-expensive/",
           "type": 301

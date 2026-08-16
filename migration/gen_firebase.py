@@ -120,6 +120,8 @@ GAP_REDIRECTS = {
         ("/latin-america-leaders-awards", "https://awards.pro-latam.org/"),
         ("/bienvenido-a-los-latin-american-leaders-awards/", "https://awards.pro-latam.org/"),
         ("/bienvenido-a-los-latin-american-leaders-awards", "https://awards.pro-latam.org/"),
+        ("/experiencias/latin-america-leaders-awards/", "https://awards.pro-latam.org/"),
+        ("/experiencias/latin-america-leaders-awards", "https://awards.pro-latam.org/"),
     ],
 }
 for lang, pairs in GAP_REDIRECTS.items():
