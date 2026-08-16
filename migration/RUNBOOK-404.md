@@ -11,20 +11,22 @@ Cada tanto (ej. mensual), revisar los 404 que Google encontró y redirigirlos.
 > La columna que importa es la URL. Si el CSV trae `clicks,impressions`, mejor (prioriza por tráfico).
 
 ## 2. Cruzar contra lo que ya está cubierto
-Desde la raíz del repo:
+Corre SIEMPRE desde la raíz del repo (no desde ~). Reemplaza `tu-export.csv` por el nombre real:
 ```bash
-npm run build                          # deja dist-en / dist-es al día
-node migration/check_404.mjs ~/Downloads/tu-export.csv
+cd ~/Developer/theglobal.school && npm run build && node migration/check_404.mjs ~/Downloads/tu-export.csv
+```
+Para probar el flujo sin export nuevo (usa el CSV existente):
+```bash
+cd ~/Developer/theglobal.school && node migration/check_404.mjs
 ```
 Imprime cuántas ya están redirigidas / existen, y lista **solo las que siguen en 404**, ya con el formato `("/ruta/", "/"),` listo para pegar.
 
 ## 3. Agregar los redirects (nunca editar firebase.json a mano)
 Pega las líneas nuevas en `GAP_REDIRECTS` (`"en"` o `"es"`) dentro de `migration/gen_firebase.py`.
 Ajusta el destino cuando haya uno mejor que la home (una página real, una expedición, awards, etc.).
-Luego regenera y despliega:
+Luego regenera y despliega (desde la raíz del repo):
 ```bash
-python3 migration/gen_firebase.py     # regenera firebase.json
-git add -A && git commit -m "chore: redirects 404 nuevos de Search Console" && git push origin main
+cd ~/Developer/theglobal.school && python3 migration/gen_firebase.py && git add -A && git commit -m "chore: redirects 404 nuevos de Search Console" && git push origin main
 ```
 El push dispara el deploy por GitHub Actions.
 
