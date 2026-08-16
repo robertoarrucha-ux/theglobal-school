@@ -16,6 +16,8 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     {ogFull && <meta property="og:image" content={ogFull} />}

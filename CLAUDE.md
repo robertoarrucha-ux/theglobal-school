@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRÍTICO: un solo proyecto Firebase
+
+Todo el trabajo de este workspace (sitio Astro + app Aliados) vive **SIEMPRE** en el proyecto Firebase **`gen-lang-client-0345505794`** ("Global School", project number 216115217934). Aquí NUNCA se trabaja sobre otro proyecto: nada de `apex-vote` (pro-latam / awards) ni ningún otro. Todo deploy, regla, secret, Firestore y Storage se hace contra `gen-lang-client-0345505794`. Antes de cualquier `firebase deploy`/comando, confirmar que el output diga `Deploying to 'gen-lang-client-0345505794'`. Si algo pide tocar otro proyecto, detenerse y preguntar.
+
 ## What this workspace is
 
 This directory holds **theglobal.school**, migrated off WordPress into a hybrid product:
