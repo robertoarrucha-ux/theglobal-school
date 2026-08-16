@@ -125,6 +125,9 @@ GAP_REDIRECTS = {
         ("/our-children-in-school/", "/"),
         ("/become-a-volunteer/", "/"), ("/become-a-volounteer/", "/"),
         ("/prices/", "/"),
+        # 404 GSC (drilldown 2026-08-15)
+        ("/invitation-masterclass/", "/"),
+        ("/purpose-driven-leader/", "/"),
     ],
     "es": [
         ("/tag/**", "/"),
@@ -163,6 +166,15 @@ GAP_REDIRECTS = {
         ("/airbnb-violence-survivors/", "/"),
         ("/the-battle-against-inequality-starts-in-mexico/", "/"),
         ("/5-lessons/", "/"),
+        # 404 GSC (drilldown 2026-08-15): cruft de WordPress (archivos de fecha, paginación, etc.)
+        ("/viena-ciudad-inteligente/page/**", "/"),
+        ("/viena-ciudad-", "/"),
+        ("/abril-2020/", "/"),
+        ("/july-2023-es/", "/"),
+        ("/junio-2023/", "/"),
+        ("/sin-categorizar/", "/"),
+        ("/can-women-lead-an-army/", "/"),
+        ("/libro-roberto/", "/"),
     ],
 }
 for lang, pairs in GAP_REDIRECTS.items():

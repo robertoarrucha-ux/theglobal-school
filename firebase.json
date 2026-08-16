@@ -311,6 +311,11 @@
           "type": 301
         },
         {
+          "source": "/invitation-masterclass/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/its-time-for-impact-driven-events-what-can-the-events-industry-learn-from-the-coronavirus-crisis/",
           "destination": "https://theglobal.school/events-industry/",
           "type": 301
@@ -458,6 +463,11 @@
         {
           "source": "/project/purpose-driven-career-masterclass/",
           "destination": "/purpose-driven-career-masterclass/",
+          "type": 301
+        },
+        {
+          "source": "/purpose-driven-leader/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -703,6 +713,11 @@
           "type": 301
         },
         {
+          "source": "/abril-2020/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/airbnb-partners-with-safe-ireland-and-womens-aid-to-offer-free-accommodation-for-domestic-violence-survivors/",
           "destination": "https://theglobal.school/airbnb-violence-survivors/",
           "type": 301
@@ -750,6 +765,11 @@
         {
           "source": "/can-ai-cheat-your-boss-and-professor-forever/",
           "destination": "https://theglobal.school/how-to-stop-ai-from-cheating/",
+          "type": 301
+        },
+        {
+          "source": "/can-women-lead-an-army/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -993,6 +1013,16 @@
           "type": 301
         },
         {
+          "source": "/july-2023-es/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/junio-2023/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/la-batalla-por-la-supervivencia-da-inicio/",
           "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
           "type": 301
@@ -1065,6 +1095,11 @@
         {
           "source": "/libro-mente-cuerpo-espiritu-roberto-arrucha/",
           "destination": "https://es.theglobal.school/roberto-arrucha-libro/",
+          "type": 301
+        },
+        {
+          "source": "/libro-roberto/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -1178,6 +1213,11 @@
           "type": 301
         },
         {
+          "source": "/sin-categorizar/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/speakers-requests/",
           "destination": "https://theglobal.school/startups-and-speakers-applications/",
           "type": 301
@@ -1250,6 +1290,16 @@
         {
           "source": "/una-mirada-hacia-el-futuro-del-liderazgo-en-tiempos-de-crisis-posliderazgo/",
           "destination": "https://es.theglobal.school/posliderazgo/",
+          "type": 301
+        },
+        {
+          "source": "/viena-ciudad-",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/viena-ciudad-inteligente/page/**",
+          "destination": "/",
           "type": 301
         },
         {
