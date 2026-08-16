@@ -216,6 +216,21 @@
 .mkt-chip { border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .88rem; color: var(--txt-soft); cursor: pointer; background: transparent; font-family: var(--font-sans); transition: all .2s; }
 .mkt-chip[aria-pressed="true"], .mkt-chip:hover { color: #fff; border-color: var(--purple-bright); background: rgba(123, 47, 255, 0.18); }
 
+/* Filtros enriquecidos de experiencias (búsqueda + tipo + destino + duración + formato) */
+.xp-filters { margin: 1.8rem 0 2rem; display: flex; flex-direction: column; gap: .8rem; }
+.xp-fil-row { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; justify-content: center; }
+.xp-fil-search { flex: 1 1 260px; max-width: 360px; background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 999px; padding: .6rem 1.1rem; color: var(--txt); font-family: var(--font-sans); font-size: .9rem; }
+.xp-fil-search::placeholder { color: var(--txt-soft); }
+.xp-fil-search:focus { outline: none; border-color: var(--purple-bright); }
+.xp-fil-chips { display: flex; gap: .5rem; flex-wrap: wrap; }
+.xp-fil-select { background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 999px; padding: .55rem 2.2rem .55rem 1rem; color: var(--txt); font-family: var(--font-sans); font-size: .88rem; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-opacity='.6'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; }
+.xp-fil-select:focus { outline: none; border-color: var(--purple-bright); }
+.xp-fil-select option { background: var(--bg-mid); color: var(--txt); }
+.xp-fil-clear { background: transparent; border: 0; color: var(--txt-soft); font-size: .82rem; cursor: pointer; text-decoration: underline; padding: .5rem .4rem; }
+.xp-fil-clear:hover { color: var(--txt); }
+.xp-fil-count { font-family: var(--font-sans); font-size: .8rem; color: var(--txt-soft); margin-left: auto; }
+@media (max-width: 640px) { .xp-fil-count { margin-left: 0; width: 100%; text-align: center; } }
+
 /* Grid de tarjetas */
 .mkt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; padding-bottom: 5rem; }
 .xp-card { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.04); transition: transform .25s, border-color .25s, box-shadow .25s; display: flex; flex-direction: column; }

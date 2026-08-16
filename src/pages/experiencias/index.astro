@@ -1,5 +1,6 @@
 ---
 import MarketplaceLayout from '../../layouts/MarketplaceLayout.astro';
+import ExperienceFilters from '../../components/ExperienceFilters.astro';
 import { loadExperiences } from '../../lib/experiences';
 import { seasonsText } from '../../lib/editions';
 import { LANG } from '../../lib/site';
@@ -20,15 +21,11 @@ const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Gratis</spa
   </section>
 
   <div class="mkt-wrap">
-    <div class="mkt-filters" id="filters">
-      <button class="mkt-chip" data-f="all" aria-pressed="true">Todos</button>
-      <button class="mkt-chip" data-f="evento" aria-pressed="false">Eventos</button>
-      <button class="mkt-chip" data-f="viaje" aria-pressed="false">Viajes</button>
-    </div>
+    <ExperienceFilters experiences={experiences} scope="#grid" />
 
     <div class="mkt-grid" id="grid">
       {experiences.map((x) => (
-        <a class="xp-card" href={`/experiencias/${x.slug}/`} data-type={x.type}>
+        <a class="xp-card" href={`/experiencias/${x.slug}/`} data-type={x.type} data-country={x.country || ''} data-duration={x.durationDays || ''} data-format={x.format || ''} data-search={`${x.title} ${x.summary || ''} ${x.country || ''} ${x.city || ''} ${(x.cities || []).join(' ')}`.toLowerCase()}>
           <div class="media">
             <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
             <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? 'Evento' : 'Viaje'}</span>
@@ -49,15 +46,4 @@ const price = (x: any) => (x.publicPrice === 0 ? '<span class="free">Gratis</spa
     </div>
   </div>
 
-  <script>
-    const chips = document.querySelectorAll('.mkt-chip');
-    const cards = document.querySelectorAll<HTMLElement>('.xp-card');
-    const apply = (f: string) => {
-      chips.forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.f === f)));
-      cards.forEach((c) => (c.style.display = f === 'all' || c.dataset.type === f ? '' : 'none'));
-    };
-    chips.forEach((c) => c.addEventListener('click', () => apply((c as HTMLElement).dataset.f!)));
-    const t = new URLSearchParams(location.search).get('t');
-    if (t) apply(t);
-  </script>
 </MarketplaceLayout>

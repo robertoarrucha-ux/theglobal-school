@@ -2,6 +2,7 @@
 import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
 import { getCollection } from 'astro:content';
 import { loadExperiences } from '../lib/experiences';
+import ExperienceFilters from '../components/ExperienceFilters.astro';
 import { seasonsText } from '../lib/editions';
 import { LANG, BRAND, SELF_ORIGIN } from '../lib/site';
 
@@ -191,14 +192,10 @@ const jsonLd = {
       </div>
     ) : (
     <>
-    <div class="mkt-filters" id="filters">
-      <button class="mkt-chip" data-f="all" aria-pressed="true">{t.allEvents}</button>
-      <button class="mkt-chip" data-f="evento" aria-pressed="false">{t.events}</button>
-      <button class="mkt-chip" data-f="viaje" aria-pressed="false">{t.trips}</button>
-    </div>
+    <ExperienceFilters experiences={experiences} scope="#programas" />
     <div class="mkt-grid">
       {experiences.map((x) => (
-        <a class="xp-card" href={`${xbase}/${x.slug}/`} data-type={x.type}>
+        <a class="xp-card" href={`${xbase}/${x.slug}/`} data-type={x.type} data-country={x.country || ''} data-duration={x.durationDays || ''} data-format={x.format || ''} data-search={`${x.title} ${x.summary || ''} ${x.country || ''} ${x.city || ''} ${(x.cities || []).join(' ')}`.toLowerCase()}>
           <div class="media">
             <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
             <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? t.events.replace(/s$/, '') : (L ? 'Viaje' : 'Trip')}</span>
@@ -284,13 +281,4 @@ const jsonLd = {
     <p style="text-align:center;margin-top:2rem"><a class="btn-ghost" href="/blog/">{t.blogAll} →</a></p>
   </section>
 
-  <script>
-    const chips = document.querySelectorAll('.mkt-chip');
-    const cards = document.querySelectorAll<HTMLElement>('#programas .xp-card');
-    const apply = (f: string) => {
-      chips.forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.f === f)));
-      cards.forEach((c) => (c.style.display = f === 'all' || c.dataset.type === f ? '' : 'none'));
-    };
-    chips.forEach((c) => c.addEventListener('click', () => apply((c as HTMLElement).dataset.f!)));
-  </script>
 </MarketplaceLayout>

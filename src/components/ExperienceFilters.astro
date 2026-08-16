@@ -1,0 +1,99 @@
+---
+// Filtros de experiencias (cliente): búsqueda + tipo + destino + duración + formato.
+// Opera sobre las .xp-card dentro del contenedor `scope`. Las opciones se derivan de los datos.
+import { LANG } from '../lib/site';
+const { experiences = [], scope = '#grid' } = Astro.props as { experiences: any[]; scope?: string };
+const L = LANG === 'es';
+const countries = [...new Set(experiences.map((x) => x.country).filter(Boolean))].sort();
+const hasDuration = experiences.some((x) => x.durationDays);
+const hasFormat = experiences.some((x) => x.format);
+const tt = L
+  ? { all: 'Todos', events: 'Eventos', trips: 'Viajes', search: 'Buscar por nombre o destino…', dest: 'Todos los destinos', dur: 'Cualquier duración', d1: '1 día', d24: '2 a 4 días', d57: '5 a 7 días', d8: '8+ días', fmt: 'Cualquier formato', presencial: 'Presencial', online: 'Online', hibrido: 'Híbrido', clear: 'Limpiar' }
+  : { all: 'All', events: 'Events', trips: 'Trips', search: 'Search by name or destination…', dest: 'All destinations', dur: 'Any duration', d1: '1 day', d24: '2 to 4 days', d57: '5 to 7 days', d8: '8+ days', fmt: 'Any format', presencial: 'In person', online: 'Online', hibrido: 'Hybrid', clear: 'Clear' };
+---
+<div class="xp-filters" data-scope={scope}>
+  <div class="xp-fil-row">
+    <input type="search" class="xp-fil-search" placeholder={tt.search} aria-label={tt.search} />
+    <div class="xp-fil-chips" role="group">
+      <button class="mkt-chip" data-type="all" aria-pressed="true">{tt.all}</button>
+      <button class="mkt-chip" data-type="evento" aria-pressed="false">{tt.events}</button>
+      <button class="mkt-chip" data-type="viaje" aria-pressed="false">{tt.trips}</button>
+    </div>
+  </div>
+  <div class="xp-fil-row">
+    {countries.length > 1 && (
+      <select class="xp-fil-select" data-fil="country" aria-label={tt.dest}>
+        <option value="">{tt.dest}</option>
+        {countries.map((c) => <option value={c}>{c}</option>)}
+      </select>
+    )}
+    {hasDuration && (
+      <select class="xp-fil-select" data-fil="duration" aria-label={tt.dur}>
+        <option value="">{tt.dur}</option>
+        <option value="1">{tt.d1}</option>
+        <option value="2-4">{tt.d24}</option>
+        <option value="5-7">{tt.d57}</option>
+        <option value="8">{tt.d8}</option>
+      </select>
+    )}
+    {hasFormat && (
+      <select class="xp-fil-select" data-fil="format" aria-label={tt.fmt}>
+        <option value="">{tt.fmt}</option>
+        <option value="presencial">{tt.presencial}</option>
+        <option value="online">{tt.online}</option>
+        <option value="hibrido">{tt.hibrido}</option>
+      </select>
+    )}
+    <button class="xp-fil-clear" type="button">{tt.clear}</button>
+    <span class="xp-fil-count" aria-live="polite"></span>
+  </div>
+</div>
+
+<script define:vars={{ scope, resultsWord: L ? 'resultado' : 'result', noneMsg: L ? 'Sin resultados con esos filtros.' : 'No results with those filters.' }}>
+  (function () {
+    const root = document.querySelector('.xp-filters[data-scope="' + scope + '"]');
+    const container = document.querySelector(scope);
+    if (!root || !container) return;
+    const cards = Array.from(container.querySelectorAll('.xp-card'));
+    const state = { type: 'all', country: '', duration: '', format: '', q: '' };
+    const chips = root.querySelectorAll('.mkt-chip');
+    const search = root.querySelector('.xp-fil-search');
+    const selects = root.querySelectorAll('.xp-fil-select');
+    const countEl = root.querySelector('.xp-fil-count');
+    const bucket = (n) => { n = parseInt(n, 10); if (!n) return ''; if (n <= 1) return '1'; if (n <= 4) return '2-4'; if (n <= 7) return '5-7'; return '8'; };
+    function apply() {
+      let vis = 0;
+      cards.forEach((c) => {
+        const show =
+          (state.type === 'all' || c.dataset.type === state.type) &&
+          (!state.country || c.dataset.country === state.country) &&
+          (!state.duration || bucket(c.dataset.duration) === state.duration) &&
+          (!state.format || c.dataset.format === state.format) &&
+          (!state.q || (c.dataset.search || '').indexOf(state.q) !== -1);
+        c.style.display = show ? '' : 'none';
+        if (show) vis++;
+      });
+      if (countEl) countEl.textContent = vis + ' ' + resultsWord + (vis === 1 ? '' : 's');
+    }
+    chips.forEach((c) => c.addEventListener('click', () => {
+      state.type = c.dataset.type;
+      chips.forEach((x) => x.setAttribute('aria-pressed', String(x === c)));
+      apply();
+    }));
+    selects.forEach((s) => s.addEventListener('change', () => { state[s.dataset.fil] = s.value; apply(); }));
+    if (search) search.addEventListener('input', () => { state.q = search.value.trim().toLowerCase(); apply(); });
+    root.querySelector('.xp-fil-clear').addEventListener('click', () => {
+      state.type = 'all'; state.country = ''; state.duration = ''; state.format = ''; state.q = '';
+      chips.forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.type === 'all')));
+      selects.forEach((s) => (s.value = ''));
+      if (search) search.value = '';
+      apply();
+    });
+    // Pre-filtro por query params: ?t=viaje&country=Alemania&duration=5-7&format=presencial&q=berlin
+    const p = new URLSearchParams(location.search);
+    if (p.get('t')) { state.type = p.get('t'); chips.forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.type === state.type))); }
+    ['country', 'duration', 'format'].forEach((k) => { const v = p.get(k); if (v) { state[k] = v; const s = root.querySelector('[data-fil="' + k + '"]'); if (s) s.value = v; } });
+    if (p.get('q') && search) { state.q = p.get('q').toLowerCase(); search.value = p.get('q'); }
+    apply();
+  })();
+</script>
