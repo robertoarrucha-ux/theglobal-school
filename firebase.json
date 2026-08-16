@@ -91,8 +91,33 @@
           "type": 301
         },
         {
+          "source": "/author/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/batalla-por-supervivencia/",
           "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/becarios/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/becarios/**",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/become-a-volounteer/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/become-a-volunteer/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -113,6 +138,11 @@
         {
           "source": "/casi-el-90-de-los-hombres-y-mujeres-en-el-mundo-expresan-un-sesgo-contra-las-mujeres/",
           "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/category/blog/",
+          "destination": "/blog/",
           "type": 301
         },
         {
@@ -186,6 +216,11 @@
           "type": 301
         },
         {
+          "source": "/documents/project-details/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/economia-de-la-dona-podemos-regenerar-nuestro-planeta/",
           "destination": "https://es.theglobal.school/economia-de-la-dona/",
           "type": 301
@@ -238,6 +273,16 @@
         {
           "source": "/holistic-development-for-planetary-wellbeing/",
           "destination": "https://theglobal.school/holistic-development/",
+          "type": 301
+        },
+        {
+          "source": "/home-4/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/home-6/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -341,6 +386,16 @@
           "type": 301
         },
         {
+          "source": "/mi-cuenta/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/mission/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/mujeres-autenticas-2/",
           "destination": "https://es.theglobal.school/mujeres-autenticas-votaciones/",
           "type": 301
@@ -348,6 +403,11 @@
         {
           "source": "/mujeres-autenticas-20/",
           "destination": "https://es.theglobal.school/mujeres-autenticas-2023/",
+          "type": 301
+        },
+        {
+          "source": "/nominate",
+          "destination": "/",
           "type": 301
         },
         {
@@ -366,6 +426,16 @@
           "type": 301
         },
         {
+          "source": "/our-children-in-school/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/our-new-partners/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/paises-mas-contaminantes-de-america-latina/",
           "destination": "https://es.theglobal.school/paises-contaminantes-de-america-latina/",
           "type": 301
@@ -373,6 +443,16 @@
         {
           "source": "/pasantias-pagadas-analisis-y-creacion-de-contenido/",
           "destination": "/internship-youtuber/",
+          "type": 301
+        },
+        {
+          "source": "/prepara-tu-campana/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/prices/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -403,6 +483,11 @@
         {
           "source": "/security-operations-management-systems-iso-18788/",
           "destination": "https://theglobal.school/iso-21001-educational-organizations-management/",
+          "type": 301
+        },
+        {
+          "source": "/seguridad-confianza-y-transparencia/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -491,8 +576,18 @@
           "type": 301
         },
         {
+          "source": "/viena-ciudad-inteligente/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/vienna-housing-model-programme/",
           "destination": "/vienna-housing-international-congress/",
+          "type": 301
+        },
+        {
+          "source": "/votos-mujeres-autenticas",
+          "destination": "https://awards.pro-latam.org/",
           "type": 301
         },
         {
@@ -578,6 +673,11 @@
           "type": 301
         },
         {
+          "source": "/5-lessons/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/7-razones-por-las-cuales-amamos-viena/",
           "destination": "https://es.theglobal.school/viena-ciudad-inteligente/",
           "type": 301
@@ -608,6 +708,11 @@
           "type": 301
         },
         {
+          "source": "/airbnb-violence-survivors/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/alojamiento-gratuito-violencia-domestica/",
           "destination": "https://es.theglobal.school/airbnb-alojamiento-gratuito/",
           "type": 301
@@ -620,6 +725,11 @@
         {
           "source": "/batalla-por-supervivencia/",
           "destination": "https://es.theglobal.school/carta-a-la-humanidad-desde-2100/",
+          "type": 301
+        },
+        {
+          "source": "/bienvenido-",
+          "destination": "/",
           "type": 301
         },
         {
@@ -645,6 +755,11 @@
         {
           "source": "/casi-el-90-de-los-hombres-y-mujeres-en-el-mundo-expresan-un-sesgo-contra-las-mujeres/",
           "destination": "https://es.theglobal.school/mujeres/",
+          "type": 301
+        },
+        {
+          "source": "/certification-iso-26000-social-responsibility/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -718,6 +833,11 @@
           "type": 301
         },
         {
+          "source": "/digital-innovation-toolbox/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/directora-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
           "destination": "https://es.theglobal.school/direccion-de-movilidad-y-transporte-de-zapopan-latin-american-leaders-awards-nominados-2022/",
           "type": 301
@@ -783,6 +903,11 @@
           "type": 301
         },
         {
+          "source": "/europe/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/event-organizations-academy-communities/",
           "destination": "https://theglobal.school/the-new-global-school-communities-events-education/",
           "type": 301
@@ -790,6 +915,11 @@
         {
           "source": "/event-tech-digital-solutions-for-event-organizers/",
           "destination": "/event-organizations-academy-communities/",
+          "type": 301
+        },
+        {
+          "source": "/expeditions/great-war-trenches",
+          "destination": "/experiencias/great-war-trenches/",
           "type": 301
         },
         {
@@ -820,6 +950,11 @@
         {
           "source": "/holistic-development-for-planetary-wellbeing/",
           "destination": "https://theglobal.school/holistic-development/",
+          "type": 301
+        },
+        {
+          "source": "/how-consulting-businesses-are-working-online/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -878,6 +1013,11 @@
           "type": 301
         },
         {
+          "source": "/latam-covid19/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/latin-america-leaders-awards",
           "destination": "https://awards.pro-latam.org/",
           "type": 301
@@ -893,6 +1033,11 @@
           "type": 301
         },
         {
+          "source": "/latin-american-networking-in-vienna/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/launch-your-global-school-community-events-education-academy/",
           "destination": "https://es.theglobal.school/tu-escuela-global-comunidad-eventos-educacion/",
           "type": 301
@@ -905,6 +1050,11 @@
         {
           "source": "/lessons-from-indigenous/",
           "destination": "https://theglobal.school/lessons-indigenous/",
+          "type": 301
+        },
+        {
+          "source": "/lessons-indigenous/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -935,6 +1085,16 @@
         {
           "source": "/membresias/",
           "destination": "/miembros-asociados/",
+          "type": 301
+        },
+        {
+          "source": "/miembros-/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/muje",
+          "destination": "/",
           "type": 301
         },
         {
@@ -1023,6 +1183,11 @@
           "type": 301
         },
         {
+          "source": "/startups-and-speakers-applications/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/superar-confinamiento/",
           "destination": "https://es.theglobal.school/superar-confinamiento-y-cuarentena/",
           "type": 301
@@ -1038,6 +1203,11 @@
           "type": 301
         },
         {
+          "source": "/the-battle-against-inequality-starts-in-mexico/",
+          "destination": "/",
+          "type": 301
+        },
+        {
           "source": "/the-future-is-now-european-union-and-latin-american-eu-lac/",
           "destination": "/european-union-and-latin-american-eu-lac-celac/",
           "type": 301
@@ -1045,6 +1215,11 @@
         {
           "source": "/the-global-covid-19-system-crisis/",
           "destination": "https://theglobal.school/system-crisis/",
+          "type": 301
+        },
+        {
+          "source": "/the-holy-land-experience/",
+          "destination": "/",
           "type": 301
         },
         {
@@ -1083,7 +1258,22 @@
           "type": 301
         },
         {
+          "source": "/votos-latin-american-leaders-awards",
+          "destination": "https://awards.pro-latam.org/",
+          "type": 301
+        },
+        {
           "source": "/welcome/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/who-is-arora-akanksha/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/why-cultural-transformation-is-so-important-nowadays/",
           "destination": "/",
           "type": 301
         },
