@@ -162,7 +162,7 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
     </script>
     <footer class="mkt-header" style="position:static;border-top:1px solid var(--line);border-bottom:0;margin-top:2rem">
       <div class="inner site-legal" style="color:var(--txt-soft);font-size:.82rem;flex-wrap:wrap;gap:.4rem 1.2rem">
-        <span>© {new Date().getFullYear()} Global School. Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, Austria. {L ? 'Todos los derechos reservados.' : 'All rights reserved.'} {L ? 'Consulta aquí nuestras políticas de' : 'Check here our'} <a href={L ? '/politicas/' : '/terms/'}>IMPRESSUM</a>, <a href={L ? '/politicas/' : '/terms/'}>{L ? 'PRIVACIDAD' : 'PRIVACY'}</a> {L ? 'y' : '&'} <a href={L ? '/politicas/' : '/terms/'}>{L ? 'TÉRMINOS DE USO' : 'TERMS OF USE'}</a>.</span>
+        <span>© {new Date().getFullYear()} Global School. Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, Austria. {L ? 'Todos los derechos reservados.' : 'All rights reserved.'} {L ? 'Consulta aquí nuestras políticas de' : 'Check here our'} <a href={L ? '/politicas/#impressum' : '/terms/#impressum'}>IMPRESSUM</a>, <a href={L ? '/politicas/#privacidad' : '/terms/#privacy'}>{L ? 'PRIVACIDAD' : 'PRIVACY'}</a> {L ? 'y' : '&'} <a href={L ? '/politicas/#terminos' : '/terms/#terms'}>{L ? 'TÉRMINOS DE USO' : 'TERMS OF USE'}</a>.</span>
         <a class="to-site" href="/">{L ? 'Volver al sitio' : 'Back to main site'}</a>
       </div>
     </footer>
