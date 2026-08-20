@@ -1,0 +1,147 @@
+---
+import LeadForm from './LeadForm.astro';
+import { LANG } from '../lib/site';
+const L = LANG === 'es';
+const WA = 'https://api.whatsapp.com/send/?phone=4367761735010&text=' + encodeURIComponent(L ? 'Hola, quiero organizar un viaje educativo con The New Global School' : 'Hi, I want to organize an educational trip with The New Global School');
+
+const t = L
+  ? {
+      eyebrow: 'Organiza tu viaje',
+      h1: 'Diseñemos juntos tu viaje educativo internacional',
+      sub: 'Para personas, organizaciones, gobiernos y empresas que quieren formar a sus líderes con una experiencia en Europa. Nos dices el objetivo, nosotros diseñamos el programa a medida: visitas institucionales, logística, idioma y certificados.',
+      wa: 'Escríbenos por WhatsApp',
+      formTitle: 'Cuéntanos tu idea',
+      formSub: 'Completa el formulario y te respondemos en 24 h.',
+      whoTitle: 'Para quién es',
+      who: [
+        { icon: '👤', title: 'Personas y líderes', text: 'Vive una experiencia formativa internacional y amplía tu red de contactos.' },
+        { icon: '🏛️', title: 'Organizaciones y gobierno', text: 'Capacita a tu equipo con inmersión, casos reales y aliados locales en Europa.' },
+        { icon: '🏢', title: 'Empresas', text: 'Misiones comerciales, formación de directivos y networking internacional a medida.' },
+      ],
+      whatTitle: 'Qué hacemos por ti',
+      what: ['Diseño a medida', 'Destinos en Europa: Viena, Berlín, Ginebra, París…', 'Red de aliados e instituciones', 'Agenda y visitas curadas', 'Certificados y materiales', 'Acompañamiento de principio a fin'],
+      howTitle: '¿Cómo funciona?',
+      how: [
+        { n: '1', title: 'Cuéntanos tu objetivo', text: 'Tu organización, el tema de interés y las fechas aproximadas.' },
+        { n: '2', title: 'Lo diseñamos a tu medida', text: 'Itinerario, ciudades, idioma y tamaño de grupo. Grupos privados disponibles.' },
+        { n: '3', title: 'Confirmamos y viajan', text: 'Cerramos logística, certificados y materiales; tu equipo vive la experiencia.' },
+      ],
+      closeTitle: '¿Prefieres escribirnos directo?',
+      resp: 'Respondemos en un día hábil.',
+    }
+  : {
+      eyebrow: 'Organize your trip',
+      h1: "Let's design your international educational trip together",
+      sub: 'For individuals, organizations, governments and companies that want to develop their leaders through an experience in Europe. You tell us the goal, we design the program end to end: institutional visits, logistics, language and certificates.',
+      wa: 'Message us on WhatsApp',
+      formTitle: 'Tell us your idea',
+      formSub: 'Fill in the form and we reply within 24h.',
+      whoTitle: 'Who it is for',
+      who: [
+        { icon: '👤', title: 'Individuals and leaders', text: 'Live an international learning experience and grow your network.' },
+        { icon: '🏛️', title: 'Organizations and government', text: 'Train your team with immersion, real cases and local partners in Europe.' },
+        { icon: '🏢', title: 'Companies', text: 'Trade missions, executive training and international networking, tailor-made.' },
+      ],
+      whatTitle: 'What we do for you',
+      what: ['Tailor-made design', 'Destinations in Europe: Vienna, Berlin, Geneva, Paris…', 'Network of allies and institutions', 'Curated agenda and visits', 'Certificates and materials', 'End-to-end support'],
+      howTitle: 'How it works',
+      how: [
+        { n: '1', title: 'Tell us your goal', text: 'Your organization, the topic of interest and approximate dates.' },
+        { n: '2', title: 'We design it for you', text: 'Itinerary, cities, language and group size. Private groups available.' },
+        { n: '3', title: 'We confirm and you travel', text: 'We handle logistics, certificates and materials; your team lives the experience.' },
+      ],
+      closeTitle: 'Prefer to reach us directly?',
+      resp: 'We reply within one business day.',
+    };
+
+const stats = [
+  { value: '+200K', label: L ? 'Comunidad en redes' : 'Social media community' },
+  { value: '+600', label: L ? 'Ex participantes' : 'Alumni & associates' },
+  { value: '15', label: L ? 'Años de experiencia' : 'Years of experience' },
+  { value: '+200', label: L ? 'Viajes y eventos' : 'Trips & events held' },
+  { value: '4', label: L ? 'Premios' : 'Awards' },
+];
+---
+<section class="xp-detail-hero pd-hero contact-hero">
+  <div class="mkt-wrap inner contact-hero-grid">
+    <div class="contact-hero-copy">
+      <p class="pd-eyebrow">{t.eyebrow}</p>
+      <h1>{t.h1}</h1>
+      <p class="contact-sub">{t.sub}</p>
+      <a class="btn-primary wa-btn" href={WA} target="_blank" rel="noopener">{t.wa}</a>
+      <ul class="contact-quick">
+        <li>✉️ <a href="mailto:hello@theglobal.school">hello@theglobal.school</a></li>
+        <li>📍 Viena · CDMX</li>
+        <li>⏱ {t.resp}</li>
+      </ul>
+    </div>
+    <div class="contact-form-card glass">
+      <h2>{t.formTitle}</h2>
+      <p class="cfc-sub">{t.formSub}</p>
+      <LeadForm />
+    </div>
+  </div>
+</section>
+
+<section class="mkt-wrap contact-sec">
+  <h2 class="contact-h">{t.whoTitle}</h2>
+  <div class="contact-audience">
+    {t.who.map((w) => (
+      <div class="glass aud-card">
+        <span class="aud-icon" aria-hidden="true">{w.icon}</span>
+        <h3>{w.title}</h3>
+        <p>{w.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="mkt-wrap contact-sec">
+  <h2 class="contact-h">{t.whatTitle}</h2>
+  <ul class="contact-what">
+    {t.what.map((w) => <li>{w}</li>)}
+  </ul>
+  <ul class="inst-stats glass contact-stats">
+    {stats.map((s) => <li><span class="stat-num">{s.value}</span><span class="stat-label">{s.label}</span></li>)}
+  </ul>
+</section>
+
+<section class="mkt-wrap contact-sec xp-how">
+  <h2 class="contact-h">{t.howTitle}</h2>
+  <div class="xp-how-steps">
+    {t.how.map((s) => (
+      <div class="xp-how-step glass"><span class="num">{s.n}</span><h4>{s.title}</h4><p>{s.text}</p></div>
+    ))}
+  </div>
+</section>
+
+<section class="mkt-wrap">
+  <div class="pd-cta glass">
+    <p>{t.closeTitle}</p>
+    <a class="btn-primary wa-btn" href={WA} target="_blank" rel="noopener">{t.wa}</a>
+  </div>
+</section>
+
+<style>
+  .contact-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; max-width: 1200px; }
+  @media (max-width: 900px) { .contact-hero-grid { grid-template-columns: 1fr; gap: 1.8rem; } }
+  .contact-hero-copy h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); margin: .5rem 0; line-height: 1.1; }
+  .contact-sub { color: var(--txt-soft); max-width: 44ch; line-height: 1.6; }
+  .wa-btn { margin-top: 1.2rem; }
+  .contact-quick { list-style: none; padding: 0; margin: 1.6rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; font-size: .9rem; color: var(--txt-soft); }
+  .contact-quick a { color: var(--txt); }
+  .contact-form-card { padding: 1.8rem; border-radius: 20px; }
+  .contact-form-card h2 { font-family: var(--font-display); font-size: 1.4rem; margin: 0 0 .3rem; color: var(--txt); }
+  .cfc-sub { color: var(--txt-soft); font-size: .9rem; margin: 0 0 1.2rem; }
+  .contact-sec { padding-top: 1rem; padding-bottom: .5rem; }
+  .contact-h { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--txt); margin: 1.5rem 0 1.3rem; }
+  .contact-audience { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+  .aud-card { padding: 1.6rem 1.5rem; border-radius: 18px; }
+  .aud-icon { font-size: 1.8rem; }
+  .aud-card h3 { font-family: var(--font-display); color: var(--txt); font-size: 1.15rem; margin: .6rem 0 .4rem; }
+  .aud-card p { color: var(--txt-soft); font-size: .92rem; line-height: 1.5; margin: 0; }
+  .contact-what { list-style: none; padding: 0; margin: 0 0 1.6rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .6rem; }
+  .contact-what li { position: relative; padding: .7rem 1rem .7rem 1.9rem; background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 12px; color: var(--txt-soft); font-size: .92rem; }
+  .contact-what li::before { content: '✦'; position: absolute; left: .8rem; color: var(--yellow); }
+  .contact-stats { margin-top: 0; }
+</style>

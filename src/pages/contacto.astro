@@ -1,15 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import LeadForm from '../components/LeadForm.astro';
+import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
+import ContactContent from '../components/ContactContent.astro';
 import { LANG } from '../lib/site';
 
 // En el build EN esta ruta redirige a /contact/.
 if (LANG === 'en') return Astro.redirect('/contact/');
 ---
-<BaseLayout title="Contacto, The New Global School" description="Contáctanos, educación y eventos para líderes globales.">
-  <article class="article page">
-    <h1>Contacto</h1>
-    <p>Cuéntanos sobre tu proyecto, programa o evento. Solemos responder en un día hábil.</p>
-    <LeadForm />
-  </article>
-</BaseLayout>
+<MarketplaceLayout title="Contacto, The New Global School" description="Organiza un viaje educativo internacional con The New Global School. Para personas, organizaciones, gobiernos y empresas.">
+  <ContactContent />
+</MarketplaceLayout>

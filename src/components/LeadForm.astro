@@ -1,8 +1,27 @@
 ---
 import { LANG } from '../lib/site';
-const t = LANG === 'es'
-  ? { name: 'Nombre completo', email: 'Correo electrónico', phone: 'Teléfono (opcional)', interest: 'Tema de interés (opcional)', message: 'Mensaje', send: 'Enviar', ok: '¡Gracias! Hemos recibido tu mensaje.', err: 'Hubo un error. Intenta de nuevo o escríbenos a hello@theglobal.school.' }
-  : { name: 'Full name', email: 'Email address', phone: 'Phone (optional)', interest: 'Topic of interest (optional)', message: 'Message', send: 'Send', ok: 'Thank you! We received your message.', err: 'Something went wrong. Please try again or email hello@theglobal.school.' };
+const L = LANG === 'es';
+const t = L
+  ? {
+      name: 'Nombre completo', email: 'Correo electrónico', phone: 'Teléfono (opcional)',
+      audience: 'Soy / represento a', interest: 'Tema o destino de interés',
+      group: 'Tamaño aproximado del grupo', dates: 'Fechas tentativas',
+      message: 'Cuéntanos tu objetivo', send: 'Enviar solicitud',
+      ok: '¡Gracias! Hemos recibido tu mensaje y te respondemos en 24 h.',
+      err: 'Hubo un error. Intenta de nuevo o escríbenos a hello@theglobal.school.',
+      audienceOpts: ['Selecciona…', 'Persona / líder individual', 'Organización u ONG', 'Gobierno / sector público', 'Empresa'],
+      groupOpts: ['Selecciona…', 'Solo yo', '2 a 10', '11 a 25', '26 a 50', 'Más de 50'],
+    }
+  : {
+      name: 'Full name', email: 'Email address', phone: 'Phone (optional)',
+      audience: 'I am / I represent', interest: 'Topic or destination of interest',
+      group: 'Approximate group size', dates: 'Tentative dates',
+      message: 'Tell us your goal', send: 'Send request',
+      ok: 'Thank you! We received your message and will reply within 24h.',
+      err: 'Something went wrong. Please try again or email hello@theglobal.school.',
+      audienceOpts: ['Select…', 'Individual / leader', 'Organization or NGO', 'Government / public sector', 'Company'],
+      groupOpts: ['Select…', 'Just me', '2 to 10', '11 to 25', '26 to 50', 'More than 50'],
+    };
 ---
 <form class="lead-form" data-lead-form data-lang={LANG}>
   <div class="row">
@@ -11,35 +30,52 @@ const t = LANG === 'es'
   </div>
   <div class="row">
     <label>{t.phone}<input name="phone" autocomplete="tel" /></label>
-    <label>{t.interest}<input name="interest" /></label>
+    <label>{t.audience}
+      <select name="audienceType">
+        {t.audienceOpts.map((o, i) => <option value={i === 0 ? '' : o}>{o}</option>)}
+      </select>
+    </label>
   </div>
-  <label>{t.message}<textarea name="message" rows="5"></textarea></label>
-  {/* honeypot anti-spam (oculto) */}
+  <div class="row">
+    <label>{t.interest}<input name="interest" placeholder={L ? 'Ej. Liderazgo público, Viena…' : 'e.g. Public leadership, Vienna…'} /></label>
+    <label>{t.group}
+      <select name="groupSize">
+        {t.groupOpts.map((o, i) => <option value={i === 0 ? '' : o}>{o}</option>)}
+      </select>
+    </label>
+  </div>
+  <label>{t.dates}<input name="dates" placeholder={L ? 'Ej. Marzo 2027 (aprox.)' : 'e.g. March 2027 (approx.)'} /></label>
+  <label>{t.message}<textarea name="message" rows="4"></textarea></label>
   <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
   <button type="submit">{t.send}</button>
   <p class="form-msg" data-ok={t.ok} data-err={t.err} hidden></p>
 </form>
 
 <style>
-  .lead-form { max-width: 640px; display: grid; gap: 1rem; margin: 1.5rem 0; }
-  .lead-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .lead-form { display: grid; gap: .9rem; }
+  .lead-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
   @media (max-width: 560px) { .lead-form .row { grid-template-columns: 1fr; } }
-  .lead-form label { display: grid; gap: .35rem; font-family: var(--font-head); font-weight: 500; font-size: .9rem; color: var(--ink-soft); }
-  .lead-form input, .lead-form textarea {
-    font-family: var(--font-body); font-size: 1rem; padding: .7rem .85rem;
-    border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink);
+  .lead-form label { display: grid; gap: .35rem; font-family: var(--font-sans, sans-serif); font-weight: 600; font-size: .78rem; letter-spacing: .02em; color: var(--txt-soft, rgba(255,255,255,.62)); text-transform: uppercase; }
+  .lead-form input, .lead-form textarea, .lead-form select {
+    font-family: inherit; font-size: 1rem; font-weight: 400; text-transform: none; letter-spacing: 0;
+    padding: .7rem .85rem; border: 1px solid var(--line, rgba(255,255,255,.12)); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05); color: var(--txt, #fff);
   }
-  .lead-form input:focus, .lead-form textarea:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+  .lead-form input::placeholder, .lead-form textarea::placeholder { color: var(--txt-soft, rgba(255,255,255,.45)); }
+  .lead-form select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-opacity='.55'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.2rem; }
+  .lead-form select option { background: #140d24; color: #fff; }
+  .lead-form input:focus, .lead-form textarea:focus, .lead-form select:focus { outline: none; border-color: var(--purple-bright, #b58bff); }
   .lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .lead-form button {
-    justify-self: start; font-family: var(--font-head); font-weight: 600; font-size: 1rem;
-    color: #fff; background: var(--brand); border: 0; border-radius: 999px; padding: .75rem 1.8rem; cursor: pointer;
+    justify-self: stretch; margin-top: .3rem; font-family: inherit; font-weight: 700; font-size: 1rem; color: #fff;
+    background: linear-gradient(135deg, var(--purple-glow, #7b2fff), var(--orange, #ff7a45)); border: 0;
+    border-radius: 999px; padding: .85rem 1.8rem; cursor: pointer; transition: transform .2s;
   }
-  .lead-form button:hover { background: var(--brand-2); }
-  .lead-form button:disabled { opacity: .6; cursor: default; }
-  .form-msg { font-family: var(--font-head); font-weight: 500; padding: .6rem 0; }
-  .form-msg.ok { color: #1a8f4a; }
-  .form-msg.err { color: #cf2e2e; }
+  .lead-form button:hover { transform: translateY(-2px); }
+  .lead-form button:disabled { opacity: .6; cursor: default; transform: none; }
+  .form-msg { font-weight: 600; font-size: .9rem; padding: .4rem 0; margin: 0; }
+  .form-msg.ok { color: #4ade80; }
+  .form-msg.err { color: #ff7a7a; }
 </style>
 
 <script>
