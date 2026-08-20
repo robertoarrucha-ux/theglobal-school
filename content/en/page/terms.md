@@ -22,7 +22,7 @@ On this page: [Impressum](#impressum) · [Privacy Policy](#privacy) · [Terms of
 
 **The New Global School** is a non-profit initiative dedicated to social impact through education and social innovation. It operates through the following legal entities:
 
-- **Europe:** Global School, Verein für interkulturelle Kommunikation und Bildung. Lindengasse 56, 1070 Vienna, Austria.
+- **Europe:** Global School, Verein für interkulturelle Kommunikation und Bildung. Lindengasse 56, 1070 Vienna, Austria. ZVR (Austrian register of associations): 1148330676.
 - **Latin America:** Latinomics Mexico AC. Calle 10 / 704, San José, Córdoba, Veracruz, Mexico.
 
 **Contact:** hello@theglobal.school
