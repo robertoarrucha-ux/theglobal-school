@@ -74,7 +74,7 @@ const L = LANG === 'es';
             </div>
           ))}
         </div>
-        <div class="footer-bottom">© {new Date().getFullYear()} {BRAND} · Viena · CDMX</div>
+        <div class="footer-bottom">© {new Date().getFullYear()} Global School. Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, Austria. {L ? 'Todos los derechos reservados.' : 'All rights reserved.'} {L ? 'Consulta aquí nuestras políticas de' : 'Check here our'} <a href={L ? '/politicas/' : '/terms/'}>IMPRESSUM</a>, <a href={L ? '/politicas/' : '/terms/'}>{L ? 'PRIVACIDAD' : 'PRIVACY'}</a> {L ? 'y' : '&'} <a href={L ? '/politicas/' : '/terms/'}>{L ? 'TÉRMINOS DE USO' : 'TERMS OF USE'}</a>.</div>
       </div>
     </footer>
     <script is:inline>

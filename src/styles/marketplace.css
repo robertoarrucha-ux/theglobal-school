@@ -216,6 +216,11 @@
 .mkt-chip { border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-size: .88rem; color: var(--txt-soft); cursor: pointer; background: transparent; font-family: var(--font-sans); transition: all .2s; }
 .mkt-chip[aria-pressed="true"], .mkt-chip:hover { color: #fff; border-color: var(--purple-bright); background: rgba(123, 47, 255, 0.18); }
 
+/* Footer legal (enlaces a políticas) */
+.site-legal a { color: var(--txt); text-decoration: underline; text-underline-offset: 2px; }
+.site-legal a:hover { color: var(--purple-bright); }
+.site-legal .to-site { text-decoration: none; }
+
 /* Filtros enriquecidos de experiencias (búsqueda + tipo + destino + duración + formato) */
 .xp-filters { margin: 1.8rem 0 2rem; display: flex; flex-direction: column; gap: .8rem; }
 .xp-fil-row { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; justify-content: center; }
