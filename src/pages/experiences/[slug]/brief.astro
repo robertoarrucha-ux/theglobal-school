@@ -1,0 +1,16 @@
+---
+import OnePagerLayout from '../../../layouts/OnePagerLayout.astro';
+import OnePagerContent from '../../../components/OnePagerContent.astro';
+import { loadExperiences } from '../../../lib/experiences';
+import { LANG } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  if (LANG === 'es') return []; // ES vive en /experiencias/[slug]/ficha
+  return (await loadExperiences()).map((x) => ({ params: { slug: x.slug }, props: { x } }));
+}
+
+const { x } = Astro.props as any;
+---
+<OnePagerLayout title={`${x.title}, program brief`} tripPath={`/experiences/${x.slug}/`}>
+  <OnePagerContent x={x} />
+</OnePagerLayout>

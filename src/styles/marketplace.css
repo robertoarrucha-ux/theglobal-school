@@ -424,3 +424,6 @@
 /* CTA secundario: lleva al formulario con el programa prellenado (lead con registro) */
 .xp-cta-alt { display: block; text-align: center; margin-top: .6rem; padding: .8rem; border-radius: 999px; font-weight: 600; font-size: .95rem; border: 1px solid var(--line); color: var(--txt); background: rgba(255,255,255,.04); transition: border-color .2s, background .2s; }
 .xp-cta-alt:hover { border-color: var(--purple-bright); background: rgba(255,255,255,.08); }
+/* Enlace a la ficha imprimible: material que el partner imprime o envia en PDF */
+.xp-cta-sheet { display: block; text-align: center; margin-top: .55rem; font-size: .85rem; font-weight: 600; color: var(--txt-soft); transition: color .2s; }
+.xp-cta-sheet:hover { color: var(--purple-bright); }

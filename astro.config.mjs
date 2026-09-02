@@ -12,5 +12,8 @@ export default defineConfig({
   outDir: `./dist-${LANG}`,
   trailingSlash: 'always',
   build: { format: 'directory' },
-  integrations: [sitemap()],
+  // Las fichas imprimibles (/experiencias/<slug>/ficha, /experiences/<slug>/brief)
+  // repiten el contenido de la página del viaje: van con noindex y fuera del sitemap
+  // para no competir con la página canónica.
+  integrations: [sitemap({ filter: (page) => !/\/(ficha|brief)\/$/.test(page) })],
 });

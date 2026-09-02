@@ -1,0 +1,230 @@
+---
+// Contenido de la ficha imprimible. Se alimenta del mismo doc de Firestore que la
+// página del viaje, así que no hay una segunda fuente de verdad que mantener.
+import QRCode from 'qrcode';
+import { LANG, SELF_ORIGIN, BRAND } from '../lib/site';
+import { getInclusions } from '../lib/inclusions';
+import { editionRows } from '../lib/editions';
+import { PROOF_STATS, PROOF_LOGOS } from '../data/social-proof';
+
+const { x } = Astro.props as any;
+const L = LANG === 'es';
+const t = L
+  ? { brief: 'Ficha de programa', dest: 'Destinos', dur: 'Duración', days: 'días', dates: 'Fechas 2027',
+      lang: 'Idioma', group: 'Grupo', groupMax: 'máx.', people: 'participantes', fmt: 'Formato',
+      why: 'Por qué este viaje', importance: 'Relevancia', learning: 'Aprendizaje', today: 'Hoy',
+      itin: 'Itinerario', day: 'Día', incl: 'Incluye', notIncl: 'No incluye',
+      who: 'Quién lo opera', contact: 'Organiza tu grupo', scan: 'Escanea para ver el programa completo',
+      cta: 'Escríbenos y preparamos una propuesta a la medida de tu organización: fechas, idioma, tamaño de grupo e itinerario.',
+      partners: 'Instituciones con las que hemos trabajado', priceNote: 'Precio a consultar según grupo y fechas' }
+  : { brief: 'Program brief', dest: 'Destinations', dur: 'Duration', days: 'days', dates: 'Dates 2027',
+      lang: 'Language', group: 'Group', groupMax: 'max.', people: 'participants', fmt: 'Format',
+      why: 'Why this journey', importance: 'Relevance', learning: 'Learning', today: 'Today',
+      itin: 'Itinerary', day: 'Day', incl: 'Included', notIncl: 'Not included',
+      who: 'Who runs it', contact: 'Organize your group', scan: 'Scan to see the full program',
+      cta: 'Get in touch and we will prepare a proposal tailored to your organization: dates, language, group size and itinerary.',
+      partners: 'Institutions we have worked with', priceNote: 'Price on request, depending on group and dates' };
+
+const tripPath = L ? `/experiencias/${x.slug}/` : `/experiences/${x.slug}/`;
+const tripUrl = `${SELF_ORIGIN[LANG]}${tripPath}`;
+// El QR lleva a la ficha web, no a esta hoja: quien lo escanee en papel aterriza en
+// la página que tiene el CTA de propuesta, y el interés queda como lead rastreable.
+const qrSvg = await QRCode.toString(tripUrl, {
+  type: 'svg', margin: 0, errorCorrectionLevel: 'M', color: { dark: '#241633', light: '#0000' },
+});
+
+const inc = getInclusions(LANG);
+const included = x.included?.length ? x.included : (x.type === 'viaje' ? inc.included : []);
+const notIncluded = x.notIncluded?.length ? x.notIncluded : (x.type === 'viaje' ? inc.notIncluded : []);
+const rows = editionRows(x, L);
+const cities: string[] = x.cities?.length ? x.cities : [x.city].filter(Boolean);
+const fmtLabel = (f: string) =>
+  L ? ({ presencial: 'Presencial', online: 'Online', hibrido: 'Híbrido' } as any)[f] || 'Presencial'
+    : ({ presencial: 'In person', online: 'Online', hibrido: 'Hybrid' } as any)[f] || 'In person';
+const itinerary = x.itinerary || [];
+---
+<header class="op-head">
+  <div class="op-brand">
+    <img src="/media/2025/01/logo-the-new-global-school-Vienna.webp" alt={BRAND} />
+  </div>
+  <span class="op-kicker">{t.brief}</span>
+</header>
+
+<section class="op-hero avoid-break">
+  <img class="op-cover" src={x.coverImageUrl} alt="" />
+  <h1>{x.title}</h1>
+  <p class="op-summary">{x.summary}</p>
+</section>
+
+<section class="op-facts avoid-break">
+  <div><dt>{t.dest}</dt><dd>{cities.join(' · ')}</dd></div>
+  {x.durationDays && <div><dt>{t.dur}</dt><dd>{x.durationDays} {t.days}</dd></div>}
+  {rows.length > 0 && <div><dt>{t.dates}</dt><dd>{rows.map((r) => <span class="op-edition">{r.label}: {r.range}</span>)}</dd></div>}
+  <div><dt>{t.lang}</dt><dd>{x.language}</dd></div>
+  {x.capacity && <div><dt>{t.group}</dt><dd>{t.groupMax} {x.capacity} {t.people}</dd></div>}
+  <div><dt>{t.fmt}</dt><dd>{fmtLabel(x.format)}</dd></div>
+</section>
+
+{x.rationale && (
+  <section class="op-block avoid-break">
+    <h2>{t.why}</h2>
+    <div class="op-why">
+      <div><h3>{t.importance}</h3><p>{x.rationale.importance}</p></div>
+      <div><h3>{t.learning}</h3><p>{x.rationale.learning}</p></div>
+      <div><h3>{t.today}</h3><p>{x.rationale.relevance}</p></div>
+    </div>
+  </section>
+)}
+
+{(included.length > 0 || notIncluded.length > 0) && (
+  <section class="op-block avoid-break">
+    <div class="op-incl">
+      {included.length > 0 && (
+        <div><h3 class="op-yes">{t.incl}</h3><ul>{included.map((i: string) => <li>{i}</li>)}</ul></div>
+      )}
+      {notIncluded.length > 0 && (
+        <div><h3 class="op-no">{t.notIncl}</h3><ul>{notIncluded.map((i: string) => <li>{i}</li>)}</ul></div>
+      )}
+    </div>
+  </section>
+)}
+
+<section class="op-block avoid-break">
+  <h2>{t.who}</h2>
+  <div class="op-stats">
+    {PROOF_STATS.map((s) => <div><strong>{s.value}</strong><span>{L ? s.es : s.en}</span></div>)}
+  </div>
+  <p class="op-logos-label">{t.partners}</p>
+  <div class="op-logos">
+    {PROOF_LOGOS.map((l) => <img src={l.src} alt={l.name} />)}
+  </div>
+</section>
+
+{itinerary.length > 0 && (
+  <section class="op-block page-break">
+    <h2>{t.itin}</h2>
+    <ol class="op-itin">
+      {itinerary.map((d: any) => (
+        <li class="avoid-break">
+          <span class="op-day">{t.day} {d.day}</span>
+          <div><strong>{d.title}</strong>{d.description && <p>{d.description}</p>}</div>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+
+
+<footer class="op-foot avoid-break">
+  <div class="op-foot-text">
+    <h2>{t.contact}</h2>
+    <p>{t.cta}</p>
+    <p class="op-contact">
+      <strong>hello@theglobal.school</strong> · WhatsApp +43 677 6173 5010<br />
+      Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, {L ? 'Austria' : 'Austria'}<br />
+      <span class="op-url">{tripUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
+    </p>
+    <p class="op-price">{t.priceNote}</p>
+  </div>
+  <div class="op-qr">
+    <div class="op-qr-img" set:html={qrSvg} />
+    <span>{t.scan}</span>
+  </div>
+</footer>
+
+<style>
+  h1, h2, h3 { font-family: 'Poppins', 'Inter', sans-serif; }
+
+  .op-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 8pt; border-bottom: 2pt solid var(--ink); margin-bottom: 12pt;
+  }
+  .op-brand img { height: 30pt; width: auto; display: block; }
+  .op-kicker {
+    font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase;
+    font-weight: 700; color: var(--purple);
+  }
+
+  .op-cover {
+    width: 100%; height: 46mm; object-fit: cover; border-radius: 4pt; display: block; margin-bottom: 10pt;
+  }
+  .op-hero h1 { font-size: 21pt; line-height: 1.15; margin: 0 0 5pt; }
+  .op-summary { margin: 0; font-size: 10.5pt; color: var(--ink-soft); line-height: 1.55; }
+
+  .op-facts {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1pt;
+    background: var(--rule); border: 1pt solid var(--rule); border-radius: 4pt;
+    overflow: hidden; margin: 12pt 0;
+  }
+  .op-facts > div { background: var(--tint); padding: 7pt 9pt; }
+  .op-facts dt {
+    font-size: 7pt; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; color: var(--purple); margin-bottom: 2pt;
+  }
+  .op-facts dd { margin: 0; font-size: 9.6pt; font-weight: 600; line-height: 1.35; }
+  .op-edition { display: block; font-weight: 500; }
+
+  .op-block { margin: 14pt 0; }
+  .op-block h2 {
+    font-size: 12.5pt; margin: 0 0 8pt; padding-bottom: 3pt;
+    border-bottom: 1pt solid var(--rule);
+  }
+  .op-why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt; }
+  .op-why h3 {
+    font-size: 8pt; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--purple); margin: 0 0 3pt;
+  }
+  .op-why p { margin: 0; font-size: 9.2pt; line-height: 1.5; color: var(--ink-soft); }
+
+  .op-incl { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+  .op-incl h3 { font-size: 9.5pt; margin: 0 0 4pt; }
+  .op-yes { color: #1f7a4d; }
+  .op-no { color: #a13d3d; }
+  .op-incl ul { margin: 0; padding-left: 12pt; }
+  .op-incl li { font-size: 9pt; line-height: 1.45; margin-bottom: 2.5pt; color: var(--ink-soft); }
+
+  .op-itin { list-style: none; margin: 0; padding: 0; }
+  .op-itin li { display: flex; gap: 8pt; padding: 4.5pt 0; border-bottom: 1pt solid var(--rule); }
+  .op-itin li:last-child { border-bottom: 0; }
+  .op-day {
+    flex: 0 0 42pt; font-size: 7.5pt; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: #fff; background: var(--purple);
+    border-radius: 3pt; height: 15pt; display: flex; align-items: center; justify-content: center;
+    margin-top: 1pt;
+  }
+  .op-itin strong { font-size: 9.4pt; display: block; margin-bottom: 1pt; line-height: 1.3; }
+  .op-itin p { margin: 0; font-size: 8.5pt; line-height: 1.38; color: var(--ink-soft); }
+
+  .op-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8pt; margin-bottom: 10pt; }
+  .op-stats > div {
+    text-align: center; padding: 7pt 4pt; background: var(--tint);
+    border: 1pt solid var(--rule); border-radius: 4pt;
+  }
+  .op-stats strong { display: block; font-size: 15pt; line-height: 1; color: var(--purple); font-weight: 700; }
+  .op-stats span { font-size: 7.4pt; line-height: 1.25; color: var(--ink-soft); }
+  .op-logos-label {
+    margin: 0 0 5pt; font-size: 7pt; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .op-logos { display: flex; flex-wrap: wrap; gap: 7pt; align-items: center; }
+  .op-logos img { height: 22pt; width: auto; max-width: 62pt; object-fit: contain; }
+
+  .op-foot {
+    display: flex; gap: 14pt; align-items: center; justify-content: space-between;
+    margin-top: 14pt; padding: 11pt 13pt; background: var(--ink); color: #fff; border-radius: 5pt;
+  }
+  .op-foot h2 { font-size: 12pt; margin: 0 0 4pt; color: #fff; border: 0; padding: 0; }
+  .op-foot p { margin: 0 0 5pt; font-size: 9.2pt; line-height: 1.5; color: #e0d8ee; }
+  .op-contact strong { color: #fff; }
+  .op-url { color: #c4a8ff; }
+  .op-price { font-size: 8.4pt !important; color: #b4a5cc !important; margin: 0 !important; }
+  .op-qr { flex: 0 0 74pt; text-align: center; }
+  .op-qr-img { background: #fff; padding: 5pt; border-radius: 4pt; }
+  .op-qr-img :global(svg) { width: 100%; height: auto; display: block; }
+  .op-qr span { display: block; margin-top: 4pt; font-size: 6.6pt; line-height: 1.25; color: #b4a5cc; }
+
+  @media print {
+    .page-break { break-before: page; page-break-before: always; }
+    .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+// Ficha imprimible de un programa (A4, 2 páginas).
+// Pensada para que un partner la imprima o la envíe en PDF: por eso es clara desde
+// el inicio, no una versión "modo claro" de la ficha web. No se indexa (contenido
+// duplicado de la página del viaje) y se excluye del sitemap en astro.config.mjs.
+import { LANG } from '../lib/site';
+const { title, tripPath } = Astro.props as any;
+const L = LANG === 'es';
+---
+<html lang={LANG}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      @page { size: A4; margin: 13mm 12mm; }
+
+      :root {
+        --ink: #241633;
+        --ink-soft: #5f5273;
+        --purple: #7b2fff;
+        --orange: #ff7a45;
+        --rule: #e3ddec;
+        --tint: #f7f4fb;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body {
+        margin: 0; background: #eceaf0; color: var(--ink);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 10.2pt; line-height: 1.5;
+      }
+      .sheet {
+        width: 210mm; min-height: 297mm; margin: 24px auto; padding: 13mm 12mm;
+        background: #fff; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+      }
+      /* Barra de acción: solo pantalla. */
+      .bar {
+        position: sticky; top: 0; z-index: 10; display: flex; gap: .8rem; align-items: center;
+        justify-content: center; flex-wrap: wrap; padding: .8rem;
+        background: #241633; color: #fff; font-size: .85rem;
+      }
+      .bar button {
+        font: inherit; font-weight: 700; border: 0; border-radius: 999px; cursor: pointer;
+        padding: .55rem 1.4rem; color: #fff;
+        background: linear-gradient(135deg, var(--purple), var(--orange));
+      }
+      .bar a { color: #d9c9ff; }
+
+      @media print {
+        body { background: #fff; }
+        .bar { display: none !important; }
+        .sheet { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+      }
+      /* Pantallas más estrechas que una A4: la hoja deja de simularse. */
+      @media (max-width: 850px) {
+        .sheet { width: auto; margin: 0; padding: 18px; box-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <button type="button" onclick="window.print()">{L ? 'Imprimir o guardar en PDF' : 'Print or save as PDF'}</button>
+      <span>{L ? 'Ficha de programa' : 'Program brief'} · <a href={tripPath}>{L ? 'ver la página completa' : 'view the full page'}</a></span>
+    </div>
+    <main class="sheet"><slot /></main>
+  </body>
+</html>
