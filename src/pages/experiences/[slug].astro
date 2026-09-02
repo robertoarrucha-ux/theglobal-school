@@ -32,7 +32,12 @@ const WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
 // Default video for TNGS programs (if the experience has no video of its own).
 const DEFAULT_TGS_VIDEO = 'https://www.youtube.com/watch?v=Ts5f7VJccmk';
 const ytId = youtubeId(x.videoUrl || (x.publisher?.type === 'tgs' ? DEFAULT_TGS_VIDEO : ''));
-const videoLd = ytId ? { '@context': 'https://schema.org', '@type': 'VideoObject', name: x.title, description: x.summary, thumbnailUrl: [`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`], embedUrl: `https://www.youtube.com/embed/${ytId}`, contentUrl: `https://www.youtube.com/watch?v=${ytId}` } : null;
+// Google requires uploadDate on VideoObject. Real upload dates of our videos.
+// If a video has no known date (nor x.videoUploadDate) we skip the JSON-LD entirely:
+// better no structured data than structured data missing a required field.
+const VIDEO_UPLOAD_DATES: Record<string, string> = { x_u3hDVb95o: '2021-02-23', Ts5f7VJccmk: '2021-03-16' };
+const videoUploadDate = x.videoUploadDate || (ytId ? VIDEO_UPLOAD_DATES[ytId] : '') || '';
+const videoLd = ytId && videoUploadDate ? { '@context': 'https://schema.org', '@type': 'VideoObject', name: x.title, description: x.summary || x.title, thumbnailUrl: [`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`], uploadDate: videoUploadDate, embedUrl: `https://www.youtube.com/embed/${ytId}`, contentUrl: `https://www.youtube.com/watch?v=${ytId}` } : null;
 
 // "Your complete experience": trips use program lists or the standard default;
 // events only show what the ally filled in (no trip default).
