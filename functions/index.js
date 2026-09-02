@@ -43,6 +43,7 @@ export const submitLead = onRequest(
     const audience = (b.audienceType || '').toString().trim().slice(0, 60);
     const groupSize = (b.groupSize || '').toString().trim().slice(0, 40);
     const dates = (b.dates || '').toString().trim().slice(0, 120);
+    const country = (b.country || '').toString().trim().slice(0, 60);
     const lang = b.lang === 'es' ? 'es' : 'en';
     const page = (b.page || '').toString().slice(0, 300);
     const hp = (b.company || '').toString(); // honeypot anti-spam
@@ -65,13 +66,14 @@ export const submitLead = onRequest(
       from: `"${FROM_NAME}" <${FROM_EMAIL}>`,
       to: NOTIFY_TO,
       replyTo: email,
-      subject: `Nuevo contacto web: ${name}${audience ? ` (${audience})` : ''}${interest ? `, ${interest}` : ''}`,
+      subject: `Lead${audience ? ` [${audience}]` : ''}${groupSize ? ` [${groupSize}]` : ''}: ${name}${interest ? `, ${interest}` : ''}`,
       html: `<h3>Nuevo mensaje desde el sitio (${lang.toUpperCase()})</h3>
         <p><b>Nombre:</b> ${esc(name)}</p>
         <p><b>Email:</b> ${esc(email)}</p>
         ${phone ? `<p><b>Teléfono:</b> ${esc(phone)}</p>` : ''}
         ${audience ? `<p><b>Perfil:</b> ${esc(audience)}</p>` : ''}
         ${interest ? `<p><b>Tema o destino:</b> ${esc(interest)}</p>` : ''}
+        ${country ? `<p><b>País:</b> ${esc(country)}</p>` : ''}
         ${groupSize ? `<p><b>Tamaño de grupo:</b> ${esc(groupSize)}</p>` : ''}
         ${dates ? `<p><b>Fechas tentativas:</b> ${esc(dates)}</p>` : ''}
         <p><b>Mensaje:</b><br>${esc(message).replace(/\n/g, '<br>')}</p>

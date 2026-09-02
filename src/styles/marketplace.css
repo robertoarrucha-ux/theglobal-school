@@ -421,3 +421,6 @@
 .xp-book .pay-note { font-size: .8rem; color: var(--txt-soft); margin-top: .8rem; }
 .xp-cta { display: block; text-align: center; margin-top: 1.2rem; padding: .95rem; border-radius: 999px; font-weight: 700; background: linear-gradient(135deg, var(--purple-glow), var(--orange)); color: #fff; transition: transform .2s; }
 .xp-cta:hover { transform: translateY(-2px); }
+/* CTA secundario: lleva al formulario con el programa prellenado (lead con registro) */
+.xp-cta-alt { display: block; text-align: center; margin-top: .6rem; padding: .8rem; border-radius: 999px; font-weight: 600; font-size: .95rem; border: 1px solid var(--line); color: var(--txt); background: rgba(255,255,255,.04); transition: border-color .2s, background .2s; }
+.xp-cta-alt:hover { border-color: var(--purple-bright); background: rgba(255,255,255,.08); }
