@@ -7,6 +7,8 @@ import { LANG, SELF_ORIGIN } from '../../lib/site';
 import { getInclusions } from '../../lib/inclusions';
 import { seasonsText, editionRows } from '../../lib/editions';
 import { youtubeId } from '../../lib/video';
+import TrustStrip from '../../components/TrustStrip.astro';
+import SocialProofFallback from '../../components/SocialProofFallback.astro';
 const inc = getInclusions('es');
 
 export async function getStaticPaths() {
@@ -89,6 +91,8 @@ const jsonLd = {
       <p data-fresh="meta" style="color:var(--txt-soft);font-size:.9rem;margin-top:1rem">📍 {x.venue ? x.venue + ' · ' : ''}{x.city}, {x.country} &nbsp;·&nbsp; 🗓 {seasonsText(x, true)} &nbsp;·&nbsp; 🗣 {x.language}</p>
     </div>
   </section>
+
+  <section class="mkt-wrap"><TrustStrip /></section>
 
   {ytId && (
     <section class="mkt-wrap xp-video">
@@ -205,6 +209,8 @@ const jsonLd = {
           </>
         )}
       </section>
+
+      {!(x.testimonials && x.testimonials.length > 0) && <SocialProofFallback />}
 
       {x.rationale && (
         <>

@@ -1,0 +1,56 @@
+---
+// Banda de credenciales bajo el hero de cada ficha de viaje.
+// Muchos programas son nuevos y no tienen historial propio; esta banda contesta la
+// pregunta que se hace un comprador institucional antes de seguir leyendo: ¿quién opera esto?
+import { LANG } from '../lib/site';
+import { PROOF_STATS } from '../data/social-proof';
+const L = LANG === 'es';
+---
+<div class="trust-strip">
+  {PROOF_STATS.map((s) => (
+    <div class="trust-item">
+      <strong>{s.value}</strong>
+      <span>{L ? s.es : s.en}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .trust-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 0 2.4rem;
+  }
+  .trust-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.1rem 1rem;
+    text-align: center;
+    display: grid;
+    gap: 0.2rem;
+    align-content: center;
+  }
+  .trust-item strong {
+    font-family: var(--font-display, inherit);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--purple-bright), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .trust-item span {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: var(--txt-soft);
+    letter-spacing: 0.01em;
+  }
+  @media (max-width: 720px) {
+    .trust-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
