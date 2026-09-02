@@ -1,0 +1,11 @@
+---
+import OnePagerLayout from '../../layouts/OnePagerLayout.astro';
+import PartnerBriefContent from '../../components/PartnerBriefContent.astro';
+import { LANG } from '../../lib/site';
+
+// En el build EN esta ruta redirige a /partners/brief/.
+if (LANG === 'en') return Astro.redirect('/partners/brief/');
+---
+<OnePagerLayout title="Propuesta de alianza, The New Global School" kicker="Propuesta de alianza" tripPath="/aliados/">
+  <PartnerBriefContent />
+</OnePagerLayout>

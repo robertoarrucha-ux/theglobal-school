@@ -12,6 +12,7 @@ const L = LANG === 'es';
 
 const contactPath = L ? '/contacto/?perfil=partner' : '/contact/?profile=partner';
 const PANEL = 'https://aliados.theglobal.school/';
+const briefPath = L ? '/aliados/ficha/' : '/partners/brief/';
 
 const t = L
   ? {
@@ -175,6 +176,7 @@ const faqLd = {
       <a class="btn-primary" href={contactPath}>{t.ctaMain}</a>
       <a class="btn-ghost" href={PANEL} rel="noopener">{t.ctaAlt}</a>
     </div>
+    <p class="pt-brief"><a href={briefPath}>{L ? '\u{1F4C4} Descargar la propuesta en PDF' : '\u{1F4C4} Download the proposal as PDF'}</a></p>
   </div>
 </section>
 
@@ -265,6 +267,9 @@ const faqLd = {
   .pt-hero h1 { font-size: clamp(2.3rem, 5.5vw, 4rem); margin: .5rem 0 1rem; max-width: 18ch; }
   .pt-sub { color: var(--txt-soft); font-size: 1.15rem; line-height: 1.65; max-width: 62ch; }
 
+  .pt-brief { margin: 1.2rem 0 0; font-size: .9rem; }
+  .pt-brief a { color: var(--txt-soft); font-weight: 600; }
+  .pt-brief a:hover { color: var(--purple-bright); }
   .pt-sec { margin: clamp(2.8rem, 6vw, 4.5rem) auto; }
   .pt-h { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin: 0 0 .6rem; }
   .pt-lead { color: var(--txt-soft); max-width: 68ch; line-height: 1.65; margin: 0 0 1.6rem; }

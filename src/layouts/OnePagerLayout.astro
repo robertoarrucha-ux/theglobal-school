@@ -4,7 +4,7 @@
 // el inicio, no una versión "modo claro" de la ficha web. No se indexa (contenido
 // duplicado de la página del viaje) y se excluye del sitemap en astro.config.mjs.
 import { LANG } from '../lib/site';
-const { title, tripPath } = Astro.props as any;
+const { title, tripPath, kicker } = Astro.props as any;
 const L = LANG === 'es';
 ---
 <html lang={LANG}>
@@ -65,7 +65,7 @@ const L = LANG === 'es';
   <body>
     <div class="bar">
       <button type="button" onclick="window.print()">{L ? 'Imprimir o guardar en PDF' : 'Print or save as PDF'}</button>
-      <span>{L ? 'Ficha de programa' : 'Program brief'} · <a href={tripPath}>{L ? 'ver la página completa' : 'view the full page'}</a></span>
+      <span>{kicker || (L ? 'Ficha de programa' : 'Program brief')} · <a href={tripPath}>{L ? 'ver la página completa' : 'view the full page'}</a></span>
     </div>
     <main class="sheet"><slot /></main>
   </body>

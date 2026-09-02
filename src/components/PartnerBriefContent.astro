@@ -1,0 +1,284 @@
+---
+// Ficha imprimible de la propuesta de alianza (A4), para enviar en PDF o llevar impresa
+// a una reunión. Mismo argumento que /aliados/, condensado a lo que decide un socio:
+// el reparto de responsabilidades, qué vende y qué se le pide.
+import QRCode from 'qrcode';
+import { LANG, SELF_ORIGIN, BRAND } from '../lib/site';
+import { PROOF_STATS } from '../data/social-proof';
+
+const L = LANG === 'es';
+const pagePath = L ? '/aliados/' : '/partners/';
+const pageUrl = `${SELF_ORIGIN[LANG]}${pagePath}`;
+const qrSvg = await QRCode.toString(pageUrl, {
+  type: 'svg', margin: 0, errorCorrectionLevel: 'M', color: { dark: '#241633', light: '#0000' },
+});
+
+const t = L
+  ? {
+      kicker: 'Propuesta de alianza',
+      h1: 'Tu brazo operativo en Europa',
+      sub: 'Vendes programas educativos en Europa con tu marca y tu margen. Nosotros asumimos el 100% de la operación europea.',
+      facts: [
+        ['Base', 'Viena, Austria'],
+        ['Operando desde', '2010'],
+        ['Capacidad', '6 a 8 cohortes al año'],
+        ['Tamaño de grupo', '15 a 25 participantes'],
+        ['Duración', '3 a 10 días'],
+        ['Destinos', 'Viena, Berlín, Ginebra, Bruselas, París, Múnich, Praga, Roma'],
+      ],
+      splitTitle: 'Reparto de responsabilidades',
+      usTitle: 'The New Global School',
+      us: [
+        'Diseña y entrega el producto educativo empaquetado.',
+        'Asume el 100% de la operación y la logística en Europa.',
+        'Provee estrategia comercial y materiales de marketing.',
+        'Fija costos B2B netos por participante.',
+        'Recibe al grupo en Europa y opera cada detalle.',
+      ],
+      youTitle: 'El aliado local',
+      you: [
+        'Atiende y gestiona a los clientes interesados.',
+        'Lidera el cierre y la formalización de contratos.',
+        'Gestiona el seguimiento y la cobranza local.',
+        'Fija el precio al público y su propio margen.',
+        'Escala el volumen de grupos.',
+      ],
+      whatTitle: 'Qué vendes',
+      what: [
+        ['Viajes educativos', 'Programas de 3 a 10 días con acceso a sedes institucionales.'],
+        ['Misiones comerciales', 'Networking y negocio de alto nivel para líderes de empresa.'],
+        ['Diplomados internacionales', 'Certificaciones académicas intensivas.'],
+        ['Inmersiones para jóvenes', 'Programas para estudiantes, de demanda inmediata.'],
+        ['Accesos a eventos', 'Entradas y paquetes VIP a eventos internacionales.'],
+      ],
+      howTitle: 'Cómo funciona',
+      how: [
+        'Analizamos tu público y definimos el programa que encaja.',
+        'Recibes costos B2B netos; tú fijas precio y margen.',
+        'Promocionas con nuestra marca y nuestros materiales.',
+        'Tú cierras la venta; nosotros operamos en Europa.',
+      ],
+      fitTitle: 'Qué te pedimos',
+      fit: [
+        'Fuerza de ventas o capacidad de convocatoria demostrada.',
+        'Acceso a mercados ejecutivos, públicos o universitarios.',
+        'Haber vendido antes producto de ticket alto.',
+        'Visión comercial de largo plazo.',
+      ],
+      whoTitle: 'Con quién te alías',
+      contact: 'Siguiente paso',
+      cta: 'Una llamada de 20 minutos para ver si encaja con lo que ya vendes. Te enviamos costos B2B de los formatos que apliquen.',
+      scan: 'Escanea para la propuesta completa',
+    }
+  : {
+      kicker: 'Partnership proposal',
+      h1: 'Your operating arm in Europe',
+      sub: 'You sell educational programs in Europe under your brand and your margin. We take on 100% of the European operation.',
+      facts: [
+        ['Base', 'Vienna, Austria'],
+        ['Operating since', '2010'],
+        ['Capacity', '6 to 8 cohorts per year'],
+        ['Group size', '15 to 25 participants'],
+        ['Duration', '3 to 10 days'],
+        ['Destinations', 'Vienna, Berlin, Geneva, Brussels, Paris, Munich, Prague, Rome'],
+      ],
+      splitTitle: 'Split of responsibilities',
+      usTitle: 'The New Global School',
+      us: [
+        'Designs and delivers the packaged educational product.',
+        'Takes on 100% of operations and logistics in Europe.',
+        'Provides commercial strategy and marketing materials.',
+        'Sets net B2B costs per participant.',
+        'Hosts the group in Europe and runs every detail.',
+      ],
+      youTitle: 'The local partner',
+      you: [
+        'Handles and manages interested clients.',
+        'Leads closing and contract formalization.',
+        'Manages local follow-up and collection.',
+        'Sets the public price and its own margin.',
+        'Scales group volume.',
+      ],
+      whatTitle: 'What you sell',
+      what: [
+        ['Educational trips', '3 to 10 day programs with access to institutional venues.'],
+        ['Business missions', 'High-level networking and business for company leaders.'],
+        ['International certificates', 'Intensive academic certifications.'],
+        ['Youth immersions', 'Programs for students, with immediate demand.'],
+        ['Event access', 'Tickets and VIP packages to international events.'],
+      ],
+      howTitle: 'How it works',
+      how: [
+        'We study your audience and define the program that fits.',
+        'You get net B2B costs; you set price and margin.',
+        'You promote with our brand and our materials.',
+        'You close the sale; we operate in Europe.',
+      ],
+      fitTitle: 'What we ask of you',
+      fit: [
+        'A sales force or proven ability to convene an audience.',
+        'Access to executive, public sector or university markets.',
+        'A track record selling high-ticket products.',
+        'A long-term commercial outlook.',
+      ],
+      whoTitle: 'Who you partner with',
+      contact: 'Next step',
+      cta: 'A 20 minute call to see whether this fits what you already sell. We then send B2B costs for the formats that apply.',
+      scan: 'Scan for the full proposal',
+    };
+---
+<header class="pb-head">
+  <img src="/media/2026/01/logo-tngs-dark.webp" alt={BRAND} width="1076" height="338" />
+  <span class="pb-kicker">{t.kicker}</span>
+</header>
+
+<section class="pb-hero avoid-break">
+  <h1>{t.h1}</h1>
+  <p class="pb-sub">{t.sub}</p>
+</section>
+
+<section class="pb-facts avoid-break">
+  {t.facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+</section>
+
+<section class="pb-block avoid-break">
+  <h2>{t.splitTitle}</h2>
+  <div class="pb-split">
+    <div class="pb-col">
+      <h3>{t.usTitle}</h3>
+      <ul>{t.us.map((i) => <li>{i}</li>)}</ul>
+    </div>
+    <div class="pb-col pb-col-you">
+      <h3>{t.youTitle}</h3>
+      <ul>{t.you.map((i) => <li>{i}</li>)}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="pb-block avoid-break">
+  <h2>{t.whatTitle}</h2>
+  <ul class="pb-what">
+    {t.what.map(([h, p]) => <li><strong>{h}</strong> {p}</li>)}
+  </ul>
+</section>
+
+<section class="pb-block avoid-break">
+  <h2>{t.howTitle}</h2>
+  <ol class="pb-how">{t.how.map((s) => <li>{s}</li>)}</ol>
+</section>
+
+<section class="pb-block avoid-break">
+  <h2>{t.fitTitle}</h2>
+  <ul class="pb-fit">{t.fit.map((f) => <li>{f}</li>)}</ul>
+</section>
+
+<section class="pb-block avoid-break">
+  <h2>{t.whoTitle}</h2>
+  <div class="pb-stats">
+    {PROOF_STATS.map((s) => <div><strong>{s.value}</strong><span>{L ? s.es : s.en}</span></div>)}
+  </div>
+</section>
+
+<footer class="pb-foot avoid-break">
+  <div>
+    <h2>{t.contact}</h2>
+    <p>{t.cta}</p>
+    <p class="pb-contact">
+      <strong>hello@theglobal.school</strong> · WhatsApp +43 677 6173 5010<br />
+      Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, Austria<br />
+      <span class="pb-url">{pageUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
+    </p>
+  </div>
+  <div class="pb-qr">
+    <div class="pb-qr-img" set:html={qrSvg} />
+    <span>{t.scan}</span>
+  </div>
+</footer>
+
+<style>
+  h1, h2, h3 { font-family: 'Poppins', 'Inter', sans-serif; }
+
+  .pb-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 6pt; border-bottom: 2pt solid var(--ink); margin-bottom: 9pt;
+  }
+  .pb-head img { height: 30pt; width: auto; display: block; }
+  .pb-kicker {
+    font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase;
+    font-weight: 700; color: var(--purple);
+  }
+
+  .pb-hero h1 { font-size: 18pt; line-height: 1.15; margin: 0 0 3pt; }
+  .pb-sub { margin: 0; font-size: 9.4pt; color: var(--ink-soft); line-height: 1.45; max-width: 80%; }
+
+  .pb-facts {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1pt;
+    background: var(--rule); border: 1pt solid var(--rule); border-radius: 4pt;
+    overflow: hidden; margin: 7pt 0;
+  }
+  .pb-facts > div { background: var(--tint); padding: 4.5pt 7pt; }
+  .pb-facts dt {
+    font-size: 6.6pt; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; color: var(--purple); margin-bottom: 1.5pt;
+  }
+  .pb-facts dd { margin: 0; font-size: 9pt; font-weight: 600; line-height: 1.3; }
+
+  .pb-block { margin: 6pt 0; }
+  .pb-block h2 {
+    font-size: 11pt; margin: 0 0 5pt; padding-bottom: 2.5pt; border-bottom: 1pt solid var(--rule);
+  }
+
+  .pb-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+  .pb-col h3 { font-size: 9pt; margin: 0 0 5pt; color: var(--purple); letter-spacing: .04em; }
+  .pb-col-you h3 { color: #b8541c; }
+  .pb-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3.5pt; }
+  .pb-col li {
+    position: relative; padding-left: 11pt; font-size: 8.6pt;
+    line-height: 1.4; color: var(--ink-soft);
+  }
+  .pb-col li::before { content: '✓'; position: absolute; left: 0; color: var(--purple); font-weight: 700; }
+  .pb-col-you li::before { color: #b8541c; }
+
+  .pb-what { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 14pt; }
+  .pb-what li {
+    break-inside: avoid; font-size: 8.6pt; line-height: 1.4;
+    color: var(--ink-soft); margin-bottom: 4.5pt;
+  }
+  .pb-what strong { color: var(--ink); display: block; font-size: 9pt; }
+
+  .pb-how { margin: 0; padding-left: 14pt; columns: 2; column-gap: 14pt; }
+  .pb-how li { break-inside: avoid; font-size: 8.6pt; line-height: 1.4; color: var(--ink-soft); margin-bottom: 4pt; }
+
+  .pb-fit { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 14pt; }
+  .pb-fit li {
+    break-inside: avoid; position: relative; padding-left: 11pt; font-size: 8.6pt;
+    line-height: 1.4; color: var(--ink-soft); margin-bottom: 4pt;
+  }
+  .pb-fit li::before { content: '→'; position: absolute; left: 0; color: var(--purple); font-weight: 700; }
+
+  .pb-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5pt; margin-bottom: 6pt; }
+  .pb-stats > div {
+    text-align: center; padding: 3.5pt 3pt; background: var(--tint);
+    border: 1pt solid var(--rule); border-radius: 4pt;
+  }
+  .pb-stats strong { display: block; font-size: 12pt; line-height: 1; color: var(--purple); font-weight: 700; }
+  .pb-stats span { font-size: 7pt; line-height: 1.25; color: var(--ink-soft); }
+
+
+  .pb-foot {
+    display: flex; gap: 14pt; align-items: center; justify-content: space-between;
+    margin-top: 6pt; padding: 7pt 10pt; background: var(--ink); color: #fff; border-radius: 5pt;
+  }
+  .pb-foot h2 { font-size: 11pt; margin: 0 0 3pt; color: #fff; border: 0; padding: 0; }
+  .pb-foot p { margin: 0 0 2.5pt; font-size: 8.3pt; line-height: 1.38; color: #e0d8ee; }
+  .pb-contact strong { color: #fff; }
+  .pb-url { color: #c4a8ff; }
+  .pb-qr { flex: 0 0 62pt; text-align: center; }
+  .pb-qr-img { background: #fff; padding: 4pt; border-radius: 3pt; }
+  .pb-qr-img :global(svg) { width: 100%; height: auto; display: block; }
+  .pb-qr span { display: block; margin-top: 3pt; font-size: 6.2pt; line-height: 1.2; color: #b4a5cc; }
+
+  @media print {
+    .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
