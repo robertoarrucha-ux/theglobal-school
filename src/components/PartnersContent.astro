@@ -1,0 +1,322 @@
+---
+// Propuesta de alianza, en HTML servido y por tanto indexable.
+//
+// El mismo argumento existe en la landing del panel (aliados.theglobal.school), pero
+// esa es una SPA que sirve 2,5 KB de shell: el pitch lo pinta React en el cliente y no
+// llega ni a los buscadores ni a las respuestas de IA. Esta página lo pone en el sitio
+// estático, que es donde vive el SEO, y enruta al formulario con el perfil ya marcado.
+// El texto no se inventa: procede de src/components/PublicLanding.tsx del panel.
+import { LANG } from '../lib/site';
+import TrustStrip from './TrustStrip.astro';
+const L = LANG === 'es';
+
+const contactPath = L ? '/contacto/?perfil=partner' : '/contact/?profile=partner';
+const PANEL = 'https://aliados.theglobal.school/';
+
+const t = L
+  ? {
+      eyebrow: 'Alianzas internacionales',
+      h1: 'Tu brazo operativo en Europa',
+      sub: 'Vendes programas educativos en Europa con tu marca y tu margen. Nosotros absorbemos el 100% de la complejidad europea: diseño académico, proveedores, permisos, sedes y coordinación en destino.',
+      ctaMain: 'Hablemos de una alianza',
+      ctaAlt: 'Ver el panel de aliados',
+      splitTitle: 'Una alianza con responsabilidades definidas',
+      splitSub: 'Sin zonas grises. Cada parte hace lo que sabe hacer.',
+      usTitle: 'The New Global School',
+      usRole: 'Producto, operación y marketing',
+      us: [
+        'Diseña y entrega el producto educativo empaquetado.',
+        'Asume el 100% de la carga operativa y logística en Europa.',
+        'Provee la estrategia comercial y los materiales de marketing.',
+        'Fija costos B2B para que definas tu propio margen.',
+        'Recibe al grupo en Europa y opera cada detalle en destino.',
+      ],
+      youTitle: 'El aliado local',
+      youRole: 'Conversión, cierre y relación con el cliente',
+      you: [
+        'Atiende y gestiona los clientes interesados.',
+        'Lidera las reuniones de cierre y la formalización de contratos.',
+        'Gestiona el seguimiento y la cobranza local.',
+        'Representa la confianza local ante el cliente final.',
+        'Escala el volumen de grupos para maximizar su retorno.',
+      ],
+      whatTitle: 'Qué vendes',
+      what: [
+        { icon: '🎓', h: 'Viajes educativos en Europa', p: 'Experiencias de 3 a 10 días en destinos como Viena, Berlín y Ginebra, con acceso a sedes institucionales.' },
+        { icon: '🤝', h: 'Misiones comerciales', p: 'Programas para líderes de empresa centrados en networking, alianzas y negocio de alto nivel.' },
+        { icon: '📜', h: 'Diplomados internacionales', p: 'Certificaciones académicas intensivas en innovación y gestión pública, con validez internacional.' },
+        { icon: '🌍', h: 'Inmersiones para jóvenes', p: 'Programas internacionales para estudiantes, de demanda inmediata y alta recurrencia.' },
+        { icon: '🎟️', h: 'Accesos a eventos', p: 'Comercialización de entradas y paquetes VIP a eventos internacionales de nuestra red.' },
+      ],
+      howTitle: 'Cómo funciona',
+      how: [
+        { n: '1', h: 'Analizamos tu público', p: 'Revisamos tu cartera y tus canales para definir qué programa encaja y con qué formato.' },
+        { n: '2', h: 'Fijamos costos B2B', p: 'Recibes nuestros costos netos por participante. El precio al público y tu margen los defines tú.' },
+        { n: '3', h: 'Promocionas con respaldo', p: 'Sales al mercado con nuestra marca, los materiales y la ficha imprimible de cada programa.' },
+        { n: '4', h: 'Operamos en Europa', p: 'Tú cierras la venta y acompañas al cliente. Nosotros recibimos al grupo y ejecutamos.' },
+      ],
+      fitTitle: 'A quién buscamos',
+      fitSub: 'Nuestro socio ideal ya tiene por dónde vender: canales de distribución, una cartera de clientes o una comunidad, y quiere sumar un producto llave en mano.',
+      fit: [
+        'Fuerza de ventas o capacidad de convocatoria demostrada.',
+        'Acceso a mercados de nivel ejecutivo, público o universitario.',
+        'Busca un producto listo para operar, sin desgaste logístico.',
+        'Evalúa la alianza como inversión, con retorno claro.',
+        'Visión comercial de largo plazo, no una operación puntual.',
+      ],
+      casesTitle: 'Tres formas de usarlo',
+      cases: [
+        { h: 'Universidad o escuela de negocios', p: 'Integra un viaje a Viena en su posgrado, cobra matrícula premium y nosotros operamos a costo B2B.' },
+        { h: 'Agencia u operador corporativo', p: 'Comercializa una misión comercial a Berlín para directivos y fija su margen sobre nuestros costos netos.' },
+        { h: 'Organizador de eventos', p: 'Revende accesos VIP a eventos internacionales y genera ingresos por entradas y patrocinio.' },
+      ],
+      whoTitle: 'Con quién te alías',
+      faqTitle: 'Preguntas frecuentes',
+      faq: [
+        { q: '¿Quién cobra al participante?', a: 'El aliado. Contrata en nombre propio, fija el precio al público, factura y cobra. The New Global School opera los servicios en Europa y factura al aliado a costo B2B.' },
+        { q: '¿Hay exclusividad por territorio?', a: 'Se acuerda caso por caso según el mercado y el volumen comprometido. No es automática: se gana con capacidad de venta demostrada.' },
+        { q: '¿Cuántos participantes hacen falta para operar un grupo?', a: 'Depende del programa y del formato. Trabajamos con grupos reducidos, normalmente de 15 a 25 participantes, y definimos el mínimo al cerrar la orden de grupo.' },
+        { q: '¿Hay que pagar por adelantado?', a: 'Se paga escalonado por hitos: bloqueo de servicios, confirmación de proveedores y liquidación antes de la salida. Los costos se cubren siempre antes de que el grupo viaje.' },
+        { q: '¿Necesito experiencia en viajes educativos?', a: 'No. Necesitas capacidad de venta y acceso a tu mercado. El diseño académico y toda la operación europea corren por nuestra cuenta.' },
+        { q: '¿En qué destinos operan?', a: 'La base está en Viena, y operamos programas en toda Europa: Berlín, Ginebra, Bruselas, París, Múnich, Praga, Roma y Ámsterdam, entre otros.' },
+      ],
+      closeTitle: '¿Listo para sumar una línea de ingresos internacional?',
+      closeSub: 'Cuéntanos a quién vendes y en qué mercado. Te respondemos en 24 horas con los formatos que encajan y los costos B2B.',
+    }
+  : {
+      eyebrow: 'International partnerships',
+      h1: 'Your operating arm in Europe',
+      sub: 'You sell educational programs in Europe under your brand and your margin. We absorb 100% of the European complexity: academic design, suppliers, permits, venues and on-the-ground coordination.',
+      ctaMain: 'Let us talk about a partnership',
+      ctaAlt: 'See the partner panel',
+      splitTitle: 'A partnership with defined responsibilities',
+      splitSub: 'No grey areas. Each side does what it does best.',
+      usTitle: 'The New Global School',
+      usRole: 'Product, operations and marketing',
+      us: [
+        'Designs and delivers the packaged educational product.',
+        'Takes on 100% of the operational and logistical load in Europe.',
+        'Provides the commercial strategy and marketing materials.',
+        'Sets B2B costs so you define your own margin.',
+        'Hosts the group in Europe and runs every detail on site.',
+      ],
+      youTitle: 'The local partner',
+      youRole: 'Conversion, closing and client relationship',
+      you: [
+        'Handles and manages interested clients.',
+        'Leads closing meetings and contract formalization.',
+        'Manages local follow-up and collection.',
+        'Represents local trust with the end client.',
+        'Scales group volume to maximize return.',
+      ],
+      whatTitle: 'What you sell',
+      what: [
+        { icon: '🎓', h: 'Educational trips in Europe', p: '3 to 10 day experiences in destinations such as Vienna, Berlin and Geneva, with access to institutional venues.' },
+        { icon: '🤝', h: 'Business missions', p: 'Programs for company leaders focused on networking, partnerships and high-level business.' },
+        { icon: '📜', h: 'International certificate programs', p: 'Intensive academic certifications in innovation and public management, with international standing.' },
+        { icon: '🌍', h: 'Youth immersions', p: 'International programs for students, with immediate demand and high recurrence.' },
+        { icon: '🎟️', h: 'Event access', p: 'Sale of tickets and VIP packages to international events in our network.' },
+      ],
+      howTitle: 'How it works',
+      how: [
+        { n: '1', h: 'We study your audience', p: 'We review your client base and channels to define which program fits and in what format.' },
+        { n: '2', h: 'We set B2B costs', p: 'You get our net cost per participant. The public price and your margin are yours to set.' },
+        { n: '3', h: 'You promote with our backing', p: 'You go to market with our brand, the materials and the printable brief for each program.' },
+        { n: '4', h: 'We operate in Europe', p: 'You close the sale and support the client. We host the group and execute.' },
+      ],
+      fitTitle: 'Who we are looking for',
+      fitSub: 'Our ideal partner already has a way to sell: distribution channels, a client base or a community, and wants to add a turnkey product.',
+      fit: [
+        'A sales force or proven ability to convene an audience.',
+        'Access to executive, public sector or university markets.',
+        'Wants a product ready to operate, with no logistical strain.',
+        'Evaluates the partnership as an investment, with clear return.',
+        'A long-term commercial outlook, not a one-off operation.',
+      ],
+      casesTitle: 'Three ways to use it',
+      cases: [
+        { h: 'University or business school', p: 'Adds a Vienna trip to its postgraduate program, charges premium tuition, and we operate at B2B cost.' },
+        { h: 'Agency or corporate operator', p: 'Sells a business mission to Berlin for executives and sets its margin over our net costs.' },
+        { h: 'Event organizer', p: 'Resells VIP access to international events and earns from tickets and sponsorship.' },
+      ],
+      whoTitle: 'Who you partner with',
+      faqTitle: 'Frequently asked questions',
+      faq: [
+        { q: 'Who collects payment from the participant?', a: 'The partner. It contracts in its own name, sets the public price, invoices and collects. The New Global School operates the services in Europe and invoices the partner at B2B cost.' },
+        { q: 'Is there territorial exclusivity?', a: 'It is agreed case by case, based on the market and the committed volume. It is not automatic: it is earned with proven sales capacity.' },
+        { q: 'How many participants does a group need?', a: 'It depends on the program and format. We work with small groups, typically 15 to 25 participants, and the minimum is set when the group order is signed.' },
+        { q: 'Is payment required up front?', a: 'Payment is staged by milestones: service blocking, supplier confirmation and settlement before departure. Costs are always covered before the group travels.' },
+        { q: 'Do I need experience in educational travel?', a: 'No. You need sales capacity and access to your market. Academic design and the entire European operation are on us.' },
+        { q: 'Which destinations do you operate?', a: 'Our base is Vienna, and we run programs across Europe: Berlin, Geneva, Brussels, Paris, Munich, Prague, Rome and Amsterdam, among others.' },
+      ],
+      closeTitle: 'Ready to add an international revenue line?',
+      closeSub: 'Tell us who you sell to and in which market. We reply within 24 hours with the formats that fit and the B2B costs.',
+    };
+
+// FAQPage: preguntas y respuestas reales, el tipo de dato que las respuestas de IA citan.
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+<section class="xp-detail-hero pd-hero pt-hero">
+  <div class="mkt-wrap inner">
+    <p class="pd-eyebrow">{t.eyebrow}</p>
+    <h1>{t.h1}</h1>
+    <p class="pt-sub">{t.sub}</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href={contactPath}>{t.ctaMain}</a>
+      <a class="btn-ghost" href={PANEL} rel="noopener">{t.ctaAlt}</a>
+    </div>
+  </div>
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.splitTitle}</h2>
+  <p class="pt-lead">{t.splitSub}</p>
+  <div class="pt-split">
+    <div class="glass pt-col">
+      <span class="pt-col-tag">{t.usTitle}</span>
+      <h3>{t.usRole}</h3>
+      <ul>{t.us.map((i) => <li>{i}</li>)}</ul>
+    </div>
+    <div class="glass pt-col pt-col-you">
+      <span class="pt-col-tag">{t.youTitle}</span>
+      <h3>{t.youRole}</h3>
+      <ul>{t.you.map((i) => <li>{i}</li>)}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.whatTitle}</h2>
+  <div class="pt-grid">
+    {t.what.map((w) => (
+      <div class="glass pt-card">
+        <span class="pt-icon" aria-hidden="true">{w.icon}</span>
+        <h3>{w.h}</h3>
+        <p>{w.p}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="mkt-wrap pt-sec xp-how">
+  <h2 class="pt-h">{t.howTitle}</h2>
+  <div class="xp-how-steps">
+    {t.how.map((s) => (
+      <div class="xp-how-step glass"><span class="num">{s.n}</span><h4>{s.h}</h4><p>{s.p}</p></div>
+    ))}
+  </div>
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.fitTitle}</h2>
+  <p class="pt-lead">{t.fitSub}</p>
+  <ul class="pt-fit">{t.fit.map((f) => <li>{f}</li>)}</ul>
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.casesTitle}</h2>
+  <div class="pt-cases">
+    {t.cases.map((c) => (
+      <div class="glass pt-case"><h3>{c.h}</h3><p>{c.p}</p></div>
+    ))}
+  </div>
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.whoTitle}</h2>
+  <TrustStrip />
+</section>
+
+<section class="mkt-wrap pt-sec">
+  <h2 class="pt-h">{t.faqTitle}</h2>
+  <div class="pt-faq">
+    {t.faq.map((f) => (
+      <details class="glass">
+        <summary>{f.q}</summary>
+        <p>{f.a}</p>
+      </details>
+    ))}
+  </div>
+</section>
+
+<section class="ally-band pt-close">
+  <div class="mkt-wrap ally-inner">
+    <h2>{t.closeTitle}</h2>
+    <p class="lead">{t.closeSub}</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href={contactPath}>{t.ctaMain}</a>
+      <a class="btn-ghost" href={PANEL} rel="noopener">{t.ctaAlt}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pt-hero { min-height: 0; padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+  .pt-hero h1 { font-size: clamp(2.3rem, 5.5vw, 4rem); margin: .5rem 0 1rem; max-width: 18ch; }
+  .pt-sub { color: var(--txt-soft); font-size: 1.15rem; line-height: 1.65; max-width: 62ch; }
+
+  .pt-sec { margin: clamp(2.8rem, 6vw, 4.5rem) auto; }
+  .pt-h { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin: 0 0 .6rem; }
+  .pt-lead { color: var(--txt-soft); max-width: 68ch; line-height: 1.65; margin: 0 0 1.6rem; }
+
+  /* Reparto de responsabilidades: dos columnas enfrentadas */
+  .pt-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .pt-col { padding: 1.8rem 1.6rem; border-radius: 20px; }
+  .pt-col-tag {
+    display: inline-block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+    font-weight: 700; color: var(--purple-bright); margin-bottom: .5rem;
+  }
+  .pt-col-you .pt-col-tag { color: var(--yellow); }
+  .pt-col h3 { font-size: 1.25rem; margin: 0 0 1rem; }
+  .pt-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+  .pt-col li { position: relative; padding-left: 1.6rem; color: var(--txt-soft); line-height: 1.55; }
+  .pt-col li::before { content: '✓'; position: absolute; left: 0; color: var(--purple-bright); font-weight: 700; }
+  .pt-col-you li::before { color: var(--yellow); }
+
+  .pt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
+  .pt-card { padding: 1.5rem 1.4rem; border-radius: 18px; transition: transform .2s, border-color .2s; }
+  .pt-card:hover { transform: translateY(-4px); border-color: rgba(123, 47, 255, .45); }
+  .pt-icon { font-size: 1.6rem; display: block; margin-bottom: .6rem; }
+  .pt-card h3 { font-size: 1.12rem; margin: 0 0 .4rem; }
+  .pt-card p { color: var(--txt-soft); margin: 0; line-height: 1.55; font-size: .95rem; }
+
+  .pt-fit { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .8rem; }
+  .pt-fit li {
+    position: relative; padding: .9rem 1rem .9rem 2.6rem; border-radius: 14px;
+    border: 1px solid var(--line); background: rgba(255, 255, 255, .04); color: var(--txt-soft); line-height: 1.5;
+  }
+  .pt-fit li::before { content: '→'; position: absolute; left: 1rem; color: var(--yellow); font-weight: 700; }
+
+  .pt-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; }
+  .pt-case { padding: 1.6rem 1.4rem; border-radius: 18px; }
+  .pt-case h3 { font-size: 1.05rem; margin: 0 0 .5rem; color: var(--txt); }
+  .pt-case p { color: var(--txt-soft); margin: 0; line-height: 1.6; font-size: .95rem; }
+
+  .pt-faq { display: grid; gap: .7rem; }
+  .pt-faq details { border-radius: 14px; padding: 0; overflow: hidden; }
+  .pt-faq summary {
+    cursor: pointer; padding: 1.05rem 1.3rem; font-weight: 600; color: var(--txt);
+    list-style: none; display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+  }
+  .pt-faq summary::-webkit-details-marker { display: none; }
+  .pt-faq summary::after { content: '+'; color: var(--purple-bright); font-size: 1.3rem; line-height: 1; flex-shrink: 0; }
+  .pt-faq details[open] summary::after { content: '−'; }
+  .pt-faq details p { margin: 0; padding: 0 1.3rem 1.2rem; color: var(--txt-soft); line-height: 1.65; max-width: 76ch; }
+
+  .pt-close { margin-top: clamp(3rem, 6vw, 5rem); }
+  .pt-close h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .8rem; max-width: 26ch; }
+
+  @media (max-width: 780px) {
+    .pt-split { grid-template-columns: 1fr; }
+  }
+</style>

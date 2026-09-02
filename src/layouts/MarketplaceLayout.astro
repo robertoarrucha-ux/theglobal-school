@@ -38,7 +38,7 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
           <a href="/blog/">Blog</a>
           <a href={L ? '/nosotros/' : '/about-us/'}>{L ? 'Nosotros' : 'About'}</a>
           <a href={OTHER_ORIGIN[LANG] + '/'}>{UI[LANG].langSwitch}</a>
-          <a class="to-site" href="https://aliados.theglobal.school/">{L ? 'Únete como aliado' : 'Become an ally'}</a>
+          <a class="to-site" href={L ? '/aliados/' : '/partners/'}>{L ? 'Únete como aliado' : 'Become an ally'}</a>
         </nav>
       </div>
     </header>

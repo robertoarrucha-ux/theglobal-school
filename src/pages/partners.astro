@@ -1,0 +1,14 @@
+---
+import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
+import PartnersContent from '../components/PartnersContent.astro';
+import { LANG } from '../lib/site';
+
+// En el build ES esta ruta redirige a /aliados/.
+if (LANG === 'es') return Astro.redirect('/aliados/');
+---
+<MarketplaceLayout
+  title="Partnerships, your operating arm in Europe, The New Global School"
+  description="Sell educational trips, business missions and certificate programs in Europe under your brand and your margin. We take on 100% of the European operation. B2B costs for agencies, operators, universities and event organizers."
+>
+  <PartnersContent />
+</MarketplaceLayout>

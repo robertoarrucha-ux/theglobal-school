@@ -90,6 +90,13 @@ const t = L
       const int = f.querySelector('[name="interest"]') as HTMLInputElement | null;
       if (int && !int.value) int.value = prog;
     }
+    // Prellenado del perfil desde la pagina de alianzas: /contacto/?perfil=partner
+    const qs = new URLSearchParams(location.search);
+    if ((qs.get('perfil') || qs.get('profile') || '').toLowerCase() === 'partner') {
+      const sel = f.querySelector('[name="audienceType"]') as HTMLSelectElement | null;
+      const opt = sel && [...sel.options].find((o) => /partner/i.test(o.value));
+      if (sel && opt) sel.value = opt.value;
+    }
     f.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = f.querySelector('button')!;

@@ -8,7 +8,8 @@ import { LANG, BRAND, SELF_ORIGIN } from '../lib/site';
 
 const L = LANG === 'es';
 const xbase = L ? '/experiencias' : '/experiences';
-const applyUrl = 'https://aliados.theglobal.school/'; // landing de aliados (explica el programa + beneficios)
+// La propuesta de alianza vive ahora en la vitrina (HTML indexable); esa pagina enlaza al panel.
+const applyUrl = LANG === 'es' ? '/aliados/' : '/partners/';
 
 const experiences = await loadExperiences();
 // Datos para el widget de votación (solo viajes/expediciones).

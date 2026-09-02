@@ -1,0 +1,14 @@
+---
+import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
+import PartnersContent from '../components/PartnersContent.astro';
+import { LANG } from '../lib/site';
+
+// En el build EN esta ruta redirige a /partners/.
+if (LANG === 'en') return Astro.redirect('/partners/');
+---
+<MarketplaceLayout
+  title="Alianzas, tu brazo operativo en Europa, The New Global School"
+  description="Vende viajes educativos, misiones comerciales y diplomados en Europa con tu marca y tu margen. Nosotros asumimos el 100% de la operación europea. Costos B2B para agencias, operadores, universidades y organizadores de eventos."
+>
+  <PartnersContent />
+</MarketplaceLayout>
