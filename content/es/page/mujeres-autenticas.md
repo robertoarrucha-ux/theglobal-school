@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2022/08/3.webp"
 targetKeyword: "Mujeres Auténticas"
 sourceUrl: "https://es.theglobal.school/mujeres-autenticas/"
-images: ["/media/2022/08/3.webp", "/media/2019/03/Home-Page-Pic-2-copy.webp", "/media/2020/03/Mujeres-Auténticas.webp", "/media/2022/08/4.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/08/Vienna-School-Logo-NEW-trans.webp"]
+images: ["/media/2022/08/3.webp", "/media/2019/03/Home-Page-Pic-2-copy.webp", "/media/2020/03/Mujeres-Auténticas.webp", "/media/2022/08/4.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2026/01/Vienna-School-logo-black.webp"]
 ---
 # Mujeres Auténticas
 
@@ -449,15 +449,13 @@ TRUSTED BY
 
 es una multi-premiada ONG especializada en el diseño de educación y consultoría para líderes de gobierno y empresa
 
-![Global Honor GHES](/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp "logo vienna-business-agency-1-300x300")
-
 ![Meeting Destination Vienna](/media/2022/11/MDV_Logo_RGB_white_red.webp "MDV_Logo_RGB_white_red")
 
 Vienna Convention Bureau
 
 Grupo de trabajo que aglutina a los mejores eventos internacionales que atraen talento a Viena.
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School of Quality & Innovation")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School of Quality & Innovation")
 
 Una plataforma global de Startups e Inversionistas de Impacto que trabajan en soluciones al Desarrollo Sostenible.
 

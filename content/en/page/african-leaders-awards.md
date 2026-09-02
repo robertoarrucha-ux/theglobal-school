@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2023/01/African-2-MEDIUM.webp"
 targetKeyword: ""
 sourceUrl: "https://theglobal.school/african-leaders-awards/"
-images: ["/media/2023/01/African-2-MEDIUM.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2020/05/New-Logo-The-Global-School.webp", "/media/2022/02/Bank-Ki-Moon-Logo_525_1-Logo.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp", "/media/2023/01/African-Selma-MEDIUM.webp", "/media/2023/01/African-Leaders-4-MEDIUM.webp"]
+images: ["/media/2023/01/African-2-MEDIUM.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2020/05/New-Logo-The-Global-School.webp", "/media/2022/02/Bank-Ki-Moon-Logo_525_1-Logo.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/01/African-Selma-MEDIUM.webp", "/media/2023/01/African-Leaders-4-MEDIUM.webp"]
 ---
 # African Leaders
 
@@ -87,8 +87,6 @@ Quasi-international organization founded by the Secretary General of the UN (200
 [![Meeting Destination Vienna](/media/2022/11/MDV_Logo_RGB_white_red.webp "MDV_Logo_RGB_white_red")](https://www.vienna.convention.at/)
 
 Vienna Convention Bureau brings the best events to one of the most exciting destinations worldwide: Vienna, Austria.
-
-![Global Honor GHES](/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp "logo vienna-business-agency-1-300x300")
 
 Promoting business collaboration and partnership globally.
 

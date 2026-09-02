@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp"
 targetKeyword: "Artificial Inteligence,Sustainable Development"
 sourceUrl: "https://theglobal.school/ai-sustainability/"
-images: ["/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2024/02/The-New-Global-School.webp", "/media/2024/08/AI-Sustainability-Champions-of-our-planet-WEB.webp", "/media/2022/11/partnership-icon.webp", "/media/2024/09/AI-European-Forum-Speakers-Collage-e1726744793850.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/08/Vienna-School-Logo-NEW-trans.webp"]
+images: ["/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2024/02/The-New-Global-School.webp", "/media/2024/08/AI-Sustainability-Champions-of-our-planet-WEB.webp", "/media/2022/11/partnership-icon.webp", "/media/2024/09/AI-European-Forum-Speakers-Collage-e1726744793850.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2026/01/Vienna-School-logo-black.webp"]
 ---
 # Artificial Intelligence European Forum
 
@@ -247,7 +247,7 @@ TBC
 
 [![](/media/2023/09/Logo-champions.webp "Logo champions")](https://our-planet.org)
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School Logo NEW trans")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School Logo NEW trans")
 
 ## FAQ
 

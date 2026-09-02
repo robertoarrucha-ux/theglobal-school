@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2022/08/4.webp"
 targetKeyword: ""
 sourceUrl: "https://es.theglobal.school/votaciones-latin-american-leaders-awards/"
-images: ["/media/2022/08/4.webp", "/media/2022/08/5.webp", "/media/2022/04/Programas-The-Global-School-SMAL.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2023/04/Gonzalo-Munoz-Abogabir-Latin-American-Leaders-Awards.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/06/Logo-CAGG.webp", "/media/2023/08/Vienna-School-Logo-New-black.webp", "/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp", "/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp", "/media/2023/11/LOGO-BOOSTERIIT-OFICIAL.webp", "/media/2022/11/La-Caña-Logo-1.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/iSCAN-Logo-1.webp", "/media/2023/06/climate-reality-project-logo.webp", "/media/2021/11/1MillionStartups-Logo.webp"]
+images: ["/media/2022/08/4.webp", "/media/2022/08/5.webp", "/media/2022/04/Programas-The-Global-School-SMAL.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2023/04/Gonzalo-Munoz-Abogabir-Latin-American-Leaders-Awards.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/06/Logo-CAGG.webp", "/media/2023/08/Vienna-School-Logo-New-black.webp", "/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp", "/media/2023/11/LOGO-BOOSTERIIT-OFICIAL.webp", "/media/2022/11/La-Caña-Logo-1.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/iSCAN-Logo-1.webp", "/media/2023/06/climate-reality-project-logo.webp", "/media/2021/11/1MillionStartups-Logo.webp"]
 ---
 # Latin American
 
@@ -510,8 +510,6 @@ Establecido en 2021 en Ginebra, Suiza, CAGG es un «do tank» sin fines de lucro
 ![The Global School for New Leadership Logo](/media/2023/08/Vienna-School-Logo-New-black.webp "Vienna School Logo New black")
 
 Premiada organización educativa en Viena dedicada al estudio y certificación de líderes de gobierno y empresa en Europa
-
-![Global Honor GHES](/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp "logo vienna-business-agency-1-300x300")
 
 La Agencia de Negocios de Viena.
 

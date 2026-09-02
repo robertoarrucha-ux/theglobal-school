@@ -12,7 +12,7 @@ ogImage: "/media/2022/04/Latin-American-Leaders-Awards-1024x576.webp"
 hero: "/media/2025/07/Latin-American-Leaders-Awards-Francisco-Colunga.webp"
 targetKeyword: "Latin America Leaders Awards"
 sourceUrl: "https://es.theglobal.school/latin-america-leaders-awards/"
-images: ["/media/2025/07/Latin-American-Leaders-Awards-Francisco-Colunga.webp", "/media/2022/08/5.webp", "/media/2022/04/Programas-The-Global-School-SMAL.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2025/07/Latin-American-Leaders-Awards-Mauricio-Vila.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/06/Logo-CAGG.webp", "/media/2023/08/Vienna-School-Logo-NEW-trans.webp", "/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp", "/media/2023/11/LOGO-BOOSTERIIT-OFICIAL.webp", "/media/2022/11/La-Caña-Logo-1.webp", "/media/2025/11/Logo-OekoEvent_D_PKZ_Kernmarke-ezgif.com-jpg-to-webp-converter.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/iSCAN-Logo-1.webp", "/media/2023/06/climate-reality-project-logo.webp", "/media/2021/11/1MillionStartups-Logo.webp"]
+images: ["/media/2025/07/Latin-American-Leaders-Awards-Francisco-Colunga.webp", "/media/2022/08/5.webp", "/media/2022/04/Programas-The-Global-School-SMAL.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2025/07/Latin-American-Leaders-Awards-Mauricio-Vila.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/06/Logo-CAGG.webp", "/media/2026/01/Vienna-School-logo-black.webp", "/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp", "/media/2023/11/LOGO-BOOSTERIIT-OFICIAL.webp", "/media/2022/11/La-Caña-Logo-1.webp", "/media/2025/11/Logo-OekoEvent_D_PKZ_Kernmarke-ezgif.com-jpg-to-webp-converter.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/iSCAN-Logo-1.webp", "/media/2023/06/climate-reality-project-logo.webp", "/media/2021/11/1MillionStartups-Logo.webp"]
 ctaHref: "https://awards.pro-latam.org"
 ctaLabel: "Ir a los Latin American Leaders Awards"
 ---
@@ -487,7 +487,7 @@ Grupo de trabajo que aglutina a los mejores eventos internacionales que atraen t
 
 Establecido en 2021 en Ginebra, Suiza, CAGG es un «do tank» sin fines de lucro que representa y promueve think tanks y otras organizaciones civiles del Sur Global ante organizaciones internacionales en Europa.
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School of Quality & Innovation")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School of Quality & Innovation")
 
 Organización educativa en Viena dedicada al estudio y certificación de líderes de gobierno y empresa en Europa
 

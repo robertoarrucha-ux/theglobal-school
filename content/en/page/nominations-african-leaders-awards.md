@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2023/01/African-2-MEDIUM.webp"
 targetKeyword: ""
 sourceUrl: "https://theglobal.school/nominations-african-leaders-awards/"
-images: ["/media/2023/01/African-2-MEDIUM.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2020/05/New-Logo-The-Global-School.webp", "/media/2022/02/Bank-Ki-Moon-Logo_525_1-Logo.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2021/11/1MillionStartups-Logo.webp", "/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp"]
+images: ["/media/2023/01/African-2-MEDIUM.webp", "/media/2023/01/Alexis-African-Leaders-Awards-MEDIUM.webp", "/media/2022/10/Viena-Latin-American-Leaders-Awards.webp", "/media/2020/05/New-Logo-The-Global-School.webp", "/media/2022/02/Bank-Ki-Moon-Logo_525_1-Logo.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2021/11/1MillionStartups-Logo.webp"]
 ---
 # African Leaders
 
@@ -116,8 +116,6 @@ Vienna Convention Bureau brings the best events to one of the most exciting dest
 ![1MillionStartups Logo](/media/2021/11/1MillionStartups-Logo.webp "1MillionStartups Logo")
 
 The global platform of entrepreneurs working towards the sustainable development goals (SDGs).
-
-![Global Honor GHES](/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp "logo vienna-business-agency-1-300x300")
 
 Promoting business collaboration and partnership globally.
 

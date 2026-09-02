@@ -62,8 +62,7 @@ export const PROOF_QUOTES: ProofQuote[] = [
 
 /** Instituciones y organizaciones con las que se ha trabajado. Logos ya migrados a /media. */
 export const PROOF_LOGOS: ProofLogo[] = [
-  { name: 'Vienna Business Agency', src: '/media/2018/01/logo-vienna-business-agency-1-300x300-1.webp' },
-  { name: 'Vienna School of Quality & Innovation', src: '/media/2023/08/Vienna-School-Logo-NEW-trans.webp' },
+  { name: 'Vienna School of Quality & Innovation', src: '/media/2026/01/Vienna-School-logo-black.webp' },
   { name: 'Impact Hub Vienna', src: '/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp' },
   { name: 'The Climate Reality Project', src: '/media/2023/06/climate-reality-project-logo.webp' },
   { name: 'MDV', src: '/media/2022/11/MDV_Logo_RGB_white_red.webp' },

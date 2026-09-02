@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp"
 targetKeyword: ""
 sourceUrl: "https://theglobal.school/ai-for-sustainable-development/"
-images: ["/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/08/Vienna-School-Logo-NEW-trans.webp", "/media/2023/10/Champions-of-Our-Planet-Web.webp", "/media/2024/02/The-New-Global-School.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2022/11/partnership-icon.webp"]
+images: ["/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2026/01/Vienna-School-logo-black.webp", "/media/2023/10/Champions-of-Our-Planet-Web.webp", "/media/2024/02/The-New-Global-School.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2022/11/partnership-icon.webp"]
 ---
 # Artificial Intelligence for Sustainable Development
 
@@ -26,7 +26,7 @@ International Forum to connect and foster solutions towards sustainable developm
 
 [![](/media/2023/09/Logo-champions.webp "Logo champions")](https://our-planet.org)
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School Logo NEW trans")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School Logo NEW trans")
 
 ![African-Leaders-Awards](/media/2023/10/Champions-of-Our-Planet-Web.webp "Champions of Our Planet Web")
 

@@ -9,10 +9,10 @@ date: "2023-08-08 16:07:59"
 canonical: "https://es.theglobal.school/seminario-internacional-de-alta-especializacion-en-pld-y-compliance/"
 ogTitle: "Seminario Internacional de Alta Especialización en PLD y Compliance - The New Global School"
 ogImage: "/media/2024/02/The-New-Global-School.webp"
-hero: "/media/2023/08/Vienna-School-Logo-NEW-trans.webp"
+hero: "/media/2026/01/Vienna-School-logo-black.webp"
 targetKeyword: "Seminario Internacional de Alta Especialización en PLD y Compliance"
 sourceUrl: "https://es.theglobal.school/seminario-internacional-de-alta-especializacion-en-pld-y-compliance/"
-images: ["/media/2023/08/Vienna-School-Logo-NEW-trans.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2023/03/Top-Compliance-logo.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2023/04/Gonzalo-Munoz-Abogabir-Latin-American-Leaders-Awards.webp", "/media/2018/01/Beautiful-Vienna-Austria-4K-Wallpapers.webp"]
+images: ["/media/2026/01/Vienna-School-logo-black.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2023/03/Top-Compliance-logo.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2023/03/Programas-Agu-Rob-ONU-.webp", "/media/2023/04/Gonzalo-Munoz-Abogabir-Latin-American-Leaders-Awards.webp", "/media/2018/01/Beautiful-Vienna-Austria-4K-Wallpapers.webp"]
 ---
 # Seminario Internacional de Alta Especialización en PLD y Compliance
 
@@ -67,7 +67,7 @@ David Enrique Merino Téllez. Presidente de la Academia Mexicana de Derecho Digi
 16:40 – 18:00 Implementación de un BCP y un programa de resiliencia digital. Secure Information Technology Center Austria.  
 18:00 – 22:00 Recorrido por Centro Histórico y Cena.
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School of Quality & Innovation")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School of Quality & Innovation")
 
 ![The Global School for New Leadership Logo](/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp "Logo Transparent The Global School for New Leadeship")
 

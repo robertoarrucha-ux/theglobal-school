@@ -36,8 +36,13 @@
 /* Header/footer glass */
 .mkt-header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(7, 0, 15, 0.6); border-bottom: 1px solid var(--line); }
 .mkt-header .inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem clamp(1rem, 3vw, 2rem); max-width: 1180px; margin: 0 auto; }
-.mkt-brand { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
-.mkt-brand span { color: var(--purple-bright); }
+/* Lockup de marca: el símbolo de los tres círculos (mismo del favicon) + el nombre.
+   El wordmark completo lleva dos líneas de tagline que a tamaño de cabecera son ilegibles. */
+.mkt-brand { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.mkt-brand img { height: 32px; width: 32px; display: block; }
+.mkt-brand span { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; white-space: nowrap; }
+.mkt-brand b { font-weight: 600; color: var(--purple-bright); }
+@media (max-width: 520px) { .mkt-brand img { height: 26px; width: 26px; } .mkt-brand span { font-size: 1.1rem; } }
 .mkt-nav a { color: var(--txt-soft); font-size: .92rem; margin-left: 1.5rem; }
 .mkt-nav a:hover { color: var(--txt); }
 .mkt-nav .to-site { color: var(--txt); border: 1px solid var(--line); border-radius: 999px; padding: .3rem .9rem; }

@@ -12,7 +12,7 @@ ogImage: "/media/2024/02/The-New-Global-School.webp"
 hero: "/media/2018/01/Beautiful-Vienna-Austria-4K-Wallpapers.webp"
 targetKeyword: "Vienna,Viena,Viena Austria,Calidad de Vida,viena donde queda,viena en ingles,viena restaurante,viena mapa,Ciudad Inteligente,ciudad inteligente ejemplos,viena ciudad,viena ciudad de la musica,viena ciudad segura,viena ciudad mas bonita de europa,viena ciudad imperial,Viena Gobierno,viena tipo de gobierno,ist vienna,Viena Calidad,viena calidad de vida,calidad viena,calidad viena tela,viena mejor calidad de vida,Viena Vida,vienna visa,viena nivel de vida,viena qualidade de vida,costo vida vienna,viena custo de vida,vienna costo de vida"
 sourceUrl: "https://es.theglobal.school/diplomado-ejecutivo-viena-calidad-de-vida-y-ciudad-inteligente/"
-images: ["/media/2018/01/Beautiful-Vienna-Austria-4K-Wallpapers.webp", "/media/2025/06/Viena-Calidad-de-Vida-y-Ciudad-Inteligente-Diplomado.webp", "/media/2024/08/AI-Sustainability-Champions-of-our-planet-WEB.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2022/02/Vienna-logo-1.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/05/Natalia-Lever-Circle-Alumni-150x150.webp", "/media/2019/05/Juliana-Galindo-circle-alumni-150x150.webp", "/media/2019/05/Karina-Circle-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2019/06/Veronica-Narvaez-circle-cropped-2-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/Vienna-Business-Agency-LOGO.webp", "/media/2023/08/Vienna-School-Logo-NEW-trans.webp"]
+images: ["/media/2018/01/Beautiful-Vienna-Austria-4K-Wallpapers.webp", "/media/2025/06/Viena-Calidad-de-Vida-y-Ciudad-Inteligente-Diplomado.webp", "/media/2024/08/AI-Sustainability-Champions-of-our-planet-WEB.webp", "/media/2019/09/Viena-Ciudad-Inteligente.webp", "/media/2022/02/Vienna-logo-1.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/05/Natalia-Lever-Circle-Alumni-150x150.webp", "/media/2019/05/Juliana-Galindo-circle-alumni-150x150.webp", "/media/2019/05/Karina-Circle-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2019/06/Veronica-Narvaez-circle-cropped-2-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2025/01/logo-the-new-global-school-Vienna.webp", "/media/2022/11/MDV_Logo_RGB_white_red.webp", "/media/2023/09/Logo-champions.webp", "/media/2023/10/Vienna-Business-Agency-LOGO.webp", "/media/2026/01/Vienna-School-logo-black.webp"]
 ---
 #### 
 
@@ -304,7 +304,7 @@ Academia Regional de las Naciones Unidas
 
 ![Champions of Our Planet](/media/2023/10/Vienna-Business-Agency-LOGO.webp "Champions of Our Planet")
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School Logo NEW trans")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School Logo NEW trans")
 
 ## Desde 2010, Educación y Eventos para líderes de Gobierno y Empresa
 

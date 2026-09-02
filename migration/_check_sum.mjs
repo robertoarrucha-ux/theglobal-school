@@ -1,0 +1,14 @@
+import { initializeApp, cert } from 'firebase-admin/app';
+import { getFirestore } from 'firebase-admin/firestore';
+import fs from 'node:fs';
+const key = fs.readdirSync('.').find(f => /firebase-adminsdk.*\.json$/.test(f));
+initializeApp({ credential: cert(JSON.parse(fs.readFileSync(key,'utf8'))) });
+const db = getFirestore('ai-studio-6aba9233-6f6c-455d-be53-29923fe66f0f');
+const snap = await db.collection('experiences').get();
+const bad = [], lens = [];
+snap.forEach(d => { const s = (d.data().summary||'').trim(); lens.push(s.length);
+  if (s && !/[.!?…»"')]$/.test(s)) bad.push(`${d.data().slug} (${s.length}) …${s.slice(-30)}`); });
+console.log(`docs: ${snap.size} | longitudes ${Math.min(...lens)}–${Math.max(...lens)} | exactos 180: ${lens.filter(l=>l===180).length}`);
+console.log(`cortados a media frase: ${bad.length}`);
+bad.forEach(b => console.log('  ' + b));
+process.exit(0);

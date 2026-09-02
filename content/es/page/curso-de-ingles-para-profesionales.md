@@ -9,10 +9,10 @@ date: "2023-08-17 18:37:42"
 canonical: "https://es.theglobal.school/curso-de-ingles-para-profesionales/"
 ogTitle: "Curso de Inglés para Profesionales."
 ogImage: "/media/2023/08/Curso-de-Ingles-para-Profesionales.webp"
-hero: "/media/2023/08/Vienna-School-Logo-NEW-trans.webp"
+hero: "/media/2026/01/Vienna-School-logo-black.webp"
 targetKeyword: "Curso de Inglés para Profesionales,curso de ingles para profesionales,clases de ingles para profesionales,curso de inglés técnico para profesionales,curso ingles profesional para turismo,Inglés de Negocios,ingles de negocios curso,inglés de negocios vocabulario,ingles de negocios online,ingles de negocios traductor,ingles de negocios eafit"
 sourceUrl: "https://es.theglobal.school/curso-de-ingles-para-profesionales/"
-images: ["/media/2023/08/Vienna-School-Logo-NEW-trans.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2023/08/Melingua.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2018/02/Melanie_Furch.webp", "/media/2020/11/Mural.webp"]
+images: ["/media/2026/01/Vienna-School-logo-black.webp", "/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp", "/media/2023/08/Melingua.webp", "/media/2021/11/Lore-Gomez-Crop-Profile-1-150x150.webp", "/media/2019/06/Liz-Marcela-Summit-circle-cropped-150x150.webp", "/media/2019/06/Irma-Murillo-leaders-circle-cropped-150x150.webp", "/media/2020/07/Billy-crop-circle-150x150.webp", "/media/2018/02/Melanie_Furch.webp", "/media/2020/11/Mural.webp"]
 ---
 # Inglés para Profesionales
 
@@ -79,7 +79,7 @@ The course will end with a final exam to gauge progress and areas of improvement
 
 ### **EXAMEN & CERTIFICADO**
 
-![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-NEW-trans.webp "Vienna School of Quality & Innovation")
+![Vienna School of Quality & Innovation](/media/2026/01/Vienna-School-logo-black.webp "Vienna School of Quality & Innovation")
 
 ![The Global School for New Leadership Logo](/media/2023/06/Logo-Transparent-The-Global-School-for-New-Leadeship-scaled.webp "Logo Transparent The Global School for New Leadeship")
 

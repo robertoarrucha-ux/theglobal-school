@@ -45,7 +45,7 @@ const itinerary = x.itinerary || [];
 ---
 <header class="op-head">
   <div class="op-brand">
-    <img src="/media/2025/01/logo-the-new-global-school-Vienna.webp" alt={BRAND} />
+    <img src="/media/2026/01/logo-tngs-dark.webp" alt={BRAND} width="1076" height="338" />
   </div>
   <span class="op-kicker">{t.brief}</span>
 </header>
@@ -96,7 +96,7 @@ const itinerary = x.itinerary || [];
   </div>
   <p class="op-logos-label">{t.partners}</p>
   <div class="op-logos">
-    {PROOF_LOGOS.map((l) => <img src={l.src} alt={l.name} />)}
+    {PROOF_LOGOS.map((l) => <div><img src={l.src} alt={l.name} /></div>)}
   </div>
 </section>
 
@@ -205,8 +205,14 @@ const itinerary = x.itinerary || [];
     margin: 0 0 5pt; font-size: 7pt; letter-spacing: .12em;
     text-transform: uppercase; color: var(--ink-soft);
   }
-  .op-logos { display: flex; flex-wrap: wrap; gap: 7pt; align-items: center; }
-  .op-logos img { height: 16pt; width: auto; max-width: 50pt; object-fit: contain; }
+  /* 5 de los 9 logos institucionales vienen con fondo oscuro incrustado en el propio
+     archivo. Una ficha uniforme los presenta como rejilla en lugar de bloques sueltos. */
+  .op-logos { display: flex; flex-wrap: wrap; gap: 5pt; align-items: stretch; }
+  .op-logos > div {
+    width: 58pt; height: 26pt; display: grid; place-items: center; padding: 2pt 3pt;
+    background: #fff; border: 0.75pt solid var(--rule); border-radius: 3pt;
+  }
+  .op-logos img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 
   .op-foot {
     display: flex; gap: 14pt; align-items: center; justify-content: space-between;
