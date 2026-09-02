@@ -50,7 +50,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': x.type === 'evento' ? 'Event' : 'TouristTrip',
   name: x.title,
-  description: x.summary,
+  description: x.summary || x.title,
   startDate: x.startDate,
   ...(x.endDate ? { endDate: x.endDate } : {}),
   image: new URL(x.coverImageUrl, Astro.site).href,
@@ -59,6 +59,18 @@ const jsonLd = {
     ? {
         eventAttendanceMode: x.format === 'online' ? 'https://schema.org/OnlineEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
         location: x.format === 'online' ? { '@type': 'VirtualLocation', url: SELF_ORIGIN[LANG] } : { '@type': 'Place', name: x.venue, address: `${x.city}, ${x.country}` },
+        // offers solo si hay precio público real; el modelo B2B usa "A consultar" y no publica precios.
+        ...(x.publicPrice > 0
+          ? {
+              offers: {
+                '@type': 'Offer',
+                price: x.publicPrice,
+                priceCurrency: x.currency || 'EUR',
+                url: new URL(Astro.url.pathname, Astro.site).href,
+                availability: 'https://schema.org/InStock',
+              },
+            }
+          : {}),
       }
     : {}),
   organizer: { '@type': 'Organization', name: 'The New Global School' },

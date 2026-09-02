@@ -6,17 +6,20 @@
 import { LANG } from '../lib/site';
 const L = LANG === 'es';
 const AWARDS_URL = 'https://awards.pro-latam.org';
+// Se modela como Organization (no Event): esta página habla DEL premio, no es la página
+// del evento. Así se mantiene la atribución a Pro-Latam sin exigir los campos obligatorios
+// de Event (startDate, location, offers, image...) que aquí no aplican.
 const ld = {
   '@context': 'https://schema.org',
-  '@type': 'Event',
+  '@type': 'Organization',
   name: 'Latin American Leaders Awards',
-  organizer: {
+  url: AWARDS_URL,
+  sameAs: [AWARDS_URL],
+  parentOrganization: {
     '@type': 'Organization',
     name: 'Pro-Latam - Invest in Latin America',
-    url: AWARDS_URL,
+    url: 'https://pro-latam.org',
   },
-  url: AWARDS_URL,
-  sameAs: AWARDS_URL,
 };
 ---
 <aside class="awards-note">
