@@ -6,7 +6,7 @@ import { loadExperiences } from '../../lib/experiences';
 import { LANG, SELF_ORIGIN } from '../../lib/site';
 import { getInclusions } from '../../lib/inclusions';
 import { seasonsText, editionRows } from '../../lib/editions';
-import { youtubeId } from '../../lib/video';
+import { youtubeId, VIDEO_UPLOAD_DATES, videoUploadDateIso } from '../../lib/video';
 import TrustStrip from '../../components/TrustStrip.astro';
 import SocialProofFallback from '../../components/SocialProofFallback.astro';
 const inc = getInclusions('es');
@@ -39,8 +39,7 @@ const ytId = youtubeId(x.videoUrl || (x.publisher?.type === 'tgs' ? DEFAULT_TGS_
 // Google exige uploadDate en VideoObject. Fechas reales de subida de nuestros videos.
 // Si un video no tiene fecha conocida (ni x.videoUploadDate), NO emitimos el JSON-LD:
 // mejor sin structured data que con un campo obligatorio faltante.
-const VIDEO_UPLOAD_DATES: Record<string, string> = { x_u3hDVb95o: '2021-02-23', Ts5f7VJccmk: '2021-03-16' };
-const videoUploadDate = x.videoUploadDate || (ytId ? VIDEO_UPLOAD_DATES[ytId] : '') || '';
+const videoUploadDate = videoUploadDateIso(x.videoUploadDate || (ytId ? VIDEO_UPLOAD_DATES[ytId] : ''));
 const videoLd = ytId && videoUploadDate ? { '@context': 'https://schema.org', '@type': 'VideoObject', name: x.title, description: x.summary || x.title, thumbnailUrl: [`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`], uploadDate: videoUploadDate, embedUrl: `https://www.youtube.com/embed/${ytId}`, contentUrl: `https://www.youtube.com/watch?v=${ytId}` } : null;
 
 // Contenido completo migrado (eventos TNGS con página original: LALA, Mujeres, Diplomado...).
