@@ -206,8 +206,12 @@ def target_conf(lang):
              "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
             {"source": "**/",
              "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+            # Las imagenes de /media NO llevan hash de contenido en el nombre, asi que
+            # "immutable" un ano era una trampa: reemplazar una foto conservando su
+            # nombre dejaba a los visitantes con la vieja durante un ano. Una semana
+            # mantiene casi toda la ventaja de rendimiento y acota el problema.
             {"source": "/media/**",
-             "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
+             "headers": [{"key": "Cache-Control", "value": "public, max-age=604800"}]},
             {"source": "**/*.@(js|css|woff2)",
              "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
         ],
