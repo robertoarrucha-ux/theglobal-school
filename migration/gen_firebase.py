@@ -197,6 +197,15 @@ def target_conf(lang):
         ],
         "redirects": sorted(redir[lang].values(), key=lambda r: r["source"]),
         "headers": [
+            # El HTML no tenia regla y caia al max-age=3600 por defecto de Firebase:
+            # tras publicar, el visitante seguia viendo la version vieja hasta una hora.
+            # Con el rebuild automatico por cada cambio en Firestore eso no sirve.
+            # "no-cache" no impide cachear: obliga a revalidar, y el 304 sale gratis.
+            # Astro usa trailingSlash 'always', asi que toda pagina es una URL de directorio.
+            {"source": "/",
+             "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+            {"source": "**/",
+             "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
             {"source": "/media/**",
              "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "**/*.@(js|css|woff2)",
