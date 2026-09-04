@@ -1,0 +1,182 @@
+---
+// Banda de reputación y seguridad, justo encima del pie. Va en TODAS las páginas:
+// quien entra directo a la ficha de un viaje desde Google no ha pasado por el home
+// y no tiene forma de saber quién opera el programa ni si hay una entidad detrás.
+//
+// Estilos autónomos a propósito: aparece tanto en el tema oscuro del marketplace
+// como en el claro del blog y las legales, que no cargan marketplace.css.
+import { LANG } from '../lib/site';
+import { PROOF_STATS, PROOF_LOGOS } from '../data/social-proof';
+const L = LANG === 'es';
+
+const t = L
+  ? {
+      eyebrow: 'Quiénes somos',
+      title: 'Más de una década formando líderes globales',
+      lead: 'Desde 2010, The New Global School diseña experiencias educativas y eventos internacionales para líderes de gobierno, empresa y sociedad civil. Con base en Viena y presencia en América Latina, unimos rigor académico, inmersión cultural y una red global de aliados.',
+      pillars: [
+        { title: 'Desde 2010', text: 'Más de una década de trayectoria formando a tomadores de decisión en Europa y América Latina.' },
+        { title: 'Alcance internacional', text: 'Con base en Viena (Austria) y una red de aliados que conecta continentes, culturas e instituciones.' },
+        { title: 'Rigor y reputación', text: 'Programas con certificaciones internacionales y participantes de universidades, gobiernos y organismos como Naciones Unidas.' },
+      ],
+      logosLabel: 'Instituciones con las que hemos trabajado',
+      legalLabel: 'Entidad responsable',
+      legalName: 'The New Global School',
+      legalAddr: 'Lindengasse 56, 1070 Viena, Austria',
+      legalReg: 'Registro de asociaciones (ZVR): 1148330676',
+      links: [
+        { href: '/politicas/#impressum', label: 'Impressum' },
+        { href: '/politicas/#privacidad', label: 'Privacidad' },
+        { href: '/politicas/#terminos', label: 'Términos' },
+        { href: '/contacto/', label: 'Contacto' },
+      ],
+      aboutMore: 'Conoce al equipo',
+      aboutHref: '/nosotros/',
+    }
+  : {
+      eyebrow: 'About us',
+      title: 'Over a decade shaping global leaders',
+      lead: 'Since 2010, The New Global School has designed educational experiences and international events for leaders in government, business and civil society. Based in Vienna and active across Latin America, we combine academic rigor, cultural immersion and a global network of partners.',
+      pillars: [
+        { title: 'Since 2010', text: 'More than a decade of experience training decision-makers across Europe and Latin America.' },
+        { title: 'International reach', text: 'Based in Vienna, Austria, with a network of partners connecting continents, cultures and institutions.' },
+        { title: 'Rigor and reputation', text: 'Programs with international certifications and participants from universities, governments and bodies such as the United Nations.' },
+      ],
+      logosLabel: 'Institutions we have worked with',
+      legalLabel: 'Legal entity',
+      legalName: 'The New Global School',
+      legalAddr: 'Lindengasse 56, 1070 Vienna, Austria',
+      legalReg: 'Austrian association register (ZVR): 1148330676',
+      links: [
+        { href: '/terms/#impressum', label: 'Impressum' },
+        { href: '/terms/#privacy', label: 'Privacy' },
+        { href: '/terms/#terms', label: 'Terms' },
+        { href: '/contact/', label: 'Contact' },
+      ],
+      aboutMore: 'Meet the team',
+      aboutHref: '/about-us/',
+    };
+---
+<aside class="ab-band" aria-labelledby="ab-title">
+  <div class="ab-wrap">
+    <div class="ab-head">
+      <p class="ab-eyebrow">{t.eyebrow}</p>
+      <h2 id="ab-title">{t.title}</h2>
+      <p class="ab-lead">{t.lead}</p>
+    </div>
+
+    <div class="ab-stats">
+      {PROOF_STATS.map((s) => (
+        <div><strong>{s.value}</strong><span>{L ? s.es : s.en}</span></div>
+      ))}
+    </div>
+
+    <div class="ab-pillars">
+      {t.pillars.map((p) => (
+        <div class="ab-pillar"><h3>{p.title}</h3><p>{p.text}</p></div>
+      ))}
+    </div>
+
+    <p class="ab-logos-label">{t.logosLabel}</p>
+    <div class="ab-logos">
+      {PROOF_LOGOS.map((l) => (
+        <div class="ab-logo" title={l.name}><img src={l.src} alt={l.name} loading="lazy" decoding="async" /></div>
+      ))}
+    </div>
+
+    <div class="ab-legal">
+      <div>
+        <span class="ab-legal-label">{t.legalLabel}</span>
+        <p><strong>{t.legalName}</strong><br />{t.legalAddr}<br />{t.legalReg}</p>
+      </div>
+      <nav class="ab-links" aria-label={t.legalLabel}>
+        {t.links.map((l) => <a href={l.href}>{l.label}</a>)}
+        <a class="ab-more" href={t.aboutHref}>{t.aboutMore} →</a>
+      </nav>
+    </div>
+  </div>
+</aside>
+
+<style>
+  /* Tokens propios: este bloque no debe depender del tema de la página.
+     box-sizing incluido: sin el, el padding y el borde se suman al ancho de las
+     tarjetas de logo y los 9 no caben en una fila. */
+  .ab-band, .ab-band * { box-sizing: border-box; }
+  .ab-band {
+    --ab-ground: #f7f4ef;
+    --ab-ink: #1a1030;
+    --ab-soft: #5c5470;
+    --ab-line: rgba(26, 16, 48, 0.12);
+    --ab-accent: #6d28d9;
+    --ab-amber: #b45309;
+    background: var(--ab-ground);
+    color: var(--ab-ink);
+    border-top: 1px solid var(--ab-line);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  .ab-wrap { max-width: 1180px; margin: 0 auto; padding: clamp(2.8rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+
+  .ab-head { max-width: 68ch; }
+  .ab-eyebrow {
+    margin: 0; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ab-amber);
+  }
+  .ab-band h2 {
+    font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700;
+    font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.1; letter-spacing: -0.025em;
+    margin: 0.5rem 0 0.8rem; color: var(--ab-ink);
+  }
+  .ab-lead { margin: 0; color: var(--ab-soft); line-height: 1.7; font-size: 1.02rem; }
+
+  .ab-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--ab-line); border: 1px solid var(--ab-line);
+    border-radius: 14px; overflow: hidden; margin: 2rem 0;
+  }
+  .ab-stats > div { background: #fff; padding: 1.1rem 0.9rem; text-align: center; }
+  .ab-stats strong {
+    display: block; font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700;
+    font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1; color: var(--ab-accent);
+  }
+  .ab-stats span { font-size: 0.76rem; line-height: 1.35; color: var(--ab-soft); }
+
+  .ab-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .ab-pillar { background: #fff; border: 1px solid var(--ab-line); border-radius: 14px; padding: 1.2rem 1.2rem; }
+  .ab-pillar h3 {
+    font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: 1rem;
+    margin: 0 0 0.35rem; color: var(--ab-ink); letter-spacing: -0.01em;
+  }
+  .ab-pillar p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--ab-soft); }
+
+  .ab-logos-label {
+    margin: 2rem 0 0.8rem; font-size: 0.7rem; letter-spacing: 0.13em;
+    text-transform: uppercase; color: var(--ab-soft);
+  }
+  .ab-logos { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ab-logo {
+    /* 9 logos deben caber en una fila a 1180px: 9*106 + 8*8 = 1018 < 1116 utiles */
+    width: 106px; min-height: 58px; display: grid; place-items: center; padding: 0.6rem 0.7rem;
+    background: #fff; border: 1px solid var(--ab-line); border-radius: 12px;
+  }
+  .ab-logo img { max-width: 100%; max-height: 36px; width: auto; height: auto; object-fit: contain; display: block; }
+
+  /* Bloque de seguridad: quien compra un viaje de ticket alto quiere ver una entidad real */
+  .ab-legal {
+    display: flex; flex-wrap: wrap; gap: 1.4rem; justify-content: space-between; align-items: flex-end;
+    margin-top: 2.2rem; padding-top: 1.4rem; border-top: 1px solid var(--ab-line);
+  }
+  .ab-legal-label {
+    display: block; font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--ab-soft); margin-bottom: 0.35rem;
+  }
+  .ab-legal p { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--ab-soft); }
+  .ab-legal strong { color: var(--ab-ink); }
+  .ab-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; align-items: center; }
+  .ab-links a { color: var(--ab-soft); font-size: 0.86rem; font-weight: 500; text-decoration: none; }
+  .ab-links a:hover { color: var(--ab-accent); text-decoration: underline; }
+  .ab-links .ab-more { color: var(--ab-accent); font-weight: 600; }
+
+  @media (max-width: 640px) {
+    .ab-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import '../styles/marketplace.css';
+import AboutBand from '../components/AboutBand.astro';
 import { LANG, SELF_ORIGIN, OTHER_ORIGIN, UI } from '../lib/site';
 
 interface Props { title: string; description?: string; canonical?: string; ogImage?: string; }
@@ -7,6 +8,11 @@ const { title, description = '', canonical = '', ogImage = '' } = Astro.props;
 const L = LANG === 'es';
 const canonicalUrl = canonical || SELF_ORIGIN[LANG] + Astro.url.pathname;
 const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
+
+// La banda de reputacion se omite donde ese contenido ya es el cuerpo de la pagina:
+// el home lo tiene como seccion propia y /nosotros/ es literalmente esa pagina.
+const _p = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const showAbout = !['/', '/nosotros', '/about-us'].includes(_p);
 ---
 <!doctype html>
 <html lang={LANG}>
@@ -164,6 +170,8 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
         });
       })();
     </script>
+    {showAbout && <AboutBand />}
+
     <footer class="mkt-header" style="position:static;border-top:1px solid var(--line);border-bottom:0;margin-top:2rem">
       <div class="inner site-legal" style="color:var(--txt-soft);font-size:.82rem;flex-wrap:wrap;gap:.4rem 1.2rem">
         <span>© {new Date().getFullYear()} Global School. Lindengasse 56, 1070 {L ? 'Viena' : 'Vienna'}, Austria. {L ? 'Todos los derechos reservados.' : 'All rights reserved.'} {L ? 'Consulta aquí nuestras políticas de' : 'Check here our'} <a href={L ? '/politicas/#impressum' : '/terms/#impressum'}>IMPRESSUM</a>, <a href={L ? '/politicas/#privacidad' : '/terms/#privacy'}>{L ? 'PRIVACIDAD' : 'PRIVACY'}</a> {L ? 'y' : '&'} <a href={L ? '/politicas/#terminos' : '/terms/#terms'}>{L ? 'TÉRMINOS DE USO' : 'TERMS OF USE'}</a>.</span>
