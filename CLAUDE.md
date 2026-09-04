@@ -88,4 +88,6 @@ The repo is on GitHub (`robertoarrucha-ux/theglobal-school`) and hosting deploys
 
 ## Maintenance owed
 
-Function runtimes are on Node 20 (deprecated 2026-10-30) in both `functions/` and Aliados; bump to Node 22 before then. `firebase-functions` is outdated in both (upgrade deliberately — breaking changes).
+Runtimes: **done**. Las cinco funciones del proyecto corren en `nodejs22` (verificado con `firebase functions:list`), así que el fin de soporte de Node 20 del 2026-10-30 ya no aplica. El runtime del codebase `theglobal` se declara en `migration/gen_firebase.py`, no a mano en `firebase.json`.
+
+Pendiente: `functions/` usa `firebase-functions` v6 mientras Aliados ya está en v7. No hay fecha límite, pero conviene alinear; el salto de mayor tiene cambios incompatibles, así que hazlo a propósito y despliega con las dos codebases separadas.

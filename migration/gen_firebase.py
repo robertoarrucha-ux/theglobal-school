@@ -208,7 +208,7 @@ firebase = {
     "functions": [{
         "source": "functions",
         "codebase": "theglobal",
-        "runtime": "nodejs20",
+        "runtime": "nodejs22",
         "ignore": ["node_modules", ".git", "*.local"],
     }],
 }
