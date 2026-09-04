@@ -126,10 +126,12 @@ const jsonLd = {
 
   <!-- MÁS VOTADOS (widget cliente, votos en vivo) -->
   {votingData.length > 0 && (
-  <section class="mkt-wrap voted-sec" id="voted-section">
-    <div class="sec-head"><p class="eyebrow">{t.votedEyebrow}</p><h2>{t.votedTitle}</h2></div>
+  <section class="band band-cream" id="voted-section">
+  <div class="mkt-wrap voted-sec">
+    <div class="sec-head reveal"><p class="eyebrow">{t.votedEyebrow}</p><h2>{t.votedTitle}</h2></div>
     <p class="voted-intro">{t.votedIntro}</p>
     <div class="voted-grid" id="voted-grid"></div>
+  </div>
   </section>
   )}
   <script id="xp-vote-data" type="application/json" set:html={JSON.stringify(votingData)}></script>
@@ -181,8 +183,9 @@ const jsonLd = {
   </script>
 
   <!-- PROGRAMAS (todas las experiencias, como en /experiences) -->
-  <section class="mkt-wrap" id="programas">
-    <div class="sec-head">
+  <section class="band band-light" id="programas">
+  <div class="mkt-wrap">
+    <div class="sec-head reveal">
       <p class="eyebrow">{t.programsEyebrow}</p>
       <h2>{t.programsTitle}</h2>
     </div>
@@ -212,11 +215,13 @@ const jsonLd = {
     </div>
     </>
     )}
+  </div>
   </section>
 
   <!-- QUIÉNES SOMOS (autoridad) -->
-  <section class="mkt-wrap about-sec" id="nosotros">
-    <div class="sec-head"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
+  <section class="band band-dark" id="nosotros">
+  <div class="mkt-wrap about-sec">
+    <div class="sec-head reveal"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2></div>
     <p class="about-lead">{t.aboutLead}</p>
     <div class="about-pillars">
       {t.aboutPillars.map((p, i) => (
@@ -227,11 +232,13 @@ const jsonLd = {
         </div>
       ))}
     </div>
+  </div>
   </section>
 
   <!-- TESTIMONIOS -->
-  <section class="mkt-wrap xp-testimonials" id="testimonios">
-    <div class="sec-head"><p class="eyebrow">{t.testiEyebrow}</p><h2>{t.testiTitle}</h2></div>
+  <section class="band band-cream" id="testimonios">
+  <div class="mkt-wrap xp-testimonials">
+    <div class="sec-head reveal"><p class="eyebrow">{t.testiEyebrow}</p><h2>{t.testiTitle}</h2></div>
     <div class="testi-grid">
       {testimonials.map((tt) => (
         <figure class="testi-card glass">
@@ -247,6 +254,7 @@ const jsonLd = {
         </figure>
       ))}
     </div>
+  </div>
   </section>
 
   <!-- ALIADOS -->
@@ -263,8 +271,9 @@ const jsonLd = {
   </section>
 
   <!-- DEL BLOG (SEO + reputación) -->
-  <section class="mkt-wrap" id="blog">
-    <div class="sec-head">
+  <section class="band band-light" id="blog">
+  <div class="mkt-wrap">
+    <div class="sec-head reveal">
       <p class="eyebrow">{t.blogEyebrow}</p>
       <h2>{t.blogTitle}</h2>
     </div>
@@ -280,6 +289,7 @@ const jsonLd = {
       ))}
     </div>
     <p style="text-align:center;margin-top:2rem"><a class="btn-ghost" href="/blog/">{t.blogAll} →</a></p>
+  </div>
   </section>
 
 </MarketplaceLayout>

@@ -50,7 +50,10 @@ const tt = L
 </div>
 
 <script define:vars={{ scope, resultsWord: L ? 'resultado' : 'result', noneMsg: L ? 'Sin resultados con esos filtros.' : 'No results with those filters.' }}>
-  (function () {
+  // define:vars obliga a Astro a emitir este script EN LINEA, asi que se ejecuta durante
+  // el parseo, antes de que exista la rejilla que va debajo. Sin esta espera, cards queda
+  // vacio: el contador marca 0 y los filtros no hacen nada.
+  function initFilters() {
     const root = document.querySelector('.xp-filters[data-scope="' + scope + '"]');
     const container = document.querySelector(scope);
     if (!root || !container) return;
@@ -95,5 +98,7 @@ const tt = L
     ['country', 'duration', 'format'].forEach((k) => { const v = p.get(k); if (v) { state[k] = v; const s = root.querySelector('[data-fil="' + k + '"]'); if (s) s.value = v; } });
     if (p.get('q') && search) { state.q = p.get('q').toLowerCase(); search.value = p.get('q'); }
     apply();
-  })();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFilters);
+  else initFilters();
 </script>

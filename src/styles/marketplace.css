@@ -3,6 +3,8 @@
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/600.css';
 @import '@fontsource/inter/700.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
 @import '@fontsource-variable/cormorant-garamond';
 
 .mkt {
@@ -17,7 +19,16 @@
   --txt-soft: rgba(255, 255, 255, 0.62);
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Cormorant Garamond Variable', 'Cormorant Garamond', Georgia, serif;
+  /* La display pasa de serif a Poppins: la serif era la parte "elegante pero aburrida".
+     Poppins ya estaba instalada (la usa el tema editorial), asi que no suma peso. */
+  --font-display: 'Poppins', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond Variable', 'Cormorant Garamond', Georgia, serif;
+
+  /* Tinta y fondos para las bandas claras */
+  --ink: #1a1030;
+  --ink-soft: #5c5470;
+  --cream: #f7f4ef;
+  --amber: #f5b301;
 
   color: var(--txt);
   font-family: var(--font-sans);
@@ -29,7 +40,6 @@
 }
 
 .mkt a { color: inherit; text-decoration: none; }
-.mkt h1, .mkt h2, .mkt h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
 
 .mkt-wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 3vw, 2rem); }
 
@@ -432,3 +442,58 @@
 /* Enlace a la ficha imprimible: material que el partner imprime o envia en PDF */
 .xp-cta-sheet { display: block; text-align: center; margin-top: .55rem; font-size: .85rem; font-weight: 600; color: var(--txt-soft); transition: color .2s; }
 .xp-cta-sheet:hover { color: var(--purple-bright); }
+
+/* ===== BANDAS =====
+   El oscuro deja de ser el sitio entero y pasa a ser una banda entre varias
+   (blanco, crema, foto, morado), que es lo que da ritmo. Cada banda redefine
+   los tokens de texto y linea, asi los componentes existentes se adaptan solos. */
+.band { width: 100%; }
+.band > .mkt-wrap { padding-top: clamp(3rem, 7vw, 5.5rem); padding-bottom: clamp(3rem, 7vw, 5.5rem); }
+
+.band-light, .band-cream {
+  --txt: var(--ink);
+  --txt-soft: var(--ink-soft);
+  --line: rgba(26, 16, 48, 0.12);
+  --purple-bright: #6d28d9;   /* el morado claro no contrasta sobre blanco */
+  color: var(--txt);
+}
+.band-light { background: #fff; }
+.band-cream { background: var(--cream); }
+
+/* Las tarjetas de vidrio no funcionan sobre claro: pasan a tarjeta solida */
+.band-light .glass, .band-cream .glass {
+  backdrop-filter: none;
+  background: #fff;
+  border-color: var(--line);
+  box-shadow: 0 1px 2px rgba(26, 16, 48, .04), 0 8px 24px rgba(26, 16, 48, .06);
+}
+.band-cream .glass { box-shadow: 0 1px 2px rgba(26, 16, 48, .05), 0 10px 30px rgba(26, 16, 48, .08); }
+.band-light .eyebrow, .band-cream .eyebrow { color: #b45309; }
+.band-light .btn-ghost, .band-cream .btn-ghost { color: var(--ink); border-color: var(--line); }
+.band-light .btn-ghost:hover, .band-cream .btn-ghost:hover { border-color: var(--purple-bright); background: rgba(109, 40, 217, .07); }
+
+/* Titulares mas grandes y con tracking cerrado, como en las referencias
+   (HBS 90px/-3%, Felix 56px/-2.3%). El serif se conserva para acentos puntuales. */
+.mkt h1, .mkt h2, .mkt h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; }
+.mkt h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+.mkt h3 { letter-spacing: -0.015em; line-height: 1.2; }
+.serif { font-family: var(--font-serif); font-weight: 500; letter-spacing: 0; }
+/* La banda oscura se separa del fondo de pagina para que se lea como banda */
+/* La banda oscura era casi identica a la de aliados y las dos se leian como una sola.
+   Ahora es un panel morado propio, distinto del degradado naranja de aliados. */
+.band-dark {
+  background: linear-gradient(180deg, #16032e 0%, #0b0018 100%);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+
+/* Movimiento: entrada suave al entrar en pantalla. Es lo que separa "elegante" de
+   "elegante pero aburrido". Se desactiva si el sistema pide menos movimiento. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.22,.9,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-d1 { transition-delay: .08s; }
+  .reveal-d2 { transition-delay: .16s; }
+  .reveal-d3 { transition-delay: .24s; }
+}
+/* El padding lo pone la banda: el primer sec-head ya no necesita su margen superior */
+.band > .mkt-wrap > .sec-head:first-child { margin-top: 0; }

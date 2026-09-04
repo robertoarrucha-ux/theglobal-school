@@ -170,5 +170,21 @@ const ogFull = ogImage ? new URL(ogImage, Astro.site).href : '';
         <a class="to-site" href="/">{L ? 'Volver al sitio' : 'Back to main site'}</a>
       </div>
     </footer>
-  </body>
+    <script>
+    // Entrada al hacer scroll. Marca los bloques una sola vez y se desconecta.
+    // Si el sistema pide menos movimiento, no se toca nada: el CSS ya los deja visibles.
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll('.reveal');
+      if (!targets.length || !('IntersectionObserver' in window)) {
+        targets.forEach((t) => t.classList.add('in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      targets.forEach((t) => io.observe(t));
+    })();
+  </script>
+</body>
 </html>
