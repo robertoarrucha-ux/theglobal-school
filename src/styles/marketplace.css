@@ -436,11 +436,20 @@
 .xp-book .pay-note { font-size: .8rem; color: var(--txt-soft); margin-top: .8rem; }
 .xp-cta { display: block; text-align: center; margin-top: 1.2rem; padding: .95rem; border-radius: 999px; font-weight: 700; background: linear-gradient(135deg, var(--purple-glow), var(--orange)); color: #fff; transition: transform .2s; }
 .xp-cta:hover { transform: translateY(-2px); }
-/* CTA secundario: lleva al formulario con el programa prellenado (lead con registro) */
-.xp-cta-alt { display: block; text-align: center; margin-top: .6rem; padding: .8rem; border-radius: 999px; font-weight: 600; font-size: .95rem; border: 1px solid var(--line); color: var(--txt); background: rgba(255,255,255,.04); transition: border-color .2s, background .2s; }
-.xp-cta-alt:hover { border-color: var(--purple-bright); background: rgba(255,255,255,.08); }
-/* Enlace a la ficha imprimible: material que el partner imprime o envia en PDF */
-.xp-cta-sheet { display: block; text-align: center; margin-top: .55rem; font-size: .85rem; font-weight: 600; color: var(--txt-soft); transition: color .2s; }
+/* Jerarquia de la caja de reserva: una accion principal (el formulario, que captura
+   el lead), su canal alternativo (WhatsApp, que no deja registro), un camino aparte
+   para particulares, y el PDF como utilidad con el peso minimo. */
+.xp-cta-wa { display: flex; align-items: center; justify-content: center; gap: .45rem; margin-top: .55rem; padding: .5rem; font-size: .9rem; font-weight: 600; color: var(--txt-soft); transition: color .2s; }
+.xp-cta-wa:hover { color: var(--txt); }
+.xp-cta-wa svg { width: 17px; height: 17px; flex-shrink: 0; }
+
+.xp-cta-ind { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--line); display: grid; gap: .2rem; }
+.xp-cta-ind strong { font-size: .9rem; font-weight: 700; }
+.xp-cta-ind a { font-size: .9rem; font-weight: 600; color: var(--purple-bright); }
+.xp-cta-ind a:hover { text-decoration: underline; }
+/* Enlace a la ficha imprimible: utilidad, no llamada a la accion. Su momento llega
+   despues del interes, cuando alguien quiere reenviarla internamente. */
+.xp-cta-sheet { display: block; margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line); font-size: .82rem; font-weight: 600; color: var(--txt-soft); transition: color .2s; }
 .xp-cta-sheet:hover { color: var(--purple-bright); }
 
 /* ===== BANDAS =====
@@ -518,3 +527,21 @@
 /* Triptico del home: va pegado al heroe, sin el respiro habitual entre bandas */
 .home-tri { padding-bottom: clamp(2rem, 5vw, 3.5rem); }
 .band-dark .triptych { margin-top: 2rem; }
+
+/* Botones con degradado: el texto SIEMPRE blanco.
+   `.mkt a { color: inherit }` tiene mas especificidad (clase + elemento) que
+   `.xp-cta { color: #fff }` (clase sola), asi que el degradado heredaba el color
+   del contexto. En tema oscuro colaba por accidente; sobre banda clara daba tinta
+   oscura sobre morado. Se sube la especificidad para que no dependa del fondo. */
+.mkt a.xp-cta,
+.mkt a.btn-primary,
+.mkt a.xp-how-cta { color: #fff; }
+
+/* Y los enlaces secundarios de la caja: sin subir especificidad heredaban tinta
+   plena y perdian su nivel en la jerarquia (quedaban igual de oscuros que el texto
+   principal, distinguiendose solo por tamaño). */
+.mkt a.xp-cta-wa,
+.mkt a.xp-cta-sheet { color: var(--txt-soft); }
+.mkt a.xp-cta-wa:hover { color: var(--txt); }
+.mkt a.xp-cta-sheet:hover { color: var(--purple-bright); }
+.mkt a.xp-cta-ind-link { color: var(--purple-bright); }

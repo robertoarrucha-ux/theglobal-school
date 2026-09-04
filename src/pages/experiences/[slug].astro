@@ -34,6 +34,8 @@ const isWa = !x.registerUrl;
 const WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02h-.003a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43l-.48-.01c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.35.99 2.51.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>';
 // Default video for TNGS programs (if the experience has no video of its own).
 const DEFAULT_TGS_VIDEO = 'https://www.youtube.com/watch?v=Ts5f7VJccmk';
+// Same condition WaitlistForm uses, so we never anchor to a section that is absent.
+const hasWaitlist = editionRows(x, false).length > 0;
 const ytId = youtubeId(x.videoUrl || (x.publisher?.type === 'tgs' ? DEFAULT_TGS_VIDEO : ''));
 // Google requires uploadDate on VideoObject. Real upload dates of our videos.
 // If a video has no known date (nor x.videoUploadDate) we skip the JSON-LD entirely:
@@ -287,7 +289,7 @@ const jsonLd = {
           <div class="xp-how-step glass"><span class="num">2</span><h4>We tailor it</h4><p>We adapt the itinerary, cities, language and group size. Private groups available.</p></div>
           <div class="xp-how-step glass"><span class="num">3</span><h4>Confirm and travel</h4><p>We handle logistics, certificates and materials; your team lives the experience.</p></div>
         </div>
-        <a class="btn-primary xp-how-cta" href={ctaUrl} target="_blank" rel="noopener">{isWa && <Fragment set:html={WA_ICON} />}{ctaLabel}</a>
+        <a class="btn-primary xp-how-cta" href={x.registerUrl || `/contact/?program=${encodeURIComponent(x.title)}`} {...(x.registerUrl ? { target: '_blank', rel: 'noopener' } : {})}>{x.registerUrl ? ctaLabel : 'Request a proposal'}</a>
       </section>
     </div>
 
@@ -300,13 +302,29 @@ const jsonLd = {
           <div class="row"><span>Format</span><span>{fmtFormat(x.format)}</span></div>
           <div class="row"><span>Host</span><span>{x.publisher.type === 'tgs' ? 'TNGS' : x.publisher.name}</span></div>
         </div>
-        <a class="xp-cta" href={ctaUrl} target="_blank" rel="noopener">
-          {isWa && <Fragment set:html={WA_ICON} />}
-          {ctaLabel}
-        </a>
-        <a class="xp-cta-alt" href={`/contact/?program=${encodeURIComponent(x.title)}`}>Request a proposal</a>
-        <a class="xp-cta-sheet" href={`/experiences/${x.slug}/brief/`}>📄 Printable brief (PDF)</a>
-        <p class="pay-note">We adapt the itinerary, dates, language and group size. Private groups for your organization. Book with a deposit and pay in instalments. We reply within 24h.</p>
+        {x.registerUrl ? (
+          <a class="xp-cta" href={x.registerUrl} target="_blank" rel="noopener">Learn more</a>
+        ) : (
+          <>
+            {/* Primary = the form, which actually captures the lead (country, profile,
+                consent). WhatsApp drops to an alternate channel: it converts well in
+                Latin America but leaves no record. */}
+            <a class="xp-cta" href={`/contact/?program=${encodeURIComponent(x.title)}`}>Request a proposal</a>
+            <a class="xp-cta-wa" href={WHATSAPP} target="_blank" rel="noopener">
+              <Fragment set:html={WA_ICON} />or message us on WhatsApp
+            </a>
+          </>
+        )}
+
+        {hasWaitlist && (
+          <div class="xp-cta-ind">
+            <strong>Travelling on your own?</strong>
+            <a class="xp-cta-ind-link" href="#lista-espera">Join the waiting list →</a>
+          </div>
+        )}
+
+        <p class="pay-note">We adapt the itinerary, dates and language. Book with a deposit and pay in instalments.</p>
+        <a class="xp-cta-sheet" href={`/experiences/${x.slug}/brief/`}>📄 Program brief (PDF)</a>
       </div>
     </aside>
   </div>
