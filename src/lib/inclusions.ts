@@ -15,11 +15,10 @@ const ES = {
   ],
   notIncluded: [
     'Vuelos internacionales de ida y vuelta al punto de inicio/fin de la expedición.',
-    'Seguro médico y de cancelación (obligatorio y adicional al básico).',
     'Comidas y bebidas no especificadas en el itinerario.',
     'Gastos personales, compras y souvenirs.',
     'Actividades opcionales durante el tiempo libre.',
-    'Propinas para guías y conductores.',
+    'Propinas (opcionales).',
   ],
 };
 
@@ -36,11 +35,10 @@ const EN = {
   ],
   notIncluded: [
     'Round-trip international flights to the expedition start/end point.',
-    'Medical and cancellation insurance (mandatory, additional to the basic one).',
     'Meals and drinks not specified in the itinerary.',
     'Personal expenses, purchases and souvenirs.',
     'Optional activities during free time.',
-    'Tips for guides and drivers.',
+    'Tips (optional).',
   ],
 };
 
