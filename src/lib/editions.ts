@@ -26,8 +26,9 @@ export function seasonsText(x: any, es: boolean): string {
   return `${joined} ${year}`;
 }
 
-// Filas por edición para la caja lateral: { label: "Verano 2027", range: "14 – 23 jul" }.
-export function editionRows(x: any, es: boolean): { label: string; range: string }[] {
+// Filas por edición para la caja lateral: { season: 'summer', label: "Verano 2027", range: "14 – 23 jul" }.
+// `season` lo necesita la lista de espera, que cuenta interesados por salida.
+export function editionRows(x: any, es: boolean): { season: 'summer' | 'winter'; label: string; range: string }[] {
   const eds: Edition[] = Array.isArray(x?.editions) ? x.editions : [];
   const loc = es ? 'es-ES' : 'en-US';
   const fmtS = (iso: string) => new Date(iso + 'T00:00:00').toLocaleDateString(loc, { day: 'numeric', month: 'short' });
@@ -36,6 +37,7 @@ export function editionRows(x: any, es: boolean): { label: string; range: string
   return [...eds]
     .sort((a, b) => (order[a.season] ?? 9) - (order[b.season] ?? 9))
     .map((e) => ({
+      season: e.season,
       label: `${SEASON[e.season] ? SEASON[e.season][es ? 'es' : 'en'] : ''} ${yearOf(e.startDate)}`.trim(),
       range: e.endDate ? `${fmtS(e.startDate)} – ${fmtS(e.endDate)}` : fmtS(e.startDate),
     }));

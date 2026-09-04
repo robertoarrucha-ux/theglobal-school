@@ -1,0 +1,227 @@
+---
+// Lista de espera para particulares.
+//
+// El modelo es B2B: la cohorte se vende en bloque a un organizador, asi que aqui
+// NO se vende ni se reserva nada. Se acumula intencion por salida, se hace visible
+// con un contador, y el detalle queda para entregarselo al partner que comprometa
+// esa fecha. Un particular es el 5% de una cohorte; veinte son una cohorte entera,
+// y la demanda agregada es lo que le quita el miedo al partner al ticket alto.
+import { LANG } from '../lib/site';
+import { editionRows } from '../lib/editions';
+const { x } = Astro.props as any;
+const L = LANG === 'es';
+const rows = editionRows(x, L);
+
+const t = L
+  ? {
+      eyebrow: '¿Vas por tu cuenta?',
+      title: 'Apúntate a la salida que te interese',
+      lead: 'Estos programas se operan por grupos, así que no vendemos plazas sueltas. Deja tus datos en la salida que te interese: cuando el grupo se confirme te ponemos en contacto con el organizador de tu región, que es quien gestiona la inscripción.',
+      pick: 'Elige la salida',
+      interested: 'interesados',
+      interested1: 'interesado',
+      name: 'Nombre',
+      email: 'Correo electrónico',
+      country: 'País',
+      countryPh: 'Ej. México',
+      consent: 'Acepto que The New Global School comparta mi consulta con el organizador local que opere esta salida.',
+      consentNote: 'Sin esto no podemos presentarte al organizador. Puedes pedir que borremos tus datos cuando quieras.',
+      send: 'Apuntarme a la lista',
+      ok: 'Listo, estás en la lista. Te escribimos cuando esta salida tenga grupo confirmado.',
+      already: 'Ya estabas en la lista de esta salida.',
+      errConsent: 'Necesitamos tu permiso para presentarte al organizador.',
+      errSeason: 'Elige una salida.',
+      err: 'Hubo un error. Inténtalo de nuevo o escríbenos a hello@theglobal.school.',
+    }
+  : {
+      eyebrow: 'Travelling on your own?',
+      title: 'Join the list for the departure you want',
+      lead: 'These programs run as groups, so we do not sell individual seats. Leave your details for the departure you are interested in: once the group is confirmed we introduce you to the local organizer, who handles registration.',
+      pick: 'Choose a departure',
+      interested: 'interested',
+      interested1: 'interested',
+      name: 'Name',
+      email: 'Email address',
+      country: 'Country',
+      countryPh: 'e.g. Mexico',
+      consent: 'I agree that The New Global School may share my enquiry with the local organizer running this departure.',
+      consentNote: 'Without this we cannot introduce you to the organizer. You can ask us to delete your data at any time.',
+      send: 'Join the list',
+      ok: 'You are on the list. We will write when this departure has a confirmed group.',
+      already: 'You were already on the list for this departure.',
+      errConsent: 'We need your permission to introduce you to the organizer.',
+      errSeason: 'Choose a departure.',
+      err: 'Something went wrong. Please try again or email hello@theglobal.school.',
+    };
+---
+{rows.length > 0 && (
+  <section class="wl" data-wl data-slug={x.slug} data-lang={LANG}>
+    <p class="wl-eyebrow">{t.eyebrow}</p>
+    <h2>{t.title}</h2>
+    <p class="wl-lead">{t.lead}</p>
+
+    <form class="wl-form">
+      <fieldset class="wl-seasons">
+        <legend>{t.pick}</legend>
+        {rows.map((r, i) => (
+          <label class="wl-season">
+            <input type="radio" name="season" value={r.season} checked={i === 0} />
+            <span class="wl-season-body">
+              <strong>{r.label}</strong>
+              <em>{r.range}</em>
+              <span class="wl-count" data-count={`${x.slug}__${r.season}`} hidden></span>
+            </span>
+          </label>
+        ))}
+      </fieldset>
+
+      <div class="wl-row">
+        <label>{t.name}<input name="name" required autocomplete="name" /></label>
+        <label>{t.email}<input name="email" type="email" required autocomplete="email" /></label>
+      </div>
+      <label class="wl-country">{t.country}<input name="country" autocomplete="country-name" placeholder={t.countryPh} /></label>
+
+      <label class="wl-consent">
+        <input type="checkbox" name="consent" required />
+        <span>{t.consent}<em>{t.consentNote}</em></span>
+      </label>
+
+      <input type="text" name="company" tabindex="-1" autocomplete="off" class="wl-hp" aria-hidden="true" />
+      <button type="submit">{t.send}</button>
+      <p
+        class="wl-msg"
+        data-ok={t.ok}
+        data-already={t.already}
+        data-err={t.err}
+        data-err-consent={t.errConsent}
+        data-err-season={t.errSeason}
+        hidden
+      ></p>
+    </form>
+  </section>
+)}
+
+<style>
+  .wl { margin: 2.5rem 0 0; padding: 1.8rem 1.6rem; border: 1px solid var(--line); border-radius: 20px; background: rgba(26, 16, 48, 0.03); }
+  .wl-eyebrow { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--yellow); }
+  .wl h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin: .4rem 0 .6rem; }
+  .wl-lead { color: var(--txt-soft); line-height: 1.65; margin: 0 0 1.4rem; max-width: 62ch; font-size: .95rem; }
+
+  .wl-form { display: grid; gap: .9rem; }
+  .wl-seasons { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .7rem; }
+  .wl-seasons legend { padding: 0; margin-bottom: .5rem; font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-soft); }
+  .wl-season { position: relative; display: block; cursor: pointer; }
+  .wl-season input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .wl-season-body { display: grid; gap: .15rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s, background .2s; }
+  .wl-season input:checked + .wl-season-body { border-color: var(--purple-bright); background: rgba(109, 40, 217, .07); }
+  .wl-season input:focus-visible + .wl-season-body { outline: 2px solid var(--purple-bright); outline-offset: 2px; }
+  /* Las etiquetas de salida son contenido, no rotulos de campo: sin mayusculas */
+  .wl-season, .wl-season-body { text-transform: none; letter-spacing: 0; }
+  .wl-season strong { font-size: .98rem; font-weight: 700; color: var(--txt); }
+  .wl-season em { font-style: normal; font-size: .84rem; color: var(--txt-soft); }
+  .wl-count { font-size: .78rem; font-weight: 600; color: var(--purple-bright); }
+
+  .wl-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  @media (max-width: 560px) { .wl-row { grid-template-columns: 1fr; } }
+  .wl-form label { display: grid; gap: .3rem; font-size: .74rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--txt-soft); }
+  .wl-form input[type='text'], .wl-form input[type='email'] {
+    font-family: inherit; font-size: 1rem; font-weight: 400; text-transform: none; letter-spacing: 0;
+    padding: .7rem .85rem; border: 1px solid var(--line); border-radius: 12px;
+    background: rgba(26, 16, 48, .04); color: var(--txt);
+  }
+  .wl-form input:focus { outline: none; border-color: var(--purple-bright); }
+
+  .wl-consent { display: flex !important; gap: .7rem; align-items: flex-start; text-transform: none !important; font-weight: 400 !important; font-size: .9rem !important; color: var(--txt) !important; }
+  .wl-consent input { margin-top: .2rem; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--purple-bright); }
+  .wl-consent span { display: grid; gap: .25rem; line-height: 1.5; }
+  .wl-consent em { font-style: normal; font-size: .82rem; color: var(--txt-soft); }
+
+  .wl-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .wl-form button {
+    justify-self: start; margin-top: .2rem; font-family: inherit; font-weight: 700; font-size: 1rem; color: #fff;
+    background: linear-gradient(135deg, var(--purple-glow), var(--orange)); border: 0;
+    border-radius: 999px; padding: .8rem 1.7rem; cursor: pointer; transition: transform .2s;
+  }
+  .wl-form button:hover { transform: translateY(-2px); }
+  .wl-form button:disabled { opacity: .6; cursor: default; transform: none; }
+  .wl-msg { font-weight: 600; font-size: .92rem; margin: 0; }
+  .wl-msg.ok { color: #1f7a4d; }
+  .wl-msg.err { color: #b3261e; }
+</style>
+
+<script>
+  document.querySelectorAll('[data-wl]').forEach((root) => {
+    const box = root as HTMLElement;
+    const form = box.querySelector('form') as HTMLFormElement;
+    const msg = box.querySelector('.wl-msg') as HTMLElement;
+    const btn = box.querySelector('button') as HTMLButtonElement;
+
+    // Contadores: hacen visible la demanda acumulada. Es prueba social para el
+    // siguiente visitante y presion sana sobre el partner que duda de la fecha.
+    const es = box.dataset.lang === 'es';
+    const label = (n: number) => `${n} ${n === 1 ? (es ? 'interesado' : 'interested') : es ? 'interesados' : 'interested'}`;
+    const paintCounts = (counts: Record<string, number>) => {
+      box.querySelectorAll('.wl-count').forEach((el) => {
+        const n = counts[(el as HTMLElement).dataset.count || ''] || 0;
+        if (n <= 0) return;
+        el.textContent = label(n);
+        (el as HTMLElement).hidden = false;
+      });
+    };
+
+    fetch('/api/waitlist')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (j && j.counts) paintCounts(j.counts); })
+      .catch(() => {});
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+      const season = data.season || '';
+      const consent = form.querySelector('[name="consent"]') as HTMLInputElement;
+
+      const fail = (key: string) => {
+        msg.textContent = msg.dataset[key] || msg.dataset.err || '';
+        msg.className = 'wl-msg err';
+        msg.hidden = false;
+      };
+      if (!season) return fail('errSeason');
+      if (!consent.checked) return fail('errConsent');
+
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: box.dataset.slug,
+            season,
+            name: data.name,
+            email: data.email,
+            country: data.country || '',
+            company: data.company || '',
+            consent: true,
+            lang: box.dataset.lang,
+          }),
+        });
+        const j = await r.json();
+        if (!j.ok) throw new Error(j.error || 'fail');
+        msg.textContent = j.already ? msg.dataset.already! : msg.dataset.ok!;
+        msg.className = 'wl-msg ok';
+        if (!j.already) form.reset();
+        // Refresca el contador con el numero que devuelve la funcion.
+        const el = box.querySelector(`[data-count="${box.dataset.slug}__${season}"]`) as HTMLElement | null;
+        if (el && typeof j.count === 'number' && j.count > 0) {
+          el.textContent = label(j.count);
+          el.hidden = false;
+        }
+      } catch {
+        msg.textContent = msg.dataset.err!;
+        msg.className = 'wl-msg err';
+      } finally {
+        msg.hidden = false;
+        btn.disabled = false;
+      }
+    });
+  });
+</script>

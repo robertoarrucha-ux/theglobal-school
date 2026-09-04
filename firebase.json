@@ -22,6 +22,10 @@
         {
           "source": "/api/experience",
           "function": "experiencePublic"
+        },
+        {
+          "source": "/api/waitlist",
+          "function": "waitlist"
         }
       ],
       "redirects": [
@@ -654,6 +658,10 @@
         {
           "source": "/api/experience",
           "function": "experiencePublic"
+        },
+        {
+          "source": "/api/waitlist",
+          "function": "waitlist"
         }
       ],
       "redirects": [

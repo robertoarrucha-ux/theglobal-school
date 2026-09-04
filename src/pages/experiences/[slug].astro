@@ -8,6 +8,7 @@ import { getInclusions } from '../../lib/inclusions';
 import { seasonsText, editionRows } from '../../lib/editions';
 import { youtubeId, VIDEO_UPLOAD_DATES, videoUploadDateIso } from '../../lib/video';
 import TrustStrip from '../../components/TrustStrip.astro';
+import WaitlistForm from '../../components/WaitlistForm.astro';
 import SocialProofFallback from '../../components/SocialProofFallback.astro';
 const inc = getInclusions('en');
 
@@ -276,6 +277,8 @@ const jsonLd = {
           </>
         )}
       </section>
+
+      <WaitlistForm x={x} />
 
       <section class="xp-how">
         <h2>🧭 How it works</h2>

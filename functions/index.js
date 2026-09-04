@@ -44,6 +44,9 @@ export const submitLead = onRequest(
     const groupSize = (b.groupSize || '').toString().trim().slice(0, 40);
     const dates = (b.dates || '').toString().trim().slice(0, 120);
     const country = (b.country || '').toString().trim().slice(0, 60);
+    // Consentimiento para ceder el contacto a un partner. Sin el, el lead se atiende
+    // desde TNGS pero no se puede pasar a un organizador local.
+    const consentShare = b.consentShare === true || b.consentShare === 'on' || b.consentShare === 'true';
     const lang = b.lang === 'es' ? 'es' : 'en';
     const page = (b.page || '').toString().slice(0, 300);
     const hp = (b.company || '').toString(); // honeypot anti-spam
@@ -76,6 +79,7 @@ export const submitLead = onRequest(
         ${country ? `<p><b>País:</b> ${esc(country)}</p>` : ''}
         ${groupSize ? `<p><b>Tamaño de grupo:</b> ${esc(groupSize)}</p>` : ''}
         ${dates ? `<p><b>Fechas tentativas:</b> ${esc(dates)}</p>` : ''}
+        <p><b>¿Se puede ceder a un partner?</b> ${consentShare ? 'Sí, consintió' : 'No lo marcó'}</p>
         <p><b>Mensaje:</b><br>${esc(message).replace(/\n/g, '<br>')}</p>
         ${page ? `<p style="color:#888;font-size:12px">Página: ${esc(page)}</p>` : ''}`,
     };
@@ -311,3 +315,110 @@ export const marketplaceVotes = onRequest(
     return res.status(405).json({ ok: false });
   }
 );
+
+// --- Lista de espera de particulares ---
+// El modelo es B2B: la cohorte se vende en bloque a un organizador, asi que un
+// particular suelto no es una venta. Pero veinte particulares SI son una cohorte,
+// y la demanda agregada es justo lo que le quita el miedo al partner.
+//
+// Por eso esto no cobra ni reserva: acumula intencion por viaje y temporada, la
+// hace visible con un contador publico, y guarda el detalle para poder entregarselo
+// al partner que comprometa esa fecha.
+//
+// GET  -> { counts: { "slug__summer": 14, ... } }   contadores publicos
+// POST -> { slug, season, name, email, country, consent }
+export const waitlist = onRequest(
+  {
+    region: 'us-central1',
+    secrets: [SMTP_USER, SMTP_PASS],
+    cors: ['https://theglobal.school', 'https://es.theglobal.school', 'http://localhost:4321', 'http://localhost:4322', 'http://localhost:4323'],
+    maxInstances: 5,
+  },
+  async (req, res) => {
+    const db = votesDb();
+
+    if (req.method === 'GET') {
+      const snap = await db.collection('waitlist_counts').get();
+      const counts = {};
+      snap.forEach((d) => { counts[d.id] = d.data().count || 0; });
+      return res.json({ counts });
+    }
+
+    if (req.method !== 'POST') return res.status(405).json({ ok: false });
+
+    const b = req.body || {};
+    const slug = (b.slug || '').toString().trim();
+    const season = (b.season || '').toString().trim();
+    const name = (b.name || '').toString().trim().slice(0, 120);
+    const email = (b.email || '').toString().trim().slice(0, 160);
+    const country = (b.country || '').toString().trim().slice(0, 60);
+    const lang = b.lang === 'es' ? 'es' : 'en';
+    const consent = b.consent === true || b.consent === 'true';
+    const hp = (b.company || '').toString(); // honeypot
+
+    if (hp) return res.status(200).json({ ok: true }); // bot: fingir exito
+    if (!/^[a-z0-9-]{1,80}$/.test(slug)) return res.status(400).json({ ok: false, error: 'slug' });
+    if (!['summer', 'winter'].includes(season)) return res.status(400).json({ ok: false, error: 'season' });
+    if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ ok: false, error: 'validation' });
+    // Sin consentimiento no se guarda: el dato existe para entregarselo a un tercero,
+    // y sin base legal ese traspaso seria una infraccion del RGPD.
+    if (!consent) return res.status(400).json({ ok: false, error: 'consent' });
+
+    const key = `${slug}__${season}`;
+    const dedupe = crypto.createHash('sha256').update(email.toLowerCase() + key).digest('hex').slice(0, 40);
+    const personRef = db.collection('waitlist').doc(dedupe);
+    const countRef = db.collection('waitlist_counts').doc(key);
+
+    let result;
+    try {
+      result = await db.runTransaction(async (tx) => {
+        const existing = await tx.get(personRef);
+        const countDoc = await tx.get(countRef);
+        const current = countDoc.exists ? (countDoc.data().count || 0) : 0;
+        if (existing.exists) return { already: true, count: current };
+        tx.set(personRef, {
+          slug, season, name, email, country, lang,
+          consentShare: true,               // consentimiento explicito para ceder al organizador
+          consentAt: new Date().toISOString(),
+          assignedPartner: null,            // se rellena cuando un partner compromete la fecha
+          at: new Date().toISOString(),
+        });
+        tx.set(countRef, { slug, season, count: current + 1, updatedAt: new Date().toISOString() }, { merge: true });
+        return { already: false, count: current + 1 };
+      });
+    } catch (err) {
+      console.error('waitlist tx error:', err && err.message);
+      return res.status(500).json({ ok: false, error: 'tx' });
+    }
+
+    if (!result.already) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: SMTP_HOST, port: SMTP_PORT, secure: SMTP_PORT === 465,
+          auth: { user: SMTP_USER.value(), pass: SMTP_PASS.value() },
+          tls: { rejectUnauthorized: false, minVersion: 'TLSv1.2' },
+        });
+        await transporter.sendMail({
+          from: `"${FROM_NAME}" <${FROM_EMAIL}>`,
+          to: NOTIFY_TO,
+          replyTo: email,
+          subject: `Lista de espera [${season}] ${slug}: ${name}${country ? ` (${country})` : ''} · total ${result.count}`,
+          html: `<h3>Nueva persona en lista de espera</h3>
+            <p><b>Viaje:</b> ${esc(slug)}</p>
+            <p><b>Temporada:</b> ${esc(season)}</p>
+            <p><b>Nombre:</b> ${esc(name)}</p>
+            <p><b>Email:</b> ${esc(email)}</p>
+            ${country ? `<p><b>País:</b> ${esc(country)}</p>` : ''}
+            <p><b>Total en esta salida:</b> ${result.count}</p>
+            <p style="color:#888;font-size:12px">Consintió la cesión de sus datos al organizador local de esa salida.</p>`,
+        });
+      } catch (err) {
+        // El registro ya esta guardado: un fallo de correo no debe perder el lead.
+        console.error('waitlist mail error:', err && err.message);
+      }
+    }
+
+    return res.json({ ok: true, ...result });
+  }
+);
+

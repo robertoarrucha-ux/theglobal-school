@@ -193,6 +193,7 @@ def target_conf(lang):
             {"source": "/api/lead", "function": "submitLead"},
             {"source": "/api/votes", "function": "marketplaceVotes"},
             {"source": "/api/experience", "function": "experiencePublic"},
+            {"source": "/api/waitlist", "function": "waitlist"},
         ],
         "redirects": sorted(redir[lang].values(), key=lambda r: r["source"]),
         "headers": [
