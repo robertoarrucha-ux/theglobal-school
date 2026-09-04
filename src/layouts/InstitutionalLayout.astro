@@ -59,20 +59,25 @@ const jsonLd = {
   {isAward && <div class="mkt-wrap" style="padding-top:1.5rem"><AwardsNote /></div>}
 
   {bodyHtml && (
+    <section class="band band-light">
     <div class="mkt-wrap page-dark-body xp-richbody inst-body">
       <Fragment set:html={bodyHtml} />
     </div>
+    </section>
   )}
 
   {inst?.topics?.length > 0 && (
-    <section class="mkt-wrap inst-section">
+    <section class="band band-cream">
+      <div class="mkt-wrap inst-section">
       <h2 class="inst-h">{L ? 'Temáticas' : 'Topics'}</h2>
       <ul class="inst-topics">{inst.topics.map((t) => <li>{t}</li>)}</ul>
+      </div>
     </section>
   )}
 
   {inst?.logos?.length > 0 && (
-    <section class="mkt-wrap inst-section">
+    <section class="band band-light">
+      <div class="mkt-wrap inst-section">
       <h2 class="inst-h">{inst.logosTitle?.replace(/\.$/, '') || (L ? 'Aliados' : 'Partners')}</h2>
       <div class="inst-logos">
         {inst.logos.map((lg) => (
@@ -81,22 +86,26 @@ const jsonLd = {
             : <div class="logo-tile"><img src={lg.img} alt="" loading="lazy" /></div>
         ))}
       </div>
+      </div>
     </section>
   )}
 
   {inst?.stats?.length > 0 && (
-    <section class="mkt-wrap inst-section">
+    <section class="band band-dark">
+      <div class="mkt-wrap inst-section">
       <h2 class="inst-h">{L ? 'Nuestro trabajo en números' : 'Our work in numbers'}</h2>
       <ul class="inst-stats glass">
         {STATS.map((s) => (
           <li><span class="stat-num">{s.value}</span><span class="stat-label">{s.label}</span></li>
         ))}
       </ul>
+      </div>
     </section>
   )}
 
   {inst?.team?.length > 0 && (
-    <section class="mkt-wrap inst-section">
+    <section class="band band-cream">
+      <div class="mkt-wrap inst-section">
       <h2 class="inst-h">{L ? 'Nuestro equipo' : 'Our team'}</h2>
       <div class="inst-team">
         {inst.team.map((m) => (
@@ -114,6 +123,7 @@ const jsonLd = {
             )}
           </article>
         ))}
+      </div>
       </div>
     </section>
   )}

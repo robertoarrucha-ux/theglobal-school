@@ -46,17 +46,21 @@ const jsonLd = {
     </div>
   </section>
 
+  <section class="band band-light">
   <div class="mkt-wrap page-dark-body xp-richbody">
     {isAward && <AwardsNote />}
     <slot />
   </div>
+  </section>
 
   {(a.cta || d.ctaHref) && (
-    <section class="mkt-wrap">
+    <section class="band band-cream">
+    <div class="mkt-wrap">
       <div class="pd-cta glass">
         {a.blurb && <p>{a.blurb}</p>}
         <a class="btn-primary" href={ctaHref} {...(ctaExternal ? { rel: 'noopener', target: '_blank' } : {})}>{ctaLabel}</a>
       </div>
+    </div>
     </section>
   )}
 </MarketplaceLayout>

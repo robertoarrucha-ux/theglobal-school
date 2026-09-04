@@ -83,7 +83,8 @@ const stats = [
   </div>
 </section>
 
-<section class="mkt-wrap contact-sec">
+<section class="band band-cream">
+  <div class="mkt-wrap contact-sec">
   <h2 class="contact-h">{t.whoTitle}</h2>
   <div class="contact-audience">
     {t.who.map((w) => (
@@ -94,9 +95,11 @@ const stats = [
       </div>
     ))}
   </div>
+  </div>
 </section>
 
-<section class="mkt-wrap contact-sec">
+<section class="band band-light">
+  <div class="mkt-wrap contact-sec">
   <h2 class="contact-h">{t.whatTitle}</h2>
   <ul class="contact-what">
     {t.what.map((w) => <li>{w}</li>)}
@@ -104,21 +107,26 @@ const stats = [
   <ul class="inst-stats glass contact-stats">
     {stats.map((s) => <li><span class="stat-num">{s.value}</span><span class="stat-label">{s.label}</span></li>)}
   </ul>
+  </div>
 </section>
 
-<section class="mkt-wrap contact-sec xp-how">
+<section class="band band-dark">
+  <div class="mkt-wrap contact-sec xp-how">
   <h2 class="contact-h">{t.howTitle}</h2>
   <div class="xp-how-steps">
     {t.how.map((s) => (
       <div class="xp-how-step glass"><span class="num">{s.n}</span><h4>{s.title}</h4><p>{s.text}</p></div>
     ))}
   </div>
+  </div>
 </section>
 
-<section class="mkt-wrap">
+<section class="band band-cream">
+  <div class="mkt-wrap">
   <div class="pd-cta glass">
     <p>{t.closeTitle}</p>
     <a class="btn-primary wa-btn" href={WA} target="_blank" rel="noopener">{t.wa}</a>
+  </div>
   </div>
 </section>
 

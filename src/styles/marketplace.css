@@ -469,6 +469,15 @@
 }
 .band-cream .glass { box-shadow: 0 1px 2px rgba(26, 16, 48, .05), 0 10px 30px rgba(26, 16, 48, .08); }
 .band-light .eyebrow, .band-cream .eyebrow { color: #b45309; }
+/* El amarillo de marca es ilegible sobre claro: en estas bandas pasa a ambar oscuro */
+.band-light, .band-cream { --yellow: #b45309; }
+/* Los fondos translucidos blancos desaparecen sobre claro y los bloques pierden su
+   superficie: se sustituyen por una tinta muy suave para que sigan leyendose como pieza */
+.band-light .xp-cta-alt, .band-cream .xp-cta-alt,
+.band-light .xp-highlights li, .band-cream .xp-highlights li,
+.band-light .pt-fit li, .band-cream .pt-fit li,
+.band-light .op-facts > div, .band-cream .op-facts > div { background: rgba(26, 16, 48, 0.035); }
+.band-light .xp-cta-alt:hover, .band-cream .xp-cta-alt:hover { background: rgba(26, 16, 48, 0.07); }
 .band-light .btn-ghost, .band-cream .btn-ghost { color: var(--ink); border-color: var(--line); }
 .band-light .btn-ghost:hover, .band-cream .btn-ghost:hover { border-color: var(--purple-bright); background: rgba(109, 40, 217, .07); }
 

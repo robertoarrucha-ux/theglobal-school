@@ -63,7 +63,8 @@ const jsonLd = {
   </section>
 
   {isCatalog ? (
-    <section class="mkt-wrap course-catalog">
+    <section class="band band-light">
+    <div class="mkt-wrap course-catalog">
       <div class="course-grid">
         {course.cards.map((c) => (
           <a class="course-card glass" href={c.href}>
@@ -76,8 +77,10 @@ const jsonLd = {
           </a>
         ))}
       </div>
+    </div>
     </section>
   ) : (
+    <section class="band band-light">
     <div class={`mkt-wrap course-single${hasSyllabus ? '' : ' no-aside'}`}>
       {hasSyllabus && (
         <aside class="course-syllabus glass">
@@ -104,16 +107,19 @@ const jsonLd = {
         </div>
       </div>
     </div>
+    </section>
   )}
 
   {!isCatalog && (
-    <section class="mkt-wrap">
+    <section class="band band-cream">
+    <div class="mkt-wrap">
       <div class="pd-cta glass">
         <p>{free
           ? (L ? '¿Listo para empezar? Accede gratis a este curso.' : 'Ready to start? Get free access to this course.')
           : (L ? '¿Te interesa este curso? Escríbenos y te damos los detalles.' : 'Interested in this course? Contact us for the details.')}</p>
         <a class="btn-primary" href={enrollHref} {...(enrollExternal ? { rel: 'noopener', target: '_blank' } : {})}>{enrollLabel}</a>
       </div>
+    </div>
     </section>
   )}
 </MarketplaceLayout>
