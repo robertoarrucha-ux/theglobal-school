@@ -1,153 +1,145 @@
 # Primeros 20 contactos: México y Colombia
 
-Lista de arranque para el [kit de prospección](KIT-PROSPECCION-PARTNERS.md). Se prioriza México y Colombia porque es donde está la mayor parte de tu red (de los 88 nominados de los Latin American Leaders Awards, 38 son de México y 19 de Colombia).
+Lista de arranque para el [kit de prospección](KIT-PROSPECCION-PARTNERS.md).
 
-## Antes de usarla, tres advertencias
+**Perfil corregido.** Una versión anterior de este documento apuntaba a escuelas de negocios y universidades. Era un error: ese comprador busca convenios con otras universidades, y The Global School no lo es. El perfil real, confirmado por dirección, son cuatro segmentos:
 
-**Lo que verifiqué:** que cada organización existe, que su web responde, y en los casos marcados como *señal verificada*, una afirmación concreta y comprobable que indica encaje. Las fuentes están enlazadas.
+1. **Organizadores de tours y viajes que venden Europa**, desde donde sea (probado)
+2. **Academias de música y orquestas** (probado)
+3. **Grupos de viajeros y comunidades** con audiencia propia (probado)
+4. **Preparatorias y colegios con viaje de graduación** (sin probar todavía)
 
-**Lo que NO verifiqué:** si ya tienen un operador europeo, si hay presupuesto, y si la persona que decide sigue en el puesto. Eso solo se sabe hablando.
+Los tres primeros ya tienen partners activos. El cuarto es apuesta nueva, y va marcado como tal.
 
-**Lo que deliberadamente NO incluí:** nombres de personas, correos y teléfonos individuales. Un listado así se queda obsoleto en meses, y compilar datos personales para prospección es justo el problema de consentimiento que ya señalamos con la red de los premios. En su lugar, cada ficha indica **el cargo que hay que buscar**. Localizar a la persona concreta en LinkedIn es tu paso, y además te da el detalle personalizado que hace que el primer correo no parezca plantilla.
+## Antes de usarla
 
-**Una lista no es un embudo.** Según la aritmética del kit necesitas de 25 a 35 conversaciones cualificadas para firmar de 6 a 8 partners. Estos 20 son el arranque, no el total: los directorios del final te llevan a cientos más.
+**Lo que verifiqué:** que cada organización existe, que su web responde, y en los casos marcados *señal verificada*, una afirmación concreta que indica encaje. Las fuentes van enlazadas.
+
+**Lo que no verifiqué:** si ya tienen operador europeo, si hay presupuesto, y si quien decide sigue en el puesto.
+
+**Lo que no incluí a propósito:** nombres de personas, correos y teléfonos individuales. Se quedan obsoletos y compilarlos para prospección repite el problema de consentimiento que ya señalamos con la red de los premios. Cada ficha dice **el cargo a buscar**; localizar a la persona en LinkedIn es tu paso, y de paso te da el detalle que evita que el primer correo parezca plantilla.
 
 ---
 
-## A. Escuelas de negocios y universidades
+## A. Operadores de viajes escolares y de graduación
 
-Es el tipo de comprador de mayor palanca: **una sola venta institucional llena una cohorte entera**. Ojo, aquí el encaje suele ser de cliente, no de partner revendedor. Vale igual: llena capacidad.
+El segmento con encaje más directo: **ya venden Europa a jóvenes**, tienen fuerza de ventas y colegios como clientes, y les falta el operador en destino.
 
-Cargo a buscar: **dirección de posgrado, de educación ejecutiva o de internacionalización**. Nunca el rector.
+Y aquí está la jugada que evita el error de ir colegio por colegio: un operador de estos trae **decenas de colegios** en una sola conversación. Ir a la preparatoria directamente es una cohorte; ir al operador son muchas.
+
+Cargo a buscar: **dirección comercial o de producto**.
 
 ### México
 
-**1. EGADE Business School (Tec de Monterrey)** · *señal verificada*
-Declara que 1 de cada 3 alumnos de posgrado vive al menos una experiencia internacional, con viaje internacional dentro del programa y más de 100 convenios con escuelas de negocios del mundo. Ya compran esto; la pregunta es quién se lo opera en Europa.
-[egade.tec.mx](https://egade.tec.mx/)
+**1. Vívelo Travel** · *señal verificada*
+Agencia especializada en viajes escolares, juveniles, de graduación y corporativos **desde 1994**, con más de 50 países operados. Perfil exacto: veteranos, con cartera de colegios y músculo comercial.
+[vivelotravel.mx](https://www.vivelotravel.mx/agencia-viajes-escolares.php)
 
-**2. ITAM, Maestrías en Negocios** · *señal verificada, y es la mejor de la lista*
-Su programa incluye cuatro bloques de 10 días en Vancouver, Nashville, CDMX y São Paulo. Es decir: **ya operan módulos internacionales de 10 días, y ninguno es europeo**. El hueco es exactamente tu producto.
-[mba.itam.mx](https://mba.itam.mx/)
+**2. SeeMéxico** · *señal verificada*
+Anuncian explícitamente **viajes de graduación a Europa**, además de Asia y Sudamérica. Ya venden tu destino.
+[seemexico.com](https://www.seemexico.com/en/experiencias/graduaciones)
 
-**3. IPADE Business School** · *perfil, sin señal verificada*
-Escuela de dirección de referencia en México, con programas de alta dirección y ticket alto.
-[ipade.mx](https://www.ipade.mx/)
+**3. EduKaTours** · *señal verificada*
+Viajes a medida para estudiantes, jóvenes y empresas. El "a medida" encaja con cómo diseñas tú.
+[edukatours.com](https://edukatours.com/paquetes-escolares-graduacion-y-empresariales/)
 
-**4. Universidad Anáhuac** · *perfil, sin señal verificada*
-Red con varias sedes y oferta de negocios internacionales.
-[anahuac.mx](https://www.anahuac.mx/)
-
-### Colombia
-
-**5. Universidad de los Andes, Educación Ejecutiva** · *señal verificada, la más fuerte de Colombia*
-Primera de Colombia y top 35 mundial en el ranking del Financial Times de 2022, con más de 250 programas. Y lo decisivo: ofrecen **misiones académicas internacionales diseñadas conjuntamente entre las dos instituciones**. Ese "conjuntamente" es literalmente la figura que propones.
-[educacionejecutiva.uniandes.edu.co](https://educacionejecutiva.uniandes.edu.co/)
-
-**6. CESA** · *señal verificada*
-Escuela de negocios privada mejor posicionada del país según el ranking que ellos mismos citan. Especializada solo en administración, sin dispersión.
-[cesa.edu.co](https://www.cesa.edu.co/)
-
-**7. Universidad Externado, Executive Education** · *señal verificada*
-School of Management desde 1965, con educación ejecutiva y enfoque declarado en sostenibilidad, que encaja con varios de tus programas de Viena.
-[uexternado.edu.co](https://www.uexternado.edu.co/administracion-de-empresas/executive-education/)
-
-**8. EAFIT** · *señal verificada*
-Tercera escuela de administración del país según el ranking citado. Base en Medellín, útil para no concentrarlo todo en Bogotá.
-[eafit.edu.co](https://www.eafit.edu.co/)
-
-**9. Pontificia Universidad Javeriana** · *señal verificada*
-Segunda del mismo ranking.
-[javeriana.edu.co](https://www.javeriana.edu.co/)
-
----
-
-## B. Agencias y operadores corporativos
-
-Aquí sí buscas **partner revendedor**: tienen fuerza de ventas y cartera, y les falta el brazo europeo.
-
-Cargo a buscar: **dirección comercial o de producto**, no el mostrador de reservas.
-
-### México
-
-**10. Viajes Polanco** · *señal verificada*
-Más de 35 años, se presentan como "Top Ten" de México y Top 75 de Latinoamérica, con viajes corporativos y turismo de reunión. Tamaño y perfil correctos: grandes para tener cartera, no tanto como para operar Europa por su cuenta.
-[viajespolanco.com](https://viajespolanco.com/)
-
-**11. Travelieer Meetings & Incentives** · *señal verificada por prensa del sector*
-Empresa mexicana centrada en viajes de grupo, reuniones y eventos. Su web no me respondió al comprobarla, así que confirma que siguen activos antes de invertir tiempo.
-[cobertura en Factor Meetings](https://factormeetings.com/travelieer-poniendo-en-alto-los-viajes-de-incentivo-en-mexico/)
-
-**12. Mexitours, división de incentivos** · *perfil, sin señal verificada*
-[agencia.mexitours.travel/incentivos](https://agencia.mexitours.travel/incentivos/)
-
-**13. Mexico Top Travel** · *perfil, sin señal verificada*
-Se anuncian específicamente en viajes de incentivo y corporativos.
-[mexicotoptravel.com.mx](https://www.mexicotoptravel.com.mx/es/viajes-de-incentivo-corporativos.php)
+**4. Viajes FAMA** · *señal verificada*
+Operador **mayorista especializado en Europa** con base en CDMX. Ser mayorista importa: venden a través de otras agencias, así que un acuerdo multiplica.
+[viajesfama.com](https://www.viajesfama.com/mexico)
 
 ### Colombia
 
-**14. Grupo Aviatur** · *señal verificada, pero con reserva*
-La empresa de turismo más grande de Colombia, más de 60 años y red nacional de oficinas. La reserva: por tamaño puede preferir montar su propia operación europea. Vale la conversación, no la esperanza.
-[grupoaviatur.com](https://grupoaviatur.com/)
+**5. Summer Viajes de 11** · *señal verificada*
+Más de 17 años dedicados a viajes de grado 11 en toda Colombia. Monoproducto y con el calendario escolar dominado.
+[summerviajesde11.com](https://summerviajesde11.com/)
 
-**15. Novatours** · *perfil, sin señal verificada*
-Agencia bogotana con turismo corporativo.
-[novatours.com.co](https://www.novatours.com.co/)
+**6. Educa Colombia** · *señal verificada*
+Viajes educativos para grupos estudiantiles e intercambios, con oficinas en Bogotá, Barranquilla, Cali, Medellín **y México**. Una sola conversación cubre los dos países.
+[educacolombia.com](https://educacolombia.com/estudiar-en-el-extranjero)
 
-**16. Avelier Group** · *perfil, sin señal verificada*
-[aveliergroup.com](https://aveliergroup.com/)
+**7. Information Planet Colombia** · *perfil, sin señal verificada*
+Agentes educativos autorizados, centrados en estudiar en el exterior.
+[informationplanet.com.co](https://www.informationplanet.com.co/)
 
----
+**8. ANEX, Asociación de Agencias de Intercambio** · *señal verificada*
+Agrupa agencias colombianas de intercambio estudiantil, con listado público. Contactar a la asociación abre a todo el padrón de golpe.
+[anex.com.co/agencias](https://anex.com.co/agencias/)
 
-## C. Cámaras binacionales
-
-El canal más infravalorado, y para tu caso el mejor encaje conceptual: **ya organizan delegaciones a Europa**. Tienen la convocatoria hecha y la confianza puesta, y les falta exactamente lo que tú haces.
-
-Cargo a buscar: **coordinación de ferias, delegaciones o misiones empresariales**.
-
-**17. CAMEXA, Cámara Mexicano-Alemana de Comercio e Industria** · *señal verificada, la mejor de toda la lista*
-Existe desde 1929, más de 820 empresas afiliadas, y **organiza regularmente viajes de delegación** para conectar actores alemanes y mexicanos. No hay que convencerlos de que el producto tiene sentido: ya lo hacen. La conversación es sobre quién lo opera en destino.
-[mexiko.ahk.de](https://mexiko.ahk.de/es)
-
-**18. AHK Colombia, Cámara de Industria y Comercio Colombo-Alemana** · *señal verificada*
-Misma red (más de 140 oficinas en 92 países). Entre sus servicios declarados están **misiones empresariales y ferias en Alemania**.
-[ahk-colombia.com](https://www.ahk-colombia.com/es/)
+> **No persigas a EF.** [EF](https://www.ef.com.mx/pg/viajes-graduacion/) domina viajes de graduación en México, pero es una multinacional con operación propia en Europa. No necesita partner: es competencia. Sirve para estudiar cómo empaquetan y qué precio ponen.
 
 ---
 
-## D. Asociaciones del sector
+## B. Música y orquestas juveniles
 
-Contactarlas a ellas es una jugada distinta y de mayor alcance: un acuerdo con la asociación te abre a todo su padrón de una vez, en lugar de agencia por agencia. Además su directorio es de donde salen los siguientes 100 contactos.
+Aquí tienes **producto que casi nadie más tiene**: el campamento de invierno musical en Viena, enero de 2027. Viena es la capital mundial de la música clásica, y eso convierte una conversación fría en una obvia.
 
-**19. ANATO, Asociación Colombiana de Agencias de Viajes y Turismo** · *señal verificada*
-Agrupa **607 agencias** en nueve capítulos regionales, con directorio público consultable.
+Cargo a buscar: **dirección artística o de proyectos**, y en las fundaciones, **dirección de programa**.
+
+**9. Filarmónica Joven de Colombia (Fundación Bolívar Davivienda)** · *señal verificada, la mejor del segmento*
+Fundada en 2010, ha formado 700 músicos jóvenes y hecho unas **25 giras nacionales e internacionales**. Ha tocado en la Philharmonie de Berlín, la Philharmonie de París, el Victoria Hall de Ginebra, el Casino de Berna y la Isar Philharmonie de Múnich, y es miembro de la Federación Europea de Orquestas Nacionales Juveniles. Viajan a Europa de forma recurrente: alguien les está operando eso.
+[fundacionbolivardavivienda.org](https://www.fundacionbolivardavivienda.org/programas/filarmonica-joven-de-colombia/la-orquesta/)
+
+**10. Sistema Nacional de Fomento Musical, OSIM (México)** · *señal verificada, y el hueco es evidente*
+La Orquesta Sinfónica Infantil y Juvenil de México lleva 33 giras nacionales y solo **3 internacionales: dos a Estados Unidos y una a España**. Tienen apetito de gira internacional y **ninguna experiencia en Europa central**. Ese es exactamente tu hueco.
+[fomentomusical.cultura.gob.mx](https://fomentomusical.cultura.gob.mx/grupos_artisticos/osim)
+
+**11. Iberorquestas Juveniles** · *señal verificada*
+Programa iberoamericano de cooperación técnica y financiera entre orquestas juveniles, con proyectos binacionales México-Colombia en marcha. **No es un cliente, es un canal**: te conecta con las orquestas de toda la región de una vez, y además mueve financiación, que es el freno real de estos grupos.
+[iberorquestasjuveniles.org](https://www.iberorquestasjuveniles.org)
+
+**12. Programa de Orquestas Juveniles y Coros de la CDMX "Fernando Lozano"** · *perfil, sin señal verificada*
+Programa público con volumen de jóvenes músicos.
+[cultura.cdmx.gob.mx](https://www.cultura.cdmx.gob.mx/recintos/escuelas/programa-de-orquestas-juveniles-y-coros-de-la-ciudad-de-mexico-fernando-lozano)
+
+**13. Conservatorio Nacional de Música, INBA (México)** · *perfil, sin señal verificada*
+[inba.gob.mx](https://inba.gob.mx/recinto/3)
+
+**14. Escuela de Artes, Universidad Panamericana** · *perfil, sin señal verificada*
+Institución privada, que suele significar decisión más rápida y presupuesto propio, a diferencia de las públicas.
+[up.edu.mx](https://www.up.edu.mx/)
+
+---
+
+## C. Grupos de viajeros y comunidades
+
+Segmento probado, pero **no puedo darte nombres verificados aquí y prefiero decirlo a inventarlos**. Una "comunidad con audiencia propia" no se encuentra por búsqueda genérica: se reconoce.
+
+El método, que además es más rentable que cualquier lista:
+
+**15. Tus propios ex participantes con comunidad.** De los +600, algunos hoy dirigen asociaciones, clubes o comunidades profesionales. Es el mejor canal templado que tienes y no cuesta prospección, solo preguntar.
+
+**16. Asociaciones de exalumnos** de las universidades donde ya operaste programas. Tienen base de datos, boletín y un motivo para viajar juntos.
+
+**17. Clubes culturales y sociedades filarmónicas** de las ciudades donde vendes. Convocan, cobran cuota y ya organizan actividades.
+
+**18. Creadores y divulgadores de historia, gastronomía o música** con audiencia propia en México y Colombia. Encajan con tus viajes temáticos y monetizan viajando con su comunidad. Un solo creador con audiencia fiel llena una cohorte.
+
+Para los cuatro, el filtro del kit no cambia: ¿tiene a quién vender ya?, ¿ha vendido antes ticket alto?, ¿hay alguien que cierre?
+
+---
+
+## D. Directorios para llegar a cientos más
+
+**19. ANATO** · 607 agencias colombianas afiliadas, con directorio público filtrable por región.
 [anato.org/directorio](https://anato.org/directorio/)
 
-**20. AMAV, Asociación Mexicana de Agencias de Viajes** · *señal verificada*
-El equivalente mexicano, con padrón de asociados.
+**20. AMAV** · asociación mexicana de agencias de viajes, con padrón de asociados y delegaciones estatales.
 [amav.com.mx](https://www.amav.com.mx/)
 
+Además: el [directorio oficial de agencias de Bogotá (IDT)](https://www.idt.gov.co/sites/default/files/directorio_agencias_de_viajes.pdf) en PDF, y el listado de [ANEX](https://anex.com.co/agencias/) para intercambio estudiantil.
+
 ---
-
-## Cómo extender la lista
-
-- **[Directorio ANATO](https://anato.org/directorio/)**: 607 agencias colombianas, filtrables por capítulo regional.
-- **[Directorio de agencias de Bogotá (IDT)](https://www.idt.gov.co/sites/default/files/directorio_agencias_de_viajes.pdf)**: listado oficial del Instituto Distrital de Turismo, en PDF.
-- **AMAV** y sus delegaciones estatales para México.
-- **Padrón de socios de las cámaras binacionales**: CAMEXA declara más de 820 empresas afiliadas. Además de la cámara como partner, sus socios son compradores institucionales.
-- Repite el ejercicio con las cámaras **franco**, **hispano** e **italo** de cada país: misma lógica, mismo tipo de delegaciones a Europa.
 
 ## Por dónde empezar esta semana
 
-Si solo puedes abrir cinco conversaciones, abre estas, en este orden:
+Cinco conversaciones, en este orden:
 
-1. **CAMEXA**, porque ya organiza viajes de delegación a Europa.
-2. **ITAM**, porque ya opera módulos internacionales de 10 días y no tiene ninguno europeo.
-3. **Uniandes Educación Ejecutiva**, porque sus misiones académicas se diseñan conjuntamente con la institución anfitriona.
-4. **AHK Colombia**, misma lógica que CAMEXA.
-5. **EGADE**, por volumen: 1 de cada 3 alumnos ya viaja.
+1. **Vívelo Travel**, 30 años vendiendo viajes escolares y juveniles: cartera y músculo comercial hechos.
+2. **Sistema Nacional de Fomento Musical (OSIM)**, porque quieren gira internacional y no han estado nunca en Europa central. Ahí entras con el campamento de Viena.
+3. **Viajes FAMA**, porque siendo mayorista de Europa un acuerdo te abre sus agencias, no solo su venta directa.
+4. **Fundación Bolívar Davivienda**, porque la Filarmónica Joven ya gira por Europa de forma recurrente y hoy alguien más se lo opera.
+5. **Educa Colombia**, porque con oficinas en los dos países cubres México y Colombia en una sola conversación.
 
-Las cinco tienen algo en común y por eso van primero: **no hay que convencerlas de la categoría, solo de que tú eres el mejor operador**. Esa venta es mucho más corta.
+Las cinco comparten lo que hace corta la venta: **no hay que convencerlas de la categoría, solo de que tú eres mejor operador que quien tienen ahora**, o el primero que les resuelve un destino que aún no tocan.
 
-Y antes de escribir el primer correo, ten firmado el contrato marco (ver [BLINDAJE-PARTNERS.md](BLINDAJE-PARTNERS.md)). Llegar a un sí sin acuerdo listo cuesta semanas en el peor momento.
+Y antes del primer correo, ten firmado el contrato marco ([BLINDAJE-PARTNERS.md](BLINDAJE-PARTNERS.md)). Llegar a un sí sin acuerdo listo cuesta semanas en el peor momento.

@@ -33,31 +33,33 @@ Y hacia arriba del embudo, con supuestos prudentes que conviene sustituir por da
 
 Cinco tipos, ordenados por facilidad de cierre según lo que ya funciona.
 
+> **Lo que ya se probó y no funciona: universidades y escuelas de negocios.** Buscan convenios con otras universidades, y The Global School no lo es. No se insiste ahí.
+
 ### a) Agencia u operador corporativo de viajes
 El encaje más directo: ya vende viajes, ya tiene clientes corporativos, y le falta el brazo europeo.
 - **Señal de encaje:** organiza viajes de incentivos o convenciones fuera de su país, tiene equipo comercial propio, factura en divisa.
 - **Descalifica:** solo hace turismo de ocio, ticket medio bajo, vende por volumen y precio.
 
-### b) Universidad o escuela de negocios con posgrado
-La venta institucional que llena una cohorte de una sola vez.
-- **Señal de encaje:** tiene maestrías o posgrados ejecutivos, ya hace o quiere hacer viajes de estudios, cobra matrícula alta.
-- **Dónde está la decisión:** dirección de posgrado o de internacionalización, no el rector.
-- **Descalifica:** presupuesto público rígido sin partida para movilidad.
+### b) Academia de música, orquesta juvenil o escuela de arte
+Donde tienes producto que casi nadie más tiene: el campamento de invierno en Viena.
+- **Señal de encaje:** ya hace giras o intercambios internacionales, o tiene alumnado que viaja.
+- **Dónde está la decisión:** dirección artística o de proyectos; en fundaciones, dirección de programa.
+- **Descalifica:** depende al 100% de presupuesto público sin partida para movilidad.
 
-### c) Consultora de formación o desarrollo directivo
-Vende programas a empresas y le falta el producto insignia.
-- **Señal de encaje:** cartera de clientes corporativos recurrente, ya vende formación de varios miles por persona.
-- **Descalifica:** solo formación online de bajo precio.
+### c) Grupo de viajeros o comunidad con audiencia propia
+Clubes, asociaciones de exalumnos, sociedades culturales, creadores con seguidores fieles.
+- **Señal de encaje:** comunidad propia y no comprada, que ya paga por algo (cuota, evento, curso).
+- **Descalifica:** audiencia grande sin poder de compra.
 
-### d) Cámara de comercio, gremio o asociación profesional
-Tiene la convocatoria hecha y la confianza puesta.
-- **Señal de encaje:** organiza misiones comerciales o delegaciones al extranjero, tiene base de socios activa.
-- **Ojo:** el ciclo de decisión es lento y a veces necesita aval de junta. Cuando cierra, cierra grande.
+### d) Preparatoria o colegio con viaje de graduación
+**Apuesta sin probar todavía.** Ojo con el atajo: ir colegio por colegio es una cohorte cada vez. Ir al operador que ya les vende trae decenas de colegios en una conversación.
+- **Señal de encaje:** ya hace viaje de graduación internacional y cobra cuota alta.
+- **Descalifica:** viaje de graduación nacional y de bajo presupuesto.
 
-### e) Organizador de eventos con comunidad propia
-El que ya llena salas.
-- **Señal de encaje:** comunidad cautiva propia (lista, evento anual, audiencia), no comprada.
-- **Descalifica:** audiencia grande pero sin poder de compra.
+### e) Cámara, gremio o asociación del sector
+Un acuerdo con la asociación abre todo su padrón de una vez, en lugar de agencia por agencia.
+- **Señal de encaje:** agrupa agencias, operadores o colegios, o ya organiza delegaciones al extranjero.
+- **Ojo:** ciclo de decisión lento y a veces con aval de junta. Cuando cierra, cierra grande.
 
 **Filtro común, tres preguntas.** Si alguna se responde con no, no es partner:
 1. ¿Tiene ya a quién vender, sin comprar audiencia desde cero?
@@ -70,7 +72,7 @@ El que ya llena salas.
 
 ### Los canales templados primero, que es donde está el retorno rápido
 
-**+600 ex participantes.** El activo más desaprovechado. Muchos son directivos, funcionarios o académicos que hoy están en posición de comprar o de recomendar. No les escribas para reclutarlos como partners, escríbeles para preguntar a quién conocen y qué necesita su organización. Un ex participante que te presenta a su director de posgrado vale más que cincuenta correos en frío.
+**+600 ex participantes.** El activo más desaprovechado. Muchos son directivos, funcionarios o académicos que hoy están en posición de comprar o de recomendar. No les escribas para reclutarlos como partners, escríbeles para preguntar a quién conocen y qué necesita su organización. Un ex participante que te presenta al director de su club, su orquesta o la agencia con la que viaja vale más que cincuenta correos en frío.
 
 **Instituciones con las que ya has trabajado.** Vienna School of Quality & Innovation, Impact Hub Vienna, MDV, CAGG, Champions of Our Planet, iSCAN, Booster IIT, 1MillionStartups, The Climate Reality Project. Ya conocen tu operación, y varias tienen red en América Latina.
 
@@ -87,11 +89,12 @@ El que ya llena salas.
 **Prioriza por donde ya tienes rastro**, no por tamaño de mercado: México y Colombia primero (es donde está la mayoría de tu red), después Chile, Costa Rica, Ecuador, Perú y Argentina.
 
 **Cadenas de búsqueda en LinkedIn** que dan resultados útiles:
-- `"viajes de incentivos" OR "misiones comerciales" director` filtrado por país
-- `"director de posgrado" OR "internacionalización" universidad` filtrado por país
-- `"desarrollo directivo" OR "formación ejecutiva" gerente comercial`
+- `"viajes de graduación" OR "viajes escolares" OR "viajes de grado" gerente comercial` por país
+- `"turismo estudiantil" OR "viajes juveniles" director` por país
+- `"orquesta juvenil" OR "academia de música" director artístico` por país
+- `"mayorista de viajes" Europa director comercial` por país
 
-**Directorios que valen la pena:** las cámaras binacionales (Cámara Mexicano-Alemana, Cámara Colombo-Suiza y equivalentes) tienen listas de socios públicas y sus miembros ya piensan en Europa. Las asociaciones de agencias de viajes corporativas de cada país publican padrón. Los rankings locales de escuelas de negocios te dan las 20 con posgrado ejecutivo de un país en una tarde.
+**Directorios que valen la pena:** las asociaciones de agencias de cada país publican padrón (ANATO en Colombia con 607 afiliadas, AMAV en México, ANEX para intercambio estudiantil). Los directorios oficiales de turismo de cada ciudad listan las agencias registradas. Y para el segmento musical, los programas regionales tipo Iberorquestas te conectan con muchas orquestas de una vez. Ver la [lista de arranque](LISTA-20-CONTACTOS-MX-CO.md).
 
 ---
 
@@ -174,7 +177,7 @@ Solicitud de contacto con nota de dos líneas: quién eres, qué ofreces, sin en
 El precio al público lo fijan ellos: reciben costos netos. Si el ticket no encaja, se ajusta el formato, menos días, otra ciudad, grupo más grande. Pregunta cuál es el techo real de su cliente y trabaja hacia atrás desde ahí.
 
 **"Mis clientes no viajan a Europa."**
-Puede que sea cierto y entonces no es tu partner. Pero antes comprueba si el freno era el precio o la falta de un producto creíble. Muchos no lo ofrecen porque no tenían con quién operarlo.
+Puede que sea cierto y entonces no es tu partner. Pero antes comprueba si el freno era el precio o la falta de un producto creíble. Muchos no lo ofrecen porque no tenían con quién operarlo, y venden en su lugar el mismo destino de siempre.
 
 **"¿Qué exclusividad tengo en mi país?"**
 Se acuerda caso por caso según mercado y volumen comprometido, y no es automática. Si la piden en el primer contacto sin haber vendido nada, es señal de que quieren bloquear el territorio sin trabajarlo.
