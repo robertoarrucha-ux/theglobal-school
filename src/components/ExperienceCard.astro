@@ -1,0 +1,32 @@
+---
+// Tarjeta de experiencia del catálogo. Se extrajo a componente al partir la rejilla
+// del home en dos mitades: el marcado es el mismo en ambas y no debe divergir.
+import { seasonsText } from '../lib/editions';
+import { LANG } from '../lib/site';
+const { x, base } = Astro.props as { x: any; base: string };
+const L = LANG === 'es';
+const search = `${x.title} ${x.summary || ''} ${x.country || ''} ${x.city || ''} ${(x.cities || []).join(' ')}`.toLowerCase();
+---
+<a
+  class="xp-card"
+  href={`${base}/${x.slug}/`}
+  data-type={x.type}
+  data-country={x.country || ''}
+  data-duration={x.durationDays || ''}
+  data-format={x.format || ''}
+  data-search={search}
+>
+  <div class="media">
+    <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
+    <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? (L ? 'Evento' : 'Event') : (L ? 'Viaje' : 'Trip')}</span>
+  </div>
+  <div class="body">
+    <div class="meta"><span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {seasonsText(x, L)}</span></div>
+    <h3>{x.title}</h3>
+    <p class="summary">{x.summary}</p>
+    <div class="foot">
+      <span class="xp-price consult">{L ? 'A consultar' : 'On request'}</span>
+      <span class="xp-pub">{x.publisher?.type === 'tgs' ? 'TNGS' : x.publisher?.name}</span>
+    </div>
+  </div>
+</a>

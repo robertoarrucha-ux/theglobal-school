@@ -3,6 +3,7 @@ import MarketplaceLayout from '../layouts/MarketplaceLayout.astro';
 import { getCollection } from 'astro:content';
 import { loadExperiences } from '../lib/experiences';
 import ExperienceFilters from '../components/ExperienceFilters.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
 import { seasonsText } from '../lib/editions';
 import { LANG, BRAND, SELF_ORIGIN } from '../lib/site';
 
@@ -46,6 +47,12 @@ const t = {
     ? ['Vitrina indexable con tráfico y reputación ya establecidos', 'Registro y pagos gestionados (o cobras directo, tú eliges)', 'Certificación y respaldo de marca The New Global School']
     : ['Indexable storefront with established traffic and reputation', 'Managed registration and payments (or collect directly, your choice)', 'Certification and The New Global School brand backing'],
   votedEyebrow: L ? 'Lo más votado' : 'Most voted',
+  breakEyebrow: L ? '¿Nada encaja del todo?' : 'Nothing quite fits?',
+  breakTitle: L ? 'Todos nuestros viajes se diseñan a medida' : 'Every journey we run is built to measure',
+  breakLead: L
+    ? 'Estos son los itinerarios que ya tenemos armados. Si buscas otro tema, otras ciudades u otras fechas, partimos de cero contigo: tú pones el objetivo y el grupo, nosotros la operación europea.'
+    : 'These are the itineraries we already have packaged. If you need another theme, other cities or other dates, we start from scratch with you: you bring the goal and the group, we bring the European operation.',
+  breakCta: L ? 'Cuéntanos qué necesitas' : 'Tell us what you need',
   votedTitle: L ? '¿Qué viaje te interesa más?' : 'Which trip interests you most?',
   votedIntro: L ? 'Vota por tu expedición favorita. Un voto por persona, así vemos qué viaje despierta más interés.' : 'Vote for your favourite expedition. One vote per person, so we can see which trip draws the most interest.',
   vote: L ? 'Votar' : 'Vote',
@@ -183,39 +190,49 @@ const jsonLd = {
   </script>
 
   <!-- PROGRAMAS (todas las experiencias, como en /experiences) -->
-  <section class="band band-light" id="programas">
-  <div class="mkt-wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">{t.programsEyebrow}</p>
-      <h2>{t.programsTitle}</h2>
-    </div>
-    {experiences.length === 0 ? (
-      <div class="mkt-empty glass">
-        <h3>{L ? 'Próximamente' : 'Coming soon'}</h3>
-        <p set:html={L ? 'Estamos preparando más experiencias.' : 'We\'re preparing our international events and trips in English. Meanwhile, explore the <a href="/blog/">blog</a>.'} />
+  <section id="programas">
+    <div class="band band-light">
+      <div class="mkt-wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">{t.programsEyebrow}</p>
+          <h2>{t.programsTitle}</h2>
+        </div>
+        {experiences.length === 0 ? (
+          <div class="mkt-empty glass">
+            <h3>{L ? 'Próximamente' : 'Coming soon'}</h3>
+            <p set:html={L ? 'Estamos preparando más experiencias.' : 'We\'re preparing our international events and trips in English. Meanwhile, explore the <a href="/blog/">blog</a>.'} />
+          </div>
+        ) : (
+          <>
+            <ExperienceFilters experiences={experiences} scope="#programas" />
+            <div class="mkt-grid">
+              {experiences.slice(0, 9).map((x) => <ExperienceCard x={x} base={xbase} />)}
+            </div>
+          </>
+        )}
       </div>
-    ) : (
-    <>
-    <ExperienceFilters experiences={experiences} scope="#programas" />
-    <div class="mkt-grid">
-      {experiences.map((x) => (
-        <a class="xp-card" href={`${xbase}/${x.slug}/`} data-type={x.type} data-country={x.country || ''} data-duration={x.durationDays || ''} data-format={x.format || ''} data-search={`${x.title} ${x.summary || ''} ${x.country || ''} ${x.city || ''} ${(x.cities || []).join(' ')}`.toLowerCase()}>
-          <div class="media">
-            <img src={x.coverImageUrl} alt={x.title} width="400" height="250" loading="lazy" />
-            <span class={`xp-badge ${x.type}`}>{x.type === 'evento' ? t.events.replace(/s$/, '') : (L ? 'Viaje' : 'Trip')}</span>
-          </div>
-          <div class="body">
-            <div class="meta"><span>📍 {x.city}, {x.country}</span><span>·</span><span>🗓 {seasonsText(x, L)}</span></div>
-            <h3>{x.title}</h3>
-            <p class="summary">{x.summary}</p>
-            <div class="foot"><span class="xp-price consult">{L ? 'A consultar' : 'On request'}</span><span class="xp-pub">{x.publisher?.type === 'tgs' ? 'TNGS' : x.publisher?.name}</span></div>
-          </div>
-        </a>
-      ))}
     </div>
-    </>
+
+    {experiences.length > 9 && (
+      <>
+        <div class="band band-dark">
+          <div class="mkt-wrap catalog-break reveal">
+            <p class="eyebrow">{t.breakEyebrow}</p>
+            <h2>{t.breakTitle}</h2>
+            <p class="lead">{t.breakLead}</p>
+            <a class="btn-primary" href={L ? '/contacto/' : '/contact/'}>{t.breakCta}</a>
+          </div>
+        </div>
+
+        <div class="band band-light">
+          <div class="mkt-wrap">
+            <div class="mkt-grid">
+              {experiences.slice(9).map((x) => <ExperienceCard x={x} base={xbase} />)}
+            </div>
+          </div>
+        </div>
+      </>
     )}
-  </div>
   </section>
 
   <!-- QUIÉNES SOMOS (autoridad) -->
