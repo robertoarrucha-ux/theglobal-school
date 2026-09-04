@@ -1,0 +1,71 @@
+---
+// Tríptico de fotografía, el recurso que carga la emoción en la referencia de HBS:
+// tres imágenes de gente real justo debajo del titular, en vez de más texto.
+// Las proporciones (estrecha, ancha, estrecha) reproducen las de los originales.
+const { photos = [], eager = false } = Astro.props as {
+  photos: { src: string; alt: string }[];
+  eager?: boolean;
+};
+---
+{photos.length === 3 && (
+  <div class="triptych">
+    {photos.map((p, i) => (
+      <figure class={`tri-${i + 1}`}>
+        <img
+          src={p.src}
+          alt={p.alt}
+          width="927"
+          height="1440"
+          loading={eager && i === 0 ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      </figure>
+    ))}
+  </div>
+)}
+
+<style>
+  .triptych {
+    display: grid;
+    grid-template-columns: 1fr 1.19fr 1fr; /* proporción de los originales */
+    gap: 0.9rem;
+    margin: 0;
+  }
+  .triptych figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .triptych img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.22, 0.9, 0.3, 1);
+  }
+  .triptych figure:hover img { transform: scale(1.04); }
+
+  /* En móvil el tríptico se convierte en una tira que se desliza: tres fotos
+     apiladas ocuparían pantalla y media y romperían el ritmo. */
+  @media (max-width: 720px) {
+    .triptych {
+      display: flex;
+      gap: 0.7rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.4rem;
+      scrollbar-width: none;
+    }
+    .triptych::-webkit-scrollbar { display: none; }
+    .triptych figure { flex: 0 0 78%; scroll-snap-align: center; }
+    .triptych img { aspect-ratio: 3 / 4; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .triptych img { transition: none; }
+    .triptych figure:hover img { transform: none; }
+  }
+</style>

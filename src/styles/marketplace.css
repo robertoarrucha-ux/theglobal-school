@@ -514,3 +514,7 @@
 .catalog-break h2 { margin: .5rem 0 .8rem; }
 .catalog-break .lead { color: var(--txt-soft); font-size: 1.05rem; line-height: 1.65; margin: 0 0 1.8rem; }
 .band-dark > .catalog-break { margin-inline: auto; }
+
+/* Triptico del home: va pegado al heroe, sin el respiro habitual entre bandas */
+.home-tri { padding-bottom: clamp(2rem, 5vw, 3.5rem); }
+.band-dark .triptych { margin-top: 2rem; }

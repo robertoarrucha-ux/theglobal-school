@@ -19,3 +19,11 @@ Viajes.theglobal.school/
 qidb/
 migration/.venv/
 *.DS_Store
+
+# Imagenes sueltas en la raiz: restos de la migracion y originales que se recortan
+# a mano. Las que se publican viven en public/media/.
+/*.webp
+/*.jpg
+/*.jpeg
+/*.png
+!/public/**
