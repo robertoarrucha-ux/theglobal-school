@@ -36,9 +36,11 @@ const RUTAS = {
     es: ['Berlín', 'Praga', 'Roma', 'Bruselas'],
     en: ['Berlin', 'Prague', 'Rome', 'Brussels'],
   },
+  // Orden posterior al reordenado de días (ver fix_orden_carlos_v.mjs): Italia
+  // antes que España, para no cruzar el continente dos veces.
   'charles-v-empire-tour': {
-    es: ['Bruselas', 'Gante', 'Aquisgrán', 'París', 'Madrid', 'Toledo', 'Bolonia', 'Milán', 'Yuste'],
-    en: ['Brussels', 'Ghent', 'Aachen', 'Paris', 'Madrid', 'Toledo', 'Bologna', 'Milan', 'Yuste'],
+    es: ['Bruselas', 'Gante', 'Aquisgrán', 'París', 'Bolonia', 'Milán', 'Madrid', 'Toledo', 'Yuste'],
+    en: ['Brussels', 'Ghent', 'Aachen', 'Paris', 'Bologna', 'Milan', 'Madrid', 'Toledo', 'Yuste'],
   },
   // Ironbridge es la jornada entera del día 4 y no figuraba. Es un sitio, no una
   // ciudad base, pero la convención ya lista sitios (Auschwitz, Somme, Verdún).
