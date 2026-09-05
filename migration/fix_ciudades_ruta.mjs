@@ -40,6 +40,12 @@ const RUTAS = {
     es: ['Bruselas', 'Gante', 'Aquisgrán', 'París', 'Madrid', 'Toledo', 'Bolonia', 'Milán', 'Yuste'],
     en: ['Brussels', 'Ghent', 'Aachen', 'Paris', 'Madrid', 'Toledo', 'Bologna', 'Milan', 'Yuste'],
   },
+  // Ironbridge es la jornada entera del día 4 y no figuraba. Es un sitio, no una
+  // ciudad base, pero la convención ya lista sitios (Auschwitz, Somme, Verdún).
+  'industrial-revolution': {
+    es: ['Mánchester', 'Liverpool', 'Ironbridge', 'Londres'],
+    en: ['Manchester', 'Liverpool', 'Ironbridge', 'London'],
+  },
 };
 
 const key = fs.readdirSync('.').find((f) => /firebase-adminsdk.*\.json$/.test(f));
