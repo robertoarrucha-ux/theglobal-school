@@ -496,6 +496,17 @@
 .mkt h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
 .mkt h3 { letter-spacing: -0.015em; line-height: 1.2; }
 .serif { font-family: var(--font-serif); font-weight: 500; letter-spacing: 0; }
+
+/* El titular del home mide 48 caracteres en espanol y 36 en ingles. En la caja
+   de 900px el ingles cae en dos lineas (una larga, una corta, con un triangulo
+   de aire) y el espanol en tres casi iguales, un bloque macizo un 50% mas alto.
+   Medido en pantalla a 1440px: ingles 877+621 y 168px de alto, espanol
+   631+640+642 y 252px.
+   La caja necesita 1100px para que el espanol quepa en dos lineas al mismo
+   cuerpo; con 1120 queda margen. No se toca el tamano de letra: encogerlo
+   arreglaba las lineas pero dejaba el titular espanol mas pequeno que el
+   ingles, y el problema no era el cuerpo sino la medida. */
+html[lang="es"] .home-hero { max-width: 1120px; }
 /* La banda oscura se separa del fondo de pagina para que se lea como banda */
 /* La banda oscura era casi identica a la de aliados y las dos se leian como una sola.
    Ahora es un panel morado propio, distinto del degradado naranja de aliados. */
