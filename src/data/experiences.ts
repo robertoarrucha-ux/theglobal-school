@@ -36,7 +36,9 @@ export interface Experience {
   cities?: string[];
   leader?: { name: string; title: string; narrative: string };
   rationale?: { importance: string; learning: string; relevance: string };
-  itinerary?: { day: number; title: string; description: string; relevance?: string }[];
+  // `label` sustituye al "Día N" por defecto cuando un bloque no es un día
+  // suelto: programas largos que se cuentan por semanas, por ejemplo.
+  itinerary?: { day: number; label?: string; title: string; description: string; relevance?: string }[];
   pricingTiers?: { threshold: number; discountPercent: number }[];
   preWork?: { title: string; items: { type: string; title: string; author: string }[] };
   // --- Votación (validación de demanda antes de agendar) ---

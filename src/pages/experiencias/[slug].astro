@@ -235,7 +235,7 @@ const jsonLd = {
           <div class="xp-agenda">
             {x.itinerary.map((d: any) => (
               <div class="xp-agenda-item glass">
-                <div class="lbl">Día {d.day}</div>
+                <div class="lbl">{d.label || `Día ${d.day}`}</div>
                 <strong>{d.title}</strong>
                 <p style="margin:.3rem 0 0">{d.description}</p>
                 {d.relevance && <p class="rel">↳ {d.relevance}</p>}

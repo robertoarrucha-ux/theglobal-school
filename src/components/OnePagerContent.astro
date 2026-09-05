@@ -106,7 +106,7 @@ const itinerary = x.itinerary || [];
     <ol class="op-itin">
       {itinerary.map((d: any) => (
         <li class="avoid-break">
-          <strong><span class="op-day">{t.day} {d.day}</span> {d.title}</strong>
+          <strong><span class="op-day">{d.label || `${t.day} ${d.day}`}</span> {d.title}</strong>
           {d.description && <p>{d.description}</p>}
         </li>
       ))}
