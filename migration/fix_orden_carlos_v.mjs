@@ -1,3 +1,8 @@
+// SUPERADO por fix_bases_carlos_v.mjs, que además saca París y parte el día de
+// Gante y Aquisgrán en dos. Se conserva como registro de por qué el itinerario
+// cambió de orden. Reejecutarlo no hace nada: sus claves ya no casan con el
+// itinerario actual y el script se salta el documento en vez de tocarlo.
+//
 // Reordena los días de charles-v-empire-tour para que la ruta deje de cruzar
 // el continente dos veces.
 //

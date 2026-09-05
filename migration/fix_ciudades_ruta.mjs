@@ -20,9 +20,10 @@ const WRITE = process.argv.includes('--write');
 
 // slug -> { es: [...], en: [...] }, en orden de itinerario.
 const RUTAS = {
+  // Sin Londres desde la reestructuración en 5 bases (fix_bases_ww2.mjs).
   'ww2-conflict-and-memory': {
-    es: ['Londres', 'Normandía', 'París', 'Cracovia', 'Auschwitz', 'Berlín', 'Núremberg'],
-    en: ['London', 'Normandy', 'Paris', 'Krakow', 'Auschwitz', 'Berlin', 'Nuremberg'],
+    es: ['Normandía', 'París', 'Cracovia', 'Auschwitz', 'Berlín', 'Núremberg'],
+    en: ['Normandy', 'Paris', 'Krakow', 'Auschwitz', 'Berlin', 'Nuremberg'],
   },
   'great-war-trenches': {
     es: ['Bruselas', 'Ypres', 'Somme', 'Verdún', 'París'],
@@ -36,11 +37,12 @@ const RUTAS = {
     es: ['Berlín', 'Praga', 'Roma', 'Bruselas'],
     en: ['Berlin', 'Prague', 'Rome', 'Brussels'],
   },
-  // Orden posterior al reordenado de días (ver fix_orden_carlos_v.mjs): Italia
-  // antes que España, para no cruzar el continente dos veces.
+  // Estado posterior al reordenado (fix_orden_carlos_v.mjs, Italia antes que
+  // España) y a la reestructuración en 4 bases (fix_bases_carlos_v.mjs, que
+  // saca París). Si se cambia aquí, cambiarlo también allí.
   'charles-v-empire-tour': {
-    es: ['Bruselas', 'Gante', 'Aquisgrán', 'París', 'Bolonia', 'Milán', 'Madrid', 'Toledo', 'Yuste'],
-    en: ['Brussels', 'Ghent', 'Aachen', 'Paris', 'Bologna', 'Milan', 'Madrid', 'Toledo', 'Yuste'],
+    es: ['Bruselas', 'Gante', 'Aquisgrán', 'Bolonia', 'Milán', 'Madrid', 'Toledo', 'Yuste'],
+    en: ['Brussels', 'Ghent', 'Aachen', 'Bologna', 'Milan', 'Madrid', 'Toledo', 'Yuste'],
   },
   // Ironbridge es la jornada entera del día 4 y no figuraba. Es un sitio, no una
   // ciudad base, pero la convención ya lista sitios (Auschwitz, Somme, Verdún).

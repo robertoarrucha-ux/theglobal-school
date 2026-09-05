@@ -1,6 +1,12 @@
-// Plausibilidad operativa de los itinerarios: detecta traslados que el calendario
-// no aguanta. Mide el salto real entre ciudades consecutivas con coordenadas,
-// cuenta traslados por viaje y marca destinos fuera de Europa.
+// Plausibilidad operativa de los itinerarios.
+//
+// Regla de diseño: en 10 días, 4 bases, 5 como máximo. Lo que carga un viaje es
+// cambiar de hotel, no visitar sitios: Versalles, Auschwitz o Toledo son
+// excursiones del día y no cuentan como base.
+//
+// Mide el salto real entre ciudades consecutivas con coordenadas, infiere las
+// bases y los cambios de base, marca destinos fuera de Europa y compara la lista
+// de destinos contra las ciudades que el itinerario visita, en los dos sentidos.
 // Solo lectura.
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -54,7 +60,7 @@ snap.forEach((d) => {
   const it = x.itinerary || [];
   if (!it.length) return;
 
-  let traslados = 0, fuera = [], saltos = [];
+  let fuera = [], saltos = [];
   let prev = null;
   const enItinerario = new Set();
   // Bases = sitios donde se duerme, que es lo que manda en la carga de movilidad.
@@ -66,7 +72,6 @@ snap.forEach((d) => {
     const txt = `${i.title} ${i.description||''}`;
     // Un dia declarado tematico no implica traslado ni salto: se excluye del calculo.
     const tematico = /sin traslado|no travel|jornada tem[áa]tica|thematic day/i.test(txt);
-    if (!tematico && /vuelo|traslado|viaje a|regreso a|nos trasladamos/i.test(txt)) traslados++;
     if (tematico) return;
     const c = findCity(txt);
     if (c) {
@@ -92,11 +97,14 @@ snap.forEach((d) => {
   // Volver a una base ya usada obliga a moverse otra vez, pero no es un destino
   // más: para la regla cuentan las bases distintas.
   const distintas = [...new Set(bases)];
-  resumen.push(`  ${x.slug.slice(0,30).padEnd(31)} ${x.durationDays}d  ${String(distintas.length)} bases  ${String(traslados).padStart(2)} traslados  ${(x.cities||[]).length} destinos   ${bases.join(' → ')}`);
+  // Cambiar de base es hacer la maleta. Se cuenta sobre la secuencia, no sobre
+  // las bases distintas: volver a una anterior también obliga a moverse.
+  const mudanzas = Math.max(0, bases.length - 1);
+  resumen.push(`  ${x.slug.slice(0,30).padEnd(31)} ${x.durationDays}d  ${String(distintas.length)} bases  ${String(mudanzas).padStart(2)} mudanzas  ${(x.cities||[]).length} destinos   ${bases.join(' → ')}`);
   if (distintas.length > MAX_BASES) P.push(`DEMASIADAS BASES | ${x.slug}: ${distintas.length} bases en ${x.durationDays} días (máximo ${MAX_BASES}): ${distintas.join(', ')}`);
   if (fuera.length) P.push(`FUERA DE EUROPA | ${x.slug}: ${fuera.join('; ')}`);
   if (saltos.length) P.push(`SALTO LARGO | ${x.slug}: ${saltos.join('; ')}`);
-  if (traslados > x.durationDays / 2) P.push(`DEMASIADOS TRASLADOS | ${x.slug}: ${traslados} en ${x.durationDays} días`);
+  if (mudanzas > x.durationDays / 2) P.push(`DEMASIADAS MUDANZAS | ${x.slug}: ${mudanzas} cambios de base en ${x.durationDays} días`);
   // Inverso del primer chequeo: se visita una ciudad que no figura como destino.
   const declaradas = new Set((x.cities||[]).map(c => norm(c)));
   const noDeclaradas = [...enItinerario].filter(c => ![...declaradas].some(d => d.includes(c) || c.includes(d)));
