@@ -38,15 +38,19 @@ const C = {
   cracovia:[50.06,19.94], krakow:[50.06,19.94], ironbridge:[52.63,-2.49],
   passchendaele:[50.90,3.02], belleau:[49.07,3.29],
 };
-const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z]/g,'');
+// Se conservan los espacios para poder exigir palabra completa. Sin eso,
+// "romana" y "galorromano" contienen "roma", y un día en Lyon se leía como un
+// día en Roma. Mismo fallo que tuvo audit_coherencia_dias.mjs.
+const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')
+  .replace(/[^a-z]/g,' ').replace(/\s+/g,' ').trim();
 const km = (a,b) => { const R=6371, dLat=(b[0]-a[0])*Math.PI/180, dLon=(b[1]-a[1])*Math.PI/180;
   const la1=a[0]*Math.PI/180, la2=b[0]*Math.PI/180;
   const h=Math.sin(dLat/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)**2;
   return Math.round(2*R*Math.asin(Math.sqrt(h))); };
 
 const findCity = (txt) => {
-  const n = norm(txt);
-  const hits = Object.keys(C).filter(k => n.includes(k) && k.length > 3);
+  const n = ` ${norm(txt)} `;
+  const hits = Object.keys(C).filter(k => k.length > 3 && n.includes(` ${k} `));
   return hits.sort((a,b)=>b.length-a.length)[0] || null;
 };
 
