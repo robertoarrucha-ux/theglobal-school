@@ -16,6 +16,12 @@ const WRITE = process.argv.includes('--write');
 // [patrón, corrección]. El patrón no debe casar con la forma ya correcta.
 const ERRATAS = [
   [/\bPaschendaele\b/g, 'Passchendaele'],
+  // cheese-and-wine-trail d9: el título dice Livrarot y su propia descripción,
+  // más el documento en inglés, escriben Livarot.
+  [/\bLivrarot\b/g, 'Livarot'],
+  // grand-tour-enlightenment d4: futuro suelto en una narración en pasado
+  // (Voltaire habla de su vida: "pasé", "lancé"). El inglés ya dice "I established".
+  [/donde estableceré mi/g, 'donde establecí mi'],
 ];
 
 const key = fs.readdirSync('.').find((f) => /firebase-adminsdk.*\.json$/.test(f));
