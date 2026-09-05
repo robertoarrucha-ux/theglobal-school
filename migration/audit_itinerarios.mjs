@@ -57,6 +57,11 @@ snap.forEach((d) => {
   let traslados = 0, fuera = [], saltos = [];
   let prev = null;
   const enItinerario = new Set();
+  // Bases = sitios donde se duerme, que es lo que manda en la carga de movilidad.
+  // Una excursión visita una ciudad sin cambiar de base, así que no cuenta.
+  // Regla: en 10 días, 4 bases, 5 como máximo.
+  const MAX_BASES = 5;
+  const bases = [];
   it.forEach((i) => {
     const txt = `${i.title} ${i.description||''}`;
     // Un dia declarado tematico no implica traslado ni salto: se excluye del calculo.
@@ -71,11 +76,24 @@ snap.forEach((d) => {
         if (dist > 900) saltos.push(`día ${prev.day}→${i.day} ${prev.c}→${c}: ${dist} km`);
       }
       enItinerario.add(c);
-      prev = { c, day: i.day };
+      // El modelo no guarda dónde se duerme, así que la base se infiere. El
+      // criterio textual no sirve (los itinerarios casi nunca dicen "excursión"),
+      // pero el físico sí: por encima de RADIO no hay ida y vuelta cómoda en el
+      // día, así que esa ciudad es base nueva. Un vuelo siempre lo es.
+      const RADIO = 150;
+      const base = bases[bases.length - 1];
+      const lejos = !base || km(C[base], C[c]) > RADIO;
+      const vuela = /vuelo|flight/i.test(txt);
+      if (base !== c && (lejos || vuela)) { bases.push(c); prev = { c, day: i.day }; }
+      else if (!prev) prev = { c, day: i.day };
     }
   });
 
-  resumen.push(`  ${x.slug.slice(0,30).padEnd(31)} ${x.durationDays}d  ${String(traslados).padStart(2)} traslados  ${(x.cities||[]).length} ciudades`);
+  // Volver a una base ya usada obliga a moverse otra vez, pero no es un destino
+  // más: para la regla cuentan las bases distintas.
+  const distintas = [...new Set(bases)];
+  resumen.push(`  ${x.slug.slice(0,30).padEnd(31)} ${x.durationDays}d  ${String(distintas.length)} bases  ${String(traslados).padStart(2)} traslados  ${(x.cities||[]).length} destinos   ${bases.join(' → ')}`);
+  if (distintas.length > MAX_BASES) P.push(`DEMASIADAS BASES | ${x.slug}: ${distintas.length} bases en ${x.durationDays} días (máximo ${MAX_BASES}): ${distintas.join(', ')}`);
   if (fuera.length) P.push(`FUERA DE EUROPA | ${x.slug}: ${fuera.join('; ')}`);
   if (saltos.length) P.push(`SALTO LARGO | ${x.slug}: ${saltos.join('; ')}`);
   if (traslados > x.durationDays / 2) P.push(`DEMASIADOS TRASLADOS | ${x.slug}: ${traslados} en ${x.durationDays} días`);
