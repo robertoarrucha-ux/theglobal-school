@@ -29,9 +29,11 @@ const RUTAS = {
     es: ['Bruselas', 'Ypres', 'Somme', 'Verdún', 'París'],
     en: ['Brussels', 'Ypres', 'Somme', 'Verdun', 'Paris'],
   },
+  // Sin Bruselas desde fix_reestructura_tres.mjs: era un rodeo de 400 km para
+  // un solo día, y el tema del día se quedó en París.
   'grand-tour-enlightenment': {
-    es: ['París', 'Bruselas', 'Ginebra', 'Roma', 'Venecia'],
-    en: ['Paris', 'Brussels', 'Geneva', 'Rome', 'Venice'],
+    es: ['París', 'Ginebra', 'Roma', 'Venecia'],
+    en: ['Paris', 'Geneva', 'Rome', 'Venice'],
   },
   'cold-war-and-reunion': {
     es: ['Berlín', 'Praga', 'Roma', 'Bruselas'],
