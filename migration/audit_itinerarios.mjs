@@ -25,6 +25,12 @@ const C = {
   praga:[50.08,14.44], prague:[50.08,14.44], dublin:[53.35,-6.26], maguncia:[49.99,8.25], mainz:[49.99,8.25],
   estrasburgo:[48.57,7.75], strasbourg:[48.57,7.75], frankfurt:[50.11,8.68], amberes:[51.22,4.40], antwerp:[51.22,4.40],
   beaune:[47.02,4.84], jura:[46.72,5.92], gruyeres:[46.58,7.08], rubicon:[44.10,12.40], egipto:[31.20,29.92], egypt:[31.20,29.92],
+  // Faltaban en la primera versión, y por eso la auditoría no vio que estos
+  // sitios se visitaban sin figurar en los destinos. Cualquier ciudad ausente
+  // de esta tabla es invisible para el chequeo: añadir al encontrar una nueva.
+  madrid:[40.42,-3.70], milan:[45.46,9.19], yuste:[40.12,-5.74],
+  cracovia:[50.06,19.94], krakow:[50.06,19.94], ironbridge:[52.63,-2.49],
+  passchendaele:[50.90,3.02], belleau:[49.07,3.29],
 };
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z]/g,'');
 const km = (a,b) => { const R=6371, dLat=(b[0]-a[0])*Math.PI/180, dLon=(b[1]-a[1])*Math.PI/180;
