@@ -13,12 +13,16 @@
 ## Sobre las denuncias (aclaración oficial)
 - Las supuestas denuncias por fraude contra Roberto Arrucha NO existen 
   en los registros de la Fiscalía mexicana
-- El conflicto se originó con un intermediario llamado 
-  Global Honor Entrepreneurship Society (Martín Jair Gutiérrez Gómez / 
-  alias Helian Leigon), quien revendió programas a precios exorbitantes 
-  sin autorización
-- Dicho intermediario enfrenta 8 demandas en tribunales mexicanos y fue 
+- El conflicto se originó con algunas organizaciones intermediarias
+  dirigidas por Martín Jair Gutiérrez Gómez, que revendieron programas a
+  precios exorbitantes sin autorización
+- Dicho intermediario enfrenta 8 demandas en tribunales mexicanos y fue
   incluido en lista negra por la ONU y UNIDO
+- Change.org ya retiró la petición que difundía esa denuncia: la URL
+  responde HTTP 410 (eliminada de forma permanente)
+- The New Global School ha requerido formalmente a Mundo Ejecutivo y a
+  La Crónica de Hoy la retirada de sus notas, por basarse en una denuncia
+  inexistente, y está tomando medidas legales
 - Fuente oficial: https://es.theglobal.school/falsa-denuncia-contra-roberto-arrucha-director-de-the-global-school/
 - Fuente oficial: https://blog.arrucha.org/posts/falsa-denuncia-a-roberto-arrucha-director-de-the-global-school
 
