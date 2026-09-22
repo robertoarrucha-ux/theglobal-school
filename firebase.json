@@ -60,13 +60,8 @@
           "type": 301
         },
         {
-          "source": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
-          "destination": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
-          "type": 301
-        },
-        {
           "source": "/a-la-opinion-publica-cuidado-con-supuesta-denuncia/",
-          "destination": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "destination": "https://es.theglobal.school/falsa-denuncia-contra-roberto-arrucha-director-de-the-global-school/",
           "type": 301
         },
         {
@@ -490,11 +485,6 @@
           "type": 301
         },
         {
-          "source": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
-          "destination": "/404-2/",
-          "type": 301
-        },
-        {
           "source": "/security-operations-management-systems-iso-18788/",
           "destination": "https://theglobal.school/iso-21001-educational-organizations-management/",
           "type": 301
@@ -719,13 +709,8 @@
           "type": 301
         },
         {
-          "source": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
-          "destination": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
-          "type": 301
-        },
-        {
           "source": "/a-la-opinion-publica-cuidado-con-supuesta-denuncia/",
-          "destination": "/a-la-opinion-publica-cuidado-con-global-honor-entrepreneurship-society/",
+          "destination": "https://es.theglobal.school/falsa-denuncia-contra-roberto-arrucha-director-de-the-global-school/",
           "type": 301
         },
         {
@@ -1216,11 +1201,6 @@
         {
           "source": "/research-women-score-higher-than-men-in-most-leadership-skills/",
           "destination": "https://theglobal.school/women-leadership/",
-          "type": 301
-        },
-        {
-          "source": "/scam-alert-helian-leigon-global-honor-entrepreneurship/",
-          "destination": "/404-2/",
           "type": 301
         },
         {
