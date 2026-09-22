@@ -7,6 +7,16 @@
 // canonico, y repetir el mismo @id desde cada sitio de la red es lo que permite
 // a un buscador entender que hablan de la misma persona.
 //
+// Pro-Latam se referencia como https://pro-latam.org/#organization, que es el
+// @id que declara su propio dominio. arrucha.org la llama #org, lo cual las
+// convierte en dos entidades distintas para un buscador. Se sigue al dominio
+// dueño, que es la autoridad sobre su propio identificador, y queda pendiente
+// corregir arrucha.org para que coincida.
+//
+// El nodo de Pro-Latam va minimo a proposito: solo lo justo para enlazar. Su
+// propio sitio ya publica la ficha completa, y repetir detalle desde aqui solo
+// crea ocasiones de contradecirla.
+//
 // Ojo: el JSON-LD tiene que ir con set:html={JSON.stringify(...)}. La forma
 // <set:html value=... /> escapa el HTML en silencio y rompe el dato estructurado.
 const graph = {
@@ -18,9 +28,13 @@ const graph = {
       name: 'Roberto A. Arrucha',
       url: 'https://arrucha.org/',
       image: 'https://arrucha.org/photos/Roberto%20Profile%202020%20The%20New%20Global%20School.jpg',
-      jobTitle: 'Founder & Director of Pro-Latam',
+      jobTitle: 'Founder & Director',
       nationality: 'Mexican',
       knowsLanguage: ['Spanish', 'English'],
+      worksFor: [
+        { '@id': 'https://pro-latam.org/#organization' },
+        { '@id': 'https://theglobal.school/#org' },
+      ],
       sameAs: [
         'https://arrucha.org',
         'https://www.linkedin.com/in/arrucha/',
@@ -33,6 +47,13 @@ const graph = {
         'https://ecovillages-mexico.org',
         'https://awards.pro-latam.org',
       ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://pro-latam.org/#organization',
+      name: 'Pro Latam',
+      url: 'https://pro-latam.org',
+      founder: { '@id': 'https://arrucha.org/#person' },
     },
     {
       '@type': 'Organization',
