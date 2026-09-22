@@ -515,7 +515,7 @@ La Agencia de Negocios de Viena.
 
 Promoviendo las relaciones comerciales entre el mundo y la ciudad de Viena.
 
-![Global Honor GHES](/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp "Impact-Hub-Vienna-Logo webp")
+![Impact Hub Vienna](/media/2023/04/Impact-Hub-Vienna-Logo-webp.webp "Impact-Hub-Vienna-Logo webp")
 
 El Hub para Innovadores más importante de Europa Central.
 
@@ -529,11 +529,11 @@ La fiestá hispanoamericana má emblemática de Europa Central.
 
 ### Trusted by
 
-![Global Honor GHES](/media/2023/09/Logo-champions.webp "Logo champions")
+![Champions](/media/2023/09/Logo-champions.webp "Logo champions")
 
-![Global Honor GHES](/media/2023/10/iSCAN-Logo-1.webp "iSCAN-Logo-1")
+![iSCAN](/media/2023/10/iSCAN-Logo-1.webp "iSCAN-Logo-1")
 
-![Global Honor GHES](/media/2023/06/climate-reality-project-logo.webp "climate-reality-project-logo")
+![Climate Reality Project](/media/2023/06/climate-reality-project-logo.webp "climate-reality-project-logo")
 
 ![1MillionStartups Logo](/media/2021/11/1MillionStartups-Logo.webp "1MillionStartups Logo")
 

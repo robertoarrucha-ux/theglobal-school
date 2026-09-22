@@ -160,7 +160,7 @@ TRUSTED BY
 
 ![The Global School for New Leadership Logo](/media/2023/06/Logo-Transparent-black-The-Global-School-for-New-Leadeship-scaled.webp "Logo Transparent black The Global School for New Leadeship")
 
-![Global Honor GHES](/media/2023/08/Vienna-School-Logo-New-black.webp "Vienna School Logo New black")
+![Vienna School of Quality & Innovation](/media/2023/08/Vienna-School-Logo-New-black.webp "Vienna School Logo New black")
 
 ![Meeting Destination Vienna](/media/2022/11/MDV_Logo_RGB_white_red.webp "MDV_Logo_RGB_white_red")
 

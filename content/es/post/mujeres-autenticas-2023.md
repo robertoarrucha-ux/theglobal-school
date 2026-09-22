@@ -566,9 +566,9 @@ Soy una mujer empresaria con más de 20 años de experiencia, en donde he tenido
 
 **Tu historia**
 
-Presidenta de la comisión de marketing de la Global Honor Enterpreneurship Society, vicepresidenta de Educación y Cultura de la Asociación de Internet MX; entre sus últimos reconocimientos se destacan: el premio Go be the first por “Mujer líder” y el Galardón Forjadores de México, por su “Trayectoria profe- sional e impacto empresarial”.
+Vicepresidenta de Educación y Cultura de la Asociación de Internet MX; entre sus últimos reconocimientos se destacan: el premio Go be the first por “Mujer líder” y el Galardón Forjadores de México, por su “Trayectoria profe- sional e impacto empresarial”.
 
-Directora General de la importante agencia Digital Venture, la cual fue reconocida en 2022 como compañía del año por parte de la Global Honor Entrepreneurship Society.Cuenta con más de 19 años de experiencia en Comunicación, Marketing y Negocios, en donde la transformación empresarial de sus clientes siempre ha sido el resultado de sus acciones.
+Directora General de la importante agencia Digital Venture, la cual fue reconocida en 2022 como compañía del año. Cuenta con más de 19 años de experiencia en Comunicación, Marketing y Negocios, en donde la transformación empresarial de sus clientes siempre ha sido el resultado de sus acciones.
 
 Maestra en Mercadotecnia Digital y Comercio Electrónico por la Universidad de la Rioja, España. Licenciada en Ciencias de la Comunicación por el Instituto Tecnológico y de Estudios Superiores de Monterrey.Me impulsa apoyar a las personas y empresas a crecer su panorama empresarial por medio de estrategias contundentes en resultados en ventas.Soy mamá de un joven de 19 años, a quien espero dejarle un mejor mundo al que yo encontré
 
