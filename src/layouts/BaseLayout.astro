@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import { LANG, BRAND, UI, SELF_ORIGIN, OTHER_ORIGIN } from '../lib/site';
 import { footerGroups } from '../lib/nav';
+import FounderSchema from '../components/FounderSchema.astro';
+import FounderBio from '../components/FounderBio.astro';
 
 interface Props {
   title: string;
@@ -42,6 +44,7 @@ const L = LANG === 'es';
     {ogFull && <meta property="og:image" content={ogFull} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#8300e9" />
+    <FounderSchema />
   </head>
   <body>
     <header class="site-header">
@@ -67,6 +70,7 @@ const L = LANG === 'es';
               <a href={L ? '/contacto/' : '/contact/'}>{L ? 'Contacto' : 'Contact'}</a> ·
               <a href={OTHER_ORIGIN[LANG] + '/'}>{ui.langSwitch}</a>
             </p>
+            <FounderBio />
           </div>
           {groups.map((g) => (
             <div class="footer-col">

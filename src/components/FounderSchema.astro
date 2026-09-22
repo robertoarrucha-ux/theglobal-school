@@ -1,0 +1,48 @@
+---
+// Grafo de entidad del fundador, compartido por los dos layouts que tienen head
+// propio (BaseLayout y MarketplaceLayout), para que el sitio entero declare lo
+// mismo y no haya dos versiones que se contradigan.
+//
+// El @id de la Persona es el de arrucha.org, no uno local: ese es el perfil
+// canonico, y repetir el mismo @id desde cada sitio de la red es lo que permite
+// a un buscador entender que hablan de la misma persona.
+//
+// Ojo: el JSON-LD tiene que ir con set:html={JSON.stringify(...)}. La forma
+// <set:html value=... /> escapa el HTML en silencio y rompe el dato estructurado.
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://arrucha.org/#person',
+      name: 'Roberto A. Arrucha',
+      url: 'https://arrucha.org/',
+      image: 'https://arrucha.org/photos/Roberto%20Profile%202020%20The%20New%20Global%20School.jpg',
+      jobTitle: 'Founder & Director of Pro-Latam',
+      nationality: 'Mexican',
+      knowsLanguage: ['Spanish', 'English'],
+      sameAs: [
+        'https://arrucha.org',
+        'https://www.linkedin.com/in/arrucha/',
+        'https://www.instagram.com/arrucha',
+        'https://www.facebook.com/arrucha.org/',
+        'https://pro-latam.org',
+        'https://rutas.club',
+        'https://ai-lawyers.org',
+        'https://theglobal.school',
+        'https://ecovillages-mexico.org',
+        'https://awards.pro-latam.org',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://theglobal.school/#org',
+      name: 'The New Global School',
+      url: 'https://theglobal.school',
+      founder: { '@id': 'https://arrucha.org/#person' },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

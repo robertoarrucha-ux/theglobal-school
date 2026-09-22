@@ -19,6 +19,10 @@ The site has a separate Spanish-language version at https://es.theglobal.school.
 - [Tech vs Mindfulness](https://theglobal.school/tech-vs-mindfulness/): Article discussing technology and mindfulness.
 - [Smart City Vienna](https://theglobal.school/smart-city-vienna/): Content related to urban innovation and Vienna.
 
+## About the founder
+
+Founded by Roberto A. Arrucha, Founder and Director of Pro-Latam. Canonical profile: https://arrucha.org
+
 ## Language Versions
 
 - [Spanish Site](https://es.theglobal.school): Spanish-language version of The New Global School website.

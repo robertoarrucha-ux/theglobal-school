@@ -1,0 +1,27 @@
+---
+// Bio del fundador en el pie, con enlace follow a arrucha.org. Acompana al
+// grafo de FounderSchema: el dato estructurado declara la relacion y este
+// parrafo la hace visible y enlazada para un lector y para un rastreador.
+//
+// Sin rel="nofollow" a proposito: bloquearia justo la senal de entidad que se
+// busca. Tampoco lleva target="_blank", que no aporta nada aqui.
+import { LANG } from '../lib/site';
+const L = LANG === 'es';
+---
+
+<p class="founder-bio">
+  <strong>Roberto A. Arrucha</strong>{L
+    ? ', fundador y director de Pro-Latam, fundó The New Global School. Más sobre él en '
+    : ', Founder and Director of Pro-Latam, founded The New Global School. More about him at '}<a
+    href="https://arrucha.org/">arrucha.org</a>.
+</p>
+
+<style>
+  .founder-bio {
+    margin: 1.2rem 0 0;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--txt-soft, var(--ink-mute, inherit));
+  }
+  .founder-bio a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+</style>
